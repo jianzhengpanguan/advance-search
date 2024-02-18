@@ -14,14 +14,14 @@ def main():
     print(f"Logics file path: {args.logics_file_path}")
     print(f"Evaluation file path: {args.evaluation_file_path}")
 
-    # # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
-    # with open(args.raw_file_path, "r", encoding='utf-8') as f:
-    #   raw_statement = f.read()
-    #   logics = logiclinker.fetch_logics(raw_statement)
+    # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
+    with open(args.raw_file_path, "r", encoding='utf-8') as f:
+      raw_statement = f.read()
+      logics = logiclinker.fetch_logics(raw_statement)
     
-    # with open(args.logics_file_path, 'w', encoding='utf-8') as file:
-    #   for logic in logics:
-    #     file.write(logic + '\n')
+    with open(args.logics_file_path, 'w', encoding='utf-8') as file:
+      for logic in logics:
+        file.write(logic + '\n')
     
     # Step 2: Evaluate the logics.
     with open(args.logics_file_path, "r", encoding='utf-8') as f:
