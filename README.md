@@ -66,7 +66,3 @@ Check the summarized results and evaluations in the output files located in the 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues to improve the project.
-
----
-
-Feel free to modify this template to better fit your project's specific needs and details.
