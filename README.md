@@ -109,6 +109,15 @@ The information obtained from the article you provided is as follows:
 These points indicate that the overall narrative surrounding the Paris Agreement is that it can potentially provide economic benefits and drive growth, rather than causing uniform economic harm across sectors. However, it's important to acknowledge that specific sectors that are heavily reliant on fossil fuels may face challenges and disruptions, but the provided articles do not detail these aspects or the balance of job gains in new sectors versus job losses in traditional sectors.
 ```
 
+## Known Issues.
+
+In the ./data/raw.txt file, we have 9 sentences. From these, we generate 3 logical structures, each containing 7 premises and 3 hypotheses, and store them in ./data/logics.txt. To assess the validity of these premises and hypotheses, we execute 240 Google search queries. Out of these 240 queries, 50 yield genuinely useful links or information.
+
+Overall, we achieve only about 20% high-quality results, with a success rate of 50 out of 240 searches. This can be attributed to the following factors:
+- CHATGPT may not always generate relevant keywords, questions, or statements for a given premise or hypothesis.
+- The quality of Google search results is not always optimal.
+
+
 
 ## Contributing
 
