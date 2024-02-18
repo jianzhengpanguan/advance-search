@@ -1,0 +1,32 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt Anaconda",
+    "terminal.integrated.automationProfile.windows": {},
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Command Prompt Anaconda": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+                "/K", "C:\\Users\\xyang\\Anaconda3\\Scripts\\activate.bat",
+            ],
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+}
+
