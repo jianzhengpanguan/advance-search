@@ -11,10 +11,10 @@ Hypothesis:
 1.__
 2.__
 Inference:
-1.__
-2.__
-The the inferences should be in the format:
-Premise -> logical dependencies -> Hypothesis
+1.Premise:[1+2+3...] -> logical dependencies -> Hypothesis:[1+2+3...]
+2.Premise:[1+2+3...] -> logical dependencies -> Hypothesis:[1+2+3...]
+
+
 
 The logical dependencies should be one of:
 1. Cause and effect
@@ -35,8 +35,6 @@ Use instruct to analyze conversation: """
 _CHUCK_SIZE = 500
 _OVERLAP_SIZE = 50
 _MAX_NUM_PATTERNS = 100
-_PREMISE_PATTERN = r"Premise (\b\d+\b)"
-_HYPOTHESIS_PATTERN = r"Hypothesis (\b\d+\b)"
 
 # Fetch the patterns in premise, hypothesis.
 # Example raw text: r"Premise:\s*\n(1\..*?)\n(2\..*?)\n".
@@ -85,22 +83,26 @@ def fetch_logics(statement):
     if not len(inferences):
       continue
 
-    # GPT might mix hypothesis' and premises' text and indices in the inference.
-    # Example: Premises: 1.xx, 2.yy; Hypothesis: 1.zz; Inference: 1. Premise 1 + yy -> Cause and effect -> zz.
-    # Keep them in the same 'indices' format.
-    # Expected Inference: Premise 1 + Premise 2 -> Cause and effect -> Hypothesis 1.
+    # GPT should enforce hypotheses and premises keeping indices format in the inference.
+    # Replace the indices to the content, example Inference: Premise 1 + Premise 2 -> Hypothesis 1.
     for inference in inferences:
-      # Find all matched premise and hypothesis in the inference.
-      premise_indices = re.findall(_PREMISE_PATTERN, inference)
-      hypothesis_indices = re.findall(_HYPOTHESIS_PATTERN, inference)
-      # Extract the indices from the premises, replace the index with the exact premise in inference.
-      for premise_index in premise_indices:
-        premise = raw_logic["Premise"][int(premise_index)-1]
-        inference = inference.replace(f"Premise {premise_index}", premise)
-      # Extract the indices from the hypotheses, replace the index with the exact hypothese in inference.
-      for hypothesis_index in hypothesis_indices:
-        hypothesis = raw_logic["Hypothesis"][int(hypothesis_index)-1]
-        inference = inference.replace(f"Hypothesis {hypothesis_index}", hypothesis)
+      if "->" not in inference:
+        continue
+      print(f"Inference before parsing: {inference}")
+      premise_str, hypothesis_str = inference.split("->")[0], inference.split("->")[-1]
+      # Ignore the index number before Premise.
+      # Example： 1. Premise[2,3], we should skip the 1 and keep the 2 and 3.
+      premise_str = premise_str.split("Premise")[-1]
+      # Find all premise and hypothesis indices in the inference.
+      premise_indices = re.findall(r"\d+", premise_str)
+      hypothesis_indices = re.findall(r"\d+", hypothesis_str)
+      if not premise_indices or not hypothesis_indices:
+        continue
+      premises = [raw_logic["Premise"][int(premise_index)-1] for premise_index in premise_indices]
+      hypotheses = [raw_logic["Hypothesis"][int(hypothesis_index)-1] for hypothesis_index in hypothesis_indices]
+      # Extract the indices from the premises/hypotheses, replace the index with the exact premise/hypothesis in inference.
+      inference = f"Premise:[{'+'.join(premises)}] -> Hypothesis:[{'+'.join(hypotheses)}]"
+      print(f"Inference after parsing: {inference}")
       logics.append(inference)
 
   return logics
