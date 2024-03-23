@@ -61,6 +61,7 @@ python main.py --raw_file_path ./path/to/your/file.txt
 Check the summarized results and evaluations in the output files located in the `./data/` directory:
 
 - `logics.txt`: Contains the logical analysis of the input data.
+- `fallacy.txt`: Provides a list of fallacies identified in the input data.
 - `evaluation.txt`: Provides an evaluation summary of the opinions and facts.
 
 ## Example outputs:
@@ -69,6 +70,19 @@ More details in `./data/` directory, here shows paritial results:
 ```
 ...
 3. Mr. Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord. + 2. A study asserts that the agreement would cost 2.7 million jobs by 2025, which is disputed by environmental groups. + 1. The United States' participation in the Paris accord is bad for the country's economy. -> Association -> 3. If sectors of the economy are at risk of losing revenue and jobs due to the Paris accord, as claimed by a study, then leaving the accord may be perceived as beneficial for the economy.
+```
+- `fallacy.txt`
+```
+...
+Fallacy:
+1. Hasty Generalization
+2. Appeal to Ignorance (Argumentum ad Ignorantiam)
+3. Association Fallacy (Guilty Association)
+
+Explanation:
+1. Hasty Generalization - The conclusion that the United States' participation in the Paris accord is bad for the country's economy is a hasty generalization because it is based on an incomplete assessment of the impact. There could be other studies or economic models suggesting different outcomes, or there could be long-term benefits to participating in the accord not considered in this argument. The inference lacks a comprehensive evaluation of all factors.
+2. Appeal to Ignorance (Argumentum ad Ignorantiam) - The argument suggests that because the negative impact of the Paris accord on jobs and the economy is disputed by environmental groups, the accord's overall economic effect cannot be deemed negative. This appeal to ignorance implies that a lack of agreement on the negative consequences is evidence of the absence of such consequences, which is a logical fallacy.
+3. Association Fallacy (Guilty Association) - The final inference associates the notion of sectors losing revenue and jobs with the need to leave the Paris accord as a means of protecting the economy. This association is a fallacy because it assumes that if a particular aspect of the accord appears to be negative (loss of jobs), then the entire agreement must be harmful to the economy, without considering the potential overall benefits of environmental protection and sustainable growth.
 ```
 - `evaluation.txt`: 
 ```
