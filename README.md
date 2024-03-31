@@ -69,7 +69,8 @@ More details in `./data/` directory, here shows paritial results:
 - `logics.txt`: 
 ```
 ...
-3. Mr. Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord. + 2. A study asserts that the agreement would cost 2.7 million jobs by 2025, which is disputed by environmental groups. + 1. The United States' participation in the Paris accord is bad for the country's economy. -> Association -> 3. If sectors of the economy are at risk of losing revenue and jobs due to the Paris accord, as claimed by a study, then leaving the accord may be perceived as beneficial for the economy.
+3. President Trump listed sectors of the United States economy that would lose revenue and jobs if the United States remained part of the Paris accord. + 2. A study asserts that the Paris agreement would cost the United States economy 2.7 million jobs by 2025, which is disputed by environmental groups. + 1. The United States' participation in the Paris accord is bad for the country's economy. -> Association -> 3. If sectors of the United States economy are at risk of losing revenue and jobs due to the Paris accord, as claimed by a study, then leaving the Paris accord may be perceived as beneficial for the United States economy.
+
 ```
 - `fallacy.txt`
 ```
