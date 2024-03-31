@@ -1,5 +1,6 @@
 import re
 import gpt
+import rephraser
 
 _PROMPT = """
 Read the conversation, identify all the premises, hypothesis and inference.
@@ -102,7 +103,8 @@ def fetch_logics(statement):
       hypotheses = [raw_logic["Hypothesis"][int(hypothesis_index)-1] for hypothesis_index in hypothesis_indices]
       # Extract the indices from the premises/hypotheses, replace the index with the exact premise/hypothesis in inference.
       inference = f"Premise:[{'+'.join(premises)}] -> Hypothesis:[{'+'.join(hypotheses)}]"
-      print(f"Inference after parsing: {inference}")
-      logics.append(inference)
+      rephrased_inference = rephraser.replace_ambiguous_terms(inference)
+      print(f"Inference after parsing: {rephrased_inference}")
+      logics.append(rephrased_inference)
 
   return logics
