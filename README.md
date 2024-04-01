@@ -88,29 +88,39 @@ Explanation:
 - `evaluation.txt`: 
 ```
 ...
-Premise:3. Mr. Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord. 
+Premise:3. President Trump listed sectors of the United States economy that would lose revenue and jobs if the United States remained part of the Paris accord. 
 No
 The information obtained from the article you provided is as follows:
-
-- President Trump cited that the Paris Accord would cost the U.S. economy close to $3 trillion in lost GDP and 6.5 million jobs, as well as $2.7 trillion in lost manufacturing output by 2040, according to a study he referenced during his announcement to withdraw from the agreement. [Trump Will Withdraw U.S. From Paris Climate Agreement - The New York Times](https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html)
-- In his speech, Trump claimed that compliance with the Paris Agreement would lead to job losses in sectors such as coal, paper, iron and steel, as well as in the production of cement, natural gas, and coal production. The Washington Post fact-checked these claims, noting that Trump omitted the context that job losses in some sectors may be offset by job gains in others, such as renewable energy. [Fact-checking President Trump's claims on the Paris climate change deal - The Washington Post](https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/)
+- [President Trump announced on Thursday that the United States would withdraw from the Paris climate accord, citing that it would lead to lost revenue and jobs in various sectors of the U.S. economy.](https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html)
+- [In his June 1, 2017 remarks, President Trump made the decision to exit the Paris Agreement based on the belief that it would negatively impact the U.S. economy and workers.](https://2017-2021.state.gov/on-the-u-s-withdrawal-from-the-paris-agreement/)
+- [President Trump claimed the Paris Agreement would result in lost jobs, lower wages, shuttered factories, and vastly diminished economic production.](https://trumpwhitehouse.archives.gov/articles/president-trump-announces-u-s-withdrawal-paris-climate-accord/)
+- [The Washington Post fact-checked President Trump's claims about the economic repercussions of the Paris Accord, suggesting that many of his statements were misleading.](https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/)
+- [The Guardian analyzed Trump's claims about the Paris climate speech, including the assertion that the Accord would cost the U.S. economy jobs and reduce competitiveness.](https://www.theguardian.com/environment/ng-interactive/2017/jun/02/presidents-paris-climate-speech-annotated-trumps-claims-analysed)
+- [The NRDC countered former President Trump's claims regarding the economic harm of the Paris Agreement, pointing to a number of unfounded assertions.](https://www.nrdc.org/stories/paris-climate-agreement-everything-you-need-know)
 - A review of President Trump's speech by numerous sources, including Scientific American, indicated that some of his claims about the economic consequences of the Paris Agreement were misleading, pointing out that job losses in traditional energy sectors can be weighed against potential job gains in the renewable sector. [Factcheck Shows Trump's Climate Speech Was Full of Misleading Statements - Scientific American](https://www.scientificamerican.com/article/factcheck-shows-trumps-climate-speech-was-full-of-misleading-statements/)
 - According to the International Renewable Energy Agency (IRENA), transitioning to renewables offers significant job creation potential. While the energy transition may impact fossil fuel jobs, there is a strong potential for job growth in the renewables sector. [Could the Energy Transition Benefit Africa's Economies? - IRENA](https://www.irena.org/News/expertinsights/2022/Nov/Could-the-Energy-Transition-Benefit-Africas-Economies) 
 
-It should be noted that the specific links provided might not directly contain the affirmations as stated above, as my access does not include the verification or citation from the links themselves. However, the response is based on commonly reported information in the given context and time frame.
 
-Premise:2. A study asserts that the Paris agreement would cost 2.7 million jobs by 2025, which is disputed by environmental groups. 
+Please note that the effectiveness and accuracy of President Trump's arguments have been widely debated and varied opinions exist on the economic implications of the Paris Agreement.
+
+Premise: 2. A study asserts that the Paris agreement would cost the United States economy 2.7 million jobs by 2025, which is disputed by environmental groups. 
 No
-The information obtained from the articles you provided is as follows:
-- Achieving the more ambitious 1.5°C goal of the Paris Agreement could yield an additional $138 trillion in benefits. This suggests positive economic implications rather than job losses. ([RFF Article](https://www.rff.org/publications/issue-briefs/the-economic-benefits-of-achieving-the-paris-agreement-goals/))
-- A Purdue study indicates that the economic impacts of the U.S. rejoining the Paris climate accord would be limited, which does not confirm the assertion of a 2.7 million job loss by 2025. ([Purdue Study](https://www.purdue.edu/newsroom/releases/2021/Q1/purdue-study-finds-limited-economic-impacts-from-u.s.-rejoining-the-paris-climate-accord.html))
-- General information about the Paris Agreement's economic impact is discussed, with emphasis on its role in reducing global greenhouse gas emissions, but specific numbers regarding job impact are not mentioned. ([Earth.Org Article](https://earth.org/the-economic-impact-of-the-paris-agreement/))
-- A UNFCCC report highlights the growing threat of climate change to human health, food and water security, and socio-economic development in Africa, which underscores the risks of inaction rather than job loss predictions. ([UNFCCC Report](https://unfccc.int/news/climate-change-is-an-increasing-threat-to-africa))
+The information obtained from the article you provided is as follows:
+1. The study mentioned with the job loss figures does not appear in the current list of provided links. However, similar claims have been made in the past, often by groups with interests in industries that might be negatively affected by climate policies. (No direct link provided for the specific claim about the 2.7 million job losses)
+2. The White House documents and other articles focus on the benefits of adhering to the Paris Agreement and transitioning to a greener economy, including job creation in the renewable energy sector and other economic opportunities. ([The Long-Term Strategy of the United States, Pathways to Net-Zero](https://www.whitehouse.gov/wp-content/uploads/2021/10/us-long-term-strategy.pdf), [FACT SHEET: President Biden Sets 2030 Greenhouse Gas Pollution Reduction Target...](https://www.whitehouse.gov/briefing-room/statements-releases/2021/04/22/fact-sheet-president-biden-sets-2030-greenhouse-gas-pollution-reduction-target-aimed-at-creating-good-paying-union-jobs-and-securing-u-s-leadership-on-clean-energy-technologies/), [FACT SHEET: One Year In, President Biden's Inflation Reduction Act...](https://www.whitehouse.gov/briefing-room/statements-releases/2023/08/16/fact-sheet-one-year-in-president-bidens-inflation-reduction-act-is-driving-historic-climate-action-and-investing-in-america-to-create-good-paying-jobs-and-reduce-costs/))
+3. A Purdue study cited finds 'limited economic impacts' from the U.S. rejoining the Paris climate accord, contradicting the claim of extensive job losses. ([Purdue study finds limited economic impacts from U.S. rejoining the Paris climate accord](https://www.purdue.edu/newsroom/releases/2021/Q1/purdue-study-finds-limited-economic-impacts-from-u.s.-rejoining-the-paris-climate-accord.html))
 
-None of the provided articles specifically validate the claim of the Paris agreement costing 2.7 million jobs by 2025.
+The claim of 2.7 million job losses by 2025 due to the Paris Agreement seems to be an outlier and is not supported by other economic studies and projections included in the links provided. It's also important to note that such projections can be highly dependent on the assumptions and methodologies used in the analyses.
 
 Premise: 1. The United States' participation in the Paris accord is bad for the country's economy. 
-Sorry, I can't answer your question.
+No
+The information obtained from the article you provided is as follows:
+1. A Purdue study suggests limited economic impacts on the U.S. economy from rejoining the Paris climate accord. [Purdue Study](https://www.purdue.edu/newsroom/releases/2021/Q1/purdue-study-finds-limited-economic-impacts-from-u.s.-rejoining-the-paris-climate-accord.html)
+2. President Biden's administration argues that tackling climate change by rejoining the Paris Agreement and setting ambitious emissions reduction targets can create good-paying jobs and provide economic opportunities. [White House Fact Sheet 1](https://www.whitehouse.gov/briefing-room/statements-releases/2021/04/22/fact-sheet-president-biden-sets-2030-greenhouse-gas-pollution-reduction-target-aimed-at-creating-good-paying-union-jobs-and-securing-u-s-leadership-on-clean-energy-technologies/)
+3. The Inflation Reduction Act promoted by President Biden aims to drive climate action while creating jobs and reducing costs for Americans. [Inflation Reduction Act](https://www.whitehouse.gov/briefing-room/statements-releases/2023/08/16/fact-sheet-one-year-in-president-bidens-inflation-reduction-act-is-driving-historic-climate-action-and-investing-in-america-to-create-good-paying-jobs-and-reduce-costs/)
+4. Economic benefits are anticipated from achieving the Paris Agreement goals, with estimates suggesting significant cumulative GDP benefits. [Economic Benefits](https://www.rff.org/publications/issue-briefs/the-economic-benefits-of-achieving-the-paris-agreement-goals/)
+5. The White House's long-term strategy outlines benefits such as improvements in public health, climate security, and job growth from adhering to the Paris Agreement targets. [Long-Term Strategy](https://www.whitehouse.gov/wp-content/uploads/2021/10/us-long-term-strategy.pdf)
+6. The International Energy Agency (IEA) describes a pathway to net-zero by 2050 that is cost-effective and economically productive. [IEA Report](https://www.iea.org/reports/net-zero-by-2050)
 
 Hypothesis: 3. If sectors of the economy are at risk of losing revenue and jobs due to the Paris accord, as claimed by a study, then leaving the accord may be perceived as beneficial for the economy.
 No
@@ -126,7 +136,7 @@ These points indicate that the overall narrative surrounding the Paris Agreement
 
 ## Known Issues.
 
-In the ./data/raw.txt file, we have 9 sentences. From these, we generate 3 logical structures, each containing 7 premises and 3 hypotheses, and store them in ./data/logics.txt. To assess the validity of these premises and hypotheses, we execute 240 Google search queries. Out of these 240 queries, 50 yield genuinely useful links or information.
+In the ./data/raw.txt file, we have 9 sentences. From these, we generate 3 logical structures, containing 7 premises and 3 hypotheses, and store them in ./data/logics.txt. To assess the validity of these premises and hypotheses, we execute 240 Google search queries. Out of these 240 queries, 50 yield genuinely useful links or information.
 
 Overall, we achieve only about 20% high-quality results, with a success rate of 50 out of 240 searches. This can be attributed to the following factors:
 - CHATGPT may not always generate relevant keywords, questions, or statements for a given premise or hypothesis.
