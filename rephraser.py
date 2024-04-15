@@ -20,7 +20,7 @@ import gpt
 # * `He` should be `President Trump`
 # * `it` should be `renegotiation of the international agreement`, more specifically, `renegotiation of the Paris accord`.
 # * `lead to a deal that is fair` should be `lead to a deal that is fair for the United States`
-def replace_ambiguous_terms(inference: str)-> str:
+def replace_ambiguous_terms(inference: str, provider_type: gpt.ProviderType=gpt.ProviderType.openai, model_type: gpt.ModelType=gpt.ModelType.advance_model)-> str:
   prompt = f"""
   Given a sentence:
   {inference}
@@ -30,4 +30,4 @@ def replace_ambiguous_terms(inference: str)-> str:
   * replace the referred subject (e.g., the xx) to the  full name based on the context `in place`.
   * add the implicit part (e.g., change `A did B` to `A did B in/on/at/to/from/with/by/for/of C`)) `in place`.
   """
-  return gpt.request(prompt)
+  return gpt.request(prompt, provider_type, model_type)

@@ -5,6 +5,7 @@ import rephraser
 _PROMPT = """
 Read the conversation, identify all the premises, hypothesis and inference.
 List them in the format:
+```
 Premise:
 1.__
 2.__
@@ -14,10 +15,12 @@ Hypothesis:
 Inference:
 1.Premise:[1+2+3...] -> logical dependencies -> Hypothesis:[1+2+3...]
 2.Premise:[1+2+3...] -> logical dependencies -> Hypothesis:[1+2+3...]
+```
 
-
-
-The logical dependencies should be one of:
+Notice:
+* Deduplicate the same premise, hypothesis or inference.
+* In inference, only show the indices of premise and hypothesis.
+* The logical dependencies should be one of:
 1. Cause and effect
 2. Spatial relationship
 3. Temporal relationship
@@ -51,12 +54,12 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
     patterns.append(matches.group(i).strip())
   return patterns
 
-def fetch_logics(statement):
+def fetch_logics(statement:str, provider_type:gpt.ProviderType=gpt.ProviderType.openai, model_type:gpt.ModelType=gpt.ModelType.advance_model):
   logics = []
   chunks = len(statement) // _CHUCK_SIZE
   for i in range(0, chunks):
     request = _PROMPT+statement[i*_CHUCK_SIZE:(i+1)*_CHUCK_SIZE+_OVERLAP_SIZE]
-    raw_text = gpt.request(request)
+    raw_text = gpt.request(request, provider_type, model_type)
     raw_logic = {
       "Premise": _fetch_patterns(prefix="Premise", raw_text=raw_text),
       "Hypothesis": _fetch_patterns(prefix="Hypothesis", raw_text=raw_text),
@@ -99,11 +102,11 @@ def fetch_logics(statement):
       hypothesis_indices = re.findall(r"\d+", hypothesis_str)
       if not premise_indices or not hypothesis_indices:
         continue
-      premises = [raw_logic["Premise"][int(premise_index)-1] for premise_index in premise_indices]
-      hypotheses = [raw_logic["Hypothesis"][int(hypothesis_index)-1] for hypothesis_index in hypothesis_indices]
+      premises = [raw_logic["Premise"][int(premise_index)-1] for premise_index in premise_indices if int(premise_index)-1 < len(raw_logic["Premise"])]
+      hypotheses = [raw_logic["Hypothesis"][int(hypothesis_index)-1] for hypothesis_index in hypothesis_indices if int(hypothesis_index)-1 < len(raw_logic["Hypothesis"])]
       # Extract the indices from the premises/hypotheses, replace the index with the exact premise/hypothesis in inference.
       inference = f"Premise:[{'+'.join(premises)}] -> Hypothesis:[{'+'.join(hypotheses)}]"
-      rephrased_inference = rephraser.replace_ambiguous_terms(inference)
+      rephrased_inference = rephraser.replace_ambiguous_terms(inference, provider_type, model_type)
       print(f"Inference after parsing: {rephrased_inference}")
       logics.append(rephrased_inference)
 

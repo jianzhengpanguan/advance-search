@@ -41,15 +41,16 @@ def main():
       print(f"Number of logics: {len(logics)}")
       with open(args.evaluation_file_path, 'w', encoding='utf-8') as file:
         for logic in logics:
+          logic = logic.replace("Premise:","").replace("[","").replace("]","").replace("Hypothesis:","")
           statements = logic.split('->')
-          if len(statements) != 3:
+          if len(statements) != 2:
             continue
           for premise in statements[0].split('+'):
             if premise == '':
               continue
             file.write('Premise:' + premise + '\n')
             file.write(evaluator.evaluate(premise) + '\n\n')
-          for hypothesis in statements[2].split('+'):
+          for hypothesis in statements[1].split('+'):
             if hypothesis == '':
               continue
             file.write('Hypothesis:' + hypothesis + '\n')
