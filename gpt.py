@@ -1,50 +1,147 @@
 import tiktoken
 import requests
 import configparser
+import anthropic
+import math
+import ratelimiter
+from enum import Enum
 
 _MAX_TOKENS = 4000
 _TEMPERATURE = 1.0
+_GPT_NO_ANSWER = "Sorry, GPT can't answer your question."
 
 # Use tiktoken.get_encoding() to load an encoding by name.
 # The first time this runs, it will require an internet connection to download. Later runs won't need an internet connection.
-encoding = tiktoken.get_encoding("cl100k_base")
+default_encoding = tiktoken.get_encoding("cl100k_base")
 # Create a configparser object
 config = configparser.ConfigParser()
 # Read the configuration file
 config.read('config.ini')
+# Limit to 50,000 tokens per minute for Anthropic Tier 1 user.
+anthropic_token_rate_limiter = ratelimiter.TokensRateLimiter(max_tokens=35000)
 
+class ProviderType(Enum):
+  openai = 1
+  anthropic = 2
 
-def _num_tokens_from_messages(message, model):
-    """Return the number of tokens used by messages."""
-    try:
-        encoding = tiktoken.encoding_for_model(model)
-    except KeyError:
-        print("Warning: model not found. Using default cl100k_base encoding.")
-    num_tokens = len(encoding.encode(message))
-    return num_tokens
+class ModelType(Enum):
+  advance_model = 1
+  basic_model = 2
 
-def request(statement):
-  model = config['LLM']['model']
-  # Get the LLM's API key, url and model from the configuration file.
+def num_tokens_from_messages(message:str, model:str="gpt-4")->int:
+  """Return the number of tokens used by messages."""
+  if not message:
+    return 0
+  try:
+      encoding = tiktoken.encoding_for_model(model)
+  except KeyError:
+      print("Warning: model not found. Using default cl100k_base encoding.")
+      encoding = default_encoding
+  num_tokens = len(encoding.encode(message))
+  return num_tokens
+
+def request(statement: str, provider_type: ProviderType=ProviderType.openai, model_type: ModelType=ModelType.advance_model)->str:
+  if provider_type == ProviderType.anthropic:
+    response = anthropic_request(statement, model_type)
+    if response != _GPT_NO_ANSWER:
+      return response
+    # Upgrade to advance model if we still use basic model.
+    if model_type == ModelType.basic_model:
+      return anthropic_request(statement, ModelType.advance_model)
+    # Switch to other provider if advance model still not work.
+    return openai_request(statement, ModelType.advance_model)
+  
+  response = openai_request(statement, model_type)
+  if response != _GPT_NO_ANSWER:
+    return response
+  # Upgrade to advance model if we still use basic model.
+  if model_type == ModelType.basic_model:
+    return openai_request(statement, ModelType.advance_model)
+  # Switch to other provider if advance model still not work.
+  return anthropic_request(statement, ModelType.advance_model)
+
+def openai_request(statement:str, model_type:ModelType)->str:
+  # Get the OPENAI's API key, url and model from the configuration file.
   headers = {
-      'Authorization': f"Bearer {config['LLM']['api_key']}",
+      'Authorization': f"Bearer {config['OPENAI']['api_key']}",
       'Content-Type': 'application/json'
   }
-  num_tokens = _num_tokens_from_messages(statement, model)
-  try:
-    print(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
-  except:
-    pass
+  # Set model.
+  model = config['OPENAI']['advance_model']
+  url = config['OPENAI']['advance_url']
+  if model_type == ModelType.basic_model:
+    model = config['OPENAI']['basic_model']
+    url = config['OPENAI']['basic_url']
+  statements = _divide_statement(statement)
+  results = []
+  for statement in statements:
+    # Find how many tokens used.
+    num_tokens = num_tokens_from_messages(statement, model)
+    try:
+      print(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+    except:
+      pass
 
-  # Build the request, including the question or statement you want to ask.
-  request = {
-      'model': model,
-      'temperature': _TEMPERATURE,
-      "messages": [{"role": "user", "content": statement}],
-      'max_tokens': _MAX_TOKENS - num_tokens
-  }
+    # Build the request, including the question or statement you want to ask.
+    request = {
+        'model': model,
+        'temperature': _TEMPERATURE,
+        "messages": [{"role": "user", "content": statement}],
+        'max_tokens': _MAX_TOKENS - num_tokens
+    }
+    response = requests.post(url, headers=headers, json=request)
+    print(f"openai response: {response.json().get('choices')}")
+    if not response.json().get('choices'):
+      continue
+    results.append(response.json().get('choices')[0].get('message').get('content'))
+  return " \n".join(results)
 
-  response = requests.post(config['LLM']['url'], headers=headers, json=request)
-  if not response.json().get('choices'):
-      return "Sorry, I can't answer your question."
-  return response.json().get('choices')[0].get('message').get('content')
+def anthropic_request(statement:str, model_type:ModelType)->str:
+  client = anthropic.Anthropic(
+    api_key=config['ANTHROPIC']['api_key'],
+  )
+  # Set model.
+  model = config['ANTHROPIC']['advance_model']
+  if model_type == ModelType.basic_model:
+    model = config['ANTHROPIC']['basic_model']
+  statements = _divide_statement(statement)
+  results = []
+  for statement in statements:
+    # Find how many tokens used.
+    num_tokens = num_tokens_from_messages(statement, model)
+    try:
+      if anthropic_token_rate_limiter.request_tokens(num_tokens):
+        print(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+    except:
+      pass
+
+    # Build the message, including the question or statement you want to ask.
+    messages = [{
+      "role": "user", 
+      "content": [
+        {
+          "type": "text",
+          "text": statement
+        }
+      ]
+    }]
+    response = client.messages.create(
+      model=model,
+      max_tokens=_MAX_TOKENS - num_tokens,
+      temperature=_TEMPERATURE,
+      system="",
+      messages=messages
+    )
+    print(f"anthropic response: {response.content}")
+    if not len(response.content):
+      continue
+    results.append(response.content[0].text)
+  return " \n".join(results)
+
+# Divide the statement into chunks make sure we don't exceed the maximum number of tokens in one request.
+def _divide_statement(statement:str)->list[str]:
+  """Divide the statement into chunks."""
+  num_tokens = num_tokens_from_messages(statement)
+  num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 2))
+  bucket_length = math.ceil(len(statement) / num_buckets)
+  return [statement[i:i+bucket_length] for i in range(0, len(statement), bucket_length)]
