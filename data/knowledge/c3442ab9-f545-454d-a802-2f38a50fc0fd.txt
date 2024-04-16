@@ -1,0 +1,1976 @@
+The Political Economy of Economic Policy - IMF F&D 
+The IMF Press Center is a password-protected site for working journalists. 
+ 
+JEFFRY FRIEDEN 
+ 
+June 2020 
+ 
+Download PDF 
+ 
+We should pay closer attention to the interactions between politics, economics, and other realms 
+ 
+The COVID-19 pandemic strikingly illustrates the intersection of politics,
+economics, and other considerations. Public health experts have long warned
+that the world was likely to face a major pandemic and called for greater
+preparedness. Yet policymakers who have to focus on the next election find
+it difficult to invest the time, money, and political capital to address
+the abstract possibility of a future crisis. And so most of the world was
+unprepared for a global public health threat of the magnitude posed by the
+novel coronavirus. 
+ 
+As the pandemic has raced across the world, the policy response has
+continued to be tempered by political realities. Some members of the
+public, and some policymakers, have resisted the recommendations of public
+health experts, hoping for relaxed restrictions and a return to normalcy
+before the dangers have passed. At the same time, business interests have
+pressed for exceptions to benefit themselves, and for substantial
+subsidies—bailouts—to help them through difficult times. 
+ 
+At the international level, government responses to the pandemic illustrate
+the difficult politics of worldwide cooperation. A global pandemic requires
+a global response: microbes do not respect borders. A coordinated
+international response is clearly the best way to confront an international
+public health emergency. Yet policymakers under pressure from their
+constituents have diverted resources away from other countries, banned the
+export of food and drugs, and hoarded essential supplies. Each of these
+measures—popular as they may be to national publics—imposes costs on other
+countries. In the final analysis, the lack of cooperation makes everyone
+worse off. Such international institutions as theWorld Health Organizationattempt to coordinate a cooperative global response to the global
+crisis—but they can be powerless in the face of potent nationalist
+political pressures (see, for example, Goodman and others 2010). 
+ 
+Every government faces tough decisions about the appropriate measures: what
+restrictions to impose and when to loosen them, where money will be spent
+and how it will be raised, and what national concerns can be limited to
+favor international cooperation. These decisions have to take into account
+public health recommendations, economic considerations, and political
+constraints. Just as the policy response to the 2007–08 financial crisis
+varied from country to country in line with local political economy
+conditions, so national policy responses to the COVID-19 pandemic vary for
+health, economic, and political reasons. 
+ 
+This hotly contested policy response to a universal threat is no surprise
+to political economists. It happens all the time. For example, just about
+every economist believes that small countries would be better off if they
+removed all barriers to trade. Yet unilateral free trade is practically
+unheard of, and no country in the world today pursues it. Why not? More
+generally, why do governments have so much trouble getting economic
+policies right? Why does the advice of independent observers, analysts, and
+scholars go so often unheeded? 
+ 
+Politicsis the usual answer, and the answer is usually right. But that is too
+vague—like saying that some countries are rich and others poor due to
+economics. Exactly how does politics keep governments from making better
+policy, even in the face of imminent crises? What does that tell us about
+how economic policy can and should be made? 
+ 
+Political economyis about how politics affects the economy and the economy affects politics
+(see box). Governments try to pump up the economy before elections, so that
+so-called political business cycles create ebbs and flows of economic
+activity around elections. By the same token, economic conditions have a
+powerful impact on elections. Political economists have uncovered the
+simple (perhaps disturbing) fact that the rates of economic growth and
+inflation are all the information we need to predict quite accurately the
+results of the past 100 years of US presidential elections (see, for
+example, Fair 2018). So why don’t elections work to push politicians to
+choose the best policies? 
+ 
+Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate. 
+ 
+Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines. 
+ 
+For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention. 
+ 
+By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy. 
+ 
+Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways: 
+ 
+It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy. 
+ 
+It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity. 
+ 
+It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics. 
+ 
+All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society. 
+ 
+A basic economic principle is that any policy that is good for society as a
+whole can be made to be good for everyone in society, even if the policy
+creates winners and losers. It requires only that the winners be taxed just
+a bit to compensate the losers—and everyone is better off. Economists use
+powerful tools to clarify which economic policies are best for society. So
+why should economic policy be controversial? 
+ 
+A basicpolitical economyprinciple is that the winners don’t like
+being taxed to compensate losers. And the battle is joined, not over what
+is best for society but rather over who will be the winners and losers.
+What is best for the country may not be best for my region, or group, or
+industry, or class—and so I will fight it. 
+ 
+Even in democracies, plenty of citizens might agree that politics obeys the
+golden rule: those with the gold make the rules. Special-interest groups do
+seem to play an outsize role around the world, democratic or not. These
+include wealthy individuals, powerful industries, big banks and
+corporations, and formidable labor unions. 
+ 
+How else to explain why Americans pay two or three times the world price
+for sugar? There are a handful of sugarcane plantations and a few thousand
+sugar beet farmers in the United States—and 330 million sugar consumers.
+You’d think that the 330 million would count for a lot more in politics
+than the several thousand, but you’d be wrong. For decades, subsidies and
+trade barriers have raised the price of sugar to the benefit of the sugar
+planters and farmers and to the detriment of everyone else. 
+ 
+Why does a tiny group of sugar producers matter more than the rest of the
+country? A commonplace of political economy is thatconcentratedinterests usually win overdiffuseinterests. The sugar producers
+are well organized and work hard to influence politicians. If they didn’t
+get favorable government treatment they’d go out of business, so it’s
+important for them to organize to lobby and fund politicians. The cost to
+consumers is estimated at $2 billion to $3 billion a year. That’s a lot of
+money—but it comes to a couple of cents a day for the average American. No
+consumer is going to talk to an elected representative or threaten to vote
+for an opponent over a couple of cents a day. 
+ 
+The fact that producers are concentrated while consumers are diffuse helps
+explain trade protection. A few automobile manufacturers can organize
+themselves; tens of millions of car buyers can’t. That’s not all.
+Management and labor in the auto industry may not agree on much, but
+automakers and autoworkers agree that they want to be protected from
+foreign competition. Politicians—especially politicians from areas where
+automobile manufacturing is important—have a hard time denying a common
+demand of workers and owners in a powerful industry. 
+ 
+Perhaps this is not such a bad thing. Sugar farmers and autoworkers depend
+for their livelihood on supportive policies. Who is to say that their jobs
+are less important than lower prices for consumers? There is no simple,
+widely accepted way to balance the benefits against the costs—is cheaper
+sugar important enough to bankrupt thousands of hardworking farmers?
+Politics is, in fact, the way society adjudicates among conflicting
+interests, and maybe those with more at stake should have a bigger say. 
+ 
+Political economists don’t usually take stands on complicated moral and
+ethical issues of this sort. They try to understandwhysocieties
+choose to do what they do. The fact that sugar or car producers have much
+more at stake and are much better organized than sugar or car consumers
+helps explain why government policies favor sugar and car producers over
+consumers. 
+ 
+Some consumers are concentrated, though. Sugar is sweet, and the
+corporations of the Sweetener Users Association want it to be cheap as
+well. Coca-Cola, Hershey, and the like have pushed hard to change American
+sugar policy. The fact that there are powerful concentrated interests on
+both sides of the issue helps explain why prices aren’t even higher than
+they are. The same thing is true of industrial products. Steelmakers want
+protection; steel users—like the auto manufacturers—don’t. Trade policy is not just a battle between big corporations and
+disunited households; it’s also a battleamongbig corporations.
+Otherwise we’d expect every industry to be protected and trade to be
+tightly limited everywhere. 
+ 
+In fact, there are plenty of powerful interests infavorof
+international trade and investment. The world’s multinational corporations
+and international banks depend on an open flow of goods and capital. This
+is especially the case today, when many of the world’s largest companies
+depend on complex global supply chains. A typical international corporation
+today produces parts and components in dozens of countries, assembles them
+in dozens more, and sells the final products everywhere. Trade barriers
+interfere with these supply chains, which is why most of the world’s
+biggest companies are also some of the biggest supporters of freer trade. 
+ 
+In this 15-minute video, Prof. Jeffry Frieden responds to reader questions from around the world on political economy 
+ 
+Special interests as well as voters on different sides of every issue fight
+their battles in the political arena. But the rules of politics vary a lot
+from country to country. The way a political economy is organized affects
+who wins the battle over policy. 
+ 
+A logical starting point is elections, at least in democracies. Governments
+that don’t satisfy their constituents don’t remain governments very long.
+So we might expect democracies to choose policies that benefit the economy
+as a whole. However, the economy as a whole doesn’t vote. 
+ 
+Politicians need votes from the people who decide elections. The decisive
+or pivotal voters vary with a country’s electoral institutions and social
+divisions. In most political systems, the best targets are swing voters,
+who might change their vote in response to the policies of an incumbent or
+the promises of a challenger. If the poor vote for the left and the rich
+vote for the right, for example, the middle class could be decisive. In
+recent American presidential elections, the most important swing voters
+have been in distressed industrial regions of the Midwest. Many voters in
+these areas believe that foreign competition contributed to manufacturing
+decline. This helps explain why presidential candidates have become
+increasingly protectionist, even though most Americans support openness to
+trade. 
+ 
+In addition, policymakers in democratic societies must always pay attention
+to the next election—otherwise they are likely to cease being policymakers.
+This helps explain why it can be difficult for governments to pay money now
+for policies whose benefits will be realized only in the long run—such as
+pandemic prevention and preparedness. 
+ 
+The mass of special and general interests in society is overwhelming.Institutionshelp make sense of them. First aresocial institutions—the way people organize themselves. Some
+businesses, farmers, and workers are well organized, giving them more
+political clout. Farmers in rich countries are relatively few, are well
+organized, and are almost universally subsidized and protected. Farmers in
+poor countries are many, rarely organized, and almost universally taxed.
+Where workers are grouped into centralized labor federations, as in some
+northern European countries, they play a major role in national
+policymaking. The ways in which societies organize themselves—by economic
+sector, region, ethnicity—affect how they structure their politics. 
+ 
+Political institutionsmediate the pressures constituents bring to bear on leaders. Even in
+authoritarian countries, rulers have to pay attention to at least some part
+of public opinion. Political economists call this the “selectorate,” that
+portion of the population that matters to policymakers. In an authoritarian
+regime, this could be an economic elite or the armed forces. In an
+electoral democracy it would be voters and interest groups. No matter who
+matters, policymakers need their support to stay in office. 
+ 
+In democracies, the variety ofelectoral institutionsaffects how
+policymakers feel constituent pressures. Organized political parties can
+help extend the time horizons of politicians: while an individual
+politician may worry only about the next election, a party has to be
+concerned about its longer-term reputation. On another dimension, where
+politicians are elected by the country as a whole, as in Israel or the
+Netherlands, the focus is on national policy. Where politicians represent
+narrower geographic locations, as in the US House of Representatives, the
+general view is that “all politics is local” (usually attributed to
+1970s–80s Democratic Speaker of the House Tip O’Neill). These different
+electoral systems can drive politics toward more national or more local
+concerns. 
+ 
+Electoral institutions affect the identity of the people politicians need
+to attract to win an election. The US Electoral College makes
+middle-of-the-road voters in the Midwestern industrial states pivotal in
+presidential elections, driving the emphasis on protection for
+manufacturing. In a multiparty parliamentary system, the pivotal voters may
+be the supporters of a small party that can swing back and forth between
+coalition partners, such as the fringe parties for the formation of Israeli
+governments. Whichever voters the electoral system makes pivotal are likely
+to have outsize influence over politics and policy. 
+ 
+The character of legislative institutionsalso matters. For
+example, while a unitary parliamentary system can deliver big and fast
+change, in the US separation of powers system change is more modest and
+slower. Federal systems—in Australia, Brazil, Canada, Germany, the United
+States—give provincial or state governments a lot of power, while
+centralized systems allow the national government to rule unchallenged.
+Some governments have handed off control of important policies to
+independent bodies that are less subject to day-to-day political
+pressures—such as central banks and public health agencies. 
+ 
+These institutions matter because they affect the weights that politicians
+give to different groups in society. Some sociopolitical institutions give
+labor unions a great deal of influence; others privilege farmers; still
+others are dominated by business associations. Political economists analyze
+the interests in play and how the institutions of society transmit and
+transform them into government policy. 
+ 
+All this matters to policymakers or observers or even just people who care
+about the economy because it can profoundly change the way we think about
+policy and policy advice. 
+ 
+The policy that economic analysis indicates is best for the economy may not
+be politically feasible. To go back to free trade, virtually all economists
+would recommend that a small country’s best bet is to remove all trade
+barriers unilaterally. Yet it is almost certain that a government that
+attempted to move to unilateral free trade would face massive opposition
+from special interests and from many in the public who would regard such a
+move as dangerous. The result might well be the collapse of the government
+and its replacement with one that could be relied on to maintain and even
+expand trade barriers. In this case, pursuit of the first-best policy could
+lead to a much worse outcome. 
+ 
+Politicians, analysts, observers, and just regular people who are
+interested in economic policy are well advised to evaluate not only the
+economic implications of policy initiatives but also their political
+feasibility. If the pursuit of a first-best policy is bound to fail and
+perhaps provoke a backlash, then truly the cure may be worse than the
+disease. It makes more sense to consider the political realities the
+government faces and to structure policy with those realities in mind. It
+is better to settle for second-best than to insist on first-best and end up
+worse—or, as folk wisdom has it, to let the perfect be the enemy of the
+good. 
+ 
+Political economy is the integration of political and economic factors in
+our analysis of modern society. Inasmuch as just about everyone would agree
+that politics and economics are intricately and irretrievably
+interwoven—politics affects the economy and the economy affects
+politics—this approach seems natural. It has proved itself powerful inunderstandinggovernments and societies; it can also be a powerful
+tool for those interested inchanginggovernments and societies.
+Policymakers should hold these important lessons in mind today as they
+tackle the COVID-19 pandemic. 
+ 
+JEFFRY FRIEDENis Professor of Government at Harvard University 
+ 
+Opinions expressed in articles and other materials are those of the authors; they do not necessarily reflect IMF policy. 
+ 
+Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT. 
+ 
+Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10. 
+ 
+© International Monetary Fund. All rights reserved. 
+ 
+Finance & Development 
+ 
+The Political Economy of Economic Policy 
+ 
+FACTSHEETS 
+ 
+RESOURCES 
+ 
+TOPICS 
+ 
+Flagship Publications 
+ 
+Other Publications 
+ 
+IMF reports and publications by country 
+ 
+Regional Offices 
+ 
+All News 
+ 
+See Also 
+ 
+For Journalists 
+ 
+RESOURCES 
+ 
+FLAGSHIPS 
+ 
+KEY SERIES 
+ 
+IMF NOTES 
+ 
+Related Features 
+ 
+You might also like 
+ 
+Press Center 
+ 
+Latest Issues 
+ 
+Politics at play 
+ 
+What Is Political Economy? 
+ 
+Where you stand depends on where you sit 
+ 
+A complex web 
+ 
+Second-best can be best 
+ 
+Bottom line 
+ 
+References: 
+ 
+March 2024 
+ 
+December 2023 
+ 
+September 2023 
+ 
+June 2023 
+ 
+About Us 
+ 
+Social Media 
+ 
+F&D STAFF 
+ 
+AboutFACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll Topics 
+ 
+FACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll Topics 
+ 
+FACTSHEETS 
+ 
+RESOURCES 
+ 
+TOPICS 
+ 
+IMF at a Glance 
+ 
+Surveillance 
+ 
+Lending 
+ 
+Capacity Development 
+ 
+IMF Factsheets List 
+ 
+IMF Members 
+ 
+IMF Timeline 
+ 
+Senior Officials 
+ 
+Job Opportunities 
+ 
+Archives of the IMF 
+ 
+Climate Change 
+ 
+Fintech 
+ 
+Fiscal Policies 
+ 
+Income Inequality 
+ 
+All Topics 
+ 
+ResearchFlagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF Events 
+ 
+Flagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF Events 
+ 
+Flagship Publications 
+ 
+Other Publications 
+ 
+World Economic Outlook 
+ 
+Global Financial Stability Report 
+ 
+Fiscal Monitor 
+ 
+External Sector Report 
+ 
+Staff Discussion Notes 
+ 
+Working Papers 
+ 
+IMF Research Perspectives 
+ 
+Economic Review 
+ 
+Global Housing Watch 
+ 
+Commodity Prices 
+ 
+Commodities Data Portal 
+ 
+IMF Researchers 
+ 
+Annual Research Conference 
+ 
+Other IMF Events 
+ 
+CountriesIMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific Islands 
+ 
+IMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific Islands 
+ 
+IMF reports and publications by country 
+ 
+Regional Offices 
+ 
+A 
+ 
+B 
+ 
+C 
+ 
+D 
+ 
+E 
+ 
+F 
+ 
+G 
+ 
+H 
+ 
+I 
+ 
+J 
+ 
+K 
+ 
+L 
+ 
+M 
+ 
+N 
+ 
+O 
+ 
+P 
+ 
+Q 
+ 
+R 
+ 
+S 
+ 
+T 
+ 
+U 
+ 
+V 
+ 
+Y 
+ 
+Z 
+ 
+IMF Resident Representative Offices 
+ 
+IMF Regional Reports 
+ 
+IMF and Europe 
+ 
+IMF Members' Quotas and Voting Power, and Board of Governors 
+ 
+IMF Regional Office for Asia and the Pacific 
+ 
+IMF Capacity Development Office in Thailand (CDOT) 
+ 
+IMF Regional Office in Central America, Panama, and the Dominican Republic 
+ 
+Eastern Caribbean Currency Union (ECCU) 
+ 
+IMF Europe Office in Paris and Brussels 
+ 
+IMF Office in the Pacific Islands 
+ 
+Capacity DevelopmentAbout UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and Policies 
+ 
+About UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and Policies 
+ 
+About Us 
+ 
+What We Do 
+ 
+How We Work 
+ 
+IMF Training 
+ 
+Digital Training Catalog 
+ 
+Online Learning 
+ 
+Our Partners 
+ 
+Country Stories 
+ 
+Technical Assistance Reports 
+ 
+High-Level Summary Technical Assistance Reports 
+ 
+Strategy and Policies 
+ 
+NewsAll NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interest 
+ 
+All NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interest 
+ 
+All News 
+ 
+See Also 
+ 
+For Journalists 
+ 
+Country Focus 
+ 
+Chart of the Week 
+ 
+Communiqués 
+ 
+Mission Concluding Statements 
+ 
+Press Releases 
+ 
+Speeches 
+ 
+Statements at Donor Meetings 
+ 
+Transcripts 
+ 
+Views & Commentaries 
+ 
+IMFBlog 
+ 
+Article IV Consultations 
+ 
+Financial Sector Assessment Program (FSAP) 
+ 
+Seminars, Conferences, & Other Events 
+ 
+E-mail Notification 
+ 
+Press CenterThe IMF Press Center is a password-protected site for working journalists. 
+ 
+LoginorRegister 
+ 
+Information of interest 
+ 
+VideosAbout the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost Popular 
+ 
+About the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost Popular 
+ 
+About the IMF 
+ 
+Conferences 
+ 
+Press briefings 
+ 
+Speeches 
+ 
+Special Features 
+ 
+Africa 
+ 
+Americas 
+ 
+Asia 
+ 
+Europe 
+ 
+Middle East and Central Asia 
+ 
+Economic Outlook 
+ 
+Annual and spring meetings 
+ 
+Capacity Development 
+ 
+Most Recent 
+ 
+Most Popular 
+ 
+DataIMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance Statistics 
+ 
+IMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance Statistics 
+ 
+IMF Finances 
+ 
+Additional Data Sources 
+ 
+World Economic Outlook Databases 
+ 
+Climate Change Indicators Dashboard 
+ 
+IMF eLibrary-Data 
+ 
+International Financial Statistics 
+ 
+G20 Data Gaps Initiative 
+ 
+Currency Composition of Official Foreign Exchange Reserves 
+ 
+Financial Access Survey 
+ 
+Government Finance Statistics 
+ 
+PublicationsRESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+RESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+RESOURCES 
+ 
+FLAGSHIPS 
+ 
+KEY SERIES 
+ 
+IMF NOTES 
+ 
+Publications Advanced Search 
+ 
+IMF eLibrary 
+ 
+IMF Bookstore 
+ 
+Publications Newsletter 
+ 
+Essential Reading Guides 
+ 
+World Economic Outlook 
+ 
+Global Financial Stability Report 
+ 
+Fiscal Monitor 
+ 
+External Sector Report 
+ 
+Regional Economic Reports 
+ 
+Country Reports 
+ 
+Departmental Papers 
+ 
+Policy Papers 
+ 
+Staff Discussion Notes 
+ 
+Selected Issues Papers 
+ 
+All Staff Notes Series 
+ 
+Analytical Notes 
+ 
+Fintech Notes 
+ 
+How-To Notes 
+ 
+Staff Climate Notes 
+ 
+March of the Models 
+ 
+The Social Costs of Price 
+ 
+A Place for Politics 
+ 
+Gillian Tett on Anthropology for the Modern Economist 
+ 
+A Road Well Traveled 
+ 
+Revisiting the Soviet Breakup 
+ 
+F&D HOMEPAGE 
+ 
+About F&D Magazine 
+ 
+Contact Us 
+ 
+F&D on Facebook 
+ 
+F&D on LinkedIn 
+ 
+Gita Bhatt, Editor-In-Chief 
+ 
+Maureen Burke,  Managing Editor 
+ 
+Peter J. Walker, Senior Editor 
+ 
+Jeff Kearns, Senior Editor 
+ 
+Nicholas Owen, Senior Editor 
+ 
+Smita Aggarwal, Assistant Editor 
+ 
+Andrew Stanley, Assistant Editor 
+ 
+Bruce Edwards, Multimedia Content 
+ 
+Noha Elbadawy, Multimedia content 
+ 
+Melinda Weir,  Production Manager 
+ 
+Rekia Ennaboulssi, Web Manager 
+ 
+Marta Doroszczyk, Digital Marketing 
+ 
+Kwabena Akuamoah-Boateng, Social Media Editor 
+ 
+About 
+ 
+Research 
+ 
+Countries 
+ 
+Capacity Development 
+ 
+News 
+ 
+Events 
+ 
+Videos 
+ 
+Data 
+ 
+Publications 
+ 
+Social Media Hub 
+ 
+Annual Report 
+ 
+Copyright and Usage 
+ 
+Privacy Policy 
+ 
+Contact Us 
+ 
+Careers 
+ 
+Glossary 
+ 
+Scam Alert 
+ 
+IMF Brand 
+ 
+عربي 
+ 
+中文 
+ 
+Français 
+ 
+日本語 
+ 
+Русский 
+ 
+Español 
+ 
+AboutFACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll TopicsResearchFlagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF EventsCountriesIMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific IslandsCapacity DevelopmentAbout UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and PoliciesNewsAll NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interestVideosAbout the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost PopularDataIMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance StatisticsPublicationsRESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate NotesFinance & DevelopmentThe Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020Englishالعربيةespañolfrançais日本語русский中文5 min(1403 words)ReadDownload PDFWe should pay closer attention to the interactions between politics, economics, and other realmsThe COVID-19 pandemic strikingly illustrates the intersection of politics,
+economics, and other considerations. Public health experts have long warned
+that the world was likely to face a major pandemic and called for greater
+preparedness. Yet policymakers who have to focus on the next election find
+it difficult to invest the time, money, and political capital to address
+the abstract possibility of a future crisis. And so most of the world was
+unprepared for a global public health threat of the magnitude posed by the
+novel coronavirus.As the pandemic has raced across the world, the policy response has
+continued to be tempered by political realities. Some members of the
+public, and some policymakers, have resisted the recommendations of public
+health experts, hoping for relaxed restrictions and a return to normalcy
+before the dangers have passed. At the same time, business interests have
+pressed for exceptions to benefit themselves, and for substantial
+subsidies—bailouts—to help them through difficult times.At the international level, government responses to the pandemic illustrate
+the difficult politics of worldwide cooperation. A global pandemic requires
+a global response: microbes do not respect borders. A coordinated
+international response is clearly the best way to confront an international
+public health emergency. Yet policymakers under pressure from their
+constituents have diverted resources away from other countries, banned the
+export of food and drugs, and hoarded essential supplies. Each of these
+measures—popular as they may be to national publics—imposes costs on other
+countries. In the final analysis, the lack of cooperation makes everyone
+worse off. Such international institutions as theWorld Health Organizationattempt to coordinate a cooperative global response to the global
+crisis—but they can be powerless in the face of potent nationalist
+political pressures (see, for example, Goodman and others 2010).Every government faces tough decisions about the appropriate measures: what
+restrictions to impose and when to loosen them, where money will be spent
+and how it will be raised, and what national concerns can be limited to
+favor international cooperation. These decisions have to take into account
+public health recommendations, economic considerations, and political
+constraints. Just as the policy response to the 2007–08 financial crisis
+varied from country to country in line with local political economy
+conditions, so national policy responses to the COVID-19 pandemic vary for
+health, economic, and political reasons.Politics at playThis hotly contested policy response to a universal threat is no surprise
+to political economists. It happens all the time. For example, just about
+every economist believes that small countries would be better off if they
+removed all barriers to trade. Yet unilateral free trade is practically
+unheard of, and no country in the world today pursues it. Why not? More
+generally, why do governments have so much trouble getting economic
+policies right? Why does the advice of independent observers, analysts, and
+scholars go so often unheeded?Politicsis the usual answer, and the answer is usually right. But that is too
+vague—like saying that some countries are rich and others poor due to
+economics. Exactly how does politics keep governments from making better
+policy, even in the face of imminent crises? What does that tell us about
+how economic policy can and should be made?Political economyis about how politics affects the economy and the economy affects politics
+(see box). Governments try to pump up the economy before elections, so that
+so-called political business cycles create ebbs and flows of economic
+activity around elections. By the same token, economic conditions have a
+powerful impact on elections. Political economists have uncovered the
+simple (perhaps disturbing) fact that the rates of economic growth and
+inflation are all the information we need to predict quite accurately the
+results of the past 100 years of US presidential elections (see, for
+example, Fair 2018). So why don’t elections work to push politicians to
+choose the best policies?What Is Political Economy?Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate.Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines.For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention.By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy.Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways:It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy.It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity.It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics.All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society.Where you stand depends on where you sitA basic economic principle is that any policy that is good for society as a
+whole can be made to be good for everyone in society, even if the policy
+creates winners and losers. It requires only that the winners be taxed just
+a bit to compensate the losers—and everyone is better off. Economists use
+powerful tools to clarify which economic policies are best for society. So
+why should economic policy be controversial?A basicpolitical economyprinciple is that the winners don’t like
+being taxed to compensate losers. And the battle is joined, not over what
+is best for society but rather over who will be the winners and losers.
+What is best for the country may not be best for my region, or group, or
+industry, or class—and so I will fight it.Even in democracies, plenty of citizens might agree that politics obeys the
+golden rule: those with the gold make the rules. Special-interest groups do
+seem to play an outsize role around the world, democratic or not. These
+include wealthy individuals, powerful industries, big banks and
+corporations, and formidable labor unions.How else to explain why Americans pay two or three times the world price
+for sugar? There are a handful of sugarcane plantations and a few thousand
+sugar beet farmers in the United States—and 330 million sugar consumers.
+You’d think that the 330 million would count for a lot more in politics
+than the several thousand, but you’d be wrong. For decades, subsidies and
+trade barriers have raised the price of sugar to the benefit of the sugar
+planters and farmers and to the detriment of everyone else.Why does a tiny group of sugar producers matter more than the rest of the
+country? A commonplace of political economy is thatconcentratedinterests usually win overdiffuseinterests. The sugar producers
+are well organized and work hard to influence politicians. If they didn’t
+get favorable government treatment they’d go out of business, so it’s
+important for them to organize to lobby and fund politicians. The cost to
+consumers is estimated at $2 billion to $3 billion a year. That’s a lot of
+money—but it comes to a couple of cents a day for the average American. No
+consumer is going to talk to an elected representative or threaten to vote
+for an opponent over a couple of cents a day.The fact that producers are concentrated while consumers are diffuse helps
+explain trade protection. A few automobile manufacturers can organize
+themselves; tens of millions of car buyers can’t. That’s not all.
+Management and labor in the auto industry may not agree on much, but
+automakers and autoworkers agree that they want to be protected from
+foreign competition. Politicians—especially politicians from areas where
+automobile manufacturing is important—have a hard time denying a common
+demand of workers and owners in a powerful industry.Perhaps this is not such a bad thing. Sugar farmers and autoworkers depend
+for their livelihood on supportive policies. Who is to say that their jobs
+are less important than lower prices for consumers? There is no simple,
+widely accepted way to balance the benefits against the costs—is cheaper
+sugar important enough to bankrupt thousands of hardworking farmers?
+Politics is, in fact, the way society adjudicates among conflicting
+interests, and maybe those with more at stake should have a bigger say.Political economists don’t usually take stands on complicated moral and
+ethical issues of this sort. They try to understandwhysocieties
+choose to do what they do. The fact that sugar or car producers have much
+more at stake and are much better organized than sugar or car consumers
+helps explain why government policies favor sugar and car producers over
+consumers.Some consumers are concentrated, though. Sugar is sweet, and the
+corporations of the Sweetener Users Association want it to be cheap as
+well. Coca-Cola, Hershey, and the like have pushed hard to change American
+sugar policy. The fact that there are powerful concentrated interests on
+both sides of the issue helps explain why prices aren’t even higher than
+they are. The same thing is true of industrial products. Steelmakers want
+protection; steel users—like the auto manufacturers—don’t. Trade policy is not just a battle between big corporations and
+disunited households; it’s also a battleamongbig corporations.
+Otherwise we’d expect every industry to be protected and trade to be
+tightly limited everywhere.In fact, there are plenty of powerful interests infavorof
+international trade and investment. The world’s multinational corporations
+and international banks depend on an open flow of goods and capital. This
+is especially the case today, when many of the world’s largest companies
+depend on complex global supply chains. A typical international corporation
+today produces parts and components in dozens of countries, assembles them
+in dozens more, and sells the final products everywhere. Trade barriers
+interfere with these supply chains, which is why most of the world’s
+biggest companies are also some of the biggest supporters of freer trade.In this 15-minute video, Prof. Jeffry Frieden responds to reader questions from around the world on political economyA complex webSpecial interests as well as voters on different sides of every issue fight
+their battles in the political arena. But the rules of politics vary a lot
+from country to country. The way a political economy is organized affects
+who wins the battle over policy.A logical starting point is elections, at least in democracies. Governments
+that don’t satisfy their constituents don’t remain governments very long.
+So we might expect democracies to choose policies that benefit the economy
+as a whole. However, the economy as a whole doesn’t vote.Politicians need votes from the people who decide elections. The decisive
+or pivotal voters vary with a country’s electoral institutions and social
+divisions. In most political systems, the best targets are swing voters,
+who might change their vote in response to the policies of an incumbent or
+the promises of a challenger. If the poor vote for the left and the rich
+vote for the right, for example, the middle class could be decisive. In
+recent American presidential elections, the most important swing voters
+have been in distressed industrial regions of the Midwest. Many voters in
+these areas believe that foreign competition contributed to manufacturing
+decline. This helps explain why presidential candidates have become
+increasingly protectionist, even though most Americans support openness to
+trade.In addition, policymakers in democratic societies must always pay attention
+to the next election—otherwise they are likely to cease being policymakers.
+This helps explain why it can be difficult for governments to pay money now
+for policies whose benefits will be realized only in the long run—such as
+pandemic prevention and preparedness.The mass of special and general interests in society is overwhelming.Institutionshelp make sense of them. First aresocial institutions—the way people organize themselves. Some
+businesses, farmers, and workers are well organized, giving them more
+political clout. Farmers in rich countries are relatively few, are well
+organized, and are almost universally subsidized and protected. Farmers in
+poor countries are many, rarely organized, and almost universally taxed.
+Where workers are grouped into centralized labor federations, as in some
+northern European countries, they play a major role in national
+policymaking. The ways in which societies organize themselves—by economic
+sector, region, ethnicity—affect how they structure their politics.Political institutionsmediate the pressures constituents bring to bear on leaders. Even in
+authoritarian countries, rulers have to pay attention to at least some part
+of public opinion. Political economists call this the “selectorate,” that
+portion of the population that matters to policymakers. In an authoritarian
+regime, this could be an economic elite or the armed forces. In an
+electoral democracy it would be voters and interest groups. No matter who
+matters, policymakers need their support to stay in office.In democracies, the variety ofelectoral institutionsaffects how
+policymakers feel constituent pressures. Organized political parties can
+help extend the time horizons of politicians: while an individual
+politician may worry only about the next election, a party has to be
+concerned about its longer-term reputation. On another dimension, where
+politicians are elected by the country as a whole, as in Israel or the
+Netherlands, the focus is on national policy. Where politicians represent
+narrower geographic locations, as in the US House of Representatives, the
+general view is that “all politics is local” (usually attributed to
+1970s–80s Democratic Speaker of the House Tip O’Neill). These different
+electoral systems can drive politics toward more national or more local
+concerns.Electoral institutions affect the identity of the people politicians need
+to attract to win an election. The US Electoral College makes
+middle-of-the-road voters in the Midwestern industrial states pivotal in
+presidential elections, driving the emphasis on protection for
+manufacturing. In a multiparty parliamentary system, the pivotal voters may
+be the supporters of a small party that can swing back and forth between
+coalition partners, such as the fringe parties for the formation of Israeli
+governments. Whichever voters the electoral system makes pivotal are likely
+to have outsize influence over politics and policy.The character of legislative institutionsalso matters. For
+example, while a unitary parliamentary system can deliver big and fast
+change, in the US separation of powers system change is more modest and
+slower. Federal systems—in Australia, Brazil, Canada, Germany, the United
+States—give provincial or state governments a lot of power, while
+centralized systems allow the national government to rule unchallenged.
+Some governments have handed off control of important policies to
+independent bodies that are less subject to day-to-day political
+pressures—such as central banks and public health agencies.These institutions matter because they affect the weights that politicians
+give to different groups in society. Some sociopolitical institutions give
+labor unions a great deal of influence; others privilege farmers; still
+others are dominated by business associations. Political economists analyze
+the interests in play and how the institutions of society transmit and
+transform them into government policy.Second-best can be bestAll this matters to policymakers or observers or even just people who care
+about the economy because it can profoundly change the way we think about
+policy and policy advice.The policy that economic analysis indicates is best for the economy may not
+be politically feasible. To go back to free trade, virtually all economists
+would recommend that a small country’s best bet is to remove all trade
+barriers unilaterally. Yet it is almost certain that a government that
+attempted to move to unilateral free trade would face massive opposition
+from special interests and from many in the public who would regard such a
+move as dangerous. The result might well be the collapse of the government
+and its replacement with one that could be relied on to maintain and even
+expand trade barriers. In this case, pursuit of the first-best policy could
+lead to a much worse outcome.Politicians, analysts, observers, and just regular people who are
+interested in economic policy are well advised to evaluate not only the
+economic implications of policy initiatives but also their political
+feasibility. If the pursuit of a first-best policy is bound to fail and
+perhaps provoke a backlash, then truly the cure may be worse than the
+disease. It makes more sense to consider the political realities the
+government faces and to structure policy with those realities in mind. It
+is better to settle for second-best than to insist on first-best and end up
+worse—or, as folk wisdom has it, to let the perfect be the enemy of the
+good.Bottom linePolitical economy is the integration of political and economic factors in
+our analysis of modern society. Inasmuch as just about everyone would agree
+that politics and economics are intricately and irretrievably
+interwoven—politics affects the economy and the economy affects
+politics—this approach seems natural. It has proved itself powerful inunderstandinggovernments and societies; it can also be a powerful
+tool for those interested inchanginggovernments and societies.
+Policymakers should hold these important lessons in mind today as they
+tackle the COVID-19 pandemic.JEFFRY FRIEDENis Professor of Government at Harvard UniversityOpinions expressed in articles and other materials are those of the authors; they do not necessarily reflect IMF policy.References:Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT.Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10.Related FeaturesYou might also likeMarch of the ModelsThe Social Costs of PriceA Place for PoliticsGillian Tett on Anthropology for the Modern EconomistA Road Well TraveledRevisiting the Soviet BreakupF&D HOMEPAGELatest IssuesMarch 2024Englishالعربيةespañolfrançais日本語русский中文December 2023Englishالعربيةespañolfrançais日本語русский中文September 2023Englishالعربيةespañolfrançais日本語русский中文June 2023Englishالعربيةespañolfrançais日本語русский中文MoreAbout UsAbout F&D MagazineContact UsSocial MediaF&D on FacebookF&D on LinkedInF&D STAFFGita Bhatt, Editor-In-ChiefMaureen Burke,  Managing EditorPeter J. Walker, Senior EditorJeff Kearns, Senior EditorNicholas Owen, Senior EditorSmita Aggarwal, Assistant EditorAndrew Stanley, Assistant EditorBruce Edwards, Multimedia ContentNoha Elbadawy, Multimedia contentMelinda Weir,  Production ManagerRekia Ennaboulssi, Web ManagerMarta Doroszczyk, Digital MarketingKwabena Akuamoah-Boateng, Social Media Editor 
+ 
+AboutFACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll TopicsResearchFlagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF EventsCountriesIMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific IslandsCapacity DevelopmentAbout UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and PoliciesNewsAll NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interestVideosAbout the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost PopularDataIMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance StatisticsPublicationsRESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+AboutFACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll TopicsResearchFlagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF EventsCountriesIMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific IslandsCapacity DevelopmentAbout UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and PoliciesNewsAll NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interestVideosAbout the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost PopularDataIMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance StatisticsPublicationsRESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+AboutFACTSHEETSRESOURCESTOPICSIMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll TopicsResearchFlagship PublicationsOther PublicationsWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF EventsCountriesIMF reports and publications by countryRegional OfficesABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific IslandsCapacity DevelopmentAbout UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and PoliciesNewsAll NewsSee AlsoFor JournalistsCountry FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interestVideosAbout the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost PopularDataIMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance StatisticsPublicationsRESOURCESFLAGSHIPSKEY SERIESIMF NOTESPublications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+FACTSHEETSRESOURCESTOPICS 
+ 
+IMF at a GlanceSurveillanceLendingCapacity DevelopmentIMF Factsheets ListIMF MembersIMF TimelineSenior OfficialsJob OpportunitiesArchives of the IMFClimate ChangeFintechFiscal PoliciesIncome InequalityAll Topics 
+ 
+Flagship PublicationsOther Publications 
+ 
+World Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportStaff Discussion NotesWorking PapersIMF Research PerspectivesEconomic ReviewGlobal Housing WatchCommodity PricesCommodities Data PortalIMF ResearchersAnnual Research ConferenceOther IMF Events 
+ 
+IMF reports and publications by countryRegional Offices 
+ 
+ABCDEFGHIJKLMNOPQRSTUVYZIMF Resident Representative OfficesIMF Regional ReportsIMF and EuropeIMF Members' Quotas and Voting Power, and Board of GovernorsIMF Regional Office for Asia and the PacificIMF Capacity Development Office in Thailand (CDOT)IMF Regional Office in Central America, Panama, and the Dominican RepublicEastern Caribbean Currency Union (ECCU)IMF Europe Office in Paris and BrusselsIMF Office in the Pacific Islands 
+ 
+About UsWhat We DoHow We WorkIMF TrainingDigital Training CatalogOnline LearningOur PartnersCountry StoriesTechnical Assistance ReportsHigh-Level Summary Technical Assistance ReportsStrategy and Policies 
+ 
+All NewsSee AlsoFor Journalists 
+ 
+Country FocusChart of the WeekCommuniquésMission Concluding StatementsPress ReleasesSpeechesStatements at Donor MeetingsTranscriptsViews & CommentariesIMFBlogArticle IV ConsultationsFinancial Sector Assessment Program (FSAP)Seminars, Conferences, & Other EventsE-mail NotificationPress CenterThe IMF Press Center is a password-protected site for working journalists.LoginorRegisterInformation of interest 
+ 
+About the IMFConferencesPress briefingsSpeechesSpecial FeaturesAfricaAmericasAsiaEuropeMiddle East and Central AsiaEconomic OutlookAnnual and spring meetingsCapacity DevelopmentMost RecentMost Popular 
+ 
+IMF FinancesAdditional Data SourcesWorld Economic Outlook DatabasesClimate Change Indicators DashboardIMF eLibrary-DataInternational Financial StatisticsG20 Data Gaps InitiativeCurrency Composition of Official Foreign Exchange ReservesFinancial Access SurveyGovernment Finance Statistics 
+ 
+RESOURCESFLAGSHIPSKEY SERIESIMF NOTES 
+ 
+Publications Advanced SearchIMF eLibraryIMF BookstorePublications NewsletterEssential Reading GuidesWorld Economic OutlookGlobal Financial Stability ReportFiscal MonitorExternal Sector ReportRegional Economic ReportsCountry ReportsDepartmental PapersPolicy PapersStaff Discussion NotesSelected Issues PapersAll Staff Notes SeriesAnalytical NotesFintech NotesHow-To NotesStaff Climate Notes 
+ 
+Finance & Development 
+ 
+Finance & Development 
+ 
+The Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020 
+ 
+The Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020 
+ 
+The Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020 
+ 
+The Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020 
+ 
+The Political Economy of Economic PolicyJEFFRY FRIEDENJune 2020 
+ 
+Englishالعربيةespañolfrançais日本語русский中文5 min(1403 words)ReadDownload PDFWe should pay closer attention to the interactions between politics, economics, and other realmsThe COVID-19 pandemic strikingly illustrates the intersection of politics,
+economics, and other considerations. Public health experts have long warned
+that the world was likely to face a major pandemic and called for greater
+preparedness. Yet policymakers who have to focus on the next election find
+it difficult to invest the time, money, and political capital to address
+the abstract possibility of a future crisis. And so most of the world was
+unprepared for a global public health threat of the magnitude posed by the
+novel coronavirus.As the pandemic has raced across the world, the policy response has
+continued to be tempered by political realities. Some members of the
+public, and some policymakers, have resisted the recommendations of public
+health experts, hoping for relaxed restrictions and a return to normalcy
+before the dangers have passed. At the same time, business interests have
+pressed for exceptions to benefit themselves, and for substantial
+subsidies—bailouts—to help them through difficult times.At the international level, government responses to the pandemic illustrate
+the difficult politics of worldwide cooperation. A global pandemic requires
+a global response: microbes do not respect borders. A coordinated
+international response is clearly the best way to confront an international
+public health emergency. Yet policymakers under pressure from their
+constituents have diverted resources away from other countries, banned the
+export of food and drugs, and hoarded essential supplies. Each of these
+measures—popular as they may be to national publics—imposes costs on other
+countries. In the final analysis, the lack of cooperation makes everyone
+worse off. Such international institutions as theWorld Health Organizationattempt to coordinate a cooperative global response to the global
+crisis—but they can be powerless in the face of potent nationalist
+political pressures (see, for example, Goodman and others 2010).Every government faces tough decisions about the appropriate measures: what
+restrictions to impose and when to loosen them, where money will be spent
+and how it will be raised, and what national concerns can be limited to
+favor international cooperation. These decisions have to take into account
+public health recommendations, economic considerations, and political
+constraints. Just as the policy response to the 2007–08 financial crisis
+varied from country to country in line with local political economy
+conditions, so national policy responses to the COVID-19 pandemic vary for
+health, economic, and political reasons.Politics at playThis hotly contested policy response to a universal threat is no surprise
+to political economists. It happens all the time. For example, just about
+every economist believes that small countries would be better off if they
+removed all barriers to trade. Yet unilateral free trade is practically
+unheard of, and no country in the world today pursues it. Why not? More
+generally, why do governments have so much trouble getting economic
+policies right? Why does the advice of independent observers, analysts, and
+scholars go so often unheeded?Politicsis the usual answer, and the answer is usually right. But that is too
+vague—like saying that some countries are rich and others poor due to
+economics. Exactly how does politics keep governments from making better
+policy, even in the face of imminent crises? What does that tell us about
+how economic policy can and should be made?Political economyis about how politics affects the economy and the economy affects politics
+(see box). Governments try to pump up the economy before elections, so that
+so-called political business cycles create ebbs and flows of economic
+activity around elections. By the same token, economic conditions have a
+powerful impact on elections. Political economists have uncovered the
+simple (perhaps disturbing) fact that the rates of economic growth and
+inflation are all the information we need to predict quite accurately the
+results of the past 100 years of US presidential elections (see, for
+example, Fair 2018). So why don’t elections work to push politicians to
+choose the best policies?What Is Political Economy?Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate.Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines.For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention.By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy.Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways:It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy.It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity.It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics.All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society.Where you stand depends on where you sitA basic economic principle is that any policy that is good for society as a
+whole can be made to be good for everyone in society, even if the policy
+creates winners and losers. It requires only that the winners be taxed just
+a bit to compensate the losers—and everyone is better off. Economists use
+powerful tools to clarify which economic policies are best for society. So
+why should economic policy be controversial?A basicpolitical economyprinciple is that the winners don’t like
+being taxed to compensate losers. And the battle is joined, not over what
+is best for society but rather over who will be the winners and losers.
+What is best for the country may not be best for my region, or group, or
+industry, or class—and so I will fight it.Even in democracies, plenty of citizens might agree that politics obeys the
+golden rule: those with the gold make the rules. Special-interest groups do
+seem to play an outsize role around the world, democratic or not. These
+include wealthy individuals, powerful industries, big banks and
+corporations, and formidable labor unions.How else to explain why Americans pay two or three times the world price
+for sugar? There are a handful of sugarcane plantations and a few thousand
+sugar beet farmers in the United States—and 330 million sugar consumers.
+You’d think that the 330 million would count for a lot more in politics
+than the several thousand, but you’d be wrong. For decades, subsidies and
+trade barriers have raised the price of sugar to the benefit of the sugar
+planters and farmers and to the detriment of everyone else.Why does a tiny group of sugar producers matter more than the rest of the
+country? A commonplace of political economy is thatconcentratedinterests usually win overdiffuseinterests. The sugar producers
+are well organized and work hard to influence politicians. If they didn’t
+get favorable government treatment they’d go out of business, so it’s
+important for them to organize to lobby and fund politicians. The cost to
+consumers is estimated at $2 billion to $3 billion a year. That’s a lot of
+money—but it comes to a couple of cents a day for the average American. No
+consumer is going to talk to an elected representative or threaten to vote
+for an opponent over a couple of cents a day.The fact that producers are concentrated while consumers are diffuse helps
+explain trade protection. A few automobile manufacturers can organize
+themselves; tens of millions of car buyers can’t. That’s not all.
+Management and labor in the auto industry may not agree on much, but
+automakers and autoworkers agree that they want to be protected from
+foreign competition. Politicians—especially politicians from areas where
+automobile manufacturing is important—have a hard time denying a common
+demand of workers and owners in a powerful industry.Perhaps this is not such a bad thing. Sugar farmers and autoworkers depend
+for their livelihood on supportive policies. Who is to say that their jobs
+are less important than lower prices for consumers? There is no simple,
+widely accepted way to balance the benefits against the costs—is cheaper
+sugar important enough to bankrupt thousands of hardworking farmers?
+Politics is, in fact, the way society adjudicates among conflicting
+interests, and maybe those with more at stake should have a bigger say.Political economists don’t usually take stands on complicated moral and
+ethical issues of this sort. They try to understandwhysocieties
+choose to do what they do. The fact that sugar or car producers have much
+more at stake and are much better organized than sugar or car consumers
+helps explain why government policies favor sugar and car producers over
+consumers.Some consumers are concentrated, though. Sugar is sweet, and the
+corporations of the Sweetener Users Association want it to be cheap as
+well. Coca-Cola, Hershey, and the like have pushed hard to change American
+sugar policy. The fact that there are powerful concentrated interests on
+both sides of the issue helps explain why prices aren’t even higher than
+they are. The same thing is true of industrial products. Steelmakers want
+protection; steel users—like the auto manufacturers—don’t. Trade policy is not just a battle between big corporations and
+disunited households; it’s also a battleamongbig corporations.
+Otherwise we’d expect every industry to be protected and trade to be
+tightly limited everywhere.In fact, there are plenty of powerful interests infavorof
+international trade and investment. The world’s multinational corporations
+and international banks depend on an open flow of goods and capital. This
+is especially the case today, when many of the world’s largest companies
+depend on complex global supply chains. A typical international corporation
+today produces parts and components in dozens of countries, assembles them
+in dozens more, and sells the final products everywhere. Trade barriers
+interfere with these supply chains, which is why most of the world’s
+biggest companies are also some of the biggest supporters of freer trade.In this 15-minute video, Prof. Jeffry Frieden responds to reader questions from around the world on political economyA complex webSpecial interests as well as voters on different sides of every issue fight
+their battles in the political arena. But the rules of politics vary a lot
+from country to country. The way a political economy is organized affects
+who wins the battle over policy.A logical starting point is elections, at least in democracies. Governments
+that don’t satisfy their constituents don’t remain governments very long.
+So we might expect democracies to choose policies that benefit the economy
+as a whole. However, the economy as a whole doesn’t vote.Politicians need votes from the people who decide elections. The decisive
+or pivotal voters vary with a country’s electoral institutions and social
+divisions. In most political systems, the best targets are swing voters,
+who might change their vote in response to the policies of an incumbent or
+the promises of a challenger. If the poor vote for the left and the rich
+vote for the right, for example, the middle class could be decisive. In
+recent American presidential elections, the most important swing voters
+have been in distressed industrial regions of the Midwest. Many voters in
+these areas believe that foreign competition contributed to manufacturing
+decline. This helps explain why presidential candidates have become
+increasingly protectionist, even though most Americans support openness to
+trade.In addition, policymakers in democratic societies must always pay attention
+to the next election—otherwise they are likely to cease being policymakers.
+This helps explain why it can be difficult for governments to pay money now
+for policies whose benefits will be realized only in the long run—such as
+pandemic prevention and preparedness.The mass of special and general interests in society is overwhelming.Institutionshelp make sense of them. First aresocial institutions—the way people organize themselves. Some
+businesses, farmers, and workers are well organized, giving them more
+political clout. Farmers in rich countries are relatively few, are well
+organized, and are almost universally subsidized and protected. Farmers in
+poor countries are many, rarely organized, and almost universally taxed.
+Where workers are grouped into centralized labor federations, as in some
+northern European countries, they play a major role in national
+policymaking. The ways in which societies organize themselves—by economic
+sector, region, ethnicity—affect how they structure their politics.Political institutionsmediate the pressures constituents bring to bear on leaders. Even in
+authoritarian countries, rulers have to pay attention to at least some part
+of public opinion. Political economists call this the “selectorate,” that
+portion of the population that matters to policymakers. In an authoritarian
+regime, this could be an economic elite or the armed forces. In an
+electoral democracy it would be voters and interest groups. No matter who
+matters, policymakers need their support to stay in office.In democracies, the variety ofelectoral institutionsaffects how
+policymakers feel constituent pressures. Organized political parties can
+help extend the time horizons of politicians: while an individual
+politician may worry only about the next election, a party has to be
+concerned about its longer-term reputation. On another dimension, where
+politicians are elected by the country as a whole, as in Israel or the
+Netherlands, the focus is on national policy. Where politicians represent
+narrower geographic locations, as in the US House of Representatives, the
+general view is that “all politics is local” (usually attributed to
+1970s–80s Democratic Speaker of the House Tip O’Neill). These different
+electoral systems can drive politics toward more national or more local
+concerns.Electoral institutions affect the identity of the people politicians need
+to attract to win an election. The US Electoral College makes
+middle-of-the-road voters in the Midwestern industrial states pivotal in
+presidential elections, driving the emphasis on protection for
+manufacturing. In a multiparty parliamentary system, the pivotal voters may
+be the supporters of a small party that can swing back and forth between
+coalition partners, such as the fringe parties for the formation of Israeli
+governments. Whichever voters the electoral system makes pivotal are likely
+to have outsize influence over politics and policy.The character of legislative institutionsalso matters. For
+example, while a unitary parliamentary system can deliver big and fast
+change, in the US separation of powers system change is more modest and
+slower. Federal systems—in Australia, Brazil, Canada, Germany, the United
+States—give provincial or state governments a lot of power, while
+centralized systems allow the national government to rule unchallenged.
+Some governments have handed off control of important policies to
+independent bodies that are less subject to day-to-day political
+pressures—such as central banks and public health agencies.These institutions matter because they affect the weights that politicians
+give to different groups in society. Some sociopolitical institutions give
+labor unions a great deal of influence; others privilege farmers; still
+others are dominated by business associations. Political economists analyze
+the interests in play and how the institutions of society transmit and
+transform them into government policy.Second-best can be bestAll this matters to policymakers or observers or even just people who care
+about the economy because it can profoundly change the way we think about
+policy and policy advice.The policy that economic analysis indicates is best for the economy may not
+be politically feasible. To go back to free trade, virtually all economists
+would recommend that a small country’s best bet is to remove all trade
+barriers unilaterally. Yet it is almost certain that a government that
+attempted to move to unilateral free trade would face massive opposition
+from special interests and from many in the public who would regard such a
+move as dangerous. The result might well be the collapse of the government
+and its replacement with one that could be relied on to maintain and even
+expand trade barriers. In this case, pursuit of the first-best policy could
+lead to a much worse outcome.Politicians, analysts, observers, and just regular people who are
+interested in economic policy are well advised to evaluate not only the
+economic implications of policy initiatives but also their political
+feasibility. If the pursuit of a first-best policy is bound to fail and
+perhaps provoke a backlash, then truly the cure may be worse than the
+disease. It makes more sense to consider the political realities the
+government faces and to structure policy with those realities in mind. It
+is better to settle for second-best than to insist on first-best and end up
+worse—or, as folk wisdom has it, to let the perfect be the enemy of the
+good.Bottom linePolitical economy is the integration of political and economic factors in
+our analysis of modern society. Inasmuch as just about everyone would agree
+that politics and economics are intricately and irretrievably
+interwoven—politics affects the economy and the economy affects
+politics—this approach seems natural. It has proved itself powerful inunderstandinggovernments and societies; it can also be a powerful
+tool for those interested inchanginggovernments and societies.
+Policymakers should hold these important lessons in mind today as they
+tackle the COVID-19 pandemic.JEFFRY FRIEDENis Professor of Government at Harvard UniversityOpinions expressed in articles and other materials are those of the authors; they do not necessarily reflect IMF policy.References:Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT.Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10.Related FeaturesYou might also likeMarch of the ModelsThe Social Costs of PriceA Place for PoliticsGillian Tett on Anthropology for the Modern EconomistA Road Well TraveledRevisiting the Soviet BreakupF&D HOMEPAGE 
+ 
+Englishالعربيةespañolfrançais日本語русский中文5 min(1403 words)ReadDownload PDFWe should pay closer attention to the interactions between politics, economics, and other realmsThe COVID-19 pandemic strikingly illustrates the intersection of politics,
+economics, and other considerations. Public health experts have long warned
+that the world was likely to face a major pandemic and called for greater
+preparedness. Yet policymakers who have to focus on the next election find
+it difficult to invest the time, money, and political capital to address
+the abstract possibility of a future crisis. And so most of the world was
+unprepared for a global public health threat of the magnitude posed by the
+novel coronavirus.As the pandemic has raced across the world, the policy response has
+continued to be tempered by political realities. Some members of the
+public, and some policymakers, have resisted the recommendations of public
+health experts, hoping for relaxed restrictions and a return to normalcy
+before the dangers have passed. At the same time, business interests have
+pressed for exceptions to benefit themselves, and for substantial
+subsidies—bailouts—to help them through difficult times.At the international level, government responses to the pandemic illustrate
+the difficult politics of worldwide cooperation. A global pandemic requires
+a global response: microbes do not respect borders. A coordinated
+international response is clearly the best way to confront an international
+public health emergency. Yet policymakers under pressure from their
+constituents have diverted resources away from other countries, banned the
+export of food and drugs, and hoarded essential supplies. Each of these
+measures—popular as they may be to national publics—imposes costs on other
+countries. In the final analysis, the lack of cooperation makes everyone
+worse off. Such international institutions as theWorld Health Organizationattempt to coordinate a cooperative global response to the global
+crisis—but they can be powerless in the face of potent nationalist
+political pressures (see, for example, Goodman and others 2010).Every government faces tough decisions about the appropriate measures: what
+restrictions to impose and when to loosen them, where money will be spent
+and how it will be raised, and what national concerns can be limited to
+favor international cooperation. These decisions have to take into account
+public health recommendations, economic considerations, and political
+constraints. Just as the policy response to the 2007–08 financial crisis
+varied from country to country in line with local political economy
+conditions, so national policy responses to the COVID-19 pandemic vary for
+health, economic, and political reasons.Politics at playThis hotly contested policy response to a universal threat is no surprise
+to political economists. It happens all the time. For example, just about
+every economist believes that small countries would be better off if they
+removed all barriers to trade. Yet unilateral free trade is practically
+unheard of, and no country in the world today pursues it. Why not? More
+generally, why do governments have so much trouble getting economic
+policies right? Why does the advice of independent observers, analysts, and
+scholars go so often unheeded?Politicsis the usual answer, and the answer is usually right. But that is too
+vague—like saying that some countries are rich and others poor due to
+economics. Exactly how does politics keep governments from making better
+policy, even in the face of imminent crises? What does that tell us about
+how economic policy can and should be made?Political economyis about how politics affects the economy and the economy affects politics
+(see box). Governments try to pump up the economy before elections, so that
+so-called political business cycles create ebbs and flows of economic
+activity around elections. By the same token, economic conditions have a
+powerful impact on elections. Political economists have uncovered the
+simple (perhaps disturbing) fact that the rates of economic growth and
+inflation are all the information we need to predict quite accurately the
+results of the past 100 years of US presidential elections (see, for
+example, Fair 2018). So why don’t elections work to push politicians to
+choose the best policies?What Is Political Economy?Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate.Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines.For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention.By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy.Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways:It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy.It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity.It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics.All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society.Where you stand depends on where you sitA basic economic principle is that any policy that is good for society as a
+whole can be made to be good for everyone in society, even if the policy
+creates winners and losers. It requires only that the winners be taxed just
+a bit to compensate the losers—and everyone is better off. Economists use
+powerful tools to clarify which economic policies are best for society. So
+why should economic policy be controversial?A basicpolitical economyprinciple is that the winners don’t like
+being taxed to compensate losers. And the battle is joined, not over what
+is best for society but rather over who will be the winners and losers.
+What is best for the country may not be best for my region, or group, or
+industry, or class—and so I will fight it.Even in democracies, plenty of citizens might agree that politics obeys the
+golden rule: those with the gold make the rules. Special-interest groups do
+seem to play an outsize role around the world, democratic or not. These
+include wealthy individuals, powerful industries, big banks and
+corporations, and formidable labor unions.How else to explain why Americans pay two or three times the world price
+for sugar? There are a handful of sugarcane plantations and a few thousand
+sugar beet farmers in the United States—and 330 million sugar consumers.
+You’d think that the 330 million would count for a lot more in politics
+than the several thousand, but you’d be wrong. For decades, subsidies and
+trade barriers have raised the price of sugar to the benefit of the sugar
+planters and farmers and to the detriment of everyone else.Why does a tiny group of sugar producers matter more than the rest of the
+country? A commonplace of political economy is thatconcentratedinterests usually win overdiffuseinterests. The sugar producers
+are well organized and work hard to influence politicians. If they didn’t
+get favorable government treatment they’d go out of business, so it’s
+important for them to organize to lobby and fund politicians. The cost to
+consumers is estimated at $2 billion to $3 billion a year. That’s a lot of
+money—but it comes to a couple of cents a day for the average American. No
+consumer is going to talk to an elected representative or threaten to vote
+for an opponent over a couple of cents a day.The fact that producers are concentrated while consumers are diffuse helps
+explain trade protection. A few automobile manufacturers can organize
+themselves; tens of millions of car buyers can’t. That’s not all.
+Management and labor in the auto industry may not agree on much, but
+automakers and autoworkers agree that they want to be protected from
+foreign competition. Politicians—especially politicians from areas where
+automobile manufacturing is important—have a hard time denying a common
+demand of workers and owners in a powerful industry.Perhaps this is not such a bad thing. Sugar farmers and autoworkers depend
+for their livelihood on supportive policies. Who is to say that their jobs
+are less important than lower prices for consumers? There is no simple,
+widely accepted way to balance the benefits against the costs—is cheaper
+sugar important enough to bankrupt thousands of hardworking farmers?
+Politics is, in fact, the way society adjudicates among conflicting
+interests, and maybe those with more at stake should have a bigger say.Political economists don’t usually take stands on complicated moral and
+ethical issues of this sort. They try to understandwhysocieties
+choose to do what they do. The fact that sugar or car producers have much
+more at stake and are much better organized than sugar or car consumers
+helps explain why government policies favor sugar and car producers over
+consumers.Some consumers are concentrated, though. Sugar is sweet, and the
+corporations of the Sweetener Users Association want it to be cheap as
+well. Coca-Cola, Hershey, and the like have pushed hard to change American
+sugar policy. The fact that there are powerful concentrated interests on
+both sides of the issue helps explain why prices aren’t even higher than
+they are. The same thing is true of industrial products. Steelmakers want
+protection; steel users—like the auto manufacturers—don’t. Trade policy is not just a battle between big corporations and
+disunited households; it’s also a battleamongbig corporations.
+Otherwise we’d expect every industry to be protected and trade to be
+tightly limited everywhere.In fact, there are plenty of powerful interests infavorof
+international trade and investment. The world’s multinational corporations
+and international banks depend on an open flow of goods and capital. This
+is especially the case today, when many of the world’s largest companies
+depend on complex global supply chains. A typical international corporation
+today produces parts and components in dozens of countries, assembles them
+in dozens more, and sells the final products everywhere. Trade barriers
+interfere with these supply chains, which is why most of the world’s
+biggest companies are also some of the biggest supporters of freer trade.In this 15-minute video, Prof. Jeffry Frieden responds to reader questions from around the world on political economyA complex webSpecial interests as well as voters on different sides of every issue fight
+their battles in the political arena. But the rules of politics vary a lot
+from country to country. The way a political economy is organized affects
+who wins the battle over policy.A logical starting point is elections, at least in democracies. Governments
+that don’t satisfy their constituents don’t remain governments very long.
+So we might expect democracies to choose policies that benefit the economy
+as a whole. However, the economy as a whole doesn’t vote.Politicians need votes from the people who decide elections. The decisive
+or pivotal voters vary with a country’s electoral institutions and social
+divisions. In most political systems, the best targets are swing voters,
+who might change their vote in response to the policies of an incumbent or
+the promises of a challenger. If the poor vote for the left and the rich
+vote for the right, for example, the middle class could be decisive. In
+recent American presidential elections, the most important swing voters
+have been in distressed industrial regions of the Midwest. Many voters in
+these areas believe that foreign competition contributed to manufacturing
+decline. This helps explain why presidential candidates have become
+increasingly protectionist, even though most Americans support openness to
+trade.In addition, policymakers in democratic societies must always pay attention
+to the next election—otherwise they are likely to cease being policymakers.
+This helps explain why it can be difficult for governments to pay money now
+for policies whose benefits will be realized only in the long run—such as
+pandemic prevention and preparedness.The mass of special and general interests in society is overwhelming.Institutionshelp make sense of them. First aresocial institutions—the way people organize themselves. Some
+businesses, farmers, and workers are well organized, giving them more
+political clout. Farmers in rich countries are relatively few, are well
+organized, and are almost universally subsidized and protected. Farmers in
+poor countries are many, rarely organized, and almost universally taxed.
+Where workers are grouped into centralized labor federations, as in some
+northern European countries, they play a major role in national
+policymaking. The ways in which societies organize themselves—by economic
+sector, region, ethnicity—affect how they structure their politics.Political institutionsmediate the pressures constituents bring to bear on leaders. Even in
+authoritarian countries, rulers have to pay attention to at least some part
+of public opinion. Political economists call this the “selectorate,” that
+portion of the population that matters to policymakers. In an authoritarian
+regime, this could be an economic elite or the armed forces. In an
+electoral democracy it would be voters and interest groups. No matter who
+matters, policymakers need their support to stay in office.In democracies, the variety ofelectoral institutionsaffects how
+policymakers feel constituent pressures. Organized political parties can
+help extend the time horizons of politicians: while an individual
+politician may worry only about the next election, a party has to be
+concerned about its longer-term reputation. On another dimension, where
+politicians are elected by the country as a whole, as in Israel or the
+Netherlands, the focus is on national policy. Where politicians represent
+narrower geographic locations, as in the US House of Representatives, the
+general view is that “all politics is local” (usually attributed to
+1970s–80s Democratic Speaker of the House Tip O’Neill). These different
+electoral systems can drive politics toward more national or more local
+concerns.Electoral institutions affect the identity of the people politicians need
+to attract to win an election. The US Electoral College makes
+middle-of-the-road voters in the Midwestern industrial states pivotal in
+presidential elections, driving the emphasis on protection for
+manufacturing. In a multiparty parliamentary system, the pivotal voters may
+be the supporters of a small party that can swing back and forth between
+coalition partners, such as the fringe parties for the formation of Israeli
+governments. Whichever voters the electoral system makes pivotal are likely
+to have outsize influence over politics and policy.The character of legislative institutionsalso matters. For
+example, while a unitary parliamentary system can deliver big and fast
+change, in the US separation of powers system change is more modest and
+slower. Federal systems—in Australia, Brazil, Canada, Germany, the United
+States—give provincial or state governments a lot of power, while
+centralized systems allow the national government to rule unchallenged.
+Some governments have handed off control of important policies to
+independent bodies that are less subject to day-to-day political
+pressures—such as central banks and public health agencies.These institutions matter because they affect the weights that politicians
+give to different groups in society. Some sociopolitical institutions give
+labor unions a great deal of influence; others privilege farmers; still
+others are dominated by business associations. Political economists analyze
+the interests in play and how the institutions of society transmit and
+transform them into government policy.Second-best can be bestAll this matters to policymakers or observers or even just people who care
+about the economy because it can profoundly change the way we think about
+policy and policy advice.The policy that economic analysis indicates is best for the economy may not
+be politically feasible. To go back to free trade, virtually all economists
+would recommend that a small country’s best bet is to remove all trade
+barriers unilaterally. Yet it is almost certain that a government that
+attempted to move to unilateral free trade would face massive opposition
+from special interests and from many in the public who would regard such a
+move as dangerous. The result might well be the collapse of the government
+and its replacement with one that could be relied on to maintain and even
+expand trade barriers. In this case, pursuit of the first-best policy could
+lead to a much worse outcome.Politicians, analysts, observers, and just regular people who are
+interested in economic policy are well advised to evaluate not only the
+economic implications of policy initiatives but also their political
+feasibility. If the pursuit of a first-best policy is bound to fail and
+perhaps provoke a backlash, then truly the cure may be worse than the
+disease. It makes more sense to consider the political realities the
+government faces and to structure policy with those realities in mind. It
+is better to settle for second-best than to insist on first-best and end up
+worse—or, as folk wisdom has it, to let the perfect be the enemy of the
+good.Bottom linePolitical economy is the integration of political and economic factors in
+our analysis of modern society. Inasmuch as just about everyone would agree
+that politics and economics are intricately and irretrievably
+interwoven—politics affects the economy and the economy affects
+politics—this approach seems natural. It has proved itself powerful inunderstandinggovernments and societies; it can also be a powerful
+tool for those interested inchanginggovernments and societies.
+Policymakers should hold these important lessons in mind today as they
+tackle the COVID-19 pandemic.JEFFRY FRIEDENis Professor of Government at Harvard UniversityOpinions expressed in articles and other materials are those of the authors; they do not necessarily reflect IMF policy.References:Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT.Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10. 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+العربيةespañolfrançais日本語русский中文 
+ 
+5 min(1403 words)ReadDownload PDFWe should pay closer attention to the interactions between politics, economics, and other realmsThe COVID-19 pandemic strikingly illustrates the intersection of politics,
+economics, and other considerations. Public health experts have long warned
+that the world was likely to face a major pandemic and called for greater
+preparedness. Yet policymakers who have to focus on the next election find
+it difficult to invest the time, money, and political capital to address
+the abstract possibility of a future crisis. And so most of the world was
+unprepared for a global public health threat of the magnitude posed by the
+novel coronavirus.As the pandemic has raced across the world, the policy response has
+continued to be tempered by political realities. Some members of the
+public, and some policymakers, have resisted the recommendations of public
+health experts, hoping for relaxed restrictions and a return to normalcy
+before the dangers have passed. At the same time, business interests have
+pressed for exceptions to benefit themselves, and for substantial
+subsidies—bailouts—to help them through difficult times.At the international level, government responses to the pandemic illustrate
+the difficult politics of worldwide cooperation. A global pandemic requires
+a global response: microbes do not respect borders. A coordinated
+international response is clearly the best way to confront an international
+public health emergency. Yet policymakers under pressure from their
+constituents have diverted resources away from other countries, banned the
+export of food and drugs, and hoarded essential supplies. Each of these
+measures—popular as they may be to national publics—imposes costs on other
+countries. In the final analysis, the lack of cooperation makes everyone
+worse off. Such international institutions as theWorld Health Organizationattempt to coordinate a cooperative global response to the global
+crisis—but they can be powerless in the face of potent nationalist
+political pressures (see, for example, Goodman and others 2010).Every government faces tough decisions about the appropriate measures: what
+restrictions to impose and when to loosen them, where money will be spent
+and how it will be raised, and what national concerns can be limited to
+favor international cooperation. These decisions have to take into account
+public health recommendations, economic considerations, and political
+constraints. Just as the policy response to the 2007–08 financial crisis
+varied from country to country in line with local political economy
+conditions, so national policy responses to the COVID-19 pandemic vary for
+health, economic, and political reasons.Politics at playThis hotly contested policy response to a universal threat is no surprise
+to political economists. It happens all the time. For example, just about
+every economist believes that small countries would be better off if they
+removed all barriers to trade. Yet unilateral free trade is practically
+unheard of, and no country in the world today pursues it. Why not? More
+generally, why do governments have so much trouble getting economic
+policies right? Why does the advice of independent observers, analysts, and
+scholars go so often unheeded?Politicsis the usual answer, and the answer is usually right. But that is too
+vague—like saying that some countries are rich and others poor due to
+economics. Exactly how does politics keep governments from making better
+policy, even in the face of imminent crises? What does that tell us about
+how economic policy can and should be made?Political economyis about how politics affects the economy and the economy affects politics
+(see box). Governments try to pump up the economy before elections, so that
+so-called political business cycles create ebbs and flows of economic
+activity around elections. By the same token, economic conditions have a
+powerful impact on elections. Political economists have uncovered the
+simple (perhaps disturbing) fact that the rates of economic growth and
+inflation are all the information we need to predict quite accurately the
+results of the past 100 years of US presidential elections (see, for
+example, Fair 2018). So why don’t elections work to push politicians to
+choose the best policies?What Is Political Economy?Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate.Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines.For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention.By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy.Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways:It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy.It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity.It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics.All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society.Where you stand depends on where you sitA basic economic principle is that any policy that is good for society as a
+whole can be made to be good for everyone in society, even if the policy
+creates winners and losers. It requires only that the winners be taxed just
+a bit to compensate the losers—and everyone is better off. Economists use
+powerful tools to clarify which economic policies are best for society. So
+why should economic policy be controversial?A basicpolitical economyprinciple is that the winners don’t like
+being taxed to compensate losers. And the battle is joined, not over what
+is best for society but rather over who will be the winners and losers.
+What is best for the country may not be best for my region, or group, or
+industry, or class—and so I will fight it.Even in democracies, plenty of citizens might agree that politics obeys the
+golden rule: those with the gold make the rules. Special-interest groups do
+seem to play an outsize role around the world, democratic or not. These
+include wealthy individuals, powerful industries, big banks and
+corporations, and formidable labor unions.How else to explain why Americans pay two or three times the world price
+for sugar? There are a handful of sugarcane plantations and a few thousand
+sugar beet farmers in the United States—and 330 million sugar consumers.
+You’d think that the 330 million would count for a lot more in politics
+than the several thousand, but you’d be wrong. For decades, subsidies and
+trade barriers have raised the price of sugar to the benefit of the sugar
+planters and farmers and to the detriment of everyone else.Why does a tiny group of sugar producers matter more than the rest of the
+country? A commonplace of political economy is thatconcentratedinterests usually win overdiffuseinterests. The sugar producers
+are well organized and work hard to influence politicians. If they didn’t
+get favorable government treatment they’d go out of business, so it’s
+important for them to organize to lobby and fund politicians. The cost to
+consumers is estimated at $2 billion to $3 billion a year. That’s a lot of
+money—but it comes to a couple of cents a day for the average American. No
+consumer is going to talk to an elected representative or threaten to vote
+for an opponent over a couple of cents a day.The fact that producers are concentrated while consumers are diffuse helps
+explain trade protection. A few automobile manufacturers can organize
+themselves; tens of millions of car buyers can’t. That’s not all.
+Management and labor in the auto industry may not agree on much, but
+automakers and autoworkers agree that they want to be protected from
+foreign competition. Politicians—especially politicians from areas where
+automobile manufacturing is important—have a hard time denying a common
+demand of workers and owners in a powerful industry.Perhaps this is not such a bad thing. Sugar farmers and autoworkers depend
+for their livelihood on supportive policies. Who is to say that their jobs
+are less important than lower prices for consumers? There is no simple,
+widely accepted way to balance the benefits against the costs—is cheaper
+sugar important enough to bankrupt thousands of hardworking farmers?
+Politics is, in fact, the way society adjudicates among conflicting
+interests, and maybe those with more at stake should have a bigger say.Political economists don’t usually take stands on complicated moral and
+ethical issues of this sort. They try to understandwhysocieties
+choose to do what they do. The fact that sugar or car producers have much
+more at stake and are much better organized than sugar or car consumers
+helps explain why government policies favor sugar and car producers over
+consumers.Some consumers are concentrated, though. Sugar is sweet, and the
+corporations of the Sweetener Users Association want it to be cheap as
+well. Coca-Cola, Hershey, and the like have pushed hard to change American
+sugar policy. The fact that there are powerful concentrated interests on
+both sides of the issue helps explain why prices aren’t even higher than
+they are. The same thing is true of industrial products. Steelmakers want
+protection; steel users—like the auto manufacturers—don’t. Trade policy is not just a battle between big corporations and
+disunited households; it’s also a battleamongbig corporations.
+Otherwise we’d expect every industry to be protected and trade to be
+tightly limited everywhere.In fact, there are plenty of powerful interests infavorof
+international trade and investment. The world’s multinational corporations
+and international banks depend on an open flow of goods and capital. This
+is especially the case today, when many of the world’s largest companies
+depend on complex global supply chains. A typical international corporation
+today produces parts and components in dozens of countries, assembles them
+in dozens more, and sells the final products everywhere. Trade barriers
+interfere with these supply chains, which is why most of the world’s
+biggest companies are also some of the biggest supporters of freer trade.In this 15-minute video, Prof. Jeffry Frieden responds to reader questions from around the world on political economyA complex webSpecial interests as well as voters on different sides of every issue fight
+their battles in the political arena. But the rules of politics vary a lot
+from country to country. The way a political economy is organized affects
+who wins the battle over policy.A logical starting point is elections, at least in democracies. Governments
+that don’t satisfy their constituents don’t remain governments very long.
+So we might expect democracies to choose policies that benefit the economy
+as a whole. However, the economy as a whole doesn’t vote.Politicians need votes from the people who decide elections. The decisive
+or pivotal voters vary with a country’s electoral institutions and social
+divisions. In most political systems, the best targets are swing voters,
+who might change their vote in response to the policies of an incumbent or
+the promises of a challenger. If the poor vote for the left and the rich
+vote for the right, for example, the middle class could be decisive. In
+recent American presidential elections, the most important swing voters
+have been in distressed industrial regions of the Midwest. Many voters in
+these areas believe that foreign competition contributed to manufacturing
+decline. This helps explain why presidential candidates have become
+increasingly protectionist, even though most Americans support openness to
+trade.In addition, policymakers in democratic societies must always pay attention
+to the next election—otherwise they are likely to cease being policymakers.
+This helps explain why it can be difficult for governments to pay money now
+for policies whose benefits will be realized only in the long run—such as
+pandemic prevention and preparedness.The mass of special and general interests in society is overwhelming.Institutionshelp make sense of them. First aresocial institutions—the way people organize themselves. Some
+businesses, farmers, and workers are well organized, giving them more
+political clout. Farmers in rich countries are relatively few, are well
+organized, and are almost universally subsidized and protected. Farmers in
+poor countries are many, rarely organized, and almost universally taxed.
+Where workers are grouped into centralized labor federations, as in some
+northern European countries, they play a major role in national
+policymaking. The ways in which societies organize themselves—by economic
+sector, region, ethnicity—affect how they structure their politics.Political institutionsmediate the pressures constituents bring to bear on leaders. Even in
+authoritarian countries, rulers have to pay attention to at least some part
+of public opinion. Political economists call this the “selectorate,” that
+portion of the population that matters to policymakers. In an authoritarian
+regime, this could be an economic elite or the armed forces. In an
+electoral democracy it would be voters and interest groups. No matter who
+matters, policymakers need their support to stay in office.In democracies, the variety ofelectoral institutionsaffects how
+policymakers feel constituent pressures. Organized political parties can
+help extend the time horizons of politicians: while an individual
+politician may worry only about the next election, a party has to be
+concerned about its longer-term reputation. On another dimension, where
+politicians are elected by the country as a whole, as in Israel or the
+Netherlands, the focus is on national policy. Where politicians represent
+narrower geographic locations, as in the US House of Representatives, the
+general view is that “all politics is local” (usually attributed to
+1970s–80s Democratic Speaker of the House Tip O’Neill). These different
+electoral systems can drive politics toward more national or more local
+concerns.Electoral institutions affect the identity of the people politicians need
+to attract to win an election. The US Electoral College makes
+middle-of-the-road voters in the Midwestern industrial states pivotal in
+presidential elections, driving the emphasis on protection for
+manufacturing. In a multiparty parliamentary system, the pivotal voters may
+be the supporters of a small party that can swing back and forth between
+coalition partners, such as the fringe parties for the formation of Israeli
+governments. Whichever voters the electoral system makes pivotal are likely
+to have outsize influence over politics and policy.The character of legislative institutionsalso matters. For
+example, while a unitary parliamentary system can deliver big and fast
+change, in the US separation of powers system change is more modest and
+slower. Federal systems—in Australia, Brazil, Canada, Germany, the United
+States—give provincial or state governments a lot of power, while
+centralized systems allow the national government to rule unchallenged.
+Some governments have handed off control of important policies to
+independent bodies that are less subject to day-to-day political
+pressures—such as central banks and public health agencies.These institutions matter because they affect the weights that politicians
+give to different groups in society. Some sociopolitical institutions give
+labor unions a great deal of influence; others privilege farmers; still
+others are dominated by business associations. Political economists analyze
+the interests in play and how the institutions of society transmit and
+transform them into government policy.Second-best can be bestAll this matters to policymakers or observers or even just people who care
+about the economy because it can profoundly change the way we think about
+policy and policy advice.The policy that economic analysis indicates is best for the economy may not
+be politically feasible. To go back to free trade, virtually all economists
+would recommend that a small country’s best bet is to remove all trade
+barriers unilaterally. Yet it is almost certain that a government that
+attempted to move to unilateral free trade would face massive opposition
+from special interests and from many in the public who would regard such a
+move as dangerous. The result might well be the collapse of the government
+and its replacement with one that could be relied on to maintain and even
+expand trade barriers. In this case, pursuit of the first-best policy could
+lead to a much worse outcome.Politicians, analysts, observers, and just regular people who are
+interested in economic policy are well advised to evaluate not only the
+economic implications of policy initiatives but also their political
+feasibility. If the pursuit of a first-best policy is bound to fail and
+perhaps provoke a backlash, then truly the cure may be worse than the
+disease. It makes more sense to consider the political realities the
+government faces and to structure policy with those realities in mind. It
+is better to settle for second-best than to insist on first-best and end up
+worse—or, as folk wisdom has it, to let the perfect be the enemy of the
+good.Bottom linePolitical economy is the integration of political and economic factors in
+our analysis of modern society. Inasmuch as just about everyone would agree
+that politics and economics are intricately and irretrievably
+interwoven—politics affects the economy and the economy affects
+politics—this approach seems natural. It has proved itself powerful inunderstandinggovernments and societies; it can also be a powerful
+tool for those interested inchanginggovernments and societies.
+Policymakers should hold these important lessons in mind today as they
+tackle the COVID-19 pandemic.JEFFRY FRIEDENis Professor of Government at Harvard UniversityOpinions expressed in articles and other materials are those of the authors; they do not necessarily reflect IMF policy.References:Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT.Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10. 
+ 
+5 min(1403 words)Read 
+ 
+What Is Political Economy?Adam Smith, David Ricardo, and John Stuart Mill are widely regarded as the
+originators of modern economics. But they called themselvespolitical economists, and Mill’sPrinciples of Political Economywas the fundamental text of the
+discipline from its publication in 1848 until the end of the century. These
+early theorists could not conceive of the economic and political worlds as
+separate.Two trends divided the political from the economic analysis. First,
+governments began to reduce their direct control over the economy. Second,
+different political forms emerged: Europe went from almost exclusively
+monarchical to increasingly representative, and highly varied, forms of
+government. By the early 20th century economics and political science were
+established as separate disciplines.For much of the 20th century this division reigned. With the Great
+Depression and problems of development, the purely economic issues were
+daunting enough to occupy economists. By the same token, the political
+problems of the era—two world wars, the rise of fascism and communism—were
+so serious as to require separate attention.By the 1970s, however, it was clear that the separation between the
+economic and political spheres was misleading. That decade saw the collapse
+of the Bretton Woods monetary order, two oil price shocks, and
+stagflation—all highlighting the fact that economic and political matters
+are intertwined. The economy was now high politics, and much of politics
+was about the economy.Over the past 50 years, political economy has become increasingly prominent
+in both economics and political science, in three ways:It analyzes how political forces affect the economy.Voters and interest groups have a powerful impact on virtually every
+possible economic policy. Political economists strive to identify the
+relevant groups and their interests, and how political institutions affect
+their impact on policy.It assesses how the economy affects politics.Macroeconomic trends can boost or ruin an incumbent’s chances. At the more
+microeconomic level, features of the economic organization or activities of
+particular firms or industries can have an impact on the nature and
+direction of their political activity.It uses the tools of economics to study politics.Politicians can be thought of as analogous to firms, with voters as
+consumers, or governments as monopoly providers of goods and services to
+constituent customers. Scholars model political-economic interactions in
+order to develop a more theoretically rigorous understanding of the
+underlying features driving politics.All three methods have profoundly affected both scholars and policymakers.
+And political economy has a lot to offer both to analysts of how societies
+work and to those who would like to change society. 
+ 
+JEFFRY FRIEDENis Professor of Government at Harvard University 
+ 
+References:Fair, Ray C. 2018. “Presidential and Congressional Vote-Share Equations:
+November 2018 Update.” Yale Department of Economics Paper, Yale University,
+New Haven, CT.Goodman, Peter S., Katie Thomas, Sui-Lee Wee, and Jeffrey Gettleman. 2010.
+“A New Front for Nationalism: The Global Battle against a Virus.”New York Times, April 10. 
+ 
+Related FeaturesYou might also likeMarch of the ModelsThe Social Costs of PriceA Place for PoliticsGillian Tett on Anthropology for the Modern EconomistA Road Well TraveledRevisiting the Soviet BreakupF&D HOMEPAGE 
+ 
+Related Features 
+ 
+Latest IssuesMarch 2024Englishالعربيةespañolfrançais日本語русский中文December 2023Englishالعربيةespañolfrançais日本語русский中文September 2023Englishالعربيةespañolfrançais日本語русский中文June 2023Englishالعربيةespañolfrançais日本語русский中文More 
+ 
+Latest Issues 
+ 
+March 2024Englishالعربيةespañolfrançais日本語русский中文December 2023Englishالعربيةespañolfrançais日本語русский中文September 2023Englishالعربيةespañolfrançais日本語русский中文June 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+March 2024Englishالعربيةespañolfrançais日本語русский中文 
+ 
+March 2024Englishالعربيةespañolfrançais日本語русский中文 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+العربيةespañolfrançais日本語русский中文 
+ 
+December 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+December 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+العربيةespañolfrançais日本語русский中文 
+ 
+September 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+September 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+العربيةespañolfrançais日本語русский中文 
+ 
+June 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+June 2023Englishالعربيةespañolfrançais日本語русский中文 
+ 
+Englishالعربيةespañolfrançais日本語русский中文 
+ 
+العربيةespañolfrançais日本語русский中文 
+ 
+More 
+ 
+More 
+ 
+About UsAbout F&D MagazineContact UsSocial MediaF&D on FacebookF&D on LinkedInF&D STAFFGita Bhatt, Editor-In-ChiefMaureen Burke,  Managing EditorPeter J. Walker, Senior EditorJeff Kearns, Senior EditorNicholas Owen, Senior EditorSmita Aggarwal, Assistant EditorAndrew Stanley, Assistant EditorBruce Edwards, Multimedia ContentNoha Elbadawy, Multimedia contentMelinda Weir,  Production ManagerRekia Ennaboulssi, Web ManagerMarta Doroszczyk, Digital MarketingKwabena Akuamoah-Boateng, Social Media Editor 
+ 
+About UsAbout F&D MagazineContact Us 
+ 
+Social MediaF&D on FacebookF&D on LinkedIn 
+ 
+F&D STAFFGita Bhatt, Editor-In-ChiefMaureen Burke,  Managing EditorPeter J. Walker, Senior EditorJeff Kearns, Senior EditorNicholas Owen, Senior EditorSmita Aggarwal, Assistant Editor 
+ 
+Andrew Stanley, Assistant EditorBruce Edwards, Multimedia ContentNoha Elbadawy, Multimedia contentMelinda Weir,  Production ManagerRekia Ennaboulssi, Web ManagerMarta Doroszczyk, Digital MarketingKwabena Akuamoah-Boateng, Social Media Editor 
+ 
+AboutResearchCountriesCapacity DevelopmentNewsEventsVideosDataPublicationsSocial Media HubAnnual ReportCopyright and UsagePrivacy PolicyContact UsCareersGlossaryScam AlertIMF Brandعربي中文Français日本語РусскийEspañol© International Monetary Fund. All rights reserved. 
+ 
+AboutResearchCountriesCapacity DevelopmentNewsEventsVideosDataPublicationsSocial Media HubAnnual ReportCopyright and UsagePrivacy PolicyContact UsCareersGlossaryScam AlertIMF Brandعربي中文Français日本語РусскийEspañol 
+ 
+AboutResearchCountriesCapacity DevelopmentNewsEventsVideosDataPublicationsSocial Media HubAnnual ReportCopyright and UsagePrivacy PolicyContact UsCareersGlossaryScam AlertIMF Brandعربي中文Français日本語РусскийEspañol 
+ 
+© International Monetary Fund. All rights reserved. 
+ 
+© International Monetary Fund. All rights reserved. 

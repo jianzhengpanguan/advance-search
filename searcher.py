@@ -5,10 +5,11 @@ import configparser
 import webparser
 import math
 import logiclinker
+import retriever
 import concurrent.futures
 
-_NUM_SEARCH_RESULT = 3
-_NUM_SEARCHES = 4
+_NUM_SEARCH_RESULT = 5
+_NUM_SEARCHES = 5
 _CHUCK_SIZE = 500
 _SUMMERIZED_SIZE = 100
 
@@ -91,7 +92,7 @@ def _to_follow_up_searches(statement, search_result):
 
   * Rephrase and expand the question
   * Think step by step (chain of thinking)
-  * List the searches by importance.
+  * List the searches in order of their relevance to effectively verify the information.
 
   Output in the following format:
   ```
@@ -113,8 +114,10 @@ def _to_follow_up_searches(statement, search_result):
   return follow_up[:_NUM_SEARCHES]
 
 # Summerize the search result to save tokens.
-def _summerize(text):
-  while gpt.num_tokens_from_messages(text) > _SUMMERIZED_SIZE:
+def _summerize(text, max_iter):
+  for i in range(max_iter):
+    if gpt.num_tokens_from_messages(text) < _SUMMERIZED_SIZE:
+      break
     summaries = []
     num_tokens = gpt.num_tokens_from_messages(text)
     num_buckets = math.ceil(num_tokens / _CHUCK_SIZE)
@@ -180,42 +183,20 @@ def _to_keywords(topic:str, search:str)->list[str]:
       keywords.append(parsed_keyword)
   return keywords
 
-# Fetch the relevant part of search result.
-def _fetch_relevant(text, search):
-    relevants = []
-
-    # Function to process each logic and check if it's relevant
-    def process_logic(logic):
-      if _is_relevant(search, logic):
-          return logic
-      return None
-
-    # Fetch logics
-    logics = logiclinker.fetch_logics(text, gpt.ProviderType.anthropic, gpt.ModelType.basic_model)
-
-    # Use ThreadPoolExecutor to process logics in parallel
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        # Map process_logic to each logic
-        results = executor.map(process_logic, logics)
-        # Filter None values and collect relevant results
-        relevants = [result for result in results if result is not None]
-
-    return "\n".join(relevants)
-
 def _fetch_web_content(link, search):
-  web_content = webparser.parse(requests.get(link))
+  web_content = webparser.parse(link)
   # If we cannot fetch the content from the link.
   if not web_content:
     return ""
   # Find the web content relevant to search.
-  relevant_snippet = _fetch_relevant(web_content, search)
+  relevant_snippet = retriever.retrieve(search, web_content)
   print("relevant snippet:", relevant_snippet)
   return relevant_snippet
 
 # LLM generate keywords to filter search results.
 # More key words help us find more precise results, but too many keywords might lead to no results.
 # So we need to find the best balance between the number of keywords and the number of results.
-def _optimize_search_keywords(search:str, keywords:list[str]):
+def _optimize_search(search:str, keywords:list[str]):
   num_keywords = len(keywords)
   results = []
   links = set()
@@ -251,23 +232,32 @@ def _optimize_search_keywords(search:str, keywords:list[str]):
   return results
 
 def _web_request(search:str, keywords:list[str]):
-  output = []
-  items = _optimize_search_keywords(search, keywords)
-  for item in items:
+  items = _optimize_search(search, keywords)
+
+  # Function to process each item and check if it's relevant
+  def process(item):
     if 'title' in item and 'snippet' in item and 'link' in item:
-      summarized_link = item['title'] + item['snippet'] + _fetch_web_content(item['link'], search) + item['link']
-      if _is_relevant(search, summarized_link):
-        output.append(summarized_link)
-  return output
+      knowledge_from_web = _fetch_web_content(item['link'], search)
+      if not _is_relevant(search, knowledge_from_web):
+        return None
+      # Fetch logics
+      logics = logiclinker.fetch_logics(knowledge_from_web, gpt.ProviderType.anthropic, gpt.ModelType.basic_model)
+    return item['title'] + item['snippet'] + " ".join(logics) + item['link']
+
+  # Use ThreadPoolExecutor to process items in parallel
+  with concurrent.futures.ThreadPoolExecutor() as executor:
+    # Map process to each item.
+    results = executor.map(process, items)
+    # Filter None values and collect relevant results
+    return [result for result in results if result is not None]
 
 def search(topic:str, max_iter:int)->dict[str,list[str]]:
   results = []
   search_results = {}
+  summerized_result = ''
   for _ in range(max_iter):
-    summerized_result = ''
     if results:
-      summerized_result = _summerize(results)
-
+      summerized_result = _summerize("\n".join(results), max_iter)
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_result):
       return results

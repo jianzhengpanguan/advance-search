@@ -1,0 +1,86 @@
+[
+  {
+    "premises": [
+      {
+        "4. Donald Trump aims to focus the United States's empathy on internal matters within the United States.": {
+          "Look up interviews or articles where Donald Trump has discussed his priorities for the U.S., emphasizing internal matters.": [
+            "ACCC+commissioned+report+-+The+impact+of+digital+platforms+ ...'Whoever controls search engines has enormous influence on us all. ... US President Donald Trump ... the various elements will not be discussed at length, but its\u00a0...https://www.accc.gov.au/system/files/ACCC+commissioned+report+-+The+impact+of+digital+platforms+on+news+and+journalistic+content,+Centre+for+Media+Transition+(2).pdf",
+            "United States Department of State4 days ago ... On that call, the Secretary also emphasized the importance of Israel meeting the commitments that Prime Minister Netanyahu made to President\u00a0...https://www.state.gov/?post_type=state_briefing&%3Bp=92333",
+            "Polarization, Democracy, and Political Violence in the United States ...Sep 5, 2023 ... Jennifer McCoy, who has pioneered looking at the ways in which emotions and ... While they were united by their votes for Donald Trump in 2020 and\u00a0...https://carnegieendowment.org/2023/09/05/polarization-democracy-and-political-violence-in-united-states-what-research-says-pub-90457",
+            "Immigration \u2013 The White HouseJan 16, 2021 ... All Issues. President Trump kept his promise to build a wall on our southern border between the United States and Mexico. With 450 miles\u00a0...https://trumpwhitehouse.archives.gov/issues/immigration/"
+          ],
+          "Look up broader domestic policy initiatives during the Trump administration that might reflect a larger trend or doctrine of internal focus.": [
+            "Executive Order on Promoting Competition in the American ...Jul 9, 2021 ... Policy. A fair, open, and competitive marketplace has long been a cornerstone of the American economy, while excessive market concentration\u00a0...https://www.whitehouse.gov/briefing-room/presidential-actions/2021/07/09/executive-order-on-promoting-competition-in-the-american-economy/",
+            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... Clinging to a Cold War mentality and the hegemon's logic, the US pursues bloc politics, concocts the \u201cdemocracy versus authoritarianism\u201d\u00a0...https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
+            "FACT SHEET: The American Jobs Plan | The White HouseMar 31, 2021 ... ... during the Biden administration will be used ... for infrastructure on ... This will be paired with a broader enforcement initiative to be announced\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/03/31/fact-sheet-the-american-jobs-plan/",
+            "The Impact of Digital Platforms on News and Journalistic ContentSpecifically the Centre was asked to describe and analyse the impacts of digital platforms on choice and quality for Australian news consumers. The brief for\u00a0...https://www.accc.gov.au/system/files/ACCC+commissioned+report+-+The+impact+of+digital+platforms+on+news+and+journalistic+content,+Centre+for+Media+Transition+(2).pdf",
+            "A Foreign Policy for the American People - United States ...Mar 3, 2021 ... SECRETARY BLINKEN: Good morning. My fellow Americans, five weeks ago I was sworn in as your Secretary of State. My job is to represent the\u00a0...https://www.state.gov/a-foreign-policy-for-the-american-people/"
+          ]
+        }
+      },
+      {
+        "5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. ": {
+          "\"Donald Trump statements on international environmental aid\"": [],
+          "\"Donald Trump policies on domestic environmental initiatives and urban development\"": []
+        }
+      }
+    ],
+    "hypothesis": [
+      {
+        " 4. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.": {
+          "Current U.S. contributions to international pollution control measures: budgets, projects, and results.": [
+            "Progress Cleaning the Air and Improving People's Health | US EPAActions to implement the Clean Air Act have achieved dramatic reductions in air pollution, preventing hundreds of thousands of cases of serious health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
+            "Budget of the United States Government, Fiscal Year 2023Appendix, Budget of the United States. Government, Fiscal Year 2023 contains detailed in- formation on the various appropriations and funds that constitute the\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/03/budget_fy2023.pdf",
+            "H.R.2617 - 117th Congress (2021-2022): Consolidated ...781) This section rescinds specified unobligated funds that were provided by the Agricultural Appropriations Act of 2010 for demonstration projects to develop\u00a0...https://www.congress.gov/bill/117th-congress/house-bill/2617",
+            "DoD 7000.14 - R DEPARTMENT OF DEFENSE FINANCIAL ...Dec 16, 2020 ... DoD reimbursable authority is authorized by the Office of the Under Secretary of Defense. (Comptroller) (OUSD(C)), through budget formulation\u00a0...https://comptroller.defense.gov/Portals/45/documents/fmr/Volume_11a.pdf"
+          ],
+          "Analysis of domestic needs in the U.S. that could benefit from increased funding (e.g., healthcare, infrastructure, education).": [
+            "FACT SHEET: The American Jobs Plan | The White HouseMar 31, 2021 ... His investments will use more sustainable and innovative materials, including cleaner steel and cement, and component parts Made in America and\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/03/31/fact-sheet-the-american-jobs-plan/",
+            "High-quality health systems in the Sustainable Development Goals ...Fuelled by a major increase in domestic health spending and donor funding ... more deeply into health needs and system performance. ... education would create a\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7734391/",
+            "FACT SHEET: The American Families Plan | The White HouseApr 28, 2021 ... ... benefits, including increased wages, improved health, and reduced crime. ... Students can use the benefit over three ... This funding will support\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/04/28/fact-sheet-the-american-families-plan/",
+            "Consolidated Appropriations Act, 2023 SUMMARY OF ...As kids return to the classroom, this funding will support more than 5.2 billion school lunches and snacks. In addition, the bill provides $40 million for the\u00a0...https://appropriations.house.gov/sites/democrats.appropriations.house.gov/files/FY23%20Summary%20of%20Appropriations%20Provisions.pdf",
+            "U.S. Health Care from a Global Perspective, 2019 | Commonwealth ...Jan 30, 2020 ... Americans had fewer physician visits than peers in most countries, which may be related to a low supply of physicians in the U.S.; Americans use\u00a0...https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019"
+          ],
+          "Comparative studies on the effectiveness of funding domestic vs. international environmental projects.": [
+            "Implementation and Effectiveness of International Environmental ...... research plan- -described in more detail below. In addition to IIASA's core support, we envision raising external funding for specific research projects.http://www.ciesin.org/docs/008-592/008-592.html",
+            "JEL Codes - American Economic AssociationJEL Classification System / EconLit Subject Descriptors ; D, Microeconomics ; E, Macroeconomics and Monetary Economics ; F, International Economics ; G, Financial\u00a0...https://www.aeaweb.org/econlit/jelCodes.php?view=jel",
+            "Chapter 3: Trade Agreements and Economic Theory | Wilson Center... domestic and international political realities. ... International Monetary Fund, and the World Trade ... comparative advantage, which maximizes global efficiency.https://www.wilsoncenter.org/chapter-3-trade-agreements-and-economic-theory"
+          ],
+          "Impact assessments and case studies that detail the outcomes of shifting funds from international initiatives to domestic programs.": [
+            "ASSESSMENT OF HIGHER EDUCATION LEARNING OUTCOMESAHELO Feasibility Study Report - Volume 1. \u00a9 OECD 2012 emerging global marketplace, especially so in the case of research universities. Moreover, rankings\u00a0...https://www.oecd.org/education/skills-beyond-school/AHELOFSReportVolume1.pdf",
+            "Chapter 3: Trade Agreements and Economic Theory | Wilson CenterGlobal Europe Program ... International Monetary Fund, and the World Trade Organization (WTO). ... However, import liberalization has an impact on domestic labor\u00a0...https://www.wilsoncenter.org/chapter-3-trade-agreements-and-economic-theory",
+            "Redistribution of Income and Reducing Economic Inequality - IMF ...These cash transfer programs give money to ... New methods of means testing and cash distribution have made it ... \u00a9 International Monetary Fund. All rights\u00a0...https://www.imf.org/en/Publications/fandd/issues/2018/03/bourguignon",
+            "High-quality health systems in the Sustainable Development Goals ...For example, research will be needed to rigorously evaluate the effects and costs of recommended improvement approaches on health, patient experience, and\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7734391/"
+          ],
+          "Studies or reports evaluating the outcomes and effectiveness of past U.S. funding in international pollution control.": [
+            "Progress Cleaning the Air and Improving People's Health | US EPAActions to implement the Clean Air Act have achieved dramatic reductions in air pollution, preventing hundreds of thousands of cases of serious health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
+            "Pollution and health: a progress update - The Lancet Planetary HealthMay 17, 2022 ... HH reports grants from the US National Institutes of Health for neuro-epidemiological research on the developmental neurotoxicity of pollutants\u00a0...https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(22)00090-0/fulltext"
+          ],
+          "Comparative analysis of benefits between international pollution control investments and domestic environmental projects.": [
+            "The Clean Air Act and the Economy | US EPAThe study projects that the beneficial economic effects of these two improvements alone more than offset the economic impacts from expenditures for pollution\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy",
+            "BUILDING A CLEAN ENERGY ECONOMY:Dec 15, 2022 ... ... benefit from projects that reduce greenhouse gas emissions and other air pollution. ... local sources, particularly in areas with environmental\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/12/Inflation-Reduction-Act-Guidebook.pdf",
+            "How to Evaluate Investment Efficiency of Environmental Pollution ...Jun 13, 2022 ... Scholars used different methods to study the efficiency of environmental pollution control from various perspectives. In terms of research\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9223102/",
+            "JEL Codes - American Economic AssociationComparative Analysis of Economic Systems. P52 ... Natural Resources and Domestic and International ... Pollution Control Adoption and Costs \u2022 Distributional Effects\u00a0...https://www.aeaweb.org/econlit/jelCodes.php?view=jel"
+          ],
+          "Expert opinions or economic studies on the impact of reducing international aid for environmental issues on U.S. international relations and domestic political impact.": [
+            "The Political Economy of Economic Policy - IMF F&DThe COVID-19 pandemic strikingly illustrates the intersection of politics, economics, and other considerations. Public health experts have long warned that the\u00a0...https://www.imf.org/en/Publications/fandd/issues/2020/06/political-economy-of-economic-policy-jeff-frieden",
+            "Americans' views of climate change in 8 charts | Pew Research CenterAug 9, 2023 ... ... economy and reducing ... U.S. participation in international efforts to reduce the effects of climate change. ... Political IssuesEnvironment &\u00a0...https://www.pewresearch.org/short-reads/2023/08/09/what-the-data-says-about-americans-views-of-climate-change/",
+            "The Clean Air Act and the Economy | US EPA... reducing air pollution ... The study projects that the beneficial economic effects ... The United States is the world's largest producer and consumer of\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy"
+          ],
+          "Research on the direct benefits received by U.S. citizens from international environmental control programs compared to domestic programs.": [
+            "Progress Cleaning the Air and Improving People's Health | US EPAEPA's peer-reviewed 2011 study found that clean air programs ... direct benefits to the American people which vastly exceed compliance costs. ... get $3-9 in health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
+            "Executive Order on the Safe, Secure, and Trustworthy Development ...Oct 30, 2023 ... Across the Federal Government, my Administration will support programs to provide Americans the skills they need for the age of AI and attract\u00a0...https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/"
+          ],
+          "Comparative studies on the effectiveness of domestic versus international pollution control programs in terms of economic and health benefits.": [
+            "The Clean Air Act and the Economy | US EPA... health benefits of reducing air pollutants other than fine particles and ozone, or ... Multiple peer-reviewed economic studies show that the substantial public\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy",
+            "Water Supply, Sanitation, and Hygiene - Injury Prevention and ...Financial and economic studies convert the health, social, and environmental effects of poor WASH to a common money metric, thereby enabling aggregation as well\u00a0...https://www.ncbi.nlm.nih.gov/books/NBK525207/",
+            "BUILDING A CLEAN ENERGY ECONOMY:Dec 15, 2022 ... The Inflation Reduction Act also provides billions of dollars in grant and loan programs and other investments for clean energy and climate\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/12/Inflation-Reduction-Act-Guidebook.pdf"
+          ],
+          "Current U.S. government budgets or funding data regarding domestic and international pollution control initiatives and their respective impacts.": [
+            "G7 Hiroshima Leaders' Communiqu\u00e9 | The White HouseMay 20, 2023 ... Preamble. We, the Leaders of the Group of Seven (G7), met in Hiroshima for our annual Summit on May 19-21, 2023, more united than ever in\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2023/05/20/g7-hiroshima-leaders-communique/"
+          ]
+        }
+      }
+    ]
+  }
+]

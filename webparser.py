@@ -1,4 +1,42 @@
 from bs4 import BeautifulSoup
+import PyPDF2
+import requests
+from io import BytesIO
+
+def _is_valid_pdf(url:str)->bool:
+  """Check if the URL points to a PDF file."""
+  # Make a HEAD request to check the content type
+  response = requests.head(url, allow_redirects=True)
+  content_type = response.headers.get('Content-Type', '')
+  
+  # Check if the content type is PDF.
+  if 'application/pdf' in content_type:
+    return True
+  return False
+
+def _read_pdf(url:str)->str:
+  # Make a GET request to download the PDF
+  response = requests.get(url)
+  try:
+    response.raise_for_status()  # Raise an exception for bad requests
+  except requests.RequestException as e:
+    print(f"Failed to request: {str(e)}")
+    return ""
+
+  # Use BytesIO to handle the PDF from memory
+  with BytesIO(response.content) as pdf_file:
+    try:
+      pdf_reader = PyPDF2.PdfReader(pdf_file)
+    except PyPDF2.errors.PdfReadError as e:
+      print(f"Failed to read PDF: {str(e)}")
+      return ""
+
+    texts = []
+    # Extract text from each page
+    for page in pdf_reader.pages:
+      texts.append(page.extract_text())
+    return "\n".join(filter(None, texts))  # Join and filter out None values
+
     
 def _is_valid_html(content):
   """Check if the response is a valid HTML document."""
@@ -19,10 +57,14 @@ def _is_valid_html(content):
 
   return True
 
-def parse(content:str)->str:
+def parse(url:str)->str:
+  if _is_valid_pdf(url):
+    return _read_pdf(url)
+
+  content = requests.get(url)
   # If we cannot parse the content, return empty string.
   if not _is_valid_html(content):
-    print(f'Not a valid HTML document:{content.text}\n')
+    print(f'Not a valid HTML document:{content}\n')
     return ""
 
   results = []

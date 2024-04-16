@@ -1,12 +1,10 @@
 import gpt
 import searcher
 
-_MAX_ITER = 3
 
-def evaluate(text):
-  search_results = searcher.search(text, _MAX_ITER)
 
-  evaluate_request = f"""Verify if {text} is truth or fiction, through the following article: {str(search_results)} Answer in the following way:
+def evaluate(text_need_evaluated, search_results):
+  evaluate_request = f"""Verify if {text_need_evaluated} is truth or fiction, through the following article: {str(search_results)} Answer in the following way:
   ```
   # Verifiable:
   * Yes/No
