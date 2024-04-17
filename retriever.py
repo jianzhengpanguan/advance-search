@@ -9,7 +9,7 @@ _MAX_RETRIES = 3
 # Create a configparser object
 config = configparser.ConfigParser()
 # Read the configuration file
-config.read('config.ini')
+config.read('config/config.ini')
 
 def retrieve(question:str, knowledge:str)->str:
   client = openai.OpenAI(api_key=config['OPENAI']['api_key'])

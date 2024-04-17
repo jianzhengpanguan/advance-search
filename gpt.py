@@ -16,7 +16,7 @@ default_encoding = tiktoken.get_encoding("cl100k_base")
 # Create a configparser object
 config = configparser.ConfigParser()
 # Read the configuration file
-config.read('config.ini')
+config.read('config/config.ini')
 # Limit to 50,000 tokens per minute for Anthropic Tier 1 user.
 anthropic_token_rate_limiter = ratelimiter.TokensRateLimiter(max_tokens=35000)
 

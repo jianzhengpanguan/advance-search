@@ -252,12 +252,12 @@ def _web_request(search:str, keywords:list[str]):
     return [result for result in results if result is not None]
 
 def search(topic:str, max_iter:int)->dict[str,list[str]]:
+  response = _web_request(topic, _to_keywords(topic, topic))
+  search_results = {topic:response}
   results = []
-  search_results = {}
-  summerized_result = ''
+  results.extend(response)
   for _ in range(max_iter):
-    if results:
-      summerized_result = _summerize("\n".join(results), max_iter)
+    summerized_result = _summerize("\n".join(results), max_iter)
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_result):
       return results
