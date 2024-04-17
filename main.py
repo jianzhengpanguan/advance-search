@@ -22,23 +22,23 @@ def main():
     print(f"Evaluation file path: {args.evaluation_file_path}")
     print(f"Search result file path: {args.search_result_file_path}")
 
-    # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
-    with open(args.raw_file_path, "r", encoding='utf-8') as f:
-      raw_statement = f.read()
-      logics = logiclinker.fetch_logics(raw_statement)
+    # # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
+    # with open(args.raw_file_path, "r", encoding='utf-8') as f:
+    #   raw_statement = f.read()
+    #   logics = logiclinker.fetch_logics(raw_statement)
     
-    with open(args.logics_file_path, 'w', encoding='utf-8') as file:
-      for logic in logics:
-        file.write(logic + '\n')
+    # with open(args.logics_file_path, 'w', encoding='utf-8') as file:
+    #   for logic in logics:
+    #     file.write(logic + '\n')
 
-    # Step 2: Find the fallacies.
-    with open(args.logics_file_path, "r", encoding='utf-8') as f:
-      logics = f.readlines()
-      print(f"Number of logics: {len(logics)}")
-      with open(args.fallacy_file_path, 'w', encoding='utf-8') as file:
-        for logic in logics:
-          file.write("Inference: " + logic + '\n')
-          file.write(fallacyfinder.find_fallacies(logic) + '\n')
+    # # Step 2: Find the fallacies.
+    # with open(args.logics_file_path, "r", encoding='utf-8') as f:
+    #   logics = f.readlines()
+    #   print(f"Number of logics: {len(logics)}")
+    #   with open(args.fallacy_file_path, 'w', encoding='utf-8') as file:
+    #     for logic in logics:
+    #       file.write("Inference: " + logic + '\n')
+    #       file.write(fallacyfinder.find_fallacies(logic) + '\n')
     
     # Step 3: Search every premise and hypothesis.
     search_results = []

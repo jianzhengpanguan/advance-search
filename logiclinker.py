@@ -1,6 +1,7 @@
 import re
 import gpt
 import rephraser
+import utils
 
 _PROMPT = """
 Read the conversation, identify all the premises, hypothesis and inference.
@@ -54,7 +55,7 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
     patterns.append(matches.group(i).strip())
   return patterns
 
-def fetch_logics(statement:str, provider_type:gpt.ProviderType=gpt.ProviderType.openai, model_type:gpt.ModelType=gpt.ModelType.advance_model):
+def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model):
   logics = []
   chunks = len(statement) // _CHUCK_SIZE
   for i in range(0, chunks):

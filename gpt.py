@@ -4,6 +4,7 @@ import configparser
 import anthropic
 import math
 import ratelimiter
+import utils
 from enum import Enum
 
 _MAX_TOKENS = 4000
@@ -20,14 +21,6 @@ config.read('config/config.ini')
 # Limit to 50,000 tokens per minute for Anthropic Tier 1 user.
 anthropic_token_rate_limiter = ratelimiter.TokensRateLimiter(max_tokens=35000)
 
-class ProviderType(Enum):
-  openai = 1
-  anthropic = 2
-
-class ModelType(Enum):
-  advance_model = 1
-  basic_model = 2
-
 def num_tokens_from_messages(message:str, model:str="gpt-4")->int:
   """Return the number of tokens used by messages."""
   if not message:
@@ -40,27 +33,27 @@ def num_tokens_from_messages(message:str, model:str="gpt-4")->int:
   num_tokens = len(encoding.encode(message))
   return num_tokens
 
-def request(statement: str, provider_type: ProviderType=ProviderType.openai, model_type: ModelType=ModelType.advance_model)->str:
-  if provider_type == ProviderType.anthropic:
+def request(statement: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)->str:
+  if provider_type == utils.ProviderType.anthropic:
     response = anthropic_request(statement, model_type)
     if response != _GPT_NO_ANSWER:
       return response
     # Upgrade to advance model if we still use basic model.
-    if model_type == ModelType.basic_model:
-      return anthropic_request(statement, ModelType.advance_model)
+    if model_type == utils.ModelType.basic_model:
+      return anthropic_request(statement, utils.ModelType.advance_model)
     # Switch to other provider if advance model still not work.
-    return openai_request(statement, ModelType.advance_model)
+    return openai_request(statement, utils.ModelType.advance_model)
   
   response = openai_request(statement, model_type)
   if response != _GPT_NO_ANSWER:
     return response
   # Upgrade to advance model if we still use basic model.
-  if model_type == ModelType.basic_model:
-    return openai_request(statement, ModelType.advance_model)
+  if model_type == utils.ModelType.basic_model:
+    return openai_request(statement, utils.ModelType.advance_model)
   # Switch to other provider if advance model still not work.
-  return anthropic_request(statement, ModelType.advance_model)
+  return anthropic_request(statement, utils.ModelType.advance_model)
 
-def openai_request(statement:str, model_type:ModelType)->str:
+def openai_request(statement:str, model_type:utils.ModelType)->str:
   # Get the OPENAI's API key, url and model from the configuration file.
   headers = {
       'Authorization': f"Bearer {config['OPENAI']['api_key']}",
@@ -69,7 +62,7 @@ def openai_request(statement:str, model_type:ModelType)->str:
   # Set model.
   model = config['OPENAI']['advance_model']
   url = config['OPENAI']['advance_url']
-  if model_type == ModelType.basic_model:
+  if model_type == utils.ModelType.basic_model:
     model = config['OPENAI']['basic_model']
     url = config['OPENAI']['basic_url']
   statements = _divide_statement(statement)
@@ -96,13 +89,13 @@ def openai_request(statement:str, model_type:ModelType)->str:
     results.append(response.json().get('choices')[0].get('message').get('content'))
   return " \n".join(results)
 
-def anthropic_request(statement:str, model_type:ModelType)->str:
+def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   client = anthropic.Anthropic(
     api_key=config['ANTHROPIC']['api_key'],
   )
   # Set model.
   model = config['ANTHROPIC']['advance_model']
-  if model_type == ModelType.basic_model:
+  if model_type == utils.ModelType.basic_model:
     model = config['ANTHROPIC']['basic_model']
   statements = _divide_statement(statement)
   results = []

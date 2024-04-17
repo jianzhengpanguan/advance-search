@@ -1,4 +1,5 @@
 import gpt
+import utils
 
 # Use context to replace ambiguous terms in an inference.
 # An inference can be ambiguous, when:
@@ -20,7 +21,7 @@ import gpt
 # * `He` should be `President Trump`
 # * `it` should be `renegotiation of the international agreement`, more specifically, `renegotiation of the Paris accord`.
 # * `lead to a deal that is fair` should be `lead to a deal that is fair for the United States`
-def replace_ambiguous_terms(inference: str, provider_type: gpt.ProviderType=gpt.ProviderType.openai, model_type: gpt.ModelType=gpt.ModelType.advance_model)-> str:
+def replace_ambiguous_terms(inference: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)-> str:
   prompt = f"""
   Given a sentence:
   {inference}

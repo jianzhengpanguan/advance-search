@@ -84,7 +84,7 @@ def parse(url:str)->str:
       for element in soup.body.find_all(tag):
         text = element.get_text(strip=True)
         if text:
-          results.append(text+" \n")
+          results.append(text+"\n")
 
   # Get the updated HTML with only title and body
   return " \n".join(results)

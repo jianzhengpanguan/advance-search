@@ -7,7 +7,9 @@ import math
 import logiclinker
 import retriever
 import concurrent.futures
+import utils
 
+_MAX_WORKERS = 1
 _NUM_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
 _CHUCK_SIZE = 500
@@ -16,7 +18,7 @@ _SUMMERIZED_SIZE = 100
 # Create a configparser object
 config = configparser.ConfigParser()
 # Read the configuration file
-config.read('config.ini')
+config.read('config/config.ini')
 
 # Given the search result, determine if the search result is relevant to the statement.
 def _is_relevant(statement, search_result):
@@ -43,7 +45,7 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(statement=prompt, provider_type=gpt.ProviderType.anthropic, model_type=gpt.ModelType.basic_model)
+  response = gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model)
   try:
     answer = response.split("Answer")[-1]
   except IndexError:
@@ -135,7 +137,7 @@ def _summerize(text, max_iter):
         2.__
         ```
         """
-      summaries.append(gpt.request(statement=prompt, provider_type=gpt.ProviderType.anthropic, model_type=gpt.ModelType.basic_model))
+      summaries.append(gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model))
     text = " \n".join(summaries)
   return text
 
@@ -164,7 +166,7 @@ def _to_keywords(topic:str, search:str)->list[str]:
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(statement=prompt, provider_type=gpt.ProviderType.anthropic, model_type=gpt.ModelType.basic_model)
+  response = gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model)
   keywords = []
   keywordSet = set()
   try:
@@ -241,11 +243,11 @@ def _web_request(search:str, keywords:list[str]):
       if not _is_relevant(search, knowledge_from_web):
         return None
       # Fetch logics
-      logics = logiclinker.fetch_logics(knowledge_from_web, gpt.ProviderType.anthropic, gpt.ModelType.basic_model)
+      logics = logiclinker.fetch_logics(knowledge_from_web, utils.ProviderType.anthropic, utils.ModelType.basic_model)
     return item['title'] + item['snippet'] + " ".join(logics) + item['link']
 
   # Use ThreadPoolExecutor to process items in parallel
-  with concurrent.futures.ThreadPoolExecutor() as executor:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:
     # Map process to each item.
     results = executor.map(process, items)
     # Filter None values and collect relevant results
