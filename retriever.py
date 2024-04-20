@@ -7,9 +7,9 @@ import utils
 import signal
 import sys
 import chromadb
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 

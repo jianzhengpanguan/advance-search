@@ -56,7 +56,7 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
   return patterns
 
 def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model):
-  logics = []
+  logics:list[{dict[str,list[str]]}] = []
   chunks = len(statement) // _CHUCK_SIZE
   for i in range(0, chunks):
     request = _PROMPT+statement[i*_CHUCK_SIZE:(i+1)*_CHUCK_SIZE+_OVERLAP_SIZE]
@@ -106,9 +106,22 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
       premises = [raw_logic["Premise"][int(premise_index)-1] for premise_index in premise_indices if int(premise_index)-1 < len(raw_logic["Premise"])]
       hypotheses = [raw_logic["Hypothesis"][int(hypothesis_index)-1] for hypothesis_index in hypothesis_indices if int(hypothesis_index)-1 < len(raw_logic["Hypothesis"])]
       # Extract the indices from the premises/hypotheses, replace the index with the exact premise/hypothesis in inference.
-      inference = f"Premise:[{'+'.join(premises)}] -> Hypothesis:[{'+'.join(hypotheses)}]"
-      rephrased_inference = rephraser.replace_ambiguous_terms(inference, provider_type, model_type)
-      print(f"Inference after parsing: {rephrased_inference}")
-      logics.append(rephrased_inference)
+      raw_inference = f"Premise:[{'+'.join(premises)}] -> Hypothesis:[{'+'.join(hypotheses)}]"
+      inference = rephraser.replace_ambiguous_terms(raw_inference, provider_type, model_type)
+      print(f"Inference after parsing: {inference}")
 
+      logic = {"premises": [], "hypothesis": []}
+      inference = inference.replace("Premise:","").replace("[","").replace("]","").replace("Hypothesis:","")
+      statements = inference.split('->')
+      if len(statements) != 2:
+        continue
+      for premise in statements[0].split('+'):
+        if premise == '':
+          continue
+        logic["premises"].append(premise.strip())
+      for hypothesis in statements[1].split('+'):
+        if hypothesis == '':
+          continue
+        logic["hypothesis"].append(hypothesis.strip())
+      logics.append(logic)
   return logics

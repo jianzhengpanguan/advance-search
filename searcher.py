@@ -207,7 +207,7 @@ def _optimize_search(search:str, keywords:list[str]):
     keywordStr = ' AND '.join(keywords[:num_keywords])
     url = f"{config['SEARCH']['url']}?key={config['SEARCH']['api_key']}&cx={config['SEARCH']['cx']}&searchTerms={keywordStr}&q={search}&num={_NUM_SEARCH_RESULT}"
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=60)  # Timeout set to 60 seconds
     data = response.json()
     # If there is no response, we need to reduce the number of keywords.
     if 'items' not in data:
@@ -244,7 +244,7 @@ def _web_request(search:str, keywords:list[str]):
         return None
       # Fetch logics
       logics = logiclinker.fetch_logics(knowledge_from_web, utils.ProviderType.anthropic, utils.ModelType.basic_model)
-    return item['title'] + item['snippet'] + " ".join(logics) + item['link']
+    return item['title'] + item['snippet'] + str(logics) + item['link']
 
   # Use ThreadPoolExecutor to process items in parallel
   with concurrent.futures.ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:

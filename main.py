@@ -22,40 +22,26 @@ def main():
     print(f"Evaluation file path: {args.evaluation_file_path}")
     print(f"Search result file path: {args.search_result_file_path}")
 
-    # # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
-    # with open(args.raw_file_path, "r", encoding='utf-8') as f:
-    #   raw_statement = f.read()
-    #   logics = logiclinker.fetch_logics(raw_statement)
+    # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
+    with open(args.raw_file_path, "r", encoding='utf-8') as f:
+      raw_statement = f.read()
+      raw_logics = logiclinker.fetch_logics(raw_statement)
     
-    # with open(args.logics_file_path, 'w', encoding='utf-8') as file:
-    #   for logic in logics:
-    #     file.write(logic + '\n')
-
-    # # Step 2: Find the fallacies.
-    # with open(args.logics_file_path, "r", encoding='utf-8') as f:
-    #   logics = f.readlines()
-    #   print(f"Number of logics: {len(logics)}")
-    #   with open(args.fallacy_file_path, 'w', encoding='utf-8') as file:
-    #     for logic in logics:
-    #       file.write("Inference: " + logic + '\n')
-    #       file.write(fallacyfinder.find_fallacies(logic) + '\n')
+    with open(args.logics_file_path, 'w', encoding='utf-8') as file:
+      json.dump(logics, file, indent=2)
     
-    # Step 3: Search every premise and hypothesis.
+    # Step 2: Search every premise and hypothesis.
     search_results = []
-    with open(args.logics_file_path, "r", encoding='utf-8') as f:
-      logics = f.readlines()
+    with open(args.logics_file_path, "r", encoding='utf-8') as file:
+      logics = json.load(file)
       print(f"Number of logics: {len(logics)}")
       inference_search_result = {"premises": [], "hypothesis": []}
       for inference in logics:
-        inference = inference.replace("Premise:","").replace("[","").replace("]","").replace("Hypothesis:","")
-        statements = inference.split('->')
-        if len(statements) != 2:
-          continue
-        for premise in statements[0].split('+'):
+        for premise in inference["premises"]:
           if premise == '':
             continue
           inference_search_result["premises"].append({premise:searcher.search(premise, _MAX_ITER)})
-        for hypothesis in statements[1].split('+'):
+        for hypothesis in inference["hypothesis"]:
           if hypothesis == '':
             continue
           inference_search_result["hypothesis"].append({hypothesis:searcher.search(hypothesis, _MAX_ITER)})
@@ -63,7 +49,7 @@ def main():
     with open(args.search_result_file_path, 'w') as file:
       json.dump(search_results, file, indent=2)
 
-    # Step 4: Evaluate the logics.
+    # Step 3: Evaluate each premise and hypothesis.
     with open(args.search_result_file_path, 'r') as search_result_file:
       inference_search_results = json.load(search_result_file)
     with open(args.evaluation_file_path, 'w', encoding='utf-8') as file:
@@ -82,6 +68,14 @@ def main():
               continue
             file.write('Hypothesis:' + hypothesis + '\n')
             file.write(evaluator.evaluate(hypothesis, str(search_results)) + '\n\n')
+
+    # Step 4: Find the fallacies.
+    with open(args.logics_file_path, "r", encoding='utf-8') as file:
+      logics = json.load(file)
+    fallacies = fallacyfinder.find_fallacies(logics)
+    with open(args.fallacy_file_path, 'w', encoding='utf-8') as file:
+      json.dump(fallacies, file, indent=2)
+      
 
 if __name__ == "__main__":
     main()

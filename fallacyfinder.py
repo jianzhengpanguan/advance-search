@@ -1,5 +1,6 @@
 import re
 import gpt
+import searcher
 
 """Explanation
 Fallacy of Composition: Fallacy of Composition. Assuming that what is true for the individual parts must also be true for the whole.,
@@ -65,7 +66,45 @@ The fallacies should be one of:
 
 Use instruct to analyze inference: 
 """
+_MAX_NUM_PATTERNS = 100
+_MAX_ITER = 3
 
-def find_fallacies(inference):
+# Fetch the patterns in fallacy, explanation.
+# Example raw text: r"Fallacy:\s*\n(1\..*?)\n(2\..*?)\n".
+def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
+  patterns = []
+  pattern = prefix+r":\s*\n"
+  for i in range(1, max_iter):
+    pattern += f"({i}"+r"\..*?)\n"
+    # Find all matched content.
+    matches = re.search(pattern, raw_text, re.DOTALL)
+    if matches == None:
+      return patterns
+    patterns.append(matches.group(i).strip())
+  return patterns
+
+
+def _to_fallacy_explanation(inference):
   request = _PROMPT+inference
   return gpt.request(request)
+
+def find_fallacies(inferences:list)->list:
+  fallacies = []
+  for inference in inferences:
+    inference = f"Inference: Premises->Hypothesis {str(inference)}"
+    fallacy_explanation = _to_fallacy_explanation(inference)
+    raw = {
+      "Fallacy": _fetch_patterns(prefix="Fallacy", raw_text=fallacy_explanation),
+      "Explanation": _fetch_patterns(prefix="Explanation", raw_text=fallacy_explanation),
+    }
+    explanation_searches = {}
+    for explanation in raw["Explanation"]:
+      if explanation:
+        explanation_searches[explanation] = searcher.search(explanation, _MAX_ITER)
+    fallacies.append({
+      "Inference": inference,
+      "Fallacy": [fallacy for fallacy in raw["Fallacy"] if fallacy],
+      "Explanation": explanation_searches,
+    })
+  return fallacies
+

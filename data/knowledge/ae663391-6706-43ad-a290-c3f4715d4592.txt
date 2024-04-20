@@ -1,0 +1,620 @@
+ 
+1 
+ Logic: A Brief Introduction  
+Ronald L. Hall, Stetson University  
+ 
+Chapter 4 –  Identifying Fallacies  
+4.1 Introduction   
+ Ludwig Wittgenstein once said that his aim in philosophy was to turn disguised nonsense into patent 
+nonsense. What he was implying in th is cryptic remark is that patent (obvious) nonsense, being easy to spot, is not 
+as dangerously misleading as nonsense that is disguised as sense. Our task in this chapter is to unmask some 
+common cases of disguised nonsense. When we do, we will be less pro ne to fall for their illusion of sense.  
+ At one time or another, we have all had the illusion that some conclusion followed from a given set of 
+premises when in fact it did not. We might have even acted on such an illusion. Logicians call such deceptive 
+arguments, however psychologically convincing they may be, logical fallacies.  
+ Some of these fallacies occur so often and are so psychologically convincing that we need to be on special 
+alert to avoid them. The best way to do this is to identify (by name) e xamples of them, and to see exactly why the 
+conclusions of such fallacious arguments do not follow from their premises. (There are a couple of exceptions to 
+this rule. As we will discuss presently, the fallacy of complex question may not be formally invali d, but it is always 
+invites bad reasoning. The other exception is the fallacy of begging the question, which is technically both valid 
+and sound, but nevertheless a case of bad reasoning. I will say more about these exceptions in due course.)  
+ The list of fallacies varies with different authors.  Some, however, appear to be common to every list and 
+our list includes most of these standard fallacies. As well, our list divides the fallacies into two general categories: 
+Fallacies of Relevance and Fallacies of Ambiguity . 
+ Fallacies in the first category occur in those cases in which the content of the premises bears little or no 
+logical relevance to the conclusion. Fallacies of the second category occur in those cases in which a word, phrase, 
+or passage has no c lear meaning  
+4.2 Fallacies of Relevance  
+1. Force  
+ When a speaker or writer formulates an argument it is usually with the intention of convincing some 
+audience to accept its conclusion. For example, suppose someone tries to convince a group that it ought t o play 
+soccer instead of basketball. The reasons offered are as follows: (1) the basketball court is in bad shape, and (2) 
+most in the group would rather play soccer than basketball anyway. Giving reasons for taking one course of action 
+rather than another  is, however, not the only way of trying to get an audience to accept a conclusion. Suppose the 
+owner of the basketball and the soccer ball says that he thinks that the group ought to play basketball and further 
+that if the group does not agree but wants t o play soccer instead he tells them he will not allow the group to use his 
+soccer ball. We have now abandoned the technique of rational argument and entered the realm of coercion. And of 
+course coercion is psychologically convincing and often works. Most l ikely the group will end up playing 
+basketball. However, whenever a person attempts to coerce his or her audience to accept a conclusion on the basis 
+of a threat, veiled or explicit, we say that a logical fallacy has occurred. We call this fallacy an appea l to force.  
+(Sometimes this fallacy is referred to by its Latin name, Argumentum ad Baculum , which means “argument from 
+the stick.”)  
+ 
+2 
+ It should be obvious to you that appeals to force, while psychologically convincing, are not valid arguments.  
+Consider the difference between the following two attempts of parents to convince their child to go to college. 
+A. You ought to go to college because it will broaden your horizons.  
+B. You ought to go to college because if you don’t we will disinherit you.  
+ Clearly B is not offering a reason in support of going to college, but A is. Rather than offering reasons, B is 
+attempting to coerce the child into attending. Whether the prospective student is in or out of his or her parent’s will 
+is logically irrelevant to whether  going to college has or does not have merit. B has clearly abandoned logic in favor 
+of force.  
+2. Ignorance.  
+ How many times have you ever heard someone say something like: “Such and such must be true because 
+nobody has ever proved it is false;” or “Such  and such must be false because nobody has ever proved it is true.”  
+You can fill in the “such and such” with things like “ghosts” or “God” or “aliens.” However psychologically 
+convincing it may be, the fact remains that nothing follows logically from the absence of proof. From the fact that 
+nobody has ever proven that the proposition “God exists” is false, it does not follow that it is true; and from the fact 
+that nobody has ever proven that the proposition “God does not exist” is true, it does not follow that it is false. To 
+reason this way is to commit the fallacy of appeal to ignorance (Sometimes this fallacy is referred to by its Latin 
+name, Argumentum ad Ignorantiam .) 
+ 
+ We need to be careful, however, not to dismiss every appeal to a lack of evidence as committing this 
+fallacy. Sometimes an absence of evidence can count as positive evidence. For example, if the termite inspector 
+tells you that you do not have termites because there is no termite dust to be found on the beams under your house, 
+he or she has not committed the fallacy of appeal to ignorance. And if the doctor says that the absence of a bull’s 
+eye marking around the tick bite site on your skin is evidence that you do not have Lyme disease, this is not a case 
+of the fallacy of appeal to ignor ance. The facts are that if I did have termites I would likely have termite dust on the 
+beams under my house and if I did have Lyme disease I would likely have a bull’s eye marking around the tick bite 
+site on my skin. These cases are very different from claims like, “I do not have a soul because it has not been 
+proven that I do.”  This conclusion simply does not follow. 
+3. Pity  
+ I hope that you are beginning to see why these fallacies are classified as fallacies of relevance. Indeed, the 
+“reasons” that are given in support of the conclusions of the fallacies of relevance are not logically relevant to the 
+conclusion. What this means is that the truth of the conclusion is not guaranteed by the truth of the premises.  
+ In this light consider the following argument. “You ought to change my failing grade on my logic test to a 
+passing grade;  for otherwise I will lose my basketball scholarship and I will have to drop out of college.” Strictly 
+speaking the appeal here is logically irrelevant to the conclusion, and y et it does carry psychological weight. In fact 
+there have been college professors who have fallen for this appeal. Nevertheless, such arguments are fallacious. 
+Grades are intended to reflect the level of mastery the student has achieved in the subject, not  the level of pity the 
+Professor feels for the student. Pity is logically irrelevant to assessments of mastery. Logicians call fallacies of this 
+sort appeals to pity . (Sometimes this fallacy is referred to by its Latin name, Argumentum ad Misericordiam ) 
+ Compare the argument above to this one: “You ought to change my failing grade on my logic test to a 
+passing grade, because the failing grade that I got reflects a calculation error that you made; if the points were 
+accurately added, my grade would no longer  be a failing one.” In this case, the Professor has good reason to change 
+the grade, while in the former case she does not. If we granted good grades on the basis of pity, grades would no 
+longer measure the level of mastery of the subject that the student has achieved and hence would become 
+meaningless.  
+ 
+3 
+ 4. Desire  
+ The fallacy of desire is not always included in lists of fallacies. I include it here because we hear it so often. 
+This fallacy is committed when someone concludes that such and such must be true because he or she would like it 
+to be true. Consider the following example: “Believing that I have a guardian angel that watches over me gives me 
+all the comfort and security I want and need on the hard road of life. That’s the reason that I believe I have one.” 
+Clearly this argument reaches its conclusion on the basis of wanting something to be true.  
+Compare the following two arguments:  
+It makes me depressed to think that we human beings are nothing but causally determined mechanisms. I would be 
+so much happier if I thought we had the freedom to make at least some choices in life.  Therefore I believe that we 
+are free.  
+ 
+It is not rational to believe x unless x is true and x is based on evidence that is accepted by the believer as 
+warranting x. In other wor ds, rational beliefs are possible only for beings that possess the power of accepting or 
+rejecting evidence. This power of acceptance or rejection is called freedom. If someone were to come to believe 
+that human beings are merely causally determined mechan isms, then he or she must have accepted certain evidence 
+as warranting this belief. However, it is possible to accept (or reject) evidence only if we are free to do so. 
+Amazingly, even the claim that we are not free shows that we are. Therefore, I believe that we are free.  
+ What makes the first argument above a fallacy is that its conclusion is not guaranteed by the truth of its 
+premises. This is not true in the second argument. The premises in this argument are logically relevant to its 
+conclusion. Indeed, in this case it certainly seems obvious that the argument is valid, for if its premises were true 
+then its conclusion would have to be true. Remember, however, two things: (1) first, an argument can be fallacious 
+formally without committing one of the fal lacies in our list; there are lots of examples of bad reasoning; (2) 
+secondly, even if the argument in B were valid, it might still be unsound. Valid arguments are unsound, recall, 
+unless all  of their premises are true.  
+5. Authority 
+ How often we hear peop le say things of the following form: “Such and such must be true because “So” and 
+“So” said so.” Here we have an argument that is based on an appeal to authority. Arguments of this form, however, 
+may or may not be fallacious.  
+ Let’s consider an argument of  this form that is not fallacious. “The weapon used in the murder was a 9mm 
+pistol, because the ballistics expert said so.”  In this case the appeal to the authority of the ballistics expert provides 
+a perfectly legitimate ground for the conclusion.  
+ Howe ver, if we appeal to an authority that is not vested with the proper credentials for making the 
+judgment, then we have committed the fallacy of appeal to authority. For example, if someone were to say, “You 
+can bet that the economy is going to rebound shor tly, because Pete Rose said it was going to,” then we have an 
+obvious case of the fallacy.  In this case, Pete Rose, a former baseball player, is not an economist and so lacks the 
+relevant authority to make such a judgment. Appeals of this sort are often r eferred to as appeals to an inappropriate 
+authority. (This fallacy is sometimes referred to by its Latin name, Argumentum ad Verecumdiam .) 
+ Appealing to an authority in order to provide a reason for accepting a particular conclusion becomes a 
+fallacy when the authority appealed to lacks the appropriate knowledge or power to warrant its acceptance. 
+Sometimes the appropriateness of the authority is not easy to discern. Consider the following two examples:  
+ 
+4 
+ A. That pitch was not a strike because the TV commentator said that it was not.  
+B. That pitch was a strike because the umpire said it was.  
+ In this case it might seem that the seasoned TV commentator knows enough about baseball to tell if the 
+pitch was or was not a strike. However the fact remains that this commentator lacks the authority to make the call, 
+whereas the umpire is vested with precisely that authority. Accordingly, the first argument may commit the fallacy 
+of appeal to authority but the argument in B does not.  Now consider this: “The umpire misse d that call because (on 
+the basis of a review of the play) the referee said so. ” This is certainly not an appeal to an inappropriate authority 
+when it comes to making a judgment about whether or not the umpire missed the call.  As such it would not 
+consti tute the fallacy of an appeal to an inappropriate authority.  
+ Let me issue this caution:  sometimes even appeals to appropriate authorities may commit the fallacy of an 
+appeal to authority, we need to know how to determine when they do and when they don’t . Certainly if one appeals 
+to an inappropriate authority the fallacy is committed. However, if one appeals to an appropriate authority this may 
+not guarantee that the fallacy is avoided. Consider this example: “Abortion is morally wrong because the Pope said 
+so.” If the person who says this is a Roman Catholic, then surely the Pope is an appropriate moral authority for this 
+person. So does this argument commit the fallacy of an appeal to authority or not? It depends on what the person 
+intends to be claiming , and of course in many cases this may be difficult if not impossible to determine. If the 
+person is saying that he accepts the reasoning of the Pope in coming to the conclusion that abortion is morally 
+wrong, this is a legitimate appeal. It is legitimate because the claim is not that the Pope’s saying that abortion is 
+morally wrong is what makes it morally wrong, but that the Pope says it is morally wrong because he has come to 
+this conclusion on the basis of good reasons.  
+ In some cases, saying that somet hing is so is enough to make it so, but not always. If a jury says that you 
+are innocent then you are; if an umpire says that the pitch was a strike then it was, and this is so even if in fact you 
+really are guilty, and even if the pitch was in fact out of  the strike zone. In most cases, however, saying something 
+is so does not make it so, even if the one who says it is so has the relevant authority to make that judgment. 
+ If I say that murder is morally wrong because the Bible says that it is and mean by t his that the Bible’s 
+saying murder is morally wrong is what makes it morally wrong, then I have committed the fallacy of an 
+illegitimate appeal to authority. If I say that I think that the Bible says that murder is morally wrong because its 
+authors were co nvinced that it is morally wrong, then I do not commit the fallacy. A key to making this distinction 
+is whether the appeal to authority is designed to stop further rational inquiry, or whether it is open to it. Appeals to 
+the Bible are often of the former kind. As we hear: “The Bible says it and that settles it.” This attitude suggests that 
+there is no room for further questions. If however we think that the Bible says what it says for good reasons, then 
+there is room for further inquiry and assessment of t hese reasons. Appeals to the Bible of this second sort are 
+certainly not fallacious.  
+6. False cause  
+ It is quite obvious that causes and effects are connected. Usually that connection is a temporal one. That is, 
+usually causes come before effects. For exam ple, if a person has a headache and takes an aspirin or two and the 
+headache goes away, he or she would probably say that the medicine caused the pain to subside. But not every such 
+temporal sequence of events adds up to a cause and effect relation. It is biologically possible for a person’s 
+headache to go away before the aspirin takes effect. In this case a person might mistakenly think that the aspirin 
+caused the headache to go away when the relief was due to other causes.  
+ 
+ Causes and effects, however, are not always related in such a temporal sequence. Causes and effects can 
+occur simultaneously. Consider the relation between the light beam and the illuminated bulb in a flashlight. Even 
+though the light beam is caused by the illuminated bulb, the beam does not occur after the bulb is illuminated but at 
+precisely the same time the bulb comes on.  Again, not every such simultaneous relation of two events adds up to 
+ 
+5 
+ the conclusion that the two events are causally related. It may well be true, for example, th at every time Jupiter 
+moves to a certain position in the heavens Mars simultaneously moves to a corresponding position in relation to 
+Venus. Even though this alignment of Jupiter and Mars always simultaneously occurs, it would be a mistake to 
+think that th e movement of one causes the movement of the other. To think that because two events always, or even 
+sometimes, occur at the same time or in a temporal sequence, that they are therefore causally related, is to commit 
+what logicians call the fallacy of false cause. (The fallacy of concluding that because one event precedes another 
+that it is the cause of the second event is sometimes referred to by its Latin name, Post Hoc Ergo Propter Hoc , 
+which means something like “after therefore because ”)  
+ In general t he fallacy of false cause is committed whenever some event is held to be the cause of another 
+when in fact the events are not causally related at all. This fallacy occurs most frequently when we are dealing with 
+the chance collation of events. If, for exam ple, I fall and break my leg on the very day that a black cat crossed my 
+path, and conclude that the first event caused the second, I have committed the fallacy of false cause. Superstition is 
+full of such false cause fallacies.  
+ Many have tried to take ad vantage of the fact that human beings are prone to see causal connections where 
+they may not exist. A notable example of this is the chain letter. In such letters the recipient is asked to keep the 
+chain going, and warned that some people who dared to brea k the chain met with some horrible disaster. The 
+implication is that the failure to keep the chain going caused the disaster.   
+ You might be thinking at this point that this example sounds awfully much like the fallacy of appeal to 
+force. And you would be  exactly right. So there is no better time than now to let you know that one and the same 
+argument may commit more than one fallacy. Certainly the chain letter example does. In analyzing arguments in 
+the Exercises Workbook, you must try to decide which fal lacy is the most prominent one. Honest differences of 
+opinion are clearly possible. 
+7. Popularity  
+ However much we would like to think of ourselves as individuals forging our own unique paths in life, the 
+fact is we are also deeply influenced by forces of conformity. Most of us want to be accepted and to win the 
+approval of others. Accordingly we are very prone to be convinced by arguments that play on the psychology of 
+public opinion. For example, we are likely to think that a certain brand of clothing is the best because everybody 
+who is anybody wears that brand. To come to this conclusion is a mistake in reasoning.  Reasons that make a 
+certain brand preferable may include quality of workmanship but not popularity. Arguments of this sort commit 
+what logicians call the fallacy of popularity. (Sometimes this fallacy is referred to by its Latin name, Argumentum 
+ad Populum , which means “argument to the people.”)  
+ 
+ We often hear commercials on TV that tell us that a certain brand of automobile sells more than an y other 
+in America. American consumers buy millions of these cars every day.  Clearly this brand of car must be the best, 
+for so many car buyers could not be wrong. Well, of course they could be.  Just because a car is very popular it does 
+not follow that it is the best car for consumers to buy.   
+ On a less materialistic level, consider the attempt to provide grounds for thinking that God exists by citing 
+the fact that ninety percent of Americans believe that He (She?) does. The fact that popular opinion i s heavily 
+weighted in favor of thinking that God exists is psychologically powerful but logically speaking it has no relevance 
+in establishing or substantiating the truth of the claim that God exists.  
+ The point here is not only that popular opinion can be  mistaken and so is not a reliable ground from which 
+to draw conclusions validly. The more profound point is that even if popular opinion turns out to be correct, it is 
+still logically irrelevant in establishing the truth of a conclusion.  It may be true that most people in America believe 
+that God exists, but if the fallacy of popularity is to be avoided the claim that God exists needs to be established on 
+different grounds, grounds that if true would guarantee the truth of the conclusion. Even if we grant  the truth of the 
+claim that most Americans believe in God, it simply does not follow that God exists, for the conclusion (that God 
+ 
+6 
+ exists) could be false while the premise of the argument (that most Americans believe that God exists) is true. 
+Recall that in good arguments, if the premises are true the conclusion must be true. Or put differently, a good 
+(deductive) argument cannot have a false conclusion if its premises are true.     
+ Sometimes the fallacy of popularity is committed by what we might call association. For example, the 
+fallacy of popularity is committed when it is suggested in a commercial that a particular product has merit because 
+it is associated with the wealthy, the famous, and the powerful. The fact that the rich and the famous use a 
+particular product has no logical relevance as to whether it is a good product or not. However, because such images 
+of extravagant lifestyles are so popular with American consumers, advertisers try to play the psychological trick of 
+convincing their audience that they can have a little piece of this popular lifestyle if they buy this product.  
+ Again, we meet here with the fact that more than one fallacy can be committed in a single “argument.” If 
+the advertisers of a product not only place the product in an environment that is envied by the masses, but also have 
+famous people endorsing the product, two fallacies may be committed. Just because Brittany Spears thinks that a 
+certain brand of lawnmower is the best, it does not follow that it is. Here the fallacy is  the appeal to an 
+inappropriate authority. If the endorsement were placed within a lifestyle envied by the masses, the fallacy would 
+also be popularity. To decide which fallacy is the primary one, we must decide which mistake is the most 
+prominent. Again, we may meet here with honest disagreement. But even if we disagree about which fallacy is the 
+most prominent, there can be no denying that examples of this type commit both fallacies.   
+8. Complex Question  
+ Although you may not have heard of the fallacy of  complex question by name, you may have come across 
+some examples of it. One of the most famous is found in the classic question: “Have you stopped beating your 
+wife?” Now clearly if we are required to answer “yes” or “no” to this question we are condemned  out of our own 
+mouths as being either a current wife -beater (if you answer “no”) or as a past one (if your answer is “yes”). As we 
+might put it, such questions are structured in such as way as to presume the answer to an unasked question; in this 
+case: “A re you a wife -beater?”  
+ 
+ It may be difficult to see at first why such questions are called fallacies, for clearly questions are not 
+arguments and fallacies are bad arguments. What makes such questions fallacies is that they are designed to lead us 
+to draw conclusions that are not warranted. Drawing conclusions from assumptions that one is tricked into granting, 
+that is, that one would not grant if not so tricked, is indeed bad reasoning. Even if such arguments turn out to be 
+formally valid, there is no way that such arguments could be sound for the simple reason that they begin with a 
+false premise that one is tricked into granting.  
+ As in our example above, the question is formulated in such a way that if I answer “yes” or “no” to it, then 
+it does follow th at I am a wife- beater, even if in fact I am not. In general then, complex questions are designed 
+psychologically to trick someone into granting an assumption that is in fact false from which he or she wants to 
+draw a conclusion that is also false, as well as incriminating. Even though the reasoning here may be valid, that is, 
+even though it does follow that I am a wife -beater if I do say “yes, I have stopped beating my wife,” it could never 
+be sound reasoning to conclude that I am in fact a wife -beater, at least if the premise of the argument is in fact false.   
+ To avoid being tricked in this way, we must be careful not to answer such complex questions. If someone 
+asks you: “Do you still cheat on your exams?” you must refuse to answer either “yes” or “no” b ecause either 
+answer would imply that you are a cheater. Probably the best strategy in dealing with such questions is to make 
+their implicitly answered, but unasked question, explicit and simply deny it. That is, you may say, “Your question 
+assumes that I am a cheater, and I am not.”     
+9. Begging the Question  
+ Even though the next fallacy is called begging the question, it, unlike the previous fallacy, has nothing to 
+do with the interrogative grammatical form. In this case, “the question” is simply the is sue that the argument is 
+ 
+7 
+ attempting to settle. For example, if there is a question as to whether God exists, we might try to settle this by 
+giving reasons for concluding that God does exist, or for concluding that God does not exist.  We are said to 
+commit  the fallacy of begging the question if we smuggle the conclusion we are trying to establish (that God does 
+or does not exist) into the premises we are assuming in our argument. Consider the following argument:  
+ 
+If what the Bible says is true, then God exi sts. 
+If God inspired the Bible, then what the Bible says is true.  
+There is a God and He inspired the Bible.  
+Therefore, God exists.  
+ 
+ Now clearly the third premise in this argument assumes that God exists, which is precisely the conclusion 
+we are trying to establish. As this is usually put, this argument commits the fallacy of begging the question because 
+it assumes what it is trying to prove. (Sometimes this fallacy is referred to by its Latin name, Petitio Principi )  
+ Earlier, we said that this fallacy is an exception to the claim that fallacious arguments are invalid. In 
+begging the question, we meet a fallacy that is formally valid and may even be sound.  Let’s see how this can be 
+true. 
+ Recall that every argument that commits the fallacy of begging the q uestion is formally valid, for if x is 
+true then it follows that x is true. The problem with this reasoning, however, is that it does not get us anywhere. 
+This is why such reasoning is often referred to as circular. Of course, if God exists then it follows that God exists. 
+But to assume just what you are trying to prove does not establish anything. Rather, it merely draws a conclusion 
+and then restates that conclusion (usually in different words, but with the same propositional content) as one of the 
+premis es of the argument.  
+ What may be surprising to you is that it is also possible for an argument to be sound and yet still be 
+classified as a fallacy. Yet this is precisely the case with the fallacy of begging the question. Recall, a sound 
+argument is a vali d one with all true premises. Consider this argument: Since more electors voted for Bill Clinton 
+than for his opponent in two consecutive US presidential elections, it follows that he was twice elected to the office 
+of President of the United States. Now t he premise of this argument is true and it is a formally valid argument. As 
+such, we are forced to say that it is a sound argument. Nevertheless we also must say that this argument is a case of 
+mistaken reasoning for it begs the question and establishes no thing other than a single assertion that is asserted 
+twice in different words. One version of the assertion serves as the conclusion, the other as the premise of the 
+argument. Arguments of this sort, even sound ones, get us nowhere.  
+ Please reserve the phr ase “begging the question” to name the fallacy I have just discussed ; that is, the 
+fallacy of assuming what one is trying to prove.  Recently I have noted that the phrase is being misused in TV 
+commentary and in casual conversations.  In these cases “beggi ng the question” is used simply as a way of pleading 
+for a certain question to be asked. 
+10. Character -Abusive  
+ When someone is involved in a disagreement and is finding that he or she is losing the argument, it often 
+happens that he or she makes a shift i n strategy. Failing to support his or her position with good reasoning, he or 
+she attempts to discredit his or her opponent in this disagreement by attacking his or her character. Consider this 
+argument: “Your argument that abortion should be illegal is absurd. But what could we expect from a narrow -
+minded moral imbecile?”  
+ 
+ More generally, we will say this: whenever a person turns away from trying to settle a particular issue by 
+rational argument and turns rather toward an attack on the character of the p erson who holds a different view on the 
+issue at stake, we have a case of fallacious reasoning. We will call this the character -abusive fallacy. (This fallacy is 
+ 
+8 
+ often referred to by its general Latin name, Argumentum ad Hominem , which means “argument agai nst the 
+person." Indeed sometimes this Latin name is shortened further to simply, “ Ad Hominem .”) 
+ Abuse of character comes in many forms, some obvious, some subtle. Calling someone a “moral imbecile” 
+is a pretty obvious case of abuse of character. But it w ould also count as abuse of character to say that someone is 
+“limited” in certain ways. To say that someone is limited is not necessarily to abuse him or her, but it may be. We 
+may say that our young child is limited when it comes to understanding politica l discourse, and this certainly is not 
+to abuse the character of the child. However, suppose someone said: “I don’t expect that you would see the moral 
+absurdity of making abortion illegal, since you are extremely limited in your ability to feel sympathy f or the rights 
+of women in general.” This is no compliment of character, and in fact it is a form of abuse.  
+11. Character -Circumstantial  
+ Closely related to the character -abusive fallacy is the character -circumstantial fallacy. Both are Ad 
+Hominem  fallacie s that turn from considerations of the merits of the argument to an attempt to discredit the person 
+making the argument. The assumption of the one who argues this way is that one will be psychologically convinced 
+to discredit an argument if the one making it is discredited.  
+ 
+ Abusing the person making the argument is not, however, the only way that we can attempt to discredit the 
+person making an argument that we also want to discredit. We can call attention to the special circumstances of the 
+person makin g the argument with the aim of showing that the person has a special interest in defending the 
+conclusion that he or she is attempting to argue for. Consider this example: “Of course you think that abortion is 
+morally wrong, after all you are a Roman Catholic.” Strictly speaking, however, the fact that the person making the 
+argument that abortion is morally wrong is a Roman Catholic (assuming, of course, that Roman Catholics have 
+taken a united stance on this issue as mandated by official Church dogma) is l ogically irrelevant when it comes to 
+giving reasons in favor of the claim that it is morally wrong. Of course calling someone a Roman Catholic is not to 
+abuse him or her, but it may be a psychologically convincing way to undermine the force of the argument .Consider 
+the differences between the following two arguments:  
+A. Affirmative Action is a good policy because it aims at making sure that past injustices that have discriminated 
+against minorities and women will be corrected.  
+B. Of course A thinks that Aff irmative Action is a good policy; why wouldn’t she? After all A is a woman and 
+stands to benefit from such a policy.  
+ I hope you see that B commits the character -circumstantial fallacy, while A does not. We may of course 
+debate A on the merits of affirmati ve action, but for considerations of this sort, knowing whether B is a member of 
+a minority group or a woman is logically irrelevant to the merits of the policy itself. Even though such arguments 
+are psychologically effective, they are logical fallacies.  
+12. Accident  
+ The next two fallacies (accident and hasty generalization) that we will deal with are mirror images of each 
+other. To reflect this, so to speak, the second of these fallacies, hasty generalization, is often called converse 
+accident. Both of th ese fallacies involve mistakes in reasoning with regard to what we might call general rules and 
+exceptions to general rules. Let’s see how this mistake is made first in the case of the fallacy of accident.  
+ 
+ General rules almost always have exceptions. Whe n we do not take proper account of this fact we are liable 
+to draw unwarranted conclusions. Consider this example: As a general rule, it is morally wrong to lie. Therefore, 
+when the Nazis knocked on the door at the house in Amsterdam during WWII where Anne  Frank was being hidden 
+in the attic and inquired: “Is Anne Frank here?” the owners of the house should not have lied. Clearly this was an 
+exceptional case, that is, a case in which the general rule does not apply. Certainly most people would think that it  
+ 
+9 
+ was morally wrong in this case to tell the truth, for after all, lying would save Anne Frank’s life while telling the 
+truth would have condemned her to death.  
+ We certainly could multiply these examples with less dramatic consequences. Consider the follo wing 
+arguments, all of which commit the fallacy of accident:  
+A. We ought always to help people who are having car trouble when we can. Therefore we ought to help 
+those bank robbers over there that can’t seem to get their car started.  
+ 
+B. We ought always to obey the posted speed limits. Therefore that ambulance driver should be given a 
+speeding ticket.  
+ 
+C. We ought always to respect the right of every American to vote. Therefore we must allow convicted felons 
+the right to vote.  
+ 
+D. Americans believe that it is morally unacceptable to exclude whole groups of people (like women) from 
+having the right to vote. Therefore, in America it is morally unacceptable to exclude the whole group of 
+convicted felons from having the right to vote.  
+13. Hasty Generalization  
+ Hasty generalization, like its opposite, accident, is a fallacy that involves general rules and exceptional 
+cases. In the fallacy of accident the mistake comes in reasoning from a generalization to an exceptional case. In this 
+fallacy of hasty generalizati on, we reason in the opposite direction. (This is why this fallacy is sometimes referred 
+to as the fallacy of converse accident.)  That is, in this fallacy we start from an exceptional case and proceed to 
+draw a conclusion from it in the form of a general rule. If the sample of cases on the basis of which a generalization 
+is made is very small these cases may be exceptional. As such a generalization on the basis of a small pool of 
+particular cases may be too hasty and accordingly not justified. Again, excep tions do not make good rules. Consider 
+the following examples:  
+ 
+A. It is morally right to lie when the Nazis inquire as to whether Anne Frank is in the attic. Therefore, it is 
+always morally right to lie. 
+ 
+B. We ought not to help Robbers get their getaway car started. Therefore, we never ought to help people 
+with car trouble.  
+ 
+C. Ambulance drivers are allowed to speed, therefore everybody should be allowed to speed.  
+ 
+D. In America it is morally acceptable to exclude the whole group of convicted felons from having the right 
+to vote. Therefore it is morally acceptable to exclude whole groups of people, such as women, from having 
+the right to vote  
+ 
+10 
+ 14. Irrelevant Conclusion  
+ All of the fallacies we have looked at so far have been ones in which the premises, however 
+psychologically compelling, are logically irrelevant to the conclusions they are offered in support of. So why do we 
+have a separate fallacy entitled irrelevant conclusion? The reason is that we need a category of fallacy that will 
+cover all of the cases of irrelevancy that are not covered by the other fallacies.  
+ 
+ One such case is as follows. Sometimes in an argument premises are offered that do not in fact support the 
+conclusion they are offered in support of, but another conclusion that is not at is sue and is often readily agreed to. 
+When this happens, we say that the argument commits the fallacy of irrelevant conclusion. (This fallacy is 
+sometimes referred to by its Latin name, Ignoratio Elenchi , that is, “false refutation.”)  
+ An example of this fal lacy will help you identify it. Suppose that a Congresswoman is trying to convince 
+her colleagues in the House to vote for Fair Housing Bill #4. Rather than giving reasons for supporting this 
+particular bill, she offers reasons in favor of fair housing. Now virtually all of her colleagues agree that fair housing 
+is a good thing. So, either from her own lack of clarity, or from an intentional attempt to get this bill passed, by 
+hook or crook, as it were, she purports to argue for this particular bill but in fact argues the merits of fair housing. 
+To make such an argument concluding that fair housing is a good thing is easy, since everyone, or nearly everyone, 
+already agrees to it. But such an argument commits the fallacy of irrelevant conclusion because the r eal issue is not 
+argued for. That is, why, given that fair housing is a good thing, is this  bill worthy of being passed? Will this bill 
+promote fair housing? We could all agree that fair housing is a good thing, but honestly disagree about whether 
+passing this  bill is the best way to get it.  
+ Consider one more example of this fallacy: “I think that you ought to go to law school. The law profession 
+is a very noble and respected one. As well, many successful lawyers make a fortune.”  The premises, true as they 
+may be, do not establish that I ought to go to law school. This may be convincing however, since this argument is 
+actually directed to establishing that the practice of law is an esteemed profession, something most would readily 
+agree to.  However, the f act is that considerations of this sort are logically irrelevant to the question of whether law 
+school is the best place for me, given my talents, interests, resources, etc.  
+4.3 Fallacies of Ambiguity  
+ The fallacies we have been dealing with so far have al l involved the issue of logical relevance. Arguments 
+that commit these fallacies do so because the premises of these arguments, however psychologically relevant, are 
+logically irrelevant to their conclusions.  
+ Unlike these fallacies of relevance, the falla cies in the next group of fallacies —the fallacies of ambiguity —
+consist of mistakes in reasoning that are committed because of an ambiguity in the terms used in an argument. For 
+example, a fallacy of ambiguity is committed whenever there is a word, or phras e, or whole passage that has more 
+than one meaning and this lack of clarity of meaning leads to unwarranted conclusions. We will consider five of the 
+most commonly committed such fallacies of ambiguity.  
+15. Equivocation  
+ Many words in English have more tha n one meaning, including the word “word.” To see this, ask yourself: 
+“How many words is the word “bark?” You probably want to say: “It depends.” And you would be right. If you 
+mean by “word” simply that particular group of letters "b- a-r-k," then the answe r is one. If you mean by “word” its 
+various meanings, then it has at least two literal meanings, the covering of a tree and the sound that a dog makes, 
+and lots of metaphorical ones, as in “His bark was worse than his bite.” And certainly when one says: “Y ou have 
+my word on it,” this does not imply that some letters are printed on whatever “it” happens to be  
+. 
+ Considerations of context are absolutely important in achieving clarity in what we say and write. However, 
+sometimes context is not sufficient to av oid ambiguity. In such cases extra effort to avoid confusion is necessary. 
+This may include changing the syntax (word order) of a passage, making it clear which meaning an ambiguous 
+ 
+11 
+ word in that passage has, and making sure that it is used consistently wit h just that one meaning throughout the 
+passage or argument. Inattention to these matters often leads to the fallacy of equivocation.  
+Consider this example:  
+“If I have a mind, then I must not be completely a physical being. It was confirmed that I have a mi nd the other 
+day at the hospital when my skull was x -rayed.  Therefore, I must not be completely physical.”  
+ In this case, this person may not have been aware that he or she was using the term “mind” in one instance 
+to mean something like “soul” and in ano ther to mean “brain.” Quite obviously x- ray machines could establish that 
+I have a brain, but they could not establish the presence of something non- physical. We can take a picture of the 
+brain, but we cannot take a picture of the soul. We say in this case  that the person who put the argument forth was 
+equivocating on the term “mind.”  
+ Sometimes there is an intentional playing on the ambiguity of a word. This may be done in order to trick 
+some audience into drawing a conclusion that does not follow from a s et of premises, and would obviously not 
+follow if the ambiguity were eliminated. Consider the following example:  
+“Professor Jones is a very bad professor. He must therefore be a very bad person.”  
+Now assuming that we are not using “bad,” as some do, to mea n “good,” we are still using "bad" in two very 
+different senses. In the first case, “bad” is used to mean something like, “not good at” or if you will, “not 
+competent.” In the second case, “bad” is used as a term of moral appraisal. Clearly there is a mist ake in reasoning 
+here; for just because one is bad at teaching it does not follow that the person is morally bad. In this argument, there 
+is an equivocation on the term “bad” and the fallacy committed is thus the fallacy of equivocation.  
+16. Accent  
+ When speaking we can emphasize or accent a word or phrase and change its meaning. Consider this: 
+“Woman, without her MAN would be lost.” It would seem that this might be the kind of thing that some country 
+singer might croon. It certainly does not look like some thing that a feminist might embrace. From this claim we 
+might well draw the conclusion that women need men. 
+ 
+ Everything changes, however if we emphasize another of the words in this same statement. Consider this: 
+“Woman, without HER, man would be lost.” F rom this we might well draw the conclusion that men need women, 
+the very opposite conclusion from the first reading.  
+It is this kind of ambiguity, generated by accenting words or phrases that  produces the fallacy of ACCENT.  
+ And there are countless other examples. Consider this one: “We should be kind to our enemies.” What a 
+difference an emphasis can make in this sentence. If we say “WE should be kind to our enemies,” we might be led 
+to draw the conclusion that “they” are not under the same moral obligati on. And if we say, “We SHOULD be kind 
+to our enemies,” this may be taken to imply that being kind to our enemies is only a recommendation. And if we 
+emphasize OUR, or ENEMIES, the meaning changes as well, and mistaken conclusions can be drawn on the basis 
+of this ambiguity of meaning.   
+ There are two other ways that the fallacy of accent can be committed. First, in writing we might simply 
+resort to small print in an effort to mislead people into drawing conclusions that are not warranted. We see this on 
+motel signs: ROOMS: $50 and up .  And if we want to hide something in a contract we can always resort to putting it 
+in what we call “fine print.” Such cases are instances of the fallacy of accent.  
+ Secondly, we can accent something by pulling it out of context  and leading people to draw mistaken 
+conclusions. For example, suppose that some movie critic said in a review of a movie “It would have been a great 
+ 
+12 
+ movie had the script been improved.” On the basis of this remark an advertising agent promoting the movie says: 
+“Critics call it ‘…a great movie.’” This is the fallacy of accent.  
+17. Amphiboly  
+ Often ambiguities are generated by poor grammatical construction. Many cases of such poor construction 
+involve syntax, or word or phrase order. The most common of thes e mistakes occurs when a modifying phrase or 
+word is syntactically misplaced so that it modifies or qualifies some other word or phrase other than what it was 
+intended to modify or qualify. Sometimes such words or phrases are called “dangling modifiers.” C onsider this 
+example: “He left her at home with much regret.” This is ambiguous, for it is not clear whether he had “much 
+regret” for leaving her at home, or if she, being left at home had much regret for being left. Here we have the 
+fallacy of amphiboly. 
+  
+ More generally, any time that such poor or loose grammatical construction leads to ambiguities that in turn 
+lead to unwarranted conclusions being drawn, we have the fallacy of amphiboly. Sometimes mistakes of this sort 
+can be quite humorous. For example , a child comes to his mother and asks her: “What is a yet?”  And the mother 
+replies that she does not know what he is talking about and further asks why he is asking that question. He replies 
+that he just heard on the news that someone had been shot and t hat “the bullet was in her yet.” This is just a case of 
+poor grammatical construction that generated the ambiguity that in turn led the young child to draw the mistaken 
+conclusion that "yet" named a part of the human body. This confusion could have easily been avoided had the news 
+reporter said something like “The bullet has yet to be removed from the victim.”   
+18. Composition  
+ Like the two fallacies of relevance, accident and hasty generalization, there are two fallacies of ambiguity 
+that are mirror image s of one another. These are the fallacies of composition and division. Let's take the fallacy of 
+composition first. This fallacy, like its cousin, division, involves ambiguities generated by confusing properties of 
+wholes with properties of parts, and prop erties of individuals with properties of collections.  
+ 
+ Consider first the ambiguity of a collection and individual members of that collection. Suppose someone 
+claims: “Buses use more fuel than cars. Therefore it is not economical to use buses for public t ransportation.” The 
+fact is that individual buses use more fuel than individual cars. As a collection, however, cars use more fuel than the 
+collection of buses. Given that it takes more cars to transport the same amount of people that one bus can transport , 
+it does not follow that it is not economical to use buses for public transportation. In fact, the opposite follows.  
+ In general we will say that whenever we conclude, that because a particular member of a collection has a 
+particular attribute, that the whole collection has that attribute as well, we have the fallacy of composition. In the 
+example above, we committed this fallacy because we drew the conclusion that because individual buses use more 
+fuel than individual cars, that the same thing is true of  the collection of buses vs. the collection of cars. This is 
+simply a mistake in reasoning. Here we meet the fallacy of composition.  
+ Now consider the ambiguity of wholes and parts.  Again, the fallacy of composition is committed when one 
+concludes that be cause the parts have certain attributes that the whole has them as well. From the fact that each part 
+of a certain machine is light in weight, it does not follow that the whole machine is light in weight. This should be 
+clear.  
+ 
+13 
+ 19. Division  
+ Now let’s simpl y go in the other direction. When we conclude that because something is true of a collection 
+or of a whole, it must follow that the same is true of the members of the collection or of the parts of the whole, we 
+have a case of the fallacy of division. We can use our examples above in reverse order to illustrate this fallacy of 
+division.  
+ 
+ Because cars use more fuel than buses, it will be more economical for my colleague and I to take the school 
+bus to the meeting rather than drive in my car. (Here, of cours e, the mistake is to think that what is true of the 
+collection is also true of each member of the collection.) Because this machine is heavy, its parts must be heavy. 
+(Again, what is true of the parts is not necessarily true of the whole.)  
+ As I said, we m ust be careful not to confuse composition and division with accident and hasty 
+generalization. In fact these two sets of fallacies are so closely related that there is some chance that they will be 
+confused. To avoid this mistake, just remember this simple  distinction:  
+A. Accident and Hasty Generalization: general rules and exceptions  
+B. Composition and Division: wholes and parts or individuals and collections . 
+ 
+ If you keep this distinction in mind, you will be less likely to confuse these two sets of fall acies. Even so, 
+sometimes keeping these two sets of fallacies clearly distinguished is not easy to do. Consider the following 
+argument:  
+“Every third child born in New York City is a Roman Catholic. Therefore Protestants should have only two 
+children.”  
+ Now this humorous argument is definitely fallacious. But what is the fallacy? Arguably, we could say the 
+fallacy is division, for what is true of the whole collection of children born in New York City, is not true of the 
+children born in each individual famil y. It may also be plausible to say that the fallacy here is the fallacy of 
+accident, at least if we reasoned as follows: while the generalization that “every third child born in New York City 
+is a Roman Catholic” may be true, it does not follow that we can apply this generalization to every particular case. 
+To complicate things a bit further, it is also plausible to say that this argument commits the fallacy of equivocation. 
+Clearly the phrase “every third child” is used in two very different senses. In the one case it means simply “one 
+third of the children born in the general population of New York City,” in the other it means, “the third child in a 
+particular family.”  
+ Again , the moral of this is to remind you that one and the same passage can commit more  than one fallacy.  
+ Now it is time to have a go at identifying some fallacies of relevance and am biguity in the Workbook.  Just 
+to keep you honest, there may be some passages in these examples that do not commit any fallacy at all. In this 
+case, the correct  answer is, "no fallacy."  
+ 
+ 
+14 
+ STUDY GUIDE  
+Chapter 4  – Identifying Fallacies  
+Fallacies of Relevance  
+Ignorance:  Committed when an attempt is made to justify a conclusion on the basis of a lack of evidence.  
+Pity: Committed when an attempt is made to justify a  conclusion on the basis of pity.  
+Desire:  Committed when an attempt is made to justify a conclusion on the basis of a desire that it is true.  
+Authority : Committed when an attempt is made to justify a conclusion on the basis of an appeal to   authority.  
+Begging the Question: Committed when an attempt is made to justify a conclusion on the basis of a premise that is a 
+disguised version of the conclusion   
+Character- Abusive : Committed when a conclusion is discredited on the basis of an attack of the charact er of the one 
+making the argument. For example: “You must ignore his evidence.  He is a thief.”   
+Character- Circumstantial : Committed when a conclusion is discredited on the basis of the special circumstances of 
+the one making the argument.  For example, “ His conclusion that abortion is wrong is not convincing because he is a 
+Roman Catholic priest.”  
+Complex Question:  Committed when an attempt is made to justify a conclusion on the basis of an appeal to a question 
+that contains a concealed assumption. For ex ample, “Have you stopped beating your wife?”  This question assumes that 
+you have beaten your wife.    
+False Cause : Committed when an attempt is made to justify a conclusion on the basis of assuming that one event is the 
+cause of another when in fact the e vents are not causally related at all.    
+Popularity:  Committed when an attempt is made to justify a conclusion on the basis of an appeal to popular opinion. 
+For example, “Everybody is doing it, so it is something I am justified in doing.”    
+Force:  Commit ted whenever an attempt is made to justify a conclusion on the basis of a threat, veiled or explicit.   
+Hasty Generalization:  (Converse Accident) Committed when an attempt is made to justify a generalized conclusion 
+on the basis of an appeal to exceptional  or limited cases. For example, arguing that because lying is morally permissible 
+(perhaps to save a life) that all lying is morally permissible.  
+Accident:  Committed when an attempt is made to justify a conclusion on the basis of an appeal to a general rule that 
+does not fit an exceptional circumstance. It does not follow, for example, that because generally one should tell the 
+truth, that one should tell the truth in every circumstance.  
+Irrelevant Conclusion:  Committed when an attempt is made to justify a conclusion on the basis of an appeal to 
+premises that do not in fact support the conclusion they are offered in support of, but another conclusion that is not at 
+issue and is often readily agreed to.   
+  
+Fallacies of Ambiguity  
+Equivocation:  Committed whe n an attempt is made to justify a conclusion on the basis of an ambiguity caused by 
+using a word or phrase that occurs in the argument in two different senses.   
+Amphiboly:  Committed when an attempt is made to justify a conclusion on the basis of an ambiguity caused by poor 
+grammatical construction, usually in the form of a “dangling modifier.”  
+Accent:  Committed when an attempt is made to justify a conclusion on the basis of an ambiguity caused by 
+emphasizing or de -emphasizing a word or phrase in an argume nt, or by taking a word or phrase out of context. 
+Composition:  Committed when an attempt is made to justify a conclusion on the basis of an ambiguity between the 
+properties of the whole and its parts or between a collection and it members. This fallacy occ urs when an inference is 
+made that the whole or collection has a certain property because its parts or members have that property.  
+Division:  Committed when an attempt is made to justify a conclusion on the basis of an ambiguity between the 
+properties of th e whole and its parts or between a collection and it members. This fallacy occurs when the inference is 
+made that because the whole or collection has a certain property, its parts or members must also have it.  
+ 
