@@ -1,4 +1,6 @@
 from enum import Enum
+import json
+
 
 class ProviderType(Enum):
   unknown = 0
@@ -8,3 +10,7 @@ class ProviderType(Enum):
 class ModelType(Enum):
   advance_model = 1
   basic_model = 2
+
+class SearchType(Enum):
+  verifier = "verify"
+  fallacy_avoider = "avoid the fallacy"

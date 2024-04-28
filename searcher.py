@@ -8,6 +8,7 @@ import logiclinker
 import retriever
 import concurrent.futures
 import utils
+import json
 
 _MAX_WORKERS = 1
 _NUM_SEARCH_RESULT = 5
@@ -55,13 +56,13 @@ def _is_relevant(statement, search_result):
   return False
 
 # Given the search result, determine if additional search is needed.
-def _is_enough(statement, search_result):
+def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier):
   if not search_result:
     return False
 
   prompt = f"""
   Given `{search_result}`
-  can you verify `{statement}`? 
+  can you {search_type.value}: `{statement}`? 
   
   * Rephrase and expand the question
   * Think step by step (chain of thinking)
@@ -86,15 +87,16 @@ def _is_enough(statement, search_result):
   return False
 
 # Based on the searched result, let LLM define follow up search questions.
-def _to_follow_up_searches(statement, search_result):
+def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier)->dict[str,str]:
   prompt = f"""
   Given `{search_result}`
-  if I want to verify `{statement}`
+  If I want to {search_type.value}: `{statement}`
   what else should I search?
 
   * Rephrase and expand the question
   * Think step by step (chain of thinking)
-  * List the searches in order of their relevance to effectively verify the information.
+  * List the searches in order of their relevance to effectively {search_type.value}
+  * Explain why the search helps to {search_type.value}
 
   Output in the following format:
   ```
@@ -105,15 +107,24 @@ def _to_follow_up_searches(statement, search_result):
   *__
   *__
   # Search:
-  1. __
-  2. __
+  1.__
+  2.__
+  # Explain:
+  1.__
+  2.__
   ```
   """
   response = gpt.request(prompt)
   print("_to_follow_up_searches():", response)
-  suggest_search = response.split("Search")[-1]
-  follow_up = re.findall(r'\d+\.\s+(.*)', suggest_search)
-  return follow_up[:_NUM_SEARCHES]
+  response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
+  explains = re.findall(r'\d+\.\s+(.*)', explain_search)
+  suggest_search = "".join(response_without_explain).split("Search")[-1]
+  searches = re.findall(r'\d+\.\s+(.*)', suggest_search)
+  search_explains = {}
+  num_searches = min(len(searches), len(explains), _NUM_SEARCHES)
+  for i in range(num_searches):
+    search_explains[searches[i]] = explains[i]
+  return search_explains
 
 # Summerize the search result to save tokens.
 def _summerize(text, max_iter):
@@ -142,9 +153,15 @@ def _summerize(text, max_iter):
   return text
 
 # Let LLM suggests the keywords for the search.
-def _to_keywords(topic:str, search:str)->list[str]:
+def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.SearchType.verifier)->list[str]:
   prompt = f"""
-  If I want to search `{search}` for: `{topic}`, 
+  If I want to search ```
+  {search}
+  ```
+  to {search_type.value}: 
+  ```
+  {topic}
+  ```
   what keywords should I use?
 
   * Rephrase and expand the question
@@ -253,22 +270,49 @@ def _web_request(search:str, keywords:list[str]):
     # Filter None values and collect relevant results
     return [result for result in results if result is not None]
 
-def search(topic:str, max_iter:int)->dict[str,list[str]]:
-  response = _web_request(topic, _to_keywords(topic, topic))
-  search_results = {topic:response}
+class SearchResults:
+  def __init__(self, search:str, explain:str, results:list[str]):
+    self.search = search
+    self.explain = explain
+    self.results = results
+
+  def __str__(self):
+    return f"Search: {self.search}, Explain: {self.explain}, Results: {self.results}"
+
+  def to_dict(self):
+    return {
+      "search": self.search,
+      "explain": self.explain,
+      "results": self.results
+    }
+
+class CustomEncoder(json.JSONEncoder):
+  def default(self, obj):
+    if isinstance(obj, SearchResults):
+        return obj.to_dict()
+    # If the object is of any other type, use the default behavior
+    return json.JSONEncoder.default(self, obj)
+
+
+def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchType.verifier)->list[SearchResults]:
+  search_results = []
   results = []
-  results.extend(response)
+  # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
+  if search_type == utils.SearchType.verifier:
+    response = _web_request(topic, _to_keywords(topic, topic, search_type))
+    search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
+    results.extend(response)
   for _ in range(max_iter):
     summerized_result = _summerize("\n".join(results), max_iter)
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_result):
       return results
 
-    searches = _to_follow_up_searches(topic, summerized_result)
-    for search in searches:
-      keywords = _to_keywords(topic, search)
+    search_explains = _to_follow_up_searches(topic, summerized_result, search_type)
+    for search, explain in search_explains.items():
+      keywords = _to_keywords(topic, search, search_type)
       response = _web_request(search, keywords)
-      search_results[search] = response
+      search_results.append(SearchResults(search=search, explain=explain, results=response))
       results.extend(response)
 
   return search_results
