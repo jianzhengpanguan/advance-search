@@ -89,7 +89,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   if json_part:
     for part in json_part:
       if part:
-        parsed_part = part.replace("```json", "").replace("```", "")
+        parsed_part = part.split("```json")[-1].split("```")[0]
         for fallacy_explanation in json.loads(parsed_part):
           for fallacy, explanation in fallacy_explanation.items():
             fallacy_explanations[fallacy] = explanation

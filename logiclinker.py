@@ -154,7 +154,7 @@ def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
   raw_logic = {}
   for part in json_part:
     if part:
-      parsed_part = part.replace("```json", "").replace("```", "")
+      parsed_part = part.split("```json")[-1].split("```")[0]
       raw_logic = json.loads(parsed_part)
 
   # If no premises, hypothesis or inferences, skip it.
@@ -180,14 +180,17 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
     current_chunk = statement[i*_CHUCK_SIZE: (i+1)*_CHUCK_SIZE+_OVERLAP_SIZE]
     request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
     raw_json = gpt.request(request)
-    json_logics = _json_text_to_logics(raw_json)
+    json_logics = None
+    try:
+      json_logics = _json_text_to_logics(raw_json)
+    except Exception as e:
+      print(f"LLM does not support Json format: {e}")
     # If LLM support Json format, add it into logics.
     if json_logics:
       logics.extend(json_logics)
       continue
     
     # If LLM does not support Json format, use the text format.
-    print("LLM does not support Json format, use the text format.")
     request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, current_chunk)
     raw_text = gpt.request(request, provider_type, model_type)
     logics.extend(_raw_text_to_logics(raw_text))
@@ -195,5 +198,9 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
   # Replace Ambiguous Terms.
   for i, logic in enumerate(logics):
     json_str = json.dumps(logic)
-    logics[i] = json.loads(rephraser.replace_ambiguous_terms(json_str, provider_type, model_type))
+    output = rephraser.replace_ambiguous_terms(json_str, provider_type, model_type)
+    try:
+      logics[i] = json.loads(output.split("```json")[-1].split("```")[0])
+    except Exception as e:
+      print(f"json loads failure: {e}")
   return logics
