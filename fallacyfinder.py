@@ -4,19 +4,32 @@ import json
 import utils
 import searcher
 
-_PROMPT = """
-Read the inference, identify all the fallacies.
-For each fallacy, explain why the inference is that fallacy.
-List them in the format:
+_JSON_OUTPUT = """
+Response in the json format: 
+```json
+[
+  {"1.fallacy": "1.explanation"},
+  {"2.fallacy": "2.explanation"},
+]
+```
+"""
+# TODO: Currently JSON output format is not stable in LLM (e.g., GPT 4.0, Claude 3).
+# Once LLM correctly constantly support json format, remove the text output.
+_TEXT_OUTPUT = """
+Response in the following format:
 ```
 Fallacy:
 1.__
 ...
-
 Explanation:
 1.__
 ...
 ```
+"""
+_PROMPT_TEMPLATE = """
+Read the inference, identify all the fallacies.
+For each fallacy, explain why the inference is that fallacy.
+%s
 
 The fallacies should be one or few of the following:
 ```
@@ -46,6 +59,7 @@ The fallacies should be one or few of the following:
 }
 ```
 Use instruct to analyze inference: 
+%s
 """
 _MAX_NUM_PATTERNS = 100
 _MAX_ITER = 3
@@ -65,9 +79,30 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
   return patterns
 
 
-def _to_fallacy_explanation(inference):
-  request = _PROMPT+inference
-  return gpt.request(request)
+def _to_fallacy_explanations(inference:str)->dict[str, str]:
+  fallacy_explanations = {}
+  request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, inference)
+  response = gpt.request(request)
+  # Find json part in ```json * ```.
+  # The json part is a list of dictionary {fallacy:explanation}.
+  json_part = re.findall(r"[\`{3}json].*[\`{3}]", response, re.DOTALL)
+  if json_part:
+    for part in json_part:
+      if part:
+        parsed_part = part.replace("```json", "").replace("```", "")
+        for fallacy_explanation in json.loads(parsed_part):
+          for fallacy, explanation in fallacy_explanation.items():
+            fallacy_explanations[fallacy] = explanation
+  
+  # If LLM does not support Json format , use the text format.
+  request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, inference)
+  response = gpt.request(request)
+  fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)
+  explanations = _fetch_patterns(prefix="Explanation", raw_text=response)
+  num_fallacies = min(len(fallacies), len(explanations))
+  for i in range(num_fallacies):
+    fallacy_explanations[fallacies[i]] = explanations[i]
+  return fallacy_explanations
 
 class FallacySearches:
   def __init__(self, fallacy:str, explanation:str, search_results:list[searcher.SearchResults]):
@@ -96,13 +131,9 @@ class CustomEncoder(json.JSONEncoder):
 
 def _search_to_avoid_fallacies(inference:str)->list[FallacySearches]:
   fallacy_searches:list[FallacySearches] = []
-  fallacy_explanation = _to_fallacy_explanation(inference)
-  fallacies = _fetch_patterns(prefix="Fallacy", raw_text=fallacy_explanation)
-  explanations = _fetch_patterns(prefix="Explanation", raw_text=fallacy_explanation)
-  num_fallacies = min(len(fallacies), len(explanations))
-  for i in range(num_fallacies):
-    fallacy = fallacies[i]
-    explanation = explanations[i]
+  fallacy_explanations = _to_fallacy_explanations(inference)
+  
+  for fallacy, explanation in fallacy_explanations.items():
     topic = f"""
     ```
     Given: `{inference}`,
