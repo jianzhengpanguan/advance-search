@@ -295,7 +295,7 @@ class CustomEncoder(json.JSONEncoder):
 
 
 def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchType.verifier)->list[SearchResults]:
-  search_results = []
+  search_results:list[SearchResults] = []
   results = []
   # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
   if search_type == utils.SearchType.verifier:
@@ -306,7 +306,7 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
     summerized_result = _summerize("\n".join(results), max_iter)
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_result):
-      return results
+      return search_results
 
     search_explains = _to_follow_up_searches(topic, summerized_result, search_type)
     for search, explain in search_explains.items():
