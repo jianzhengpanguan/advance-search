@@ -32,3 +32,25 @@ def replace_ambiguous_terms(inference: str, provider_type: utils.ProviderType=ut
   * add the implicit part (e.g., change `A did B` to `A did B in/on/at/to/from/with/by/for/of C`)) `in place`.
   """
   return gpt.request(prompt, provider_type, model_type)
+
+def stonealone_question(search: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)-> str:
+  prompt = f"""
+  Given a search: `{search}`
+  Rephrase the search to be a standalone question that can be used by the LLM to search the web for information.
+  
+   1. Follow up question: How does stable diffusion work?
+  Rephrased: Stable diffusion working
+
+  2. Follow up question: What is linear algebra?
+  Rephrased: Linear algebra
+
+  3: Analysis of domestic needs in the U.S. that could benefit from increased funding (e.g., healthcare, infrastructure, education).
+  Rephrase: Domestic needs in the U.S. benefiting from increased funding
+
+  4: Comparative studies on the effectiveness of funding domestic vs. international environmental projects.
+  Rephrased: Effectiveness of funding domestic vs. international environmental projects
+
+  Rephrased standalone question:
+  """
+  return gpt.request(prompt, provider_type, model_type)
+

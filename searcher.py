@@ -10,6 +10,7 @@ import rephraser
 import concurrent.futures
 import utils
 import json
+import logging
 
 _MAX_WORKERS = 1
 _NUM_TARGET_SEARCH_RESULT = 5
@@ -19,6 +20,7 @@ _SUMMERIZED_SIZE = 100
 _MAX_LINKS_PER_SEARCH = 100
 _MAX_LINKS_PER_QUERY = 10
 
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -119,7 +121,7 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   ```
   """
   response = gpt.request(prompt)
-  print("_to_follow_up_searches():", response)
+  logging.info(f"_to_follow_up_searches():{response}")
   response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
   explains = re.findall(r'\d+\.\s+(.*)', explain_search)
   suggest_search = "".join(response_without_explain).split("Search")[-1]
@@ -230,7 +232,7 @@ def _optimize_search(search:str, keywords:list[str]):
     data = response.json()
     # If there is no response, we need to reduce the number of keywords.
     if 'items' not in data:
-      print(f"query:{search}, keywords:{keywordStr}, got not result: {data}")
+      logging.info(f"query:{search}, keywords:{keywords}, got not result: {data}")
       break
     
     # Add new search results, dedup the repeated links.
