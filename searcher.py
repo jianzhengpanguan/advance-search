@@ -6,15 +6,19 @@ import webparser
 import math
 import logiclinker
 import retriever
+import rephraser
 import concurrent.futures
 import utils
 import json
 
 _MAX_WORKERS = 1
-_NUM_SEARCH_RESULT = 5
+_NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
 _CHUCK_SIZE = 500
 _SUMMERIZED_SIZE = 100
+_MAX_LINKS_PER_SEARCH = 100
+_MAX_LINKS_PER_QUERY = 10
+
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -40,7 +44,7 @@ def _is_relevant(statement, search_result):
   *__
   *__
   # Answer:
-  Yes/No
+  yes/no
   ```
   """
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
@@ -51,7 +55,7 @@ def _is_relevant(statement, search_result):
     answer = response.split("Answer")[-1]
   except IndexError:
     return False
-  if 'Yes' in answer:
+  if 'yes' in answer.lower():
     return True
   return False
 
@@ -77,12 +81,12 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
   *__
   *__
   # Answer:
-  Yes/No
+  yes/no
   ```
   """
   response = gpt.request(statement=prompt)
   answer = response.split("Answer")[-1]
-  if 'Yes' in answer:
+  if 'yes' in answer.lower():
     return True
   return False
 
@@ -123,7 +127,11 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   search_explains = {}
   num_searches = min(len(searches), len(explains), _NUM_SEARCHES)
   for i in range(num_searches):
-    search_explains[searches[i]] = explains[i]
+    rephrased_search = rephraser.stonealone_question(searches[i])
+    if _is_relevant(statement, rephrased_search):
+      search_explains[rephrased_search] = explains[i]
+    else:
+      logging.warning(f"search: {rephrased_search} is not relevant to {statement}")
   return search_explains
 
 # Summerize the search result to save tokens.
@@ -202,66 +210,67 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
       keywords.append(parsed_keyword)
   return keywords
 
-def _fetch_web_content(link, search):
+def _fetch_web_content(link:str, searches:list[str]):
   web_content = webparser.parse(link)
   # If we cannot fetch the content from the link.
   if not web_content:
     return ""
   # Find the web content relevant to search.
-  relevant_snippet = retriever.retrieve(search, web_content)
-  print("relevant snippet:", relevant_snippet)
+  relevant_snippet = retriever.retrieve(searches, web_content)
   return relevant_snippet
 
 # LLM generate keywords to filter search results.
-# More key words help us find more precise results, but too many keywords might lead to no results.
-# So we need to find the best balance between the number of keywords and the number of results.
 def _optimize_search(search:str, keywords:list[str]):
-  num_keywords = len(keywords)
   results = []
   links = set()
-  # Search until we have no keywords.
-  while num_keywords >=0 :
-    keywordStr = ' AND '.join(keywords[:num_keywords])
-    url = f"{config['SEARCH']['url']}?key={config['SEARCH']['api_key']}&cx={config['SEARCH']['cx']}&searchTerms={keywordStr}&q={search}&num={_NUM_SEARCH_RESULT}"
+  for start in range(1, _MAX_LINKS_PER_SEARCH, _MAX_LINKS_PER_QUERY):
+    url = f"{config['SEARCH']['url']}?key={config['SEARCH']['api_key']}&cx={config['SEARCH']['cx']}&safe=active&q={search}&orTerms={' '.join(keywords)}&num={_MAX_LINKS_PER_QUERY}&start={start}"
 
     response = requests.get(url, timeout=60)  # Timeout set to 60 seconds
     data = response.json()
     # If there is no response, we need to reduce the number of keywords.
     if 'items' not in data:
       print(f"query:{search}, keywords:{keywordStr}, got not result: {data}")
-      num_keywords -= 1
-      continue
+      break
     
     # Add new search results, dedup the repeated links.
     for item in data['items']:
       if 'title' in item and 'snippet' in item and 'link' in item:
+        # Check if the link title and snippest is revelant to the search.
+        if not _is_relevant(search, f"{item['title']} {item['snippet']}"):
+          continue
         if item['link'] not in links:
           links.add(item['link'])
           results.append(item)
-    
-    # If we got not enough results, continues search with less keywords.
-    if len(results) < _NUM_SEARCH_RESULT:
-      num_keywords -= 1
-      continue
-    
-    # If we got enough results, we can stop searching.
-    return results[:_NUM_SEARCH_RESULT]
-  
-  # If we cannot find enough results, we need to return the results we got.
+          if len(results) >= _NUM_TARGET_SEARCH_RESULT:
+            break
+      
+      # If we got enough results, we can stop searching.
+      if len(results) >= _NUM_TARGET_SEARCH_RESULT:
+        break
   return results
 
-def _web_request(search:str, keywords:list[str]):
+def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
   items = _optimize_search(search, keywords)
 
   # Function to process each item and check if it's relevant
-  def process(item):
+  def process(item)->dict[str, str]:
     if 'title' in item and 'snippet' in item and 'link' in item:
-      knowledge_from_web = _fetch_web_content(item['link'], search)
-      if not _is_relevant(search, knowledge_from_web):
+      knowledges = []
+      for question in [search, item['title'], item['snippet']]:
+        knowledge_from_web = _fetch_web_content(item['link'], question)
+        knowledges.append(knowledge_from_web)
+      knowledge = "\n".join(knowledges)
+      if not _is_relevant(search, knowledge):
         return None
       # Fetch logics
-      logics = logiclinker.fetch_logics(knowledge_from_web, utils.ProviderType.anthropic, utils.ModelType.basic_model)
-    return item['title'] + item['snippet'] + str(logics) + item['link']
+      logics = logiclinker.fetch_logics(knowledge, utils.ProviderType.anthropic, utils.ModelType.basic_model)
+    return {
+      "title": {item['title']},
+      "snippet": {item['snippet']}, 
+      "logics": {str(logics)},
+      "link": {item['link']}
+    }
 
   # Use ThreadPoolExecutor to process items in parallel
   with concurrent.futures.ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:
@@ -271,7 +280,7 @@ def _web_request(search:str, keywords:list[str]):
     return [result for result in results if result is not None]
 
 class SearchResults:
-  def __init__(self, search:str, explain:str, results:list[str]):
+  def __init__(self, search:str, explain:str, results:list[dict[str, str]]):
     self.search = search
     self.explain = explain
     self.results = results
@@ -303,15 +312,14 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
     search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
     results.extend(response)
   for _ in range(max_iter):
-    summerized_result = _summerize("\n".join(results), max_iter)
+    summerized_result = _summerize("\n".join([str(result) for result in results]), max_iter)
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_result):
       return search_results
 
     search_explains = _to_follow_up_searches(topic, summerized_result, search_type)
     for search, explain in search_explains.items():
-      keywords = _to_keywords(topic, search, search_type)
-      response = _web_request(search, keywords)
+      response = _web_request(search, _to_keywords(topic, search, search_type))
       search_results.append(SearchResults(search=search, explain=explain, results=response))
       results.extend(response)
 

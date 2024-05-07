@@ -5,11 +5,13 @@ import anthropic
 import math
 import ratelimiter
 import utils
-from enum import Enum
+import logging
 
 _MAX_TOKENS = 4000
 _TEMPERATURE = 1.0
 _GPT_NO_ANSWER = "Sorry, GPT can't answer your question."
+
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 # Use tiktoken.get_encoding() to load an encoding by name.
 # The first time this runs, it will require an internet connection to download. Later runs won't need an internet connection.
@@ -28,7 +30,7 @@ def num_tokens_from_messages(message:str, model:str="gpt-4")->int:
   try:
       encoding = tiktoken.encoding_for_model(model)
   except KeyError:
-      print("Warning: model not found. Using default cl100k_base encoding.")
+      logging.warning("Model not found. Using default cl100k_base encoding.")
       encoding = default_encoding
   num_tokens = len(encoding.encode(message))
   return num_tokens
@@ -71,7 +73,7 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
     # Find how many tokens used.
     num_tokens = num_tokens_from_messages(statement, model)
     try:
-      print(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+      logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
     except:
       pass
 
@@ -83,9 +85,9 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
         'max_tokens': _MAX_TOKENS - num_tokens
     }
     response = requests.post(url, headers=headers, json=request)
-    print(f"openai response: {response.json().get('choices')}")
-    if not response.json().get('choices'):
+    if not response or not response.json() or not response.json().get('choices'):
       continue
+    logging.info(f"openai response: {response.json().get('choices')}")
     results.append(response.json().get('choices')[0].get('message').get('content'))
   return " \n".join(results)
 
@@ -104,7 +106,7 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
     num_tokens = num_tokens_from_messages(statement, model)
     try:
       if anthropic_token_rate_limiter.request_tokens(num_tokens):
-        print(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+        logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
     except:
       pass
 
@@ -125,7 +127,7 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
       system="",
       messages=messages
     )
-    print(f"anthropic response: {response.content}")
+    logging.info(f"anthropic response: {response.content}")
     if not len(response.content):
       continue
     results.append(response.content[0].text)

@@ -2,6 +2,9 @@ from bs4 import BeautifulSoup
 import PyPDF2
 import requests
 from io import BytesIO
+import logging
+
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
@@ -20,7 +23,7 @@ def _read_pdf(url:str)->str:
   try:
     response.raise_for_status()  # Raise an exception for bad requests
   except requests.RequestException as e:
-    print(f"Failed to request: {str(e)}")
+    logging.error(f"Failed to request: {str(e)}")
     return ""
 
   # Use BytesIO to handle the PDF from memory
@@ -28,7 +31,7 @@ def _read_pdf(url:str)->str:
     try:
       pdf_reader = PyPDF2.PdfReader(pdf_file)
     except PyPDF2.errors.PdfReadError as e:
-      print(f"Failed to read PDF: {str(e)}")
+      logging.error(f"Failed to read PDF: {str(e)}")
       return ""
 
     texts = []
@@ -64,7 +67,7 @@ def parse(url:str)->str:
   content = requests.get(url)
   # If we cannot parse the content, return empty string.
   if not _is_valid_html(content):
-    print(f'Not a valid HTML document:{content}\n')
+    logging.warning(f'Not a valid HTML document:{content}\n')
     return ""
 
   results = []

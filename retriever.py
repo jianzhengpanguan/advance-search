@@ -7,6 +7,7 @@ import utils
 import signal
 import sys
 import chromadb
+import logging
 from langchain_community.document_loaders import TextLoader
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -15,6 +16,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 _TOP_K_CHUNKS = 3
 _MAX_RETRIES = 3
+
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -28,7 +32,7 @@ def __init__():
   chroma_client.start_server()
   # Function to handle shutdown signals
   def _shutdown_handler(signum, _):
-    print(f"Shutdown signal {signum} received. Shutting down the server.")
+    logging.info(f"Shutdown signal {signum} received. Shutting down the server.")
     chroma_client.stop_server()
     sys.exit(0)
   # Setup signal handlers for graceful shutdown
@@ -66,7 +70,7 @@ def rag_retrieve(question:str, filename:str)->str:
   for doc in find_docs:
     if doc.metadata and doc.metadata["source"] == filename:
       results.append(doc.page_content)
-  print(f"filename: {filename}, docs size: {len(str(results))}")
+  logging.info(f"filename: {filename}, docs size: {len(str(results))}")
   return "\n".join(results)
 
 def openai_retrieve(question:str, filename:str)->str:
@@ -115,7 +119,7 @@ def openai_retrieve(question:str, filename:str)->str:
       assistant_id=assistant.id,
       file_id=file.id
     )
-    print(f"Deleted file {file.id} from assistant")
+    logging.info(f"Deleted file {file.id} from assistant")
     # Delete the assistant because we will be charged for the assitant.
     client.beta.assistants.delete(assistant.id)
-    print(f"Deleted assistant {assistant.id}")
+    logging.info(f"Deleted assistant {assistant.id}")

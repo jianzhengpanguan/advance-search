@@ -1,4 +1,8 @@
 import time
+import logging
+
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+
 
 class TokensRateLimiter:
   def __init__(self, max_tokens):
@@ -18,12 +22,12 @@ class TokensRateLimiter:
       # Max 1 request per second.
       one_second_ago = time.time() - 1
       if self.token_usage and self.token_usage[-1][0] >= one_second_ago:
-        print(f"Tokens requested: {tokens_needed} too frequently at {time.ctime()}, wait for one second.\n")
+        logging.info(f"Tokens requested: {tokens_needed} too frequently at {time.ctime()}, wait for one second.\n")
         time.sleep(1)
         continue
 
       current_tokens_used = sum(tokens for _, tokens in self.token_usage)
-      print(f"Tokens used: {current_tokens_used}, new tokens requested: {tokens_needed} in last minute at {time.ctime()}\n")
+      logging.info(f"Tokens used: {current_tokens_used}, new tokens requested: {tokens_needed} in last minute at {time.ctime()}\n")
       
       if current_tokens_used + tokens_needed <= self.max_tokens:
           self.token_usage.append((time.time(), tokens_needed))

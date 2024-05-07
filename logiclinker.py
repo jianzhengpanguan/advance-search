@@ -3,6 +3,7 @@ import gpt
 import rephraser
 import utils
 import json
+import logging
 
 _JSON_OUTPUT = """
 Response in the json format:
@@ -80,6 +81,8 @@ _CHUCK_SIZE = 500
 _OVERLAP_SIZE = 50
 _MAX_NUM_PATTERNS = 100
 
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+
 # Fetch the patterns in premise, hypothesis.
 # Example raw text: r"Premise:\s*\n(1\..*?)\n(2\..*?)\n".
 def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
@@ -128,7 +131,7 @@ def _raw_text_to_logics(raw_text:str, provider_type:utils.ProviderType=utils.Pro
   for inference in inferences:
     if "->" not in inference:
       continue
-    print(f"Inference before parsing: {inference}")
+    logging.info(f"Inference before parsing: {inference}")
     premise_str, hypothesis_str = inference.split("->")[0], inference.split("->")[-1]
     # Ignore the index number before Premise.
     # Example： 1. Premise[2,3], we should skip the 1 and keep the 2 and 3.
@@ -184,7 +187,7 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
     try:
       json_logics = _json_text_to_logics(raw_json)
     except Exception as e:
-      print(f"LLM does not support Json format: {e}")
+      logging.error(f"LLM does not support Json format: {e}")
     # If LLM support Json format, add it into logics.
     if json_logics:
       logics.extend(json_logics)
@@ -202,5 +205,5 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
     try:
       logics[i] = json.loads(output.split("```json")[-1].split("```")[0])
     except Exception as e:
-      print(f"json loads failure: {e}")
+      logging.warning(f"json loads failure: {e}")
   return logics
