@@ -10,17 +10,15 @@ import rephraser
 import concurrent.futures
 import utils
 import json
-import logging
+from applog import logger as logging
 
-_MAX_WORKERS = 1
+_MAX_WORKERS = 10
 _NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
-_CHUCK_SIZE = 500
-_SUMMERIZED_SIZE = 100
 _MAX_LINKS_PER_SEARCH = 100
 _MAX_LINKS_PER_QUERY = 10
+_MAX_ALLOWED_SEARCH_RESULT_SIZE = 100000
 
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -52,7 +50,7 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model)
+  response = gpt.request(prompt, utils.ProviderType.anthropic, utils.ModelType.basic_model)
   try:
     answer = response.split("Answer")[-1]
   except IndexError:
@@ -65,10 +63,13 @@ def _is_relevant(statement, search_result):
 def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier):
   if not search_result:
     return False
+  
+  if len(search_result) > _MAX_ALLOWED_SEARCH_RESULT_SIZE:
+    return True
 
   prompt = f"""
-  Given `{search_result}`
-  can you {search_type.value}: `{statement}`? 
+  {"Given the document," if search_result else ""}
+  is there enough information for you to {search_type.value}: `{statement}`? 
   
   * Rephrase and expand the question
   * Think step by step (chain of thinking)
@@ -86,7 +87,11 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
   yes/no
   ```
   """
-  response = gpt.request(statement=prompt)
+  if search_result:
+    response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
+  else:
+    response = gpt.request(prompt, utils.ProviderType.openai, utils.ModelType.basic_model)
+  
   answer = response.split("Answer")[-1]
   if 'yes' in answer.lower():
     return True
@@ -95,7 +100,7 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
 # Based on the searched result, let LLM define follow up search questions.
 def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier)->dict[str,str]:
   prompt = f"""
-  Given `{search_result}`
+  {f"The given document is not enough to {search_type.value}: `{statement}`" if search_result else ""}
   If I want to {search_type.value}: `{statement}`
   what else should I search?
 
@@ -120,7 +125,10 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   2.__
   ```
   """
-  response = gpt.request(prompt)
+  if search_result:
+    response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
+  else:
+    response = gpt.request(prompt, utils.ProviderType.openai, utils.ModelType.advance_model)
   logging.info(f"_to_follow_up_searches():{response}")
   response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
   explains = re.findall(r'\d+\.\s+(.*)', explain_search)
@@ -135,32 +143,6 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
     else:
       logging.warning(f"search: {rephrased_search} is not relevant to {statement}")
   return search_explains
-
-# Summerize the search result to save tokens.
-def _summerize(text, max_iter):
-  for i in range(max_iter):
-    if gpt.num_tokens_from_messages(text) < _SUMMERIZED_SIZE:
-      break
-    summaries = []
-    num_tokens = gpt.num_tokens_from_messages(text)
-    num_buckets = math.ceil(num_tokens / _CHUCK_SIZE)
-    bucket_length = math.ceil(len(text) / num_buckets)
-    for i in range(num_buckets):
-      prompt = f"""
-        summerize:
-        ```
-        {text[i*bucket_length:(i+1)*bucket_length]}
-        ```
-        into bullet points
-        Output format:
-        ```
-        1.__
-        2.__
-        ```
-        """
-      summaries.append(gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model))
-    text = " \n".join(summaries)
-  return text
 
 # Let LLM suggests the keywords for the search.
 def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.SearchType.verifier)->list[str]:
@@ -193,7 +175,7 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(statement=prompt, provider_type=utils.ProviderType.anthropic, model_type=utils.ModelType.basic_model)
+  response = gpt.request(prompt, utils.ProviderType.anthropic, utils.ModelType.basic_model)
   keywords = []
   keywordSet = set()
   try:
@@ -212,13 +194,13 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
       keywords.append(parsed_keyword)
   return keywords
 
-def _fetch_web_content(link:str, searches:list[str]):
+def _fetch_web_content(link:str, search:str):
   web_content = webparser.parse(link)
   # If we cannot fetch the content from the link.
   if not web_content:
     return ""
   # Find the web content relevant to search.
-  relevant_snippet = retriever.retrieve(searches, web_content)
+  relevant_snippet = retriever.retrieve(search, web_content)
   return relevant_snippet
 
 # LLM generate keywords to filter search results.
@@ -268,10 +250,10 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
       # Fetch logics
       logics = logiclinker.fetch_logics(knowledge, utils.ProviderType.anthropic, utils.ModelType.basic_model)
     return {
-      "title": {item['title']},
-      "snippet": {item['snippet']}, 
-      "logics": {str(logics)},
-      "link": {item['link']}
+      "title": item['title'],
+      "snippet": item['snippet'], 
+      "logics": str(logics),
+      "link": item['link']
     }
 
   # Use ThreadPoolExecutor to process items in parallel
@@ -308,21 +290,25 @@ class CustomEncoder(json.JSONEncoder):
 def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchType.verifier)->list[SearchResults]:
   search_results:list[SearchResults] = []
   results = []
-  # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
-  if search_type == utils.SearchType.verifier:
-    response = _web_request(topic, _to_keywords(topic, topic, search_type))
-    search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
-    results.extend(response)
-  for _ in range(max_iter):
-    summerized_result = _summerize("\n".join([str(result) for result in results]), max_iter)
-    # Check if the current fact is enough.
-    if _is_enough(topic, summerized_result):
-      return search_results
-
-    search_explains = _to_follow_up_searches(topic, summerized_result, search_type)
-    for search, explain in search_explains.items():
-      response = _web_request(search, _to_keywords(topic, search, search_type))
-      search_results.append(SearchResults(search=search, explain=explain, results=response))
+  try:
+    # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
+    if search_type == utils.SearchType.verifier:
+      response = _web_request(topic, _to_keywords(topic, topic, search_type))
+      search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
       results.extend(response)
+    for _ in range(max_iter):
+      all_results = "\n".join([str(result) for result in results])
+      # Check if the current fact is enough.
+      if _is_enough(topic, all_results):
+        return search_results
 
-  return search_results
+      search_explains = _to_follow_up_searches(topic, all_results, search_type)
+      for search, explain in search_explains.items():
+        response = _web_request(search, _to_keywords(topic, search, search_type))
+        search_results.append(SearchResults(search=search, explain=explain, results=response))
+        results.extend(response)
+  except Exception as e:
+    logging.error(f"search error: {e}")
+  finally:
+    # Try to return as much search results as possible.
+    return search_results

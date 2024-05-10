@@ -3,7 +3,7 @@ import gpt
 import rephraser
 import utils
 import json
-import logging
+from applog import logger as logging
 
 _JSON_OUTPUT = """
 Response in the json format:
@@ -80,8 +80,6 @@ Use instruct to analyze conversation:
 _CHUCK_SIZE = 500
 _OVERLAP_SIZE = 50
 _MAX_NUM_PATTERNS = 100
-
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 # Fetch the patterns in premise, hypothesis.
 # Example raw text: r"Premise:\s*\n(1\..*?)\n(2\..*?)\n".
@@ -178,11 +176,10 @@ def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
 
 def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model):
   logics:list[{dict[str,list[str]]}] = []
-  chunks = len(statement) // _CHUCK_SIZE
-  for i in range(0, chunks):
-    current_chunk = statement[i*_CHUCK_SIZE: (i+1)*_CHUCK_SIZE+_OVERLAP_SIZE]
+  chunks = gpt.divide_statement(statement)
+  for current_chunk in chunks:
     request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
-    raw_json = gpt.request(request)
+    raw_json = gpt.request(request, provider_type, model_type)
     json_logics = None
     try:
       json_logics = _json_text_to_logics(raw_json)

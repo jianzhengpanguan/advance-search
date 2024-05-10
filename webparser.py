@@ -2,9 +2,7 @@ from bs4 import BeautifulSoup
 import PyPDF2
 import requests
 from io import BytesIO
-import logging
-
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+from applog import logger as logging
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
@@ -20,6 +18,7 @@ def _is_valid_pdf(url:str)->bool:
 def _read_pdf(url:str)->str:
   # Make a GET request to download the PDF
   response = requests.get(url)
+  response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   try:
     response.raise_for_status()  # Raise an exception for bad requests
   except requests.RequestException as e:
@@ -65,6 +64,7 @@ def parse(url:str)->str:
     return _read_pdf(url)
 
   content = requests.get(url)
+  content.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   # If we cannot parse the content, return empty string.
   if not _is_valid_html(content):
     logging.warning(f'Not a valid HTML document:{content}\n')

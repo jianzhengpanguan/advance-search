@@ -5,13 +5,12 @@ import anthropic
 import math
 import ratelimiter
 import utils
-import logging
+from applog import logger as logging
 
+_OVERLAP = 40
 _MAX_TOKENS = 4000
 _TEMPERATURE = 1.0
 _GPT_NO_ANSWER = "Sorry, GPT can't answer your question."
-
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 # Use tiktoken.get_encoding() to load an encoding by name.
 # The first time this runs, it will require an internet connection to download. Later runs won't need an internet connection.
@@ -20,22 +19,18 @@ default_encoding = tiktoken.get_encoding("cl100k_base")
 config = configparser.ConfigParser()
 # Read the configuration file
 config.read('config/config.ini')
-# Limit to 50,000 tokens per minute for Anthropic Tier 1 user.
-anthropic_token_rate_limiter = ratelimiter.TokensRateLimiter(max_tokens=35000)
+# Limit to 1,000,000 tokens per minute for Anthropic Tier 2 user.
+anthropic_token_rate_limiter = ratelimiter.TokensRateLimiter(max_tokens=900000)
 
-def num_tokens_from_messages(message:str, model:str="gpt-4")->int:
+def _num_tokens_from_messages(message:str)->int:
   """Return the number of tokens used by messages."""
   if not message:
     return 0
-  try:
-      encoding = tiktoken.encoding_for_model(model)
-  except KeyError:
-      logging.warning("Model not found. Using default cl100k_base encoding.")
-      encoding = default_encoding
+  encoding = default_encoding
   num_tokens = len(encoding.encode(message))
   return num_tokens
 
-def request(statement: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)->str:
+def request(statement: str, provider_type: utils.ProviderType=utils.ProviderType.anthropic, model_type: utils.ModelType=utils.ModelType.basic_model)->str:
   if provider_type == utils.ProviderType.anthropic:
     response = anthropic_request(statement, model_type)
     if response != _GPT_NO_ANSWER:
@@ -67,11 +62,11 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
   if model_type == utils.ModelType.basic_model:
     model = config['OPENAI']['basic_model']
     url = config['OPENAI']['basic_url']
-  statements = _divide_statement(statement)
+  statements = divide_statement(statement)
   results = []
   for statement in statements:
     # Find how many tokens used.
-    num_tokens = num_tokens_from_messages(statement, model)
+    num_tokens = _num_tokens_from_messages(statement)
     try:
       logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
     except:
@@ -99,11 +94,11 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   model = config['ANTHROPIC']['advance_model']
   if model_type == utils.ModelType.basic_model:
     model = config['ANTHROPIC']['basic_model']
-  statements = _divide_statement(statement)
+  statements = divide_statement(statement)
   results = []
   for statement in statements:
     # Find how many tokens used.
-    num_tokens = num_tokens_from_messages(statement, model)
+    num_tokens = _num_tokens_from_messages(statement)
     try:
       if anthropic_token_rate_limiter.request_tokens(num_tokens):
         logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
@@ -134,9 +129,9 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   return " \n".join(results)
 
 # Divide the statement into chunks make sure we don't exceed the maximum number of tokens in one request.
-def _divide_statement(statement:str)->list[str]:
+def divide_statement(statement:str)->list[str]:
   """Divide the statement into chunks."""
-  num_tokens = num_tokens_from_messages(statement)
+  num_tokens = _num_tokens_from_messages(statement)
   num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 2))
   bucket_length = math.ceil(len(statement) / num_buckets)
-  return [statement[i:i+bucket_length] for i in range(0, len(statement), bucket_length)]
+  return [statement[i:i+bucket_length+_OVERLAP] for i in range(0, len(statement), bucket_length)]

@@ -1,8 +1,5 @@
 import time
-import logging
-
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
-
+from applog import logger as logging
 
 class TokensRateLimiter:
   def __init__(self, max_tokens):
