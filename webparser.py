@@ -1,13 +1,40 @@
 from bs4 import BeautifulSoup
 import PyPDF2
-import requests
 from io import BytesIO
 from applog import logger as logging
+import requests
+import urllib3
+import ssl
+
+class CustomHttpAdapter(requests.adapters.HTTPAdapter):
+    # "Transport adapter" that allows us to use custom ssl_context.
+
+    def __init__(self, ssl_context=None, **kwargs):
+        self.ssl_context = ssl_context
+        super().__init__(**kwargs)
+
+    def init_poolmanager(self, connections, maxsize, block=False):
+        self.poolmanager = urllib3.poolmanager.PoolManager(
+            num_pools=connections, maxsize=maxsize,
+            block=block, ssl_context=self.ssl_context)
+
+def get_legacy_session():
+    ctx = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
+    ctx.options |= 0x4  # OP_LEGACY_SERVER_CONNECT
+    session = requests.session()
+    session.mount('https://', CustomHttpAdapter(ctx))
+    return session
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
   # Make a HEAD request to check the content type
-  response = requests.head(url, allow_redirects=True)
+  try:
+    response = requests.head(url, allow_redirects=True)
+  except requests.exceptions.SSLError as e:
+    logging.warning(f"Request PDF has SSL Error: {e}")
+    # Make a request ignoring SSL certificate verification
+    response = get_legacy_session().head(url, allow_redirects=True)
+
   content_type = response.headers.get('Content-Type', '')
   
   # Check if the content type is PDF.
@@ -17,7 +44,12 @@ def _is_valid_pdf(url:str)->bool:
 
 def _read_pdf(url:str)->str:
   # Make a GET request to download the PDF
-  response = requests.get(url)
+  try:
+    response = requests.get(url, allow_redirects=True)
+  except requests.exceptions.SSLError as e:
+    logging.warning(f"Request PDF has SSL Error: {e}")
+    # Make a request ignoring SSL certificate verification
+    response = get_legacy_session().get(url, allow_redirects=True)
   response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   try:
     response.raise_for_status()  # Raise an exception for bad requests
@@ -59,20 +91,23 @@ def _is_valid_html(content):
 
   return True
 
-def parse(url:str)->str:
-  if _is_valid_pdf(url):
-    return _read_pdf(url)
+def _read_html(url):
+  try:
+    response = requests.get(url, allow_redirects=True)
+  except requests.exceptions.SSLError as e:
+    logging.warning(f"Request PDF has SSL Error: {e}")
+    # Make a request ignoring SSL certificate verification
+    response = get_legacy_session().get(url, allow_redirects=True)
 
-  content = requests.get(url)
-  content.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
+  response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   # If we cannot parse the content, return empty string.
-  if not _is_valid_html(content):
-    logging.warning(f'Not a valid HTML document:{content}\n')
+  if not _is_valid_html(response):
+    logging.warning(f'Not a valid HTML document:{response}\n')
     return ""
 
   results = []
   # Parse the HTML
-  soup = BeautifulSoup(content.text, 'html.parser')
+  soup = BeautifulSoup(response.text, 'html.parser')
   # Extract the title and body.
   title = soup.title
   if title:
@@ -92,4 +127,7 @@ def parse(url:str)->str:
   # Get the updated HTML with only title and body
   return " \n".join(results)
 
-  
+def parse(url:str)->str:
+  if _is_valid_pdf(url):
+    return _read_pdf(url)
+  return _read_html(url)
