@@ -12,7 +12,7 @@ import utils
 import json
 from applog import logger as logging
 
-_MAX_WORKERS = 10
+_MAX_WORKERS = 100
 _NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
 _MAX_LINKS_PER_SEARCH = 100
