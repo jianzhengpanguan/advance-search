@@ -21,7 +21,7 @@ import utils
 # * `He` should be `President Trump`
 # * `it` should be `renegotiation of the international agreement`, more specifically, `renegotiation of the Paris accord`.
 # * `lead to a deal that is fair` should be `lead to a deal that is fair for the United States`
-def replace_ambiguous_terms(inference: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)-> str:
+def replace_ambiguous_terms(inference: str)-> str:
   prompt = f"""
   Given a sentence:
   {inference}
@@ -31,9 +31,9 @@ def replace_ambiguous_terms(inference: str, provider_type: utils.ProviderType=ut
   * replace the referred subject (e.g., the xx) to the  full name based on the context `in place`.
   * add the implicit part (e.g., change `A did B` to `A did B in/on/at/to/from/with/by/for/of C`)) `in place`.
   """
-  return gpt.request(prompt, provider_type, model_type)
+  return gpt.request(prompt)
 
-def stonealone_question(search: str, provider_type: utils.ProviderType=utils.ProviderType.openai, model_type: utils.ModelType=utils.ModelType.advance_model)-> str:
+def stonealone_question(search: str)-> str:
   prompt = f"""
   Given a search: `{search}`
   Rephrase the search to be a standalone question that can be used by the LLM to search the web for information.
@@ -52,5 +52,5 @@ def stonealone_question(search: str, provider_type: utils.ProviderType=utils.Pro
 
   Rephrased standalone question:
   """
-  return gpt.request(prompt, provider_type, model_type)
+  return gpt.request(prompt)
 

@@ -12,7 +12,7 @@ log_filename = './log/app.log'
 # Once the number of log files exceeds the specified maximum (100 in this example), 
 # the oldest file will be deleted to make room for a new file.
 rotate_handler = ConcurrentRotatingFileHandler(log_filename, "a", 512*1024, 100)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter('%(asctime)s - %(levelname)s  - %(module)s - %(funcName)s - %(lineno)d - %(message)s')
 rotate_handler.setFormatter(formatter)
 
 logger.addHandler(rotate_handler)

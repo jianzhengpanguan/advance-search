@@ -174,12 +174,12 @@ def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
     logics.append({"premises": premises, "hypothesis": hypotheses})
   return logics
 
-def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model):
+def fetch_logics(statement:str):
   logics:list[{dict[str,list[str]]}] = []
   chunks = gpt.divide_statement(statement)
   for current_chunk in chunks:
     request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
-    raw_json = gpt.request(request, provider_type, model_type)
+    raw_json = gpt.request(request)
     json_logics = None
     try:
       json_logics = _json_text_to_logics(raw_json)
@@ -192,13 +192,13 @@ def fetch_logics(statement:str, provider_type:utils.ProviderType=utils.ProviderT
     
     # If LLM does not support Json format, use the text format.
     request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, current_chunk)
-    raw_text = gpt.request(request, provider_type, model_type)
+    raw_text = gpt.request(request)
     logics.extend(_raw_text_to_logics(raw_text))
   
   # Replace Ambiguous Terms.
   for i, logic in enumerate(logics):
     json_str = json.dumps(logic)
-    output = rephraser.replace_ambiguous_terms(json_str, provider_type, model_type)
+    output = rephraser.replace_ambiguous_terms(json_str)
     try:
       logics[i] = json.loads(output.split("```json")[-1].split("```")[0])
     except Exception as e:

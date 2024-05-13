@@ -22,5 +22,5 @@ def evaluate(text_need_evaluated, search_results):
 
   ```
   """
-  evaluate_result = gpt.request(evaluate_request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  evaluate_result = gpt.openai_request(evaluate_request, utils.ProviderType.openai, utils.ModelType.advance_model)
   return evaluate_result

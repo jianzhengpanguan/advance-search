@@ -50,7 +50,7 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(prompt, utils.ProviderType.anthropic, utils.ModelType.basic_model)
+  response = gpt.request(prompt)
   try:
     answer = response.split("Answer")[-1]
   except IndexError:
@@ -90,7 +90,7 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
   if search_result:
     response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
   else:
-    response = gpt.request(prompt, utils.ProviderType.openai, utils.ModelType.basic_model)
+    response = gpt.openai_request(prompt, utils.ModelType.basic_model)
   
   answer = response.split("Answer")[-1]
   if 'yes' in answer.lower():
@@ -128,7 +128,7 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   if search_result:
     response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
   else:
-    response = gpt.request(prompt, utils.ProviderType.openai, utils.ModelType.advance_model)
+    response = gpt.openai_request(prompt, utils.ModelType.advance_model)
   logging.info(f"_to_follow_up_searches():{response}")
   response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
   explains = re.findall(r'\d+\.\s+(.*)', explain_search)
@@ -175,7 +175,7 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(prompt, utils.ProviderType.anthropic, utils.ModelType.basic_model)
+  response = gpt.request(prompt)
   keywords = []
   keywordSet = set()
   try:

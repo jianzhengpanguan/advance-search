@@ -82,7 +82,7 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
 def _to_fallacy_explanations(inference:str)->dict[str, str]:
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, inference)
-  response = gpt.request(request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  response = gpt.openai_request(request, utils.ModelType.advance_model)
   # Find json part in ```json * ```.
   # The json part is a list of dictionary {fallacy:explanation}.
   json_part = re.findall(r"[\`{3}json].*[\`{3}]", response, re.DOTALL)
@@ -96,7 +96,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   
   # If LLM does not support Json format , use the text format.
   request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, inference)
-  response = gpt.request(request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  response = gpt.openai_request(request, utils.ModelType.advance_model)
   fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)
   explanations = _fetch_patterns(prefix="Explanation", raw_text=response)
   num_fallacies = min(len(fallacies), len(explanations))

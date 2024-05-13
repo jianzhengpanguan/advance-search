@@ -6,6 +6,7 @@ class ProviderType(Enum):
   unknown = 0
   openai = 1
   anthropic = 2
+  deepseek = 3
 
 class ModelType(Enum):
   advance_model = 1

@@ -1,10 +1,13 @@
 import time
 from applog import logger as logging
+import threading
 
-class TokensRateLimiter:
-  def __init__(self, max_tokens):
+class PerMinuteRateLimiter:
+  def __init__(self, max_tokens=90000, max_num_requests=6):
     self.max_tokens = max_tokens  # Maximum tokens allowed per minute
+    self.max_num_requests = max_num_requests # Maximum number of request allowed per minute
     self.token_usage = []  # List to store tuples of (timestamp, tokens_used)
+    self.lock = threading.Lock()  # Lock to synchronize access
 
   def _remove_old_tokens(self):
     """Remove token records that are older than one minute."""
@@ -12,23 +15,16 @@ class TokensRateLimiter:
     while self.token_usage and self.token_usage[0][0] < one_minute_ago:
       self.token_usage.pop(0)
 
-  def request_tokens(self, tokens_needed):
-    """Request a certain number of tokens. If rate limit is exceeded, wait and try again."""
-    while True:
+  def allow_request_tokens(self, tokens_needed:int)->bool:
+    """Attempt to request a certain number of tokens. Return True if allowed, False if rate limit exceeded."""
+    with self.lock:
       self._remove_old_tokens()
-      # Max 1 request per second.
-      one_second_ago = time.time() - 1
-      if self.token_usage and self.token_usage[-1][0] >= one_second_ago:
-        logging.info(f"Tokens requested: {tokens_needed} too frequently at {time.ctime()}, wait for one second.\n")
-        time.sleep(1)
-        continue
-
+      # Check number of requests limit.
+      if len(self.token_usage) > self.max_num_requests:
+        return False
       current_tokens_used = sum(tokens for _, tokens in self.token_usage)
-      logging.info(f"Tokens used: {current_tokens_used}, new tokens requested: {tokens_needed} in last minute at {time.ctime()}\n")
-      
-      if current_tokens_used + tokens_needed <= self.max_tokens:
-          self.token_usage.append((time.time(), tokens_needed))
-          return True
-
-      # If limit is exceeded, wait for 1 seconds before checking again
-      time.sleep(1)
+      # Check rate limit
+      if current_tokens_used + tokens_needed > self.max_tokens:
+        return False
+      self.token_usage.append((time.time(), tokens_needed))
+      return True
