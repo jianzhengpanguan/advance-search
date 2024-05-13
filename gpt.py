@@ -158,7 +158,7 @@ def deepseek_request(statement:str, _:utils.ModelType)->str:
       raise RatelimitByProviderError(str(response), response.status_code)
     if not response or not response.json() or not response.json().get('choices'):
       continue
-    logging.info(f"DEEPSEEK response: {response.json().get('choices')}")
+    logging.info(f"Deepseek response: {response.json().get('choices')}")
     results.append(response.json().get('choices')[0].get('message').get('content'))
   return " \n".join(results)
 
@@ -226,16 +226,13 @@ class requester:
         # If the current model cannot answer the question, move to the next model.
         if response == _GPT_NO_ANSWER:
           continue
+        if response == None:
+          continue
         return response
       time.sleep(1)
 
-
+# Cheapest model first.
 basic_models = [
-  model(
-    provider_type=utils.ProviderType.openai,
-    model_type=utils.ModelType.basic_model,
-    request_function=openai_request,
-  ),
   model(
     provider_type=utils.ProviderType.deepseek,
     model_type=utils.ModelType.basic_model,
@@ -245,6 +242,11 @@ basic_models = [
     provider_type=utils.ProviderType.anthropic,
     model_type=utils.ModelType.basic_model,
     request_function=anthropic_request,
+  ),
+  model(
+    provider_type=utils.ProviderType.openai,
+    model_type=utils.ModelType.basic_model,
+    request_function=openai_request,
   ),
 ]
 basic_models_requester = requester(basic_models)
