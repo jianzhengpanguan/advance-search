@@ -75,10 +75,6 @@ Use instruct to analyze conversation:
 %s
 """
 
-# Divide the text into chunks of 500 characters, with a 50-character overlap.
-# Each chunk can read up to 100 patterns in the text.
-_CHUCK_SIZE = 500
-_OVERLAP_SIZE = 50
 _MAX_NUM_PATTERNS = 100
 
 # Fetch the patterns in premise, hypothesis.
@@ -184,7 +180,7 @@ def fetch_logics(statement:str):
     try:
       json_logics = _json_text_to_logics(raw_json)
     except Exception as e:
-      logging.error(f"LLM does not support Json format: {e}")
+      logging.warning(f"LLM does not support Json format: {e}")
     # If LLM support Json format, add it into logics.
     if json_logics:
       logics.extend(json_logics)
@@ -202,5 +198,5 @@ def fetch_logics(statement:str):
     try:
       logics[i] = json.loads(output.split("```json")[-1].split("```")[0])
     except Exception as e:
-      logging.warning(f"json loads failure: {e}")
+      logging.error(f"json loads failure: {e}")
   return logics
