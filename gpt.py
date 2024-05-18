@@ -86,6 +86,8 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   model = config['ANTHROPIC']['advance_model']
   if model_type == utils.ModelType.basic_model:
     model = config['ANTHROPIC']['basic_model']
+  if model_type == utils.ModelType.small_model:
+    model = config['ANTHROPIC']['small_model']
   # Init client.
   client = anthropic.Anthropic(
     api_key=config['ANTHROPIC']['api_key'],

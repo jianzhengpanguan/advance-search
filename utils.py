@@ -9,8 +9,9 @@ class ProviderType(Enum):
   deepseek = 3
 
 class ModelType(Enum):
+  basic_model = 0
   advance_model = 1
-  basic_model = 2
+  small_model = 2
 
 class SearchType(Enum):
   verifier = "verify"

@@ -31,7 +31,8 @@ def replace_ambiguous_terms(inference: str)-> str:
   * replace the referred subject (e.g., the xx) to the  full name based on the context `in place`.
   * add the implicit part (e.g., change `A did B` to `A did B in/on/at/to/from/with/by/for/of C`)) `in place`.
   """
-  return gpt.request(prompt)
+  # Currently only openai advance model and anthropic small and advance model are supported.
+  return gpt.anthropic_request(prompt, utils.ModelType.small_model)
 
 def stonealone_question(search: str)-> str:
   prompt = f"""
@@ -52,5 +53,6 @@ def stonealone_question(search: str)-> str:
 
   Rephrased standalone question:
   """
-  return gpt.request(prompt)
+  # Currently only openai advance model and anthropic small and advance model are supported.
+  return gpt.anthropic_request(prompt, utils.ModelType.small_model)
 

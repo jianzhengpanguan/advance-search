@@ -51,10 +51,13 @@ def _is_relevant(statement, search_result):
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
   response = gpt.request(prompt)
+  answer = ""
   try:
     answer = response.split("Answer")[-1]
   except IndexError:
-    return False
+    logging.error(f"Cannot find 'Answer' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
   if 'yes' in answer.lower():
     return True
   return False
@@ -91,8 +94,14 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
     response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
   else:
     response = gpt.openai_request(prompt, utils.ModelType.basic_model)
-  
-  answer = response.split("Answer")[-1]
+
+  answer = ""
+  try:
+    answer = response.split("Answer")[-1]
+  except IndexError:
+    logging.error(f"Cannot find 'Answer' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
   if 'yes' in answer.lower():
     return True
   return False
@@ -130,9 +139,19 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   else:
     response = gpt.openai_request(prompt, utils.ModelType.advance_model)
   logging.info(f"_to_follow_up_searches():{response}")
-  response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
+  try:
+    response_without_explain, explain_search = response.split("Explain")[:-1], response.split("Explain")[-1]
+  except IndexError:
+    logging.error(f"Cannot find 'Explain' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
   explains = re.findall(r'\d+\.\s+(.*)', explain_search)
-  suggest_search = "".join(response_without_explain).split("Search")[-1]
+  try:
+    suggest_search = "".join(response_without_explain).split("Search")[-1]
+  except IndexError:
+    logging.error(f"Cannot find 'Search' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
   searches = re.findall(r'\d+\.\s+(.*)', suggest_search)
   search_explains = {}
   num_searches = min(len(searches), len(explains), _NUM_SEARCHES)
@@ -178,12 +197,21 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   response = gpt.request(prompt)
   keywords = []
   keywordSet = set()
+
+  gpt_suggest = ""
   try:
     gpt_suggest = response.split("Keywords")[-1]
   except IndexError:
+    logging.error(f"Cannot find 'Keywords' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
+  if not gpt_suggest:
     return keywords
+
   raw_keywords = re.findall(r'\d+\.\s+(.*)', gpt_suggest)
   for suggest_keyword in raw_keywords:
+    if not suggest_keyword:
+      continue
     for keyword in suggest_keyword.split(' '):
       if not keyword:
         continue
@@ -248,7 +276,7 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
       if not _is_relevant(search, knowledge):
         return None
       # Fetch logics
-      logics = logiclinker.fetch_logics(knowledge, utils.ProviderType.anthropic, utils.ModelType.basic_model)
+      logics = logiclinker.fetch_logics(knowledge)
     return {
       "title": item['title'],
       "snippet": item['snippet'], 
