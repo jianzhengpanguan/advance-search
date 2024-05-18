@@ -5,6 +5,14 @@ from applog import logger as logging
 import requests
 import urllib3
 import ssl
+import configparser
+import asyncio
+from pyppeteer import launch
+
+# Create a configparser object
+config = configparser.ConfigParser()
+# Read the configuration file
+config.read('config/config.ini')
 
 class CustomHttpAdapter(requests.adapters.HTTPAdapter):
     # "Transport adapter" that allows us to use custom ssl_context.
@@ -24,6 +32,39 @@ def get_legacy_session():
     session = requests.session()
     session.mount('https://', CustomHttpAdapter(ctx))
     return session
+
+def _bypass_javascript_blocker(url:str)->str:
+  async def get_html(url):
+    # Launch a headless browser with the manually downloaded Chromium.
+    browser = await launch(
+      executablePath=config["CHROMIUM"]["path"], 
+      headless=True, 
+      args=["--no-sandbox"]
+    )
+    page = await browser.newPage()
+
+    # Disable JavaScript on this page
+    await page.setJavaScriptEnabled(False)
+
+    # Navigate to the URL
+    await page.goto(url)
+
+    # Get the HTML content
+    html = await page.content()
+
+    # Close the browser
+    try:
+      await browser.close()
+    except IOError as e:
+      print("Failed to clean up user data:", e)
+    except Exception as e:
+      print("Failed to close browser:", e)
+    
+    return html
+  
+  # Run the function in an asyncio event loop
+  return asyncio.get_event_loop().run_until_complete(get_html(url))
+   
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
@@ -99,15 +140,16 @@ def _read_html(url):
     # Make a request ignoring SSL certificate verification
     response = get_legacy_session().get(url, allow_redirects=True)
 
-  response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
+  raw_html = response.text
   # If we cannot parse the content, return empty string.
   if not _is_valid_html(response):
     logging.warning(f'Not a valid HTML document:{response}\n')
-    return ""
+    # Try to bypass the JavaScript blocker and fetch the html again.
+    raw_html = _bypass_javascript_blocker(url)
 
   results = []
   # Parse the HTML
-  soup = BeautifulSoup(response.text, 'html.parser')
+  soup = BeautifulSoup(raw_html, 'html.parser')
   # Extract the title and body.
   title = soup.title
   if title:
