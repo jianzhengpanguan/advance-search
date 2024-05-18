@@ -268,15 +268,23 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
   # Function to process each item and check if it's relevant
   def process(item)->dict[str, str]:
     if 'title' in item and 'snippet' in item and 'link' in item:
-      knowledges = []
+      # Fetch web content will get the chuck based on the question (e.g, search/title/snippet).
+      # Dedup the same chuck retrived from different questions.
+      knowledges = set()
       for question in [search, item['title'], item['snippet']]:
         knowledge_from_web = _fetch_web_content(item['link'], question)
-        knowledges.append(knowledge_from_web)
+        knowledges.add(knowledge_from_web)
       knowledge = "\n".join(knowledges)
       if not _is_relevant(search, knowledge):
         return None
-      # Fetch logics
-      logics = logiclinker.fetch_logics(knowledge)
+      # Only keep the logic relevant to the search.
+      logics = []
+      for logic in logiclinker.fetch_logics(knowledge):
+        if _is_relevant(search, logic):
+          logics.append(logic)
+      # If there is no relevant logic, return None.
+      if not logics:
+        return None
     return {
       "title": item['title'],
       "snippet": item['snippet'], 
