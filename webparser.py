@@ -70,7 +70,7 @@ def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
   # Make a HEAD request to check the content type
   try:
-    response = requests.head(url, allow_redirects=True)
+    response = requests.head(url, allow_redirects=True, verify=False)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
@@ -86,7 +86,7 @@ def _is_valid_pdf(url:str)->bool:
 def _read_pdf(url:str)->str:
   # Make a GET request to download the PDF
   try:
-    response = requests.get(url, allow_redirects=True)
+    response = requests.get(url, allow_redirects=True, verify=False)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
@@ -134,7 +134,7 @@ def _is_valid_html(content):
 
 def _read_html(url):
   try:
-    response = requests.get(url, allow_redirects=True)
+    response = requests.get(url, allow_redirects=True, verify=False)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
