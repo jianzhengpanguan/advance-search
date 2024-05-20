@@ -8,6 +8,11 @@ import ssl
 import configparser
 import asyncio
 from pyppeteer import launch
+import urllib3
+from urllib3.exceptions import InsecureRequestWarning
+
+# Suppress only the InsecureRequestWarning
+urllib3.disable_warnings(InsecureRequestWarning)
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -52,29 +57,39 @@ def _bypass_javascript_blocker(url:str)->str:
     # Get the HTML content
     html = await page.content()
 
+    if page:
+      await page.close()
+
     # Close the browser
     try:
       await browser.close()
-    except IOError as e:
-      print("Failed to clean up user data:", e)
     except Exception as e:
-      print("Failed to close browser:", e)
+      logging.warning("Failed to close browser:", e)
     
     return html
+
+  # The event loop executes async tasks and handles I/O. By default, it's associated with the main thread
+  # Each thread needs its own event loop. Accessing the loop from a different thread (e.g., ThreadPoolExecutor) causes the error
+  # The web parser is running in thread, so we need to create a new event loop.
+  loop = asyncio.new_event_loop()
+  asyncio.set_event_loop(loop)
+  content = loop.run_until_complete(get_html(url))
   
-  # Run the function in an asyncio event loop
-  return asyncio.get_event_loop().run_until_complete(get_html(url))
+  return content
    
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
   # Make a HEAD request to check the content type
   try:
-    response = requests.head(url, allow_redirects=True, verify=False)
+    response = requests.head(url, allow_redirects=True)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
-    response = get_legacy_session().head(url, allow_redirects=True)
+    try:
+      response = get_legacy_session().head(url, allow_redirects=True)
+    except requests.exceptions.SSLError as e:
+      response = requests.get(url, allow_redirects=True, verify=False)
 
   content_type = response.headers.get('Content-Type', '')
   
@@ -86,11 +101,14 @@ def _is_valid_pdf(url:str)->bool:
 def _read_pdf(url:str)->str:
   # Make a GET request to download the PDF
   try:
-    response = requests.get(url, allow_redirects=True, verify=False)
+    response = requests.get(url, allow_redirects=True)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
-    response = get_legacy_session().get(url, allow_redirects=True)
+    try:
+      response = get_legacy_session().get(url, allow_redirects=True)
+    except requests.exceptions.SSLError as e:
+      response = requests.get(url, allow_redirects=True, verify=False)
   response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   try:
     response.raise_for_status()  # Raise an exception for bad requests
@@ -134,11 +152,14 @@ def _is_valid_html(content):
 
 def _read_html(url):
   try:
-    response = requests.get(url, allow_redirects=True, verify=False)
+    response = requests.get(url, allow_redirects=True)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
-    response = get_legacy_session().get(url, allow_redirects=True)
+    try:
+      response = get_legacy_session().get(url, allow_redirects=True)
+    except requests.exceptions.SSLError as e:
+      response = requests.get(url, allow_redirects=True, verify=False)
 
   raw_html = response.text
   # If we cannot parse the content, return empty string.
@@ -173,3 +194,8 @@ def parse(url:str)->str:
   if _is_valid_pdf(url):
     return _read_pdf(url)
   return _read_html(url)
+
+
+if __name__ == "__main__":
+  url = "https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html"
+  print(parse(url)[:20])
