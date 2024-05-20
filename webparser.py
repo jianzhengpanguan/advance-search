@@ -5,11 +5,13 @@ from applog import logger as logging
 import requests
 import urllib3
 import ssl
+import concurrent.futures
 import configparser
-import asyncio
-from pyppeteer import launch
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
 # Suppress only the InsecureRequestWarning
 urllib3.disable_warnings(InsecureRequestWarning)
@@ -38,44 +40,31 @@ def get_legacy_session():
     session.mount('https://', CustomHttpAdapter(ctx))
     return session
 
-def _bypass_javascript_blocker(url:str)->str:
-  async def get_html(url):
-    # Launch a headless browser with the manually downloaded Chromium.
-    browser = await launch(
-      executablePath=config["CHROMIUM"]["path"], 
-      headless=True, 
-      args=["--no-sandbox"]
-    )
-    page = await browser.newPage()
 
-    # Disable JavaScript on this page
-    await page.setJavaScriptEnabled(False)
+def _bypass_javascript_blocker(url: str) -> str:
+    # Configure Selenium to use the local Chromium browser and ChromeDriver
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-gpu")
+    # Disable JavaScript
+    chrome_options.add_experimental_option("prefs", {"profile.managed_default_content_settings.javascript": 2})
+    chrome_options.add_argument("--log-level=3")
 
-    # Navigate to the URL
-    await page.goto(url)
+    # Initialize WebDriver
+    driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
-    # Get the HTML content
-    html = await page.content()
-
-    if page:
-      await page.close()
-
-    # Close the browser
     try:
-      await browser.close()
-    except Exception as e:
-      logging.warning("Failed to close browser:", e)
-    
-    return html
+      # Navigate to the URL
+      driver.get(url)
 
-  # The event loop executes async tasks and handles I/O. By default, it's associated with the main thread
-  # Each thread needs its own event loop. Accessing the loop from a different thread (e.g., ThreadPoolExecutor) causes the error
-  # The web parser is running in thread, so we need to create a new event loop.
-  loop = asyncio.new_event_loop()
-  asyncio.set_event_loop(loop)
-  content = loop.run_until_complete(get_html(url))
-  
-  return content
+      # Get the HTML content
+      html = driver.page_source
+    finally:
+      # Clean up: close the browser
+      driver.quit()
+
+    return html
    
 
 def _is_valid_pdf(url:str)->bool:
@@ -194,8 +183,3 @@ def parse(url:str)->str:
   if _is_valid_pdf(url):
     return _read_pdf(url)
   return _read_html(url)
-
-
-if __name__ == "__main__":
-  url = "https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html"
-  print(parse(url)[:20])
