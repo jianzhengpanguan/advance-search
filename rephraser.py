@@ -26,7 +26,11 @@ def replace_ambiguous_terms(inference: str)-> str:
   Given a sentence:
   {inference}
 
-  `Export in the json format`, but:
+  Export in the json format like:
+  ```json
+  ...
+  ```
+  but:
   * replace the pronoun (e.g., it, she, he, they, etc.) to the full name based on the context `in place`.
   * replace the referred subject (e.g., the xx) to the  full name based on the context `in place`.
   * add the implicit part (e.g., change `A did B` to `A did B in/on/at/to/from/with/by/for/of C`)) `in place`.

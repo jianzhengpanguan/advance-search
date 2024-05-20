@@ -278,17 +278,15 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
       if not _is_relevant(search, knowledge):
         return None
       # Only keep the logic relevant to the search.
-      logics = []
-      for logic in logiclinker.fetch_logics(knowledge):
-        if _is_relevant(search, logic):
-          logics.append(logic)
-      # If there is no relevant logic, return None.
-      if not logics:
-        return None
+      logics =  logiclinker.fetch_logics(knowledge)
+      if not _is_relevant(search, logics):
+        logics = []
     return {
       "title": item['title'],
       "snippet": item['snippet'], 
+
       "logics": str(logics),
+      "knowledge": knowledge,
       "link": item['link']
     }
 
@@ -326,25 +324,36 @@ class CustomEncoder(json.JSONEncoder):
 def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchType.verifier)->list[SearchResults]:
   search_results:list[SearchResults] = []
   results = []
-  try:
-    # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
-    if search_type == utils.SearchType.verifier:
+  
+  # If we want to verify a premise or hypothesis, we can directly search it to see if there are any answer.
+  if search_type == utils.SearchType.verifier:
+    response = ""
+    try:
       response = _web_request(topic, _to_keywords(topic, topic, search_type))
-      search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
-      results.extend(response)
-    for _ in range(max_iter):
-      all_results = "\n".join([str(result) for result in results])
-      # Check if the current fact is enough.
-      if _is_enough(topic, all_results):
-        return search_results
+    except Exception as e:
+      logging.error(f"_web_request({topic}, {search_type}): {e}")
+    search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
+    results.extend(response)
+  for _ in range(max_iter):
+    all_results = "\n".join([str(result) for result in results])
+    # Check if the current fact is enough.
+    if _is_enough(topic, all_results):
+      return search_results
 
+    try:
       search_explains = _to_follow_up_searches(topic, all_results, search_type)
-      for search, explain in search_explains.items():
+    except Exception as e:
+      logging.error(f" _to_follow_up_searches({topic}, {all_results}, {search_type}): {e}")
+    if not search_results:
+      continue
+    for search, explain in search_explains.items():
+      response = ""
+      try:
         response = _web_request(search, _to_keywords(topic, search, search_type))
-        search_results.append(SearchResults(search=search, explain=explain, results=response))
-        results.extend(response)
-  except Exception as e:
-    logging.error(f"search error: {e}")
-  finally:
-    # Try to return as much search results as possible.
-    return search_results
+      except Exception as e:
+        logging.error(f"_web_request({topic}, {search}, {search_type}): {e}")
+      search_results.append(SearchResults(search=search, explain=explain, results=response))
+      results.extend(response)
+  
+  # Try to return as much search results as possible.
+  return search_results

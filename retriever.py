@@ -155,7 +155,10 @@ def openai_retrieve(question:str, filename:str)->str:
 
 def openai_clear():
   client = openai.OpenAI(api_key=config['OPENAI']['api_key'])
-  logging.info(f"Clearing OpenAI files: {client.files.list()}")
-  for document in client.files.list():
+  docs = client.files.list()
+  if not docs:
+    return
+  logging.info(f"Clearing OpenAI files: {docs}")
+  for document in docs:
     delete_response = client.files.delete(document.id)
     logging.info(f"Deleted file: {delete_response}")

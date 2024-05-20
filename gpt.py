@@ -231,13 +231,13 @@ class requester:
         if response == None:
           continue
         return response
-      time.sleep(1)
 
 # Cheapest model first.
 basic_models = [
   model(
     provider_type=utils.ProviderType.deepseek,
     model_type=utils.ModelType.basic_model,
+    per_minute_rate_limiter=ratelimiter.PerMinuteRateLimiter(max_num_requests=12),
     request_function=deepseek_request,
   ),
   model(
