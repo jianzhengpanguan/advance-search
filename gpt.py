@@ -168,7 +168,7 @@ def deepseek_request(statement:str, _:utils.ModelType)->str:
 def divide_statement(statement:str)->list[str]:
   """Divide the statement into chunks."""
   num_tokens = _num_tokens_from_messages(statement)
-  num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 2))
+  num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 4))
   bucket_length = math.ceil(len(statement) / num_buckets)
   return [statement[i:i+bucket_length+_OVERLAP] for i in range(0, len(statement), bucket_length)]
 
@@ -179,7 +179,9 @@ class model:
   isRateLimitedByProvider: bool
   request_function: Callable[[str, utils.ModelType], str]
 
-  def __init__(self, provider_type=utils.ProviderType, model_type=utils.ModelType.basic_model, per_minute_rate_limiter=ratelimiter.PerMinuteRateLimiter(), request_function=anthropic_request) -> None:
+  def __init__(self, provider_type=utils.ProviderType, model_type=utils.ModelType.basic_model, per_minute_rate_limiter=None, request_function=anthropic_request) -> None:
+    if per_minute_rate_limiter is None:
+      per_minute_rate_limiter = ratelimiter.PerMinuteRateLimiter(name=f"Provider:{provider_type},Model:{model_type}")
     self.provider_type = provider_type
     self.model_type = model_type
     self.per_minute_rate_limiter = per_minute_rate_limiter
@@ -227,28 +229,29 @@ class requester:
           continue
         # If the current model cannot answer the question, move to the next model.
         if response == _GPT_NO_ANSWER:
+          logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} cannot answer the question, moved to the next provider and model")
           continue
         if response == None:
+          logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} cannot answer the question, moved to the next provider and model")
           continue
         return response
 
 # Cheapest model first.
 basic_models = [
   model(
+    provider_type=utils.ProviderType.openai,
+    model_type=utils.ModelType.basic_model,
+    request_function=openai_request,
+  ),
+  model(
     provider_type=utils.ProviderType.deepseek,
     model_type=utils.ModelType.basic_model,
-    per_minute_rate_limiter=ratelimiter.PerMinuteRateLimiter(max_num_requests=12),
     request_function=deepseek_request,
   ),
   model(
     provider_type=utils.ProviderType.anthropic,
     model_type=utils.ModelType.basic_model,
     request_function=anthropic_request,
-  ),
-  model(
-    provider_type=utils.ProviderType.openai,
-    model_type=utils.ModelType.basic_model,
-    request_function=openai_request,
   ),
 ]
 basic_models_requester = requester(basic_models)
