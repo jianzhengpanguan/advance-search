@@ -3,7 +3,6 @@ import re
 import gpt
 import configparser
 import webparser
-import math
 import logiclinker
 import retriever
 import rephraser
@@ -12,7 +11,7 @@ import utils
 import json
 from applog import logger as logging
 
-_MAX_WORKERS = 100
+_MAX_WORKERS = 6 # The maximum number of requests allowed by most LLM api.
 _NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
 _MAX_LINKS_PER_SEARCH = 100
@@ -28,18 +27,16 @@ config.read('config/config.ini')
 # Given the search result, determine if the search result is relevant to the statement.
 def _is_relevant(statement, search_result):
   prompt = f"""
-  Given `{search_result}`
+  Given ```
+  {search_result}
+  ```
   is that relevant to `{statement}`? 
   
-  * Rephrase and expand the question
   * Think step by step (chain of thinking)
   * Answer the yes/no.
 
   Output in the following format:
   ```
-  # Rephrased and expanded questions
-  *__
-  *__
   # Chain of thinking:
   *__
   *__
@@ -50,6 +47,7 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
+  logging.info(f"Requesting GPT for relevance check: \n {prompt}")
   response = gpt.request(prompt)
   answer = ""
   try:
@@ -71,18 +69,17 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
     return True
 
   prompt = f"""
-  {"Given the document," if search_result else ""}
+  Given the document: 
+  ```
+  {search_result}
+  ```
   is there enough information for you to {search_type.value}: `{statement}`? 
   
-  * Rephrase and expand the question
   * Think step by step (chain of thinking)
   * Answer the yes/no.
 
   Output in the following format:
   ```
-  # Rephrased and expanded questions
-  *__
-  *__
   # Chain of thinking:
   *__
   *__
@@ -109,20 +106,16 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
 # Based on the searched result, let LLM define follow up search questions.
 def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier)->dict[str,str]:
   prompt = f"""
-  {f"The given document is not enough to {search_type.value}: `{statement}`" if search_result else ""}
-  If I want to {search_type.value}: `{statement}`
-  what else should I search?
+  You will be helping to {search_type.value} a `{statement}` by suggesting relevant searches. 
+  
+  First, think step-by-step about what searches would be most relevant and helpful for {search_type.value} the given statement. 
+  Write out your step-by-step reasoning.
 
-  * Rephrase and expand the question
-  * Think step by step (chain of thinking)
-  * List the searches in order of their relevance to effectively {search_type.value}
-  * Explain why the search helps to {search_type.value}
+  Then, list out the searches you came up with in order of relevance for {search_type.value} the statement.
 
-  Output in the following format:
+  Finally, explain why each of the searches you listed helps {search_type.value} the original statement.
+
   ```
-  # Rephrased and expanded questions
-  *__
-  *__
   # Chain of thinking:
   *__
   *__
@@ -135,7 +128,8 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   ```
   """
   if search_result:
-    response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
+    retriever_prefix = f"The given document is not enough to {search_type.value}: `{statement}`"
+    response = retriever.retrieve(f"{retriever_prefix}\n{prompt}", search_result, utils.ProviderType.openai)
   else:
     response = gpt.openai_request(prompt, utils.ModelType.advance_model)
   logging.info(f"_to_follow_up_searches():{response}")
@@ -175,15 +169,11 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   ```
   what keywords should I use?
 
-  * Rephrase and expand the question
   * Think step by step (chain of thinking)
   * List the keywords in order of their relevance to effectively search for information.
 
   Output in the following format:
   ```
-  # Rephrased and expanded questions
-  *__
-  *__
   # Chain of thinking:
   *__
   *__
@@ -247,15 +237,16 @@ def _optimize_search(search:str, keywords:list[str]):
     
     # Add new search results, dedup the repeated links.
     for item in data['items']:
-      if 'title' in item and 'snippet' in item and 'link' in item:
-        # Check if the link title and snippest is revelant to the search.
-        if not _is_relevant(search, f"{item['title']} {item['snippet']}"):
-          continue
-        if item['link'] not in links:
-          links.add(item['link'])
-          results.append(item)
-          if len(results) >= _NUM_TARGET_SEARCH_RESULT:
-            break
+      if not ('title' in item and 'snippet' in item and 'link' in item):
+        continue
+      # Check if the link title and snippest is revelant to the search.
+      if not _is_relevant(search, f"{item['title']} {item['snippet']}"):
+        continue
+      if item['link'] not in links:
+        links.add(item['link'])
+        results.append(item)
+        if len(results) >= _NUM_TARGET_SEARCH_RESULT:
+          break
       
       # If we got enough results, we can stop searching.
       if len(results) >= _NUM_TARGET_SEARCH_RESULT:
@@ -279,14 +270,14 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
         return None
       # Only keep the logic relevant to the search.
       logics =  logiclinker.fetch_logics(knowledge)
-      if not _is_relevant(search, logics):
-        logics = []
+      relevant_logics = []
+      if _is_relevant(search, logics):
+        relevant_logics = logics
     return {
       "title": item['title'],
-      "snippet": item['snippet'], 
-
-      "logics": str(logics),
-      "knowledge": knowledge,
+      "snippet": item['snippet'],
+      "logics": str(relevant_logics),
+      "knowledge": knowledge if not relevant_logics else "",
       "link": item['link']
     }
 
