@@ -5,7 +5,7 @@ from applog import logger as logging
 import requests
 import urllib3
 import ssl
-import concurrent.futures
+import time
 import configparser
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
@@ -42,17 +42,21 @@ def get_legacy_session():
 
 
 def _bypass_javascript_blocker(url: str) -> str:
+    start_time = time.time()
     # Configure Selenium to use the local Chromium browser and ChromeDriver
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--use-gl=swiftshader")
     # Disable JavaScript
     chrome_options.add_experimental_option("prefs", {"profile.managed_default_content_settings.javascript": 2})
     chrome_options.add_argument("--log-level=3")
 
+    # Initialize Service
+    service=Service()
     # Initialize WebDriver
-    driver = webdriver.Chrome(service=Service(), options=chrome_options)
+    driver = webdriver.Chrome(service=service, options=chrome_options)
 
     try:
       # Navigate to the URL
@@ -60,10 +64,19 @@ def _bypass_javascript_blocker(url: str) -> str:
 
       # Get the HTML content
       html = driver.page_source
+
+    except Exception as e:
+      print(f"Error occurred: {e}")
+
     finally:
       # Clean up: close the browser
-      driver.quit()
-
+      driver.close()
+      logging.info(f"drived closed for {url}")
+      # Stop the ChromeDriver service when done
+      service.stop()
+      logging.info(f"Service stoped for {url}")
+      
+    logging.info(f"Bypassing JavaScript blocker took {time.time() - start_time} seconds")
     return html
    
 
@@ -151,7 +164,6 @@ def _read_html(url):
       response = requests.get(url, allow_redirects=True, verify=False)
 
   raw_html = response.text
-  # If we cannot parse the content, return empty string.
   if not _is_valid_html(response):
     logging.warning(f'Not a valid HTML document:{response}\n')
     # Try to bypass the JavaScript blocker and fetch the html again.
@@ -183,3 +195,15 @@ def parse(url:str)->str:
   if _is_valid_pdf(url):
     return _read_pdf(url)
   return _read_html(url)
+
+
+import concurrent.futures
+
+if __name__ == "__main__":
+  url = "https://www.regulations.gov/document/EPA-HQ-OW-2018-0149-0003"
+  # Use ThreadPoolExecutor to process items in parallel
+  with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    # Map process to each item.
+    results = executor.map(_bypass_javascript_blocker, [url] * 1)
+  for result in results:
+    print(result)
