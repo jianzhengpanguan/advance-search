@@ -47,7 +47,6 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  logging.info(f"Requesting GPT for relevance check: \n {prompt}")
   response = gpt.request(prompt)
   answer = ""
   try:
@@ -59,6 +58,42 @@ def _is_relevant(statement, search_result):
   if 'yes' in answer.lower():
     return True
   return False
+
+def _summarize(statement:str, search_result:str)->list[str]:
+  if not statement or not search_result:
+    return []
+  prompt = f"""
+  Given the document.
+
+  Please summarize the parts of this document that are relevant to the following statement:  
+  <statement>`{statement}`</statement>
+
+  First, carefully read the document and statement. 
+  Then, in a <scratchpad>, think through step-by-step how to summarize the document in a way that extracts only the parts that are relevant to the given statement. 
+
+  Then, provide a numbered list summarizing the key points from the document that relate to the statement. Format your summary like this:
+
+  ```
+  # Chain of thinking:
+  *__
+  *__
+  # Summary:
+  1.__
+  2.__
+  3.__
+  ```
+
+  Each point should be one sentence long at most. Focus on distilling out only the essential information that pertains to the given statement.
+  """
+  response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
+  try:
+    answer = response.split("Summary")[-1]
+  except IndexError:
+    logging.error(f"Cannot find 'Summary' in response: {response}")
+  except AttributeError:
+    logging.error(f"Response is None type: {response}")
+  return re.findall(r'\d+\.\s+(.*)', answer)
+
 
 # Given the search result, determine if additional search is needed.
 def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=utils.SearchType.verifier):
@@ -87,10 +122,7 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
   yes/no
   ```
   """
-  if search_result:
-    response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
-  else:
-    response = gpt.openai_request(prompt, utils.ModelType.basic_model)
+  response = gpt.openai_request(prompt, utils.ModelType.advance_model)
 
   answer = ""
   try:
@@ -266,18 +298,22 @@ def _web_request(search:str, keywords:list[str])->list[dict[str, str]]:
         knowledge_from_web = _fetch_web_content(item['link'], question)
         knowledges.add(knowledge_from_web)
       knowledge = "\n".join(knowledges)
-      if not _is_relevant(search, knowledge):
+      # Summerized the knowledge.
+      relevant_knowledge = _summarize(search, knowledge)
+      if not _is_relevant(search, relevant_knowledge):
         return None
       # Only keep the logic relevant to the search.
       logics =  logiclinker.fetch_logics(knowledge)
       relevant_logics = []
-      if _is_relevant(search, logics):
-        relevant_logics = logics
+      for logic in logics:
+        if _is_relevant(search, logic):
+          relevant_logics.append(logic)
+
     return {
       "title": item['title'],
       "snippet": item['snippet'],
-      "logics": str(relevant_logics),
-      "knowledge": knowledge if not relevant_logics else "",
+      "logics": relevant_logics,
+      "knowledge": relevant_knowledge,
       "link": item['link']
     }
 
@@ -327,14 +363,15 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
     results.extend(response)
   for _ in range(max_iter):
     all_results = "\n".join([str(result) for result in results])
+    summerized_results = "\n".join(_summarize(topic, all_results))
     # Check if the current fact is enough.
-    if _is_enough(topic, all_results):
+    if _is_enough(topic, summerized_results):
       return search_results
 
     try:
-      search_explains = _to_follow_up_searches(topic, all_results, search_type)
+      search_explains = _to_follow_up_searches(topic, summerized_results, search_type)
     except Exception as e:
-      logging.error(f" _to_follow_up_searches({topic}, {all_results}, {search_type}): {e}")
+      logging.error(f" _to_follow_up_searches({topic}, {summerized_results}, {search_type}): {e}")
     if not search_results:
       continue
     for search, explain in search_explains.items():

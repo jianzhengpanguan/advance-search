@@ -40,23 +40,18 @@ def replace_ambiguous_terms(inference: str)-> str:
 
 def stonealone_question(search: str)-> str:
   prompt = f"""
-  Given a search: `{search}`
   Rephrase the search to be a standalone question that can be used by the LLM to search the web for information.
   
-   1. Follow up question: How does stable diffusion work?
-  Rephrased: Stable diffusion working
+  Examples:
+  1. Question: `How does stable diffusion work?`
+  Rephrased: `Stable diffusion working`
 
-  2. Follow up question: What is linear algebra?
-  Rephrased: Linear algebra
+  2. Question: `What is linear algebra?`
+  Rephrased: `Linear algebra`
 
-  3: Analysis of domestic needs in the U.S. that could benefit from increased funding (e.g., healthcare, infrastructure, education).
-  Rephrase: Domestic needs in the U.S. benefiting from increased funding
-
-  4: Comparative studies on the effectiveness of funding domestic vs. international environmental projects.
-  Rephrased: Effectiveness of funding domestic vs. international environmental projects
-
-  Rephrased standalone question:
+  Now apply to:
+  Question: `{search}`
+  Rephrased:
   """
-  # Currently only openai advance model and anthropic small and advance model are supported.
-  return gpt.anthropic_request(prompt, utils.ModelType.small_model)
+  return gpt.anthropic_request(prompt, utils.ModelType.advance_model).replace("`", "").split(":")[-1]
 

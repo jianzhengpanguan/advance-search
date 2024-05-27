@@ -57,6 +57,7 @@ def _bypass_javascript_blocker(url: str) -> str:
     service=Service()
     # Initialize WebDriver
     driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver.set_page_load_timeout(60)  # Set the page load timeout
 
     try:
       # Navigate to the URL
@@ -71,7 +72,7 @@ def _bypass_javascript_blocker(url: str) -> str:
     finally:
       # Clean up: close the browser
       driver.close()
-      logging.info(f"drived closed for {url}")
+      logging.info(f"driver closed for {url}")
       # Stop the ChromeDriver service when done
       service.stop()
       logging.info(f"Service stoped for {url}")
