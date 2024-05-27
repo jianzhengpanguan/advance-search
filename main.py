@@ -4,6 +4,7 @@ import evaluator
 import fallacyfinder
 import searcher
 import json
+import retriever
 
 _MAX_ITER = 3
 
@@ -22,7 +23,7 @@ def main():
     print(f"Evaluation file path: {args.evaluation_file_path}")
     print(f"Search result file path: {args.search_result_file_path}")
 
-    # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
+    # # Step 1: Convert raw file to logics (i.e., premises, hypothesis and inferences).
     with open(args.raw_file_path, "r", encoding='utf-8') as f:
       raw_statement = f.read()
       logics = logiclinker.fetch_logics(raw_statement)
@@ -32,11 +33,12 @@ def main():
     
     # Step 2: Search every premise and hypothesis.
     search_results = []
+    retriever.openai_clear()
     with open(args.logics_file_path, "r", encoding='utf-8') as file:
       logics = json.load(file)
       print(f"Number of logics: {len(logics)}")
-      inference_search_result = {"premises": [], "hypothesis": []}
       for inference in logics:
+        inference_search_result = {"premises": [], "hypothesis": []}
         for premise in inference["premises"]:
           if premise == '':
             continue
@@ -46,10 +48,12 @@ def main():
             continue
           inference_search_result["hypothesis"].append({hypothesis:searcher.search(hypothesis, _MAX_ITER)})
         search_results.append(inference_search_result)
+    retriever.openai_clear()
     with open(args.search_result_file_path, 'w') as file:
       json.dump(search_results, file, indent=2, cls=searcher.CustomEncoder)
 
-    # Step 3: Evaluate each premise and hypothesis.
+    # # Step 3: Evaluate each premise and hypothesis.
+    retriever.openai_clear()
     with open(args.search_result_file_path, 'r') as search_result_file:
       inference_search_results = json.load(search_result_file)
     with open(args.evaluation_file_path, 'w', encoding='utf-8') as file:
@@ -68,8 +72,9 @@ def main():
               continue
             file.write('Hypothesis:' + hypothesis + '\n')
             file.write(evaluator.evaluate(hypothesis, str(search_results)) + '\n\n')
+    retriever.openai_clear()
 
-    # Step 4: Find the fallacies.
+    # # Step 4: Find the fallacies.
     with open(args.logics_file_path, "r", encoding='utf-8') as file:
       logics = json.load(file)
     fallacies = fallacyfinder.find(logics)

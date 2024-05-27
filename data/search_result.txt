@@ -2,229 +2,1226 @@
   {
     "premises": [
       {
-        "4. Donald Trump aims to focus the United States's empathy on internal matters within the United States.": {
-          "Look up interviews or articles where Donald Trump has discussed his priorities for the U.S., emphasizing internal matters.": [
-            "ACCC+commissioned+report+-+The+impact+of+digital+platforms+ ...'Whoever controls search engines has enormous influence on us all. ... US President Donald Trump ... the various elements will not be discussed at length, but its\u00a0...https://www.accc.gov.au/system/files/ACCC+commissioned+report+-+The+impact+of+digital+platforms+on+news+and+journalistic+content,+Centre+for+Media+Transition+(2).pdf",
-            "United States Department of State4 days ago ... On that call, the Secretary also emphasized the importance of Israel meeting the commitments that Prime Minister Netanyahu made to President\u00a0...https://www.state.gov/?post_type=state_briefing&%3Bp=92333",
-            "Polarization, Democracy, and Political Violence in the United States ...Sep 5, 2023 ... Jennifer McCoy, who has pioneered looking at the ways in which emotions and ... While they were united by their votes for Donald Trump in 2020 and\u00a0...https://carnegieendowment.org/2023/09/05/polarization-democracy-and-political-violence-in-united-states-what-research-says-pub-90457",
-            "Immigration \u2013 The White HouseJan 16, 2021 ... All Issues. President Trump kept his promise to build a wall on our southern border between the United States and Mexico. With 450 miles\u00a0...https://trumpwhitehouse.archives.gov/issues/immigration/"
-          ],
-          "Look up broader domestic policy initiatives during the Trump administration that might reflect a larger trend or doctrine of internal focus.": [
-            "Executive Order on Promoting Competition in the American ...Jul 9, 2021 ... Policy. A fair, open, and competitive marketplace has long been a cornerstone of the American economy, while excessive market concentration\u00a0...https://www.whitehouse.gov/briefing-room/presidential-actions/2021/07/09/executive-order-on-promoting-competition-in-the-american-economy/",
-            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... Clinging to a Cold War mentality and the hegemon's logic, the US pursues bloc politics, concocts the \u201cdemocracy versus authoritarianism\u201d\u00a0...https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
-            "FACT SHEET: The American Jobs Plan | The White HouseMar 31, 2021 ... ... during the Biden administration will be used ... for infrastructure on ... This will be paired with a broader enforcement initiative to be announced\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/03/31/fact-sheet-the-american-jobs-plan/",
-            "The Impact of Digital Platforms on News and Journalistic ContentSpecifically the Centre was asked to describe and analyse the impacts of digital platforms on choice and quality for Australian news consumers. The brief for\u00a0...https://www.accc.gov.au/system/files/ACCC+commissioned+report+-+The+impact+of+digital+platforms+on+news+and+journalistic+content,+Centre+for+Media+Transition+(2).pdf",
-            "A Foreign Policy for the American People - United States ...Mar 3, 2021 ... SECRETARY BLINKEN: Good morning. My fellow Americans, five weeks ago I was sworn in as your Secretary of State. My job is to represent the\u00a0...https://www.state.gov/a-foreign-policy-for-the-american-people/"
-          ]
-        }
+        "4. Donald Trump aims to focus the United States's empathy on internal matters within the United States.": [
+          {
+            "search": "4. Donald Trump aims to focus the United States's empathy on internal matters within the United States.",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "National Drug Control Strategy | The White House",
+                "snippet": "Apr 18, 2022 ... There is a complex interplay between the availability of drugs in the United States and their use. Our Strategy will focus on two critical\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The document contains information related to the United States focusing on internal matters by learning from international harm reduction efforts and emphasizing the importance of providing respectful, dignified treatment to individuals for better outcomes in drug control strategies."
+                ],
+                "link": "https://www.whitehouse.gov/wp-content/uploads/2022/04/National-Drug-Control-2022Strategy.pdf"
+              },
+              {
+                "title": "Congressional Participation in Litigation: Article III and Legislative ...",
+                "snippet": "Nov 19, 2018 ... 3 U.S. House of Representatives v. Burwell, 130 F. Supp. 3d 53, 57 (D.D.C. 2015). 4 United States v. Windsor, 570 U.S. 744, 754\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The document emphasizes Donald Trump's focus on internal matters within the United States, aligning with his goal to bring empathy back to America, prioritize American interests, and address domestic challenges effectively."
+                ],
+                "link": "https://crsreports.congress.gov/product/pdf/R/R45636"
+              },
+              {
+                "title": "A Policymaking Checklist for the Legislative Process | West Virginia ...",
+                "snippet": "Jan 20, 2016 ... ... by another political institution can focus attention on an issue. For example, the United States Supreme Court's decision in Kelo v. City of\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. It was long ago observed that, 'issue definition is by no means an a priori given.' The conflicting parties will not necessarily agree how the issues are to be defined.",
+                      "2. Ideas are at the center of all political conflict."
+                    ],
+                    "hypothesis": [
+                      "1. A policy decision or action taken by another political institution can focus attention on an issue."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Political movements at the national level may influence the agendas of systems by reexamining past legislation and policies that were more punitive in nature.",
+                      "Complex institutional structures, the nature of democratic bargaining and conflict."
+                    ],
+                    "hypothesis": [
+                      "A policy decision or action taken by another political institution can focus attention on an issue."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Political movements on a national scale can influence agendas by revisiting past legislation and policies, potentially shifting focus to internal matters within the United States.",
+                  "Decisions or actions by political institutions, such as the United States Supreme Court, can steer attention towards internal issues instead of definitively resolving policy matters.",
+                  "Legislative leadership, exemplified by West Virginia, plays a significant role in setting agendas and guiding the legislative process.",
+                  "Proposed legislation is emphasized as an important tool for deliberation and action within the framework of intricate institutional systems and democratic processes."
+                ],
+                "link": "https://wvlawreview.wvu.edu/west-virginia-law-review-online/2016/01/20/a-policymaking-checklist-for-the-legislative-process"
+              },
+              {
+                "title": "Race Matters: 1968 as Living History in the Black Freedom Struggle",
+                "snippet": "Mar 29, 2019 ... New questions about the legacies of 1968 and the 1960s in general are presenting themselves to us, as scholars and as citizens,\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. Theoharis draws a connection between Theoharis' concern over the Trump presidency with Theoharis' desire to write Theoharis' 2018 monograph A More Beautiful and Terrible History: The Uses and Misuses of Civil Rights History.",
+                      "2. Many contributors to the Fifty Years Since MLK issue of The Boston Review express similar motivations."
+                    ],
+                    "hypothesis": [
+                      "1. Scholars explore connections between history and current events."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "To understand why and how contemporary scholars and activists engage the year 1968 in their interpretation of the black freedom struggle, it is imperative to first outline how race matters today.",
+                      "While this may seem like an open door to those activists and scholars who have devoted their careers to the exposure of racial and racist structures, the recent emergence of a new generation of black activists (a transatlantic phenomenon as noted below) must largely be understood in the context of the general sense of complacency about race matters that characterized many western nations only ten years ago."
+                    ],
+                    "hypothesis": [
+                      "The new generation of black activists must largely be understood in the context of the general sense of complacency about race matters that characterized many western nations only ten years ago."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "In fact, a key demand of protest groups such as Black Lives Matter is for the universal recognition that race still matters."
+                    ],
+                    "hypothesis": [
+                      "The election of Barack Obama, the first black president of the United States, erroneously 'confirm[ed] the view of many, especially white people, that the United States is a post-racial society.'"
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Lilla's suggestion that 'spokespeople for oppressed groups soft-pedal their indictments of white supremacy for strategic purposes, so long as white males are needed for Democrats to win elections.'",
+                      "Moyn's view that the answer to Trump is a 'contemporary New Deal' program that addresses structural justice for all and ensures that 'markets serve more than the rich.'"
+                    ],
+                    "hypothesis": [
+                      "A 'contemporary New Deal' program could effectively address structural justice and ensure equitable market service."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. The Federal Bureau of Investigation has started using the term 'black identity extremism' as a category of domestic terrorism threats",
+                      "1. The Federal Bureau of Investigation has started using the term 'black identity extremism' as a category of domestic terrorism threats"
+                    ],
+                    "hypothesis": [
+                      "1. The Federal Bureau of Investigation's categorization of 'black identity extremism' could be reminiscent of the Federal Bureau of Investigation's 1960s COINTELPRO program"
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Roughly the past five years have seen a remarkable acceleration in publications that deal with civil rights memory, the building of black inner-city communities, and fights against racial capitalism and systemic racism, particularly outside the South.",
+                      "2. Books and memoirs dealing with police brutality, criminal justice reform, and Black Lives Matter often engage the 1960s to answer larger questions regarding the long-standing animosity between the police and black communities, the causes and effects of riots, the (perceived) relationships between race, gender, and crime and the narrative power of such (alleged) interrelations, and (memories of) past protest traditions and struggles."
+                    ],
+                    "hypothesis": [
+                      "1. The concern over the Trump presidency has influenced the desire to write about the civil rights history."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. A majority of Americans believes that race relations have become worse since the election of Donald Trump."
+                    ],
+                    "hypothesis": [
+                      "1. The rise of Donald Trump has led to worse race relations in the United States."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. The Black Lives Matter protests occurred in Europe, Ireland, and South Africa."
+                    ],
+                    "hypothesis": [
+                      "1. The Black Lives Matter movement has an international impact."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The Africans showed solidarity with the Black Lives Matter movement."
+                    ],
+                    "hypothesis": [
+                      "The Black Lives Matter movement has an international impact."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The Long Civil Rights Movement and the Black Power Movement are connected in history."
+                    ],
+                    "hypothesis": [
+                      "The Long Civil Rights Movement influenced the Black Power Movement."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Scholars like Jeanne Theoharis and Margaret Edds are motivated by concerns over the Trump presidency to explore connections between historical events and contemporary issues, particularly in civil rights history.",
+                  "These scholars seek to inform new activism and lament the impact of the Trump administration on school diversity programs.",
+                  "Activists and scholars feel a sense of urgency and legitimacy following events like the emergence of Black Lives Matter and the presidency of Donald Trump.",
+                  "There is a focus on understanding uncomfortable histories that reflect the nation's past and offer lessons for addressing injustices in the current moment."
+                ],
+                "link": "https://journals.openedition.org/ejas/14233"
+              }
+            ]
+          }
+        ]
       },
       {
-        "5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. ": {
-          "\"Donald Trump statements on international environmental aid\"": [],
-          "\"Donald Trump policies on domestic environmental initiatives and urban development\"": []
-        }
+        "5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. ": [
+          {
+            "search": "5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. ",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "US Hegemony and Its Perils",
+                "snippet": "Feb 20, 2023 ... Since becoming the world's most powerful country after the two world wars and the Cold War, the United States has acted more boldly to interfere\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "4. The United States of America arbitrarily passes judgment on democracy in other countries."
+                    ],
+                    "hypothesis": [
+                      "4. The United States of America fabricates a false narrative of 'democracy versus authoritarianism' to incite estrangement, division, rivalry and confrontation."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The history of the United States is characterized by violence and expansion."
+                    ],
+                    "hypothesis": [
+                      "The United States has abused its military hegemony to pave the way for expansionist objectives."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The United States uses misinformation as a spear to attack other countries.",
+                      "The United States has been overriding truth with The United States' power and trampling justice to serve The United States' self-interest."
+                    ],
+                    "hypothesis": [
+                      "The United States' hegemonic, domineering, and bullying practices of using The United States' strength to intimidate the weak.",
+                      "The historical trends of peace, development, cooperation, and mutual benefit are unstoppable."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. The United States intervened in Venezuela to force the Maduro government to reach an agreement with the opposition, deprive Venezuela of Venezuela's ability to sell oil and gold for foreign exchange, exert high pressure on Venezuela's economy, and influence the 2018 presidential election in Venezuela."
+                    ],
+                    "hypothesis": [
+                      "1. The United States has been involved in multiple instances where the United States has acted against international norms and agreements."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The United States under the Trump administration cut off funding to the United Nations Population Fund (UNFPA) in 2017.",
+                  "Trump's administration announced the U.S. withdrawal from the Paris Agreement on climate change and exited other international treaties and organizations.",
+                  "Donald Trump rejected financial assistance for pollution controls in developing nations by cutting off funding to UNFPA and prioritizing domestic challenges\u30106\u2020source\u3011."
+                ],
+                "link": "https://www.fmprc.gov.cn/mfa_eng/wjbxw/202302/t20230220_11027664.html"
+              },
+              {
+                "title": "Revised Definition of Waters of the United States",
+                "snippet": "Prior to 1972, the ability to control and redress water pollution in the nation's ... control features that are currently in place and may be developed in the\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "3. Anyone can submit a public comment on Regulations.gov"
+                    ],
+                    "hypothesis": [
+                      "1. Public comments can influence the final regulations"
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document confirms that Trump's administration cut off assistance programs for controlling domestic and international pollution, redirecting the focus to United States cities ."
+                ],
+                "link": "https://www.regulations.gov/document/EPA-HQ-OW-2018-0149-0003"
+              }
+            ]
+          }
+        ]
       }
     ],
     "hypothesis": [
       {
-        " 4. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.": {
-          "Current U.S. contributions to international pollution control measures: budgets, projects, and results.": [
-            "Progress Cleaning the Air and Improving People's Health | US EPAActions to implement the Clean Air Act have achieved dramatic reductions in air pollution, preventing hundreds of thousands of cases of serious health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
-            "Budget of the United States Government, Fiscal Year 2023Appendix, Budget of the United States. Government, Fiscal Year 2023 contains detailed in- formation on the various appropriations and funds that constitute the\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/03/budget_fy2023.pdf",
-            "H.R.2617 - 117th Congress (2021-2022): Consolidated ...781) This section rescinds specified unobligated funds that were provided by the Agricultural Appropriations Act of 2010 for demonstration projects to develop\u00a0...https://www.congress.gov/bill/117th-congress/house-bill/2617",
-            "DoD 7000.14 - R DEPARTMENT OF DEFENSE FINANCIAL ...Dec 16, 2020 ... DoD reimbursable authority is authorized by the Office of the Under Secretary of Defense. (Comptroller) (OUSD(C)), through budget formulation\u00a0...https://comptroller.defense.gov/Portals/45/documents/fmr/Volume_11a.pdf"
-          ],
-          "Analysis of domestic needs in the U.S. that could benefit from increased funding (e.g., healthcare, infrastructure, education).": [
-            "FACT SHEET: The American Jobs Plan | The White HouseMar 31, 2021 ... His investments will use more sustainable and innovative materials, including cleaner steel and cement, and component parts Made in America and\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/03/31/fact-sheet-the-american-jobs-plan/",
-            "High-quality health systems in the Sustainable Development Goals ...Fuelled by a major increase in domestic health spending and donor funding ... more deeply into health needs and system performance. ... education would create a\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7734391/",
-            "FACT SHEET: The American Families Plan | The White HouseApr 28, 2021 ... ... benefits, including increased wages, improved health, and reduced crime. ... Students can use the benefit over three ... This funding will support\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2021/04/28/fact-sheet-the-american-families-plan/",
-            "Consolidated Appropriations Act, 2023 SUMMARY OF ...As kids return to the classroom, this funding will support more than 5.2 billion school lunches and snacks. In addition, the bill provides $40 million for the\u00a0...https://appropriations.house.gov/sites/democrats.appropriations.house.gov/files/FY23%20Summary%20of%20Appropriations%20Provisions.pdf",
-            "U.S. Health Care from a Global Perspective, 2019 | Commonwealth ...Jan 30, 2020 ... Americans had fewer physician visits than peers in most countries, which may be related to a low supply of physicians in the U.S.; Americans use\u00a0...https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019"
-          ],
-          "Comparative studies on the effectiveness of funding domestic vs. international environmental projects.": [
-            "Implementation and Effectiveness of International Environmental ...... research plan- -described in more detail below. In addition to IIASA's core support, we envision raising external funding for specific research projects.http://www.ciesin.org/docs/008-592/008-592.html",
-            "JEL Codes - American Economic AssociationJEL Classification System / EconLit Subject Descriptors ; D, Microeconomics ; E, Macroeconomics and Monetary Economics ; F, International Economics ; G, Financial\u00a0...https://www.aeaweb.org/econlit/jelCodes.php?view=jel",
-            "Chapter 3: Trade Agreements and Economic Theory | Wilson Center... domestic and international political realities. ... International Monetary Fund, and the World Trade ... comparative advantage, which maximizes global efficiency.https://www.wilsoncenter.org/chapter-3-trade-agreements-and-economic-theory"
-          ],
-          "Impact assessments and case studies that detail the outcomes of shifting funds from international initiatives to domestic programs.": [
-            "ASSESSMENT OF HIGHER EDUCATION LEARNING OUTCOMESAHELO Feasibility Study Report - Volume 1. \u00a9 OECD 2012 emerging global marketplace, especially so in the case of research universities. Moreover, rankings\u00a0...https://www.oecd.org/education/skills-beyond-school/AHELOFSReportVolume1.pdf",
-            "Chapter 3: Trade Agreements and Economic Theory | Wilson CenterGlobal Europe Program ... International Monetary Fund, and the World Trade Organization (WTO). ... However, import liberalization has an impact on domestic labor\u00a0...https://www.wilsoncenter.org/chapter-3-trade-agreements-and-economic-theory",
-            "Redistribution of Income and Reducing Economic Inequality - IMF ...These cash transfer programs give money to ... New methods of means testing and cash distribution have made it ... \u00a9 International Monetary Fund. All rights\u00a0...https://www.imf.org/en/Publications/fandd/issues/2018/03/bourguignon",
-            "High-quality health systems in the Sustainable Development Goals ...For example, research will be needed to rigorously evaluate the effects and costs of recommended improvement approaches on health, patient experience, and\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7734391/"
-          ],
-          "Studies or reports evaluating the outcomes and effectiveness of past U.S. funding in international pollution control.": [
-            "Progress Cleaning the Air and Improving People's Health | US EPAActions to implement the Clean Air Act have achieved dramatic reductions in air pollution, preventing hundreds of thousands of cases of serious health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
-            "Pollution and health: a progress update - The Lancet Planetary HealthMay 17, 2022 ... HH reports grants from the US National Institutes of Health for neuro-epidemiological research on the developmental neurotoxicity of pollutants\u00a0...https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(22)00090-0/fulltext"
-          ],
-          "Comparative analysis of benefits between international pollution control investments and domestic environmental projects.": [
-            "The Clean Air Act and the Economy | US EPAThe study projects that the beneficial economic effects of these two improvements alone more than offset the economic impacts from expenditures for pollution\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy",
-            "BUILDING A CLEAN ENERGY ECONOMY:Dec 15, 2022 ... ... benefit from projects that reduce greenhouse gas emissions and other air pollution. ... local sources, particularly in areas with environmental\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/12/Inflation-Reduction-Act-Guidebook.pdf",
-            "How to Evaluate Investment Efficiency of Environmental Pollution ...Jun 13, 2022 ... Scholars used different methods to study the efficiency of environmental pollution control from various perspectives. In terms of research\u00a0...https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9223102/",
-            "JEL Codes - American Economic AssociationComparative Analysis of Economic Systems. P52 ... Natural Resources and Domestic and International ... Pollution Control Adoption and Costs \u2022 Distributional Effects\u00a0...https://www.aeaweb.org/econlit/jelCodes.php?view=jel"
-          ],
-          "Expert opinions or economic studies on the impact of reducing international aid for environmental issues on U.S. international relations and domestic political impact.": [
-            "The Political Economy of Economic Policy - IMF F&DThe COVID-19 pandemic strikingly illustrates the intersection of politics, economics, and other considerations. Public health experts have long warned that the\u00a0...https://www.imf.org/en/Publications/fandd/issues/2020/06/political-economy-of-economic-policy-jeff-frieden",
-            "Americans' views of climate change in 8 charts | Pew Research CenterAug 9, 2023 ... ... economy and reducing ... U.S. participation in international efforts to reduce the effects of climate change. ... Political IssuesEnvironment &\u00a0...https://www.pewresearch.org/short-reads/2023/08/09/what-the-data-says-about-americans-views-of-climate-change/",
-            "The Clean Air Act and the Economy | US EPA... reducing air pollution ... The study projects that the beneficial economic effects ... The United States is the world's largest producer and consumer of\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy"
-          ],
-          "Research on the direct benefits received by U.S. citizens from international environmental control programs compared to domestic programs.": [
-            "Progress Cleaning the Air and Improving People's Health | US EPAEPA's peer-reviewed 2011 study found that clean air programs ... direct benefits to the American people which vastly exceed compliance costs. ... get $3-9 in health\u00a0...https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
-            "Executive Order on the Safe, Secure, and Trustworthy Development ...Oct 30, 2023 ... Across the Federal Government, my Administration will support programs to provide Americans the skills they need for the age of AI and attract\u00a0...https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/"
-          ],
-          "Comparative studies on the effectiveness of domestic versus international pollution control programs in terms of economic and health benefits.": [
-            "The Clean Air Act and the Economy | US EPA... health benefits of reducing air pollutants other than fine particles and ozone, or ... Multiple peer-reviewed economic studies show that the substantial public\u00a0...https://www.epa.gov/clean-air-act-overview/clean-air-act-and-economy",
-            "Water Supply, Sanitation, and Hygiene - Injury Prevention and ...Financial and economic studies convert the health, social, and environmental effects of poor WASH to a common money metric, thereby enabling aggregation as well\u00a0...https://www.ncbi.nlm.nih.gov/books/NBK525207/",
-            "BUILDING A CLEAN ENERGY ECONOMY:Dec 15, 2022 ... The Inflation Reduction Act also provides billions of dollars in grant and loan programs and other investments for clean energy and climate\u00a0...https://www.whitehouse.gov/wp-content/uploads/2022/12/Inflation-Reduction-Act-Guidebook.pdf"
-          ],
-          "Current U.S. government budgets or funding data regarding domestic and international pollution control initiatives and their respective impacts.": [
-            "G7 Hiroshima Leaders' Communiqu\u00e9 | The White HouseMay 20, 2023 ... Preamble. We, the Leaders of the Group of Seven (G7), met in Hiroshima for our annual Summit on May 19-21, 2023, more united than ever in\u00a0...https://www.whitehouse.gov/briefing-room/statements-releases/2023/05/20/g7-hiroshima-leaders-communique/"
-          ]
-        }
+        "2. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.": [
+          {
+            "search": "2. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "Short-Lived Climate Pollutant Reduction Strategy",
+                "snippet": "Mar 14, 2017 ... ... will provide immediate ... additional funding opportunities to help ... providing environmental benefits compared to use of other fossil fuels in\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "Funding programs aim to reduce emissions from GHGs and pollutants, supporting a transition to a cleaner energy economy.",
+                  "Specific legislation and targets like SB 1383 allocate funds for emission reduction activities and clean technology projects, emphasizing the importance of addressing environmental concerns."
+                ],
+                "link": "https://ww2.arb.ca.gov/sites/default/files/2020-07/final_SLCP_strategy.pdf"
+              },
+              {
+                "title": "St. Croix Chippewa Indians of Wisconsin CPRG Priority Climate ...",
+                "snippet": "Apr 1, 2024 ... The U.S. Environmental Protection Agency (EPA) Climate Pollution Reduction Grant (CPRG) program provides $5 billion in grants to states, local\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. The U.S. Environmental Protection Agency (EPA) Climate Pollution Reduction Grant (CPRG) program provides $5 billion in grants to states, local governments, Tribes, and territories."
+                    ],
+                    "hypothesis": [
+                      "1. The U.S. Environmental Protection Agency (EPA) Climate Pollution Reduction Grant (CPRG) program aims to help develop and implement products and other industrial processes."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The EPA's Climate Pollution Reduction Grant program allocates $5 billion to assist in reducing greenhouse gas emissions and harmful pollutants within the US.",
+                  "Economic impacts from climate change in the US are highlighted, including potential GDP decreases with rising temperatures and documented impacts detailed in a 2016 report by the USGCRP."
+                ],
+                "link": "https://www.epa.gov/system/files/documents/2024-04/st-croix-chippewa-tribe-pcap.pdf"
+              },
+              {
+                "title": "Budget Justifications and Performance Information FY 2025 ...",
+                "snippet": "The NPS Organic Act, 1916. \u201c...The service thus established shall promote and regulate the use of the Federal areas known as national parks, monuments,\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The NPS Organic Act of 1916 outlines the purpose of conserving natural and historic objects, wildlife, and providing for enjoyment within national parks, monuments, and reservations.",
+                  "Federal Land Acquisition Projects involve supporting high priority land acquisition projects and facilitating transfers by the National Park Service\u301011\u2020source\u3011\u301012\u2020source\u3011."
+                ],
+                "link": "https://www.doi.gov/sites/default/files/documents/2024-03/fy2025-508-nps-greenbook.pdf"
+              },
+              {
+                "title": "PROJECT 88 HARNESSING MARKET FORCES TO PROTECT THE ...",
+                "snippet": "regulations in the United States will provide a strong incentive to develop alternative products for U.S. consumption, products which may also be exported\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "Consumers and producers must face the true costs of their decisions to reduce inefficient natural resource use and environmental degradation.",
+                      "Setting uniform standards or requiring specific control technologies is increasingly difficult and expensive for the government to achieve environmental improvements."
+                    ],
+                    "hypothesis": [
+                      "Market-based regulations can induce firms to adopt alternative technologies."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document addresses the challenges of global air pollution, stresses the need to reduce natural resource inefficiency, and underlines the importance of federal support and market-based regulations in the U.S.\u301010\u2020source\u3011."
+                ],
+                "link": "https://scholar.harvard.edu/files/stavins/files/project_88-1.pdf"
+              },
+              {
+                "title": "Budget of the US Government",
+                "snippet": "Analytical Perspectives, Budget of the United States Govern- ment, Fiscal Year 2000 contains analyses that are designed to high-.",
+                "logics": [],
+                "knowledge": [
+                  "Redirecting funds from international pollution controls to domestic needs within the United States is discussed in the context of strengthening health care safety-nets for uninsured and at-risk individuals\u30104\u2020source\u3011."
+                ],
+                "link": "https://govinfo.library.unt.edu/npr/library/omb/budget.pdf"
+              },
+              {
+                "title": "All Hands on Deck",
+                "snippet": "pollution in the Alliance and across the United States since 2005. However, as wildfires become more frequent due to climate change,17 improvements made to\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "Significant progress has been made to reduce air pollution in the Alliance and across the United States since 2005."
+                    ],
+                    "hypothesis": [
+                      "Improvements made to harmful air pollution levels in the Alliance and across the United States are being put at risk."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Progress has been made to reduce air pollution in the United States, but this progress is at risk due to more frequent wildfires.",
+                  "Accelerating the development and implementation of bold climate policies is crucial for lasting reductions in emissions."
+                ],
+                "link": "https://usclimatealliance.org/wp-content/uploads/2023/12/USClimateAlliance_AnnualReport_2023.pdf"
+              },
+              {
+                "title": "STORMWATER: A Challenging Resource",
+                "snippet": "practical beneficial use ... existing programs that are costly and redirecting funds to more direct impact projects. ... We are at the point in history where more\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The document provides insights into funding challenges for stormwater management in the United States, suggesting funding sources such as taxes on fuel, water quality taxes on trash, bonds, property taxes, and general funding mechanisms.",
+                  "It addresses the difficulty in securing funds for stormwater management and proposes solutions like waivers on discharge fees, promoting low-impact development (LID) through pilot projects, and establishing local sustainable funding sources.",
+                  "The discussions in the document align with the statement about redirecting funds from international pollution controls to domestic needs in the United States, emphasizing the importance of funding stormwater management to provide immediate benefits to U.S. citizens."
+                ],
+                "link": "https://www.watereducation.org/sites/main/files/file-attachments/2013_water_leaders_class_final_report_20131125.pdf?1451778943"
+              },
+              {
+                "title": "Government Regulatory Initiatives Encouraging the Development ...",
+                "snippet": "domestic demand, it will not only save money by consuming less, ... In the interim, The United States must embrace intermedi- ... hybrids, greater sales will allow\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "11. With demand burgeoning from consumers seeking HOV incentives and others, attacks could potentially destabilize the United States and other Western economies.",
+                      "12. Some commentators go further and suggest that American oil spending indirectly finances terrorism as well."
+                    ],
+                    "hypothesis": [
+                      "4. American oil spending indirectly finances terrorism."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Removing federal fossil fuel subsidies could incentivize American drivers to seek more fuel-efficient vehicles and redirect funds to research and development of hybrid technologies or environmentally-friendly technologies within the United States.",
+                  "Redirecting funds from international pollution controls to domestic needs could benefit the automobile industry in the United States by supporting research and development domestically."
+                ],
+                "link": "https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1117&context=wmelpr"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "premises": [
       {
-        "3. The United States will withdraw from the agreement in the context of international relations.": [
-          "U.S. Relations With Afghanistan - United States Department of StateAug 15, 2022 ... The Doha Agreement memorialized the United States' commitment to withdraw its forces from Afghanistan, as well as commitments from the Taliban\u00a0...https://www.state.gov/u-s-relations-with-afghanistan/",
-          "About Treaties - U.S. SenateTreaties are binding agreements between nations and become part of international law. ... Foreign Relations, the ... United States into international agreements\u00a0...Here is the sentence with the requested changes:\n\nPremise:[1. The Senate does not ratify treaties.] -> Hypothesis:[1. Senate leadership believed the treaty lacked sufficient support for ratification by the Senate.] Here is the modified sentence with the requested changes:\n\nPremise:[2. Following consideration by the Committee on Foreign Relations, the Senate either approves or rejects a resolution of ratification.+3. If the resolution passes, then ratification takes place when the instruments of ratification are formally exchanged between the United States and the foreign power(s) in question.] -> Hypothesis:[1. Senate leadership believed that a particular treaty lacked sufficient support for ratification in the Senate.] Here is the sentence with the requested revisions:\n\nPremise: [2. Following consideration by the Committee on Foreign Relations, the Senate either approves or rejects a resolution of ratification.+3. If the resolution passes, then ratification takes place when the instruments of ratification are formally exchanged between the United States and the foreign power(s).] -> Hypothesis: [1. Senate leadership believed the treaty lacked sufficient support for ratification in the Senate.] Here is the modified sentence with the requested changes:\n\nPremise:[1. Senate leadership believed a treaty lacked sufficient support for approval] -> Hypothesis:[1. The treaty lacked sufficient support for approval in the Senate] Here is the sentence with the requested changes:\n\nPremise:[2. The Senate simply did not vote on the treaty+3. The president eventually withdrew the treaty by the president] -> Hypothesis:[2. The treaty was withdrawn by the president]https://www.senate.gov/about/powers-procedures/treaties.htm",
-          "Vienna Convention Law Treaties... treaty to which it would be subject under international law independently of the treaty. ... 3 do not ... relations between that State and the parties to the treaty\u00a0...https://www.oas.org/legal/english/docs/Vienna%20Convention%20Treaties.htm",
-          "What Is the Iran Nuclear Deal? | Council on Foreign RelationsOct 27, 2023 ... The United States' withdrawal from the arms control agreement has heightened tensions and left the remaining signatories scrambling to keep\u00a0...https://www.cfr.org/backgrounder/what-iran-nuclear-deal",
-          "Articles of Agreement of the International Monetary FundArticle III: Quotas and Subscriptions 1. Quotas and payment of subscriptions 2. Adjustment of quotas 3. Payments when quotas are changed 4. Substitution of\u00a0...https://www.imf.org/external/pubs/ft/aa/index.htm"
-        ]
-      },
-      {
-        "4. There is a possibility of renegotiating a deal that is fair to all involved parties. ": [
-          "Why And How To Renegotiate A ContractFeb 26, 2021 ... ... right at the outset, sometimes it becomes necessary to renegotiate a contract. ... for all parties. Reasons To Rework An ... for everyone involved.Here is the modified sentence with the requested changes:\n\nPremise:[1. There are costs associated with renegotiating an agreement.] -> Hypothesis:[1. The costs associated with renegotiating an agreement are worth discussing with counterparts.] Here is the sentence with the requested changes:\n\nPremise:[2. Both parties will want to benefit from the new agreement.] -> Hypothesis:[2. The potential benefits of renegotiating the new agreement should be evaluated.] Here is the revised sentence with the requested changes:\n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. It is worth discussing the costs with counterparts.]\n\nRevised sentence: \n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. Discussing the costs with counterparts is worth discussing the costs with counterparts.] Here is the modified sentence with the requested changes:\n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. Discussing the costs with counterparts is worth discussing the costs with counterparts.]https://www.forbes.com/sites/forbesbusinesscouncil/2021/02/26/why-and-how-to-renegotiate-a-contract/",
-          "Contract Termination: Overview & Common Termination ReasonsThe common law right to terminate is available to all parties, regardless of a termination clause. The right to terminate under common law exists if there has\u00a0...https://www.summize.com/resources/contract-termination",
-          "The 5 Stages of Collective Bargaining | NEAThe resulting approved contract legally binds both parties. Each round of successor negotiations allows the parties to revisit existing agreements. While there\u00a0...https://www.nea.org/resource-library/5-stages-collective-bargaining",
-          "Is it possible to renegotiate a divorce mediation if one party feels that ...Jun 14, 2018 ... Can you change a mediation agreement? Yes, if all involved parties are in agreement with the change and sign off on it. If the mediation is\u00a0...https://www.quora.com/Is-it-possible-to-renegotiate-a-divorce-mediation-if-one-party-feels-that-the-mediation-results-are-unfair"
-        ]
-      },
-      {
         "1. Sectors of United States economy would lose revenue and jobs if United States remained part of the Paris Accord.": [
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord, citing a\u00a0...https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "US Hegemony and Its PerilsFeb 20, 2023 ... This report, by presenting the relevant facts, seeks to expose the U.S. abuse of hegemony in the political, military, economic, financial,\u00a0...https://www.fmprc.gov.cn/mfa_eng/wjbxw/202302/t20230220_11027664.html",
-          "The Long-Term Strategy of the United States, Pathways to Net-Zero ...In 2021, we rejoined the Paris Agreement, set an ambitious. Nationally Determined Contribution to reduce net greenhouse gas emissions by 50-52% in 2030,.https://www.whitehouse.gov/wp-content/uploads/2021/10/us-long-term-strategy.pdf"
+          {
+            "search": "1. Sectors of United States economy would lose revenue and jobs if United States remained part of the Paris Accord.",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "Statement by President Trump on the Paris Climate Accord \u2013 The ...",
+                "snippet": "Jun 1, 2017 ... ... United States at numbers which no one until ... I will work to ensure that America remains ... The Paris Agreement handicaps the United States\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. Compliance with the terms of the Paris Accord could cost the United States 2.7 million lost jobs by 2025 according to the National Economic Research Associates.",
+                      "2. The Paris Accord imposes onerous energy restrictions on the United States."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris Accord includes 440,000 fewer manufacturing jobs, including automobile jobs in the United States.",
+                      "2. The Paris Accord leads to the decimation of vital American industries on which American communities rely."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Compliance with the terms of the Paris Accord could cost the United States 2.7 million lost jobs by 2025 according to the National Economic Research Associates.",
+                      "2. The Paris Accord imposes onerous energy restrictions on the United States."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris Accord includes 440,000 fewer manufacturing jobs, including automobile jobs in the United States.",
+                      "2. The Paris Accord leads to the decimation of vital American industries in the United States on which communities rely."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "2. The Paris Accord imposes onerous energy restrictions on the United States."
+                    ],
+                    "hypothesis": [
+                      "2. The Paris Accord leads to the decimation of vital American industries on which communities rely."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "President Trump states that the Paris Accord could cost America millions of lost jobs due to energy restrictions.",
+                  "The Paris Agreement is seen as putting the United States at a disadvantage, resulting in lost jobs, lower wages, factory closures, and diminished economic production.",
+                  "President Trump announces the United States' withdrawal from the Paris Climate Accord to protect American citizens and seek a fair agreement that benefits the country."
+                ],
+                "link": "https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
+              },
+              {
+                "title": "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...",
+                "snippet": "Jun 1, 2017 ... Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord, citing a\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. President Donald Trump announced on Thursday that the United States of America would withdraw from the Paris climate accord.",
+                      "2. President Donald Trump said the landmark 2015 Paris climate accord imposed wildly unfair environmental standards on American businesses and workers."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris climate accord weakened efforts by the United Nations and the international community to combat global warming.",
+                      "2. The Paris climate accord agreement was a pernicious threat to the economy of the United States of America and American sovereignty."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "President Trump decided to withdraw from the Paris climate accord due to concerns about its impact on the American economy and sovereignty.",
+                  "The decision was backed by the Republican Party but criticized by various leaders, executives, and environmentalists.",
+                  "Trump argued that the Paris accord imposed what he described as unjust environmental standards on American businesses and workers."
+                ],
+                "link": "https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html"
+              },
+              {
+                "title": "The Long-Term Strategy of the United States, Pathways to Net-Zero ...",
+                "snippet": "In 2021, we rejoined the Paris Agreement, set an ambitious. Nationally Determined Contribution to reduce net greenhouse gas emissions by 50-52% in 2030,.",
+                "logics": [],
+                "knowledge": [
+                  "Achieving net-zero in the U.S. economy involves actions across sectors such as efficiency, clean power, and greenhouse gas reduction\u301010\u2020source\u3011.",
+                  "The U.S. rejoined the Paris Agreement, set ambitious NDCs to reduce greenhouse gas emissions, and launched the Global Methane Pledge\u301012:0\u2020source\u3011."
+                ],
+                "link": "https://www.whitehouse.gov/wp-content/uploads/2021/10/us-long-term-strategy.pdf"
+              },
+              {
+                "title": "Working on a warmer planet: The impact of heat stress on labour ...",
+                "snippet": "If nothing is done now to mitigate climate change, these costs will be much higher as global temperatures increase even further towards the end of the century.",
+                "logics": [
+                  {
+                    "premises": [
+                      "Countries with high rates of agricultural and construction employment are at greater risk of losing work capacity.",
+                      "Hot countries are at greater risk of losing work capacity."
+                    ],
+                    "hypothesis": [
+                      "Technological and capital changes over time can affect Gross Domestic Product (GDP) per worker."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Countries with high rates of agricultural and construction employment are at risk of losing work capacity due to heat stress, which can lead to economic losses and job cuts.",
+                  "Heat stress is more prevalent in countries with decent work deficits, including working poverty, informal employment, and subsistence agriculture."
+                ],
+                "link": "https://webapps.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_711919.pdf"
+              },
+              {
+                "title": "Summary for Policymakers \u2014 Global Warming of 1.5 \u00baC",
+                "snippet": "... United Nations Framework Convention on Climate Change to adopt the Paris Agreement ... If deployed at large scale, they would ... economy and the energy sector can\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "The responses are closely linked to sustainable development which balances social well-being, economic prosperity and environmental protection.",
+                      "The United Nations Sustainable Development Goals (SDGs), adopted in 2015, provide an established framework for assessing the links between global warming of 1.5\u00b0C or 2\u00b0C and development goals that include poverty eradication, reducing inequalities, and climate action."
+                    ],
+                    "hypothesis": [
+                      "The United Nations Sustainable Development Goals (SDGs) provide an established framework for assessing the links between global warming and development goals."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Estimates of the costs of adaptation might be lower at global warming of 1.5\u00b0C than for 2\u00b0C."
+                    ],
+                    "hypothesis": [
+                      "The costs of adaptation may be lower at a global warming level of 1.5\u00b0C compared to 2\u00b0C."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "2. Pathways consistent with sustainable development have fewer mitigation and adaptation challenges."
+                    ],
+                    "hypothesis": [
+                      "2. Most modeling studies could not construct pathways limiting global warming to 1.5\u00b0C without international cooperation."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document emphasizes that the impacts on sustainable development, poverty eradication, and reducing inequalities would be more significant if global warming is limited to 1.5\u00b0C compared to 2\u00b0C\u301010\u2020source\u3011."
+                ],
+                "link": "https://www.ipcc.ch/sr15/chapter/spm/"
+              },
+              {
+                "title": "Barclays PLC Annual Report 2022 (PDF",
+                "snippet": "Feb 14, 2023 ... Society. Investors. Page 3. Parts 1 ... The transition towards a low-carbon economy is one of the defining challenges in the current and coming\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The document highlights potential economic impacts like lower GDP growth, higher unemployment, and supply chain disruptions.",
+                  "It also mentions that geopolitical tensions or protectionist measures related to the goals of the Paris Agreement could have effects on the economy\u30104\u2020source\u3011."
+                ],
+                "link": "https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/annual-reports/2022/AR/Barclays-PLC-Annual-Report-2022.pdf"
+              },
+              {
+                "title": "South Africa Carbon Pricing And Climate Mitigation Policy in: IMF ...",
+                "snippet": "Jun 6, 2023 ... Differentiated effects across sectors indicate profound shifts in the economy. Sectoral changes in value-added and employment are estimated\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "Implementation of climate mitigation policies could lead to contractions in energy-intensive and high-carbon sectors and expansions in green and low-carbon sectors.",
+                  "Sectors like fossil extraction, iron and steel, and chemicals may see a decrease in value-added, while the power sector is expected to shift towards less carbon-intensive operations and increase its value-added significantly.",
+                  "Despite coal remaining a prominent source of electricity, the overall share of renewables is projected to grow substantially, indicating a transition towards cleaner energy sources\u30104\u2020source\u3011."
+                ],
+                "link": "https://www.elibrary.imf.org/view/journals/002/2023/195/article-A003-en.xml"
+              }
+            ]
+          }
         ]
       },
       {
-        "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025.": [
-          "How to Talk to a Paris Accord SkepticJul 26, 2017 ... ... 2.7 million jobs by 2025. The source of ... Trump's assertion that the Paris accord would ... United States holds the largest share of\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Trump declared that the agreement could cost the United States $3 trillion in lost gross domestic product (GDP) by 2040 and 2.7 million jobs by 2025 in the United States.] -> Hypothesis:[1. The study exaggerated the future costs of emissions reductions from the agreement and underestimated advances in energy efficiency and clean energy technologies that could happen by the study.] Here is the updated sentence with the requested changes:\n\nPremise:[2. The source of those figures was a March 2017 study commissioned by two lobbying groups against climate regulation.] -> Hypothesis:[1. The March 2017 study commissioned by two lobbying groups against climate regulation exaggerated the future costs of emissions reductions and underestimated advances in energy efficiency and clean energy technologies.]https://www.nrdc.org/stories/how-talk-paris-accord-skeptic",
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... ... of the accord, citing a study \u2014 vigorously disputed by environmental groups \u2014 asserting that the agreement would cost 2.7 million jobs by 2025.https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "Fact-checking President Trump's claims on the Paris climate change ...Jun 1, 2017 ... ... United States could cost America as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates. This\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Compliance with the terms of the Paris accord and the onerous energy restrictions the Paris accord has placed on the United States could cost America as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates.] -> Hypothesis:[1. The Paris accord places onerous energy restrictions on the United States.]https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/",
-          "Factcheck Shows Trump's Climate Speech Was Full of Misleading ...Jun 2, 2017 ... He claimed the Paris Agreement would make America the laughingstock of the world, costing the country 2.7 million jobs. He said China and India\u00a0...https://www.scientificamerican.com/article/factcheck-shows-trumps-climate-speech-was-full-of-misleading-statements/",
-          "Statement by President Trump on the Paris Climate Accord \u2013 The ...Jun 1, 2017 ... ... 2.7 million lost jobs by 2025 according to the National Economic Research Associates. ... The cost to ... The Paris Agreement handicaps the United\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Compliance with the terms of the Paris Accord and the onerous energy restrictions the Paris Accord has placed on the United States could cost America as much as 2.7 million lost jobs by 2025 according to the National Economic Research Associates.] -> Hypothesis:[1. This includes 440,000 fewer manufacturing jobs in the United States.]https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
+        "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025": [
+          {
+            "search": "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "The real story behind Trump's claim that Paris would kill 2.7 million ...",
+                "snippet": "Jun 1, 2017 ... \"Compliance with the terms of the Paris Accord and the onerous energy restrictions it has placed on the United States could cost America as much\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. President Trump announced that the United States will withdraw from the Paris climate change deal.",
+                      "2. Compliance with the terms of the President Trump's Paris Accord and the onerous energy restrictions it has placed on the United States could cost America as much as 2.7 million lost jobs by 2025."
+                    ],
+                    "hypothesis": [
+                      "1. The grim future President Trump described (massive job losses, lower wages, shuttered factories, brownouts and blackouts) is a result of compliance with the President Trump's Paris Accord."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Compliance with the Paris Accord and the energy restrictions the Paris Accord has placed on the United States could cost the United States as much as 2.7 million lost jobs by 2025.",
+                      "2. NERA Economic Consultants conducted a study on behalf of the American Council for Capital Formation.",
+                      "3. The study was done independently of the American Council for Capital Formation's influence."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris Treaty would significantly impact the United States' economy negatively."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "4. NERA's study looked at a variety of scenarios.",
+                      "5. Donald Trump cited the most likely outcome from the NERA report, which was the one that would hurt the American economy the most.",
+                      "6. The best-case scenario from the NERA report indicates a loss of 12,000 manufacturing jobs and 2.3 million jobs overall by 2025.",
+                      "7. Donald Trump cited the worst outlook from the NERA report, which was a loss of 440,000 jobs in the manufacturing sector and 2.7 million jobs overall."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris Climate Agreement would significantly impact the American economy negatively."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "2. Compliance with the terms of the Paris Accord and the onerous energy restrictions the Paris Accord has placed on the United States could cost the United States as much as 2.7 million lost jobs by 2025."
+                    ],
+                    "hypothesis": [
+                      "1. Compliance with the terms of the Paris Accord and the onerous energy restrictions the Paris Accord has placed on the United States will lead to massive job losses and economic downturn in the United States."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "President Trump cited a study by NERA Economic Consultants, alleging that the Paris Accord would lead to 2.7 million job losses in the United States by 2025.",
+                  "The NERA study explored various scenarios, with Trump referring to the most severe outcome of 2.7 million job losses.",
+                  "Critics dispute the study's findings, suggesting that it overestimates the impact of emission reduction efforts on heavy industries and fails to consider job gains in alternative energy sectors."
+                ],
+                "link": "https://money.cnn.com/2017/06/01/news/economy/trump-jobs-paris-climate-treaty/index.html"
+              },
+              {
+                "title": "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...",
+                "snippet": "Jun 1, 2017 ... ... of the accord, citing a study \u2014 vigorously disputed by environmental groups \u2014 asserting that the agreement would cost 2.7 million jobs by 2025.",
+                "logics": [
+                  {
+                    "premises": [
+                      "President Trump will withdraw the United States from the first worldwide deal to address global warming."
+                    ],
+                    "hypothesis": [
+                      "The withdrawal by President Trump may be seen as embracing isolationist voices in the White House who argued that the Paris Agreement was a pernicious threat to the economy and American sovereignty."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "3. President Donald Trump's decision was supported by members of his Republican Party but condemned by political leaders, business executives, and environmentalists globally.",
+                      "3. President Donald Trump's decision was supported by members of his Republican Party but condemned by political leaders, business executives, and environmentalists globally."
+                    ],
+                    "hypothesis": [
+                      "3. Other countries are engaged in the effort to address global warming through the Paris Climate Deal."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The United States is the biggest carbon polluter historically and is now reversing a pledge to reduce emissions.",
+                  "President Trump announced the country's withdrawal from the Paris climate accord, mentioning concerns about the perceived negative impact on American businesses and workers\u30107\u2020source\u3011."
+                ],
+                "link": "https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html"
+              },
+              {
+                "title": "Statement by President Trump on the Paris Climate Accord \u2013 The ...",
+                "snippet": "Jun 1, 2017 ... ... 2.7 million lost jobs by 2025 according to the National Economic Research Associates. This includes 440,000 fewer manufacturing jobs \u2014 not what\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. Compliance with the Paris Accord and energy restrictions could cost the United States 2.7 million lost jobs by 2025 according to National Economic Research Associates.",
+                      "2. This includes 440,000 fewer manufacturing jobs, including automobile jobs, and the decimation of vital American industries.",
+                      "3. By 2040, compliance with the commitments in the Paris Accord would cut production for sectors: paper down 12%, cement down 23%, iron and steel down 38%, coal down 86%, natural gas down 31%.",
+                      "4. The cost to the American economy would be close to $3 trillion in lost GDP and 6.5 million industrial jobs, while American households would have $7,000 less income."
+                    ],
+                    "hypothesis": [
+                      "1. The Paris Accord is a massive redistribution of United States wealth to other countries."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Compliance with the Paris Accord and energy restrictions could cost the United States of America 2.7 million lost jobs by 2025 according to National Economic Research Associates.",
+                      "2. Compliance with the Paris Accord and energy restrictions includes 440,000 fewer manufacturing jobs, including automobile jobs, and the decimation of vital American industries.",
+                      "3. By 2040, compliance with the Paris Accord's commitments would cut production for the following sectors: paper down 12%, cement down 23%, iron and steel down 38%, coal down 86%, natural gas down 31%.",
+                      "4. The cost to the economy of compliance with the Paris Accord would be close to $3 trillion in lost Gross Domestic Product and 6.5 million industrial jobs, while households would have $7,000 less income."
+                    ],
+                    "hypothesis": [
+                      "2. At 1% growth, renewable energy sources can meet some domestic energy demand, but at 3 or 4% growth, the United States of America needs all forms of available American energy to avoid risks of brownouts and blackouts."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "A study by the National Economic Research Associates indicates that compliance with the Paris Accord could cost the United States as much as 2.7 million lost jobs by 2025, including 440,000 fewer manufacturing jobs, particularly in the automobile sector.",
+                  "The document emphasizes the potential negative impact on vital American industries, with significant job losses as a consequence of the onerous energy restrictions imposed by the Paris Accord."
+                ],
+                "link": "https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
+              },
+              {
+                "title": "Fact-checking President Trump's claims on the Paris climate change ...",
+                "snippet": "Jun 1, 2017 ... ... United States could cost America as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates. This\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. Compliance with the terms of the Paris accord and the onerous energy restrictions the Paris accord has placed on the United States could cost the United States as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates.",
+                      "2. This includes 440,000 fewer manufacturing jobs in the United States."
+                    ],
+                    "hypothesis": [
+                      "1. Compliance with the terms of the Paris accord and the onerous energy restrictions the Paris accord has placed on the United States could lead to significant job losses in the United States."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The Paris Accord is referenced as potentially causing the loss of 2.7 million United States jobs by 2025 according to the National Economic Research Associates.",
+                  "Donald Trump mentioned that this estimate includes 440,000 fewer manufacturing jobs, emphasizing the potential negative impact on the economy\u30104\u2020source\u3011."
+                ],
+                "link": "https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/"
+              },
+              {
+                "title": "Paris Climate Accord: The Background and Potential Impact of ...",
+                "snippet": "Feb 5, 2021 ... ... United States could cost America as much as 2.7 million lost jobs by 2025 according to the National Economic Research Associates,\u201d Trump said.",
+                "logics": [],
+                "knowledge": [
+                  "President Trump's withdrawal from the Paris Climate Agreement in 2017 was linked to potential job losses of up to 2.7 million by 2025 due to compliance costs.",
+                  "John Kerry, in 2021, suggested that rejoining the Paris Accord could lead to the creation of millions of jobs and significant economic benefits."
+                ],
+                "link": "https://ehsdailyadvisor.blr.com/2021/02/paris-climate-accord-the-background-and-potential-impact-of-rejoining/"
+              },
+              {
+                "title": "Climate Reports | United Nations",
+                "snippet": "National climate action plans remain insufficient to limit global temperature rise to 1.5 degrees Celsius and meet the goals of the Paris Agreement.",
+                "logics": [],
+                "knowledge": [
+                  "Look for sections in the document that discuss the impact of the Paris Accord.",
+                  "Identify any information related to the potential job losses in the United States due to the Paris Accord.",
+                  "Summarize the key points that support or mention the assertion that the Paris Accord would cost 2.7 million United States jobs by 2025."
+                ],
+                "link": "https://www.un.org/en/climatechange/reports"
+              },
+              {
+                "title": "2023 Sustainability Advocacy Report",
+                "snippet": "Dec 8, 2023 ... ... America in 2025\u2014and ... costs for OEMs that will impact jobs ... thousands of jobs in Canada, the United States, and free trade agreement countries.",
+                "logics": [],
+                "knowledge": [
+                  "The document discusses a study's prediction that the Paris Accord would lead to the loss of 2.7 million jobs in the United States by 2025 ."
+                ],
+                "link": "https://investor.gm.com/static-files/210fa676-989e-4703-a4a5-8ff5bc5599a3"
+              }
+            ]
+          }
         ]
       },
       {
-        "3. President Donald Trump mentioned specific United States cities that would presumably be negatively affected by the Paris Accord. ": [
-          "United States Department of State5 days ago ... Two questions on Israel and Iran. It was reported that director general of IAEA has said there were concerns that Israel would attack Iranian\u00a0...https://www.state.gov/?post_type=state_briefing&%3Bp=92333",
-          "Coronavirus: the first three months as it happenedApr 22, 2020 ... US President Donald Trump said on 14 April that he would ... stated goal of the Paris agreement. ... probably be more US cases of the coronavirus in\u00a0...https://www.nature.com/articles/d41586-020-00154-w"
+        "3. President Donald Trump mentioned specific United States cities (e.g., Youngstown, Ohio; Detroit, Mich.; and Pittsburgh, Pa.) that would presumably be negatively affected by the Paris Accord. ": [
+          {
+            "search": "3. President Donald Trump mentioned specific United States cities (e.g., Youngstown, Ohio; Detroit, Mich.; and Pittsburgh, Pa.) that would presumably be negatively affected by the Paris Accord. ",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "Rust Belt - Wikipedia",
+                "snippet": "... states, including Michigan, Ohio, Pennsylvania, and Wisconsin. These states were critical to Donald Trump's victory in the 2016 presidential election, his\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "2. The news media occasionally refer to a patchwork of defunct centers of heavy industry and manufacturing across the Great Lakes and Midwestern United States as the snow belt, the manufacturing belt or the factory belt because of their vibrant industrial economies in the past."
+                    ],
+                    "hypothesis": [
+                      "2. At the center of this expanse lies an area stretching from northern Indiana and southern Michigan in the west to Upstate New York in the east, where the local tax revenues as of 2004 relied more heavily on manufacturing than on any other sector."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document provides context on the Rust Belt region, key to Trump's elections.",
+                  "It highlights cities with past industrial economies across the Great Lakes and Midwest.",
+                  "Specific cities like Youngstown, Ohio; Detroit, Michigan; and Pittsburgh, Pennsylvania could be negatively affected by economic shifts like those related to the Paris Accord."
+                ],
+                "link": "https://en.wikipedia.org/wiki/Rust_Belt"
+              },
+              {
+                "title": "Pittsburgh - Wikipedia",
+                "snippet": "Pittsburgh is a city in the Commonwealth of Pennsylvania and the county seat of Allegheny County. It is the second-most populous city in Pennsylvania after\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "Following the American Revolution, the village of Pittsburgh continued to grow.",
+                      "The Pittsburgh Academy was chartered in 1787."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh was a growing village with various industries and establishments in the late 18th century."
+                    ]
+                  },
+                  {
+                    "premises": [],
+                    "hypothesis": [
+                      "Pittsburgh played a significant role in American history as a starting point for important expeditions."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Fort Pitt (now Pittsburgh) at the source of the Ohio River became the main base for settlers moving into the Northwest Territory."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh's strategic location made Pittsburgh a key base for settlers and expeditions into new territories."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Bike and walking trails have been built to border many of the city's rivers and hollows."
+                    ],
+                    "hypothesis": [
+                      "The bike and walking trails provide vistas of the Pittsburgh area."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Pittsburgh is located at the confluence of the Allegheny and Monongahela Rivers.",
+                      "2. Pittsburgh is the largest city in Appalachia."
+                    ],
+                    "hypothesis": [
+                      "1. Pittsburgh is recognized for its cultural, educational, healthcare, and technological resources."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Pittsburgh is located at the confluence of the Allegheny and Monongahela Rivers.",
+                      "2. Pittsburgh is the largest city in Appalachia."
+                    ],
+                    "hypothesis": [
+                      "2. Pittsburgh is characterized as the 'Paris of Appalachia'."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The climate data for Pittsburgh (Pittsburgh International Airport), 1991\u20132020 normals, extremes 1874\u2013present",
+                      "The month, record high \u00b0F (\u00b0C), mean maximum \u00b0F (\u00b0C), mean daily maximum \u00b0F (\u00b0C), daily mean \u00b0F (\u00b0C), mean daily minimum \u00b0F (\u00b0C), mean minimum \u00b0F (\u00b0C), record low \u00b0F (\u00b0C), average precipitation inches (mm), average snowfall inches (cm), average precipitation days (\u2265 0.01 in), average snowy days (\u2265 0.1 in), average relative humidity (%)"
+                    ],
+                    "hypothesis": [
+                      "45% is similar to Seattle's 49%"
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. The lone monitor used is immediately downwind and adjacent to United States Steel's Clairton Coke Works, the nation's largest cokemill, and several municipalities outside the city's jurisdiction of pollution controls.",
+                      "2. The region's readings also reflect pollution swept in from the state of Ohio and the state of West Virginia."
+                    ],
+                    "hypothesis": [
+                      "1. The city of Pittsburgh is the source or center of the emissions cited in the survey."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Since the beginning of the 21st century, the five largest European ethnic groups in Pittsburgh were German, Irish, Italian, Polish, and English."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh has a diverse population with significant representation from various racial and ethnic groups."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Non-Hispanic whites were 64.8% of the population in Pittsburgh in 2010."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh has a diverse population with significant representation from various racial and ethnic groups."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "3. In a 2002 study, Pittsburgh ranked 22nd of 69 urban places in the United States in the number of residents 25 years or older who had completed a bachelor's degree, at 31%."
+                    ],
+                    "hypothesis": [
+                      "1. Sewickley Heights is one of Pittsburgh's wealthiest suburbs culturally."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "3. Ten Fortune 500 companies call the Pittsburgh area home."
+                    ],
+                    "hypothesis": [
+                      "1. The Fortune 500 companies contribute to the economy of the Pittsburgh region."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Pittsburgh was listed among the \"top 15 cities for baseball\" in 2013."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh is a prominent sports city in the nation."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Pittsburgh's major professional sports teams share the team colors of black and gold."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh is a prominent sports city in the nation."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Pittsburgh is the second-most populous city in Pennsylvania with a population of 302,971 as of the 2020 census. It is known for its historical ties to the steel industry and its transition to focus on healthcare, education, and technology industries\u30104\u2020source\u3011.",
+                  "An article mentioned that in Pittsburgh, also referred to as the \"Paris of the Appalachians,\" there were doubts or disagreements regarding President Donald Trump's climate talk\u30104\u2020source\u3011."
+                ],
+                "link": "https://en.wikipedia.org/wiki/Pittsburgh"
+              },
+              {
+                "title": "Civic Spaces: Rhetoric of Pittsburgh's Parks System by Kaitlyn ...",
+                "snippet": "Sep 24, 2020 ... When President Donald J. Trump announced his decision to withdraw the United States from the Paris Climate Accord in the White House Rose Garden\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "Pittsburgh's transformation from Steel City to Most Livable City is visually evidenced by Pittsburgh's parks."
+                    ],
+                    "hypothesis": [
+                      "Pittsburgh's parks offer visual evidence of Pittsburgh's transformation from Steel City to Most Livable City."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "President Donald Trump mentioned specific United States cities (e.g., Youngstown, Ohio; Detroit, Michigan; and Pittsburgh, Pennsylvania) in the context of the Paris Accord.",
+                  "Trump emphasized representing Pittsburgh over Paris when announcing the US withdrawal from the Accord.",
+                  "He stated the need to prioritize American cities like Youngstown, Ohio; Detroit, Michigan; and Pittsburgh, Pennsylvania, over Paris, France."
+                ],
+                "link": "https://d-scholarship.pitt.edu/40124/19/Haynal%20Final%20ETD.pdf"
+              },
+              {
+                "title": "The Roosevelt Project. \u201cElectric Vehicles",
+                "snippet": "The Industrial Heartland case study evaluates barriers to the electrification of the motor vehicle manufacturing sector in the tristate region of Michigan,\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "The Industrial Heartland case study evaluates barriers to the electrification of the motor vehicle manufacturing sector in the tristate region of Michigan, Indiana, and Ohio.",
+                      "The goal of the Industrial Heartland case study is to recommend best practices and public policies that promote equitable solutions to the anticipated disruptions caused by vehicle electrification and other related clean energy transitions in the region.",
+                      "The transition to motor vehicle electrification in Michigan, Indiana, and Ohio could result in significant job loss without the right supportive policies in place.",
+                      "Between 75,000 and 100,000 jobs and over are at risk in the tristate region of Michigan, Indiana, and Ohio due to the transition to motor vehicle electrification."
+                    ],
+                    "hypothesis": [
+                      "The transition to motor vehicle electrification in Michigan, Indiana, and Ohio could result in significant job loss without the right supportive policies in place."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "8. Multiple sources of industrial pollution, inadequate infrastructure to protect the community residents, and lack of environmental enforcement are reasons for health disparities in various hot spots across the country.",
+                      "9. Economic and industry trends ultimately drive many of those disruptions.",
+                      "10. Solutions arise from the perceptions at the community level."
+                    ],
+                    "hypothesis": [
+                      "2. Economic and industry trends ultimately drive many of those disruptions."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document addresses the potential job losses in specific cities like Detroit, Flint, Kokomo, Lima, Lordstown, and Toledo due to the transition to motor vehicle electrification.",
+                  "Job loss concerns in these regions are highlighted as a key aspect of the impact of electrification on automotive manufacturing communities\u30104\u2020source\u3011."
+                ],
+                "link": "https://energyjustice.indiana.edu/doc/2022-the-roosevelt-project-industrial-heartland-case-study.pdf"
+              },
+              {
+                "title": "Abstracts",
+                "snippet": "social and demographic change, a growing number of cities in industrialized countries such as the United States,. Canada, and Germany are experiencing\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "The document explores US cities as critical sites for both progress and social unrest.",
+                  "It highlights the growing demand for federal legislative adjustments.",
+                  "President Donald Trump cited specific US cities like Youngstown, Ohio; Detroit, Michigan; and Pittsburgh, Pennsylvania, implying potential adverse effects from agreements such as the Paris Accord."
+                ],
+                "link": "https://urbanaffairsassociation.org/conference/wp-content/uploads/2022/05/2008_abstracts.pdf"
+              }
+            ]
+          }
         ]
       }
     ],
     "hypothesis": [
       {
-        " 3. The current agreement is not fair to the United States in the view of the United States government.\n": {
-          " 3. The current agreement is not fair to the United States in the view of the United States government.\n": [
-            "National Labor Relations ActIn 1935, Congress passed the National Labor Relations Act (\u201cNLRA\u201d), making clear that it is the policy of the United States to encourage collective\u00a0...https://www.nlrb.gov/guidance/key-reference-materials/national-labor-relations-act",
-            "Constitution of the United States - U.S. SenateWritten in 1787, ratified in 1788, and in operation since 1789, the United States Constitution is the world's longest surviving written charter of government.https://www.senate.gov/civics/constitution_item/constitution.htm"
-          ],
-          "Look up specific statements or comments made by key US government officials or spokespersons about the fairness of the identified agreement.": [
-            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... In May 2018, the US government announced its unilateral withdrawal from the JCPOA, and soon after resumed and expanded sanctions against Iran.https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
-            "FTC's Endorsement Guides: What People Are Asking | Federal ...Here are answers to some of the most frequently asked questions from advertisers, ad agencies, influencers, bloggers, and others. Our staff guidance can't be\u00a0...https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
-            "Prohibited Personnel Practices - U.S. Merit Systems Protection Board... certain actions by Government agencies and employees. ... agreement, filing a ... Simply put, this PPP protects Federal employees and applicants for employment from\u00a0...https://www.mspb.gov/ppp/ppp.htm",
-            "Communicating in a Crisis... government spokespersons, public ... for Public Officials. 30. IDENTIFYING CREDIBLE SOURCES ON SOCIAL MEDIA ... Communicating in a Crisis: Risk Communication\u00a0...https://store.samhsa.gov/sites/default/files/d7/priv/pep19-01-01-005.pdf",
-            "Advancing Equity and Racial Justice Through the Federal Government\u201cIt is therefore the policy of my Administration that the Federal Government should pursue a comprehensive approach to advancing equity for all,\u00a0...https://www.whitehouse.gov/equity/"
-          ],
-          "Look for congressional hearings, reports, or policy analysis documents that discuss the specific reasons why the US views a particular agreement as not fair, focusing on economic, strategic, or legal aspects.": [
-            "TREATIES AND OTHER INTERNATIONAL AGREEMENTS: THE ...[Senate Prints 106-71] [From the U.S. Government Publishing Office] 106th Congress COMMITTEE PRINT S. Prt. 2d Session 106-71\u00a0...https://www.govinfo.gov/content/pkg/CPRT-106SPRT66922/html/CPRT-106SPRT66922.htm",
-            "National Labor Relations ActNo administrative law judge's report shall be ... economic analysis. [The title ... because he has filed charges or given testimony under this Act [subchapter];.https://www.nlrb.gov/guidance/key-reference-materials/national-labor-relations-act",
-            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... A US scholar pointed out that American foreign policy since World War II has been based on a simple idea: \u201cEither you are with us or against us.https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
-            "Glossary of Legislative Terms | Congress.gov | Library of CongressLiterally, \u201ctwo chambers;\u201d in a legislative body, having two houses (as in the House of Representatives and the Senate comprising the U.S. Congress). bill: The\u00a0...https://www.congress.gov/help/legislative-glossary",
-            "Annual Threat Assessment of the U.S. Intelligence CommunityFeb 6, 2023 ... This annual report of worldwide threats to the national security of the United States responds to. Section 617 of the FY21 Intelligence\u00a0...https://www.dni.gov/files/ODNI/documents/assessments/ATA-2023-Unclassified-Report.pdf"
-          ]
-        }
-      },
-      {
-        " 1. Remaining part of the Paris Accord is detrimental to the United States economy.\n": [
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... But by Thursday, aides who pushed to remain part of the agreement were disconsolate, and it was Mr. ... United States economy ... bad deal for\u00a0...https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "Statement by President Trump on the Paris Climate Accord \u2013 The ...Jun 1, 2017 ... This agreement is less about the climate and more about other countries gaining a financial advantage over the United States. The rest of the\u00a0...https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
-        ]
-      }
-    ]
-  },
-  {
-    "premises": [
-      {
-        "3. The United States will withdraw from the agreement in the context of international relations.": [
-          "U.S. Relations With Afghanistan - United States Department of StateAug 15, 2022 ... The Doha Agreement memorialized the United States' commitment to withdraw its forces from Afghanistan, as well as commitments from the Taliban\u00a0...https://www.state.gov/u-s-relations-with-afghanistan/",
-          "About Treaties - U.S. SenateTreaties are binding agreements between nations and become part of international law. ... Foreign Relations, the ... United States into international agreements\u00a0...Here is the sentence with the requested changes:\n\nPremise:[1. The Senate does not ratify treaties.] -> Hypothesis:[1. Senate leadership believed the treaty lacked sufficient support for ratification by the Senate.] Here is the modified sentence with the requested changes:\n\nPremise:[2. Following consideration by the Committee on Foreign Relations, the Senate either approves or rejects a resolution of ratification.+3. If the resolution passes, then ratification takes place when the instruments of ratification are formally exchanged between the United States and the foreign power(s) in question.] -> Hypothesis:[1. Senate leadership believed that a particular treaty lacked sufficient support for ratification in the Senate.] Here is the sentence with the requested revisions:\n\nPremise: [2. Following consideration by the Committee on Foreign Relations, the Senate either approves or rejects a resolution of ratification.+3. If the resolution passes, then ratification takes place when the instruments of ratification are formally exchanged between the United States and the foreign power(s).] -> Hypothesis: [1. Senate leadership believed the treaty lacked sufficient support for ratification in the Senate.] Here is the modified sentence with the requested changes:\n\nPremise:[1. Senate leadership believed a treaty lacked sufficient support for approval] -> Hypothesis:[1. The treaty lacked sufficient support for approval in the Senate] Here is the sentence with the requested changes:\n\nPremise:[2. The Senate simply did not vote on the treaty+3. The president eventually withdrew the treaty by the president] -> Hypothesis:[2. The treaty was withdrawn by the president]https://www.senate.gov/about/powers-procedures/treaties.htm",
-          "Vienna Convention Law Treaties... treaty to which it would be subject under international law independently of the treaty. ... 3 do not ... relations between that State and the parties to the treaty\u00a0...https://www.oas.org/legal/english/docs/Vienna%20Convention%20Treaties.htm",
-          "What Is the Iran Nuclear Deal? | Council on Foreign RelationsOct 27, 2023 ... The United States' withdrawal from the arms control agreement has heightened tensions and left the remaining signatories scrambling to keep\u00a0...https://www.cfr.org/backgrounder/what-iran-nuclear-deal",
-          "Articles of Agreement of the International Monetary FundArticle III: Quotas and Subscriptions 1. Quotas and payment of subscriptions 2. Adjustment of quotas 3. Payments when quotas are changed 4. Substitution of\u00a0...https://www.imf.org/external/pubs/ft/aa/index.htm"
-        ]
-      },
-      {
-        "4. There is a possibility of renegotiating a deal that is fair to all involved parties. ": [
-          "Why And How To Renegotiate A ContractFeb 26, 2021 ... ... right at the outset, sometimes it becomes necessary to renegotiate a contract. ... for all parties. Reasons To Rework An ... for everyone involved.Here is the modified sentence with the requested changes:\n\nPremise:[1. There are costs associated with renegotiating an agreement.] -> Hypothesis:[1. The costs associated with renegotiating an agreement are worth discussing with counterparts.] Here is the sentence with the requested changes:\n\nPremise:[2. Both parties will want to benefit from the new agreement.] -> Hypothesis:[2. The potential benefits of renegotiating the new agreement should be evaluated.] Here is the revised sentence with the requested changes:\n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. It is worth discussing the costs with counterparts.]\n\nRevised sentence: \n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. Discussing the costs with counterparts is worth discussing the costs with counterparts.] Here is the modified sentence with the requested changes:\n\nPremise:[3. Everyone involved should be on the same page.] -> Hypothesis:[1. Discussing the costs with counterparts is worth discussing the costs with counterparts.]https://www.forbes.com/sites/forbesbusinesscouncil/2021/02/26/why-and-how-to-renegotiate-a-contract/",
-          "Contract Termination: Overview & Common Termination ReasonsThe common law right to terminate is available to all parties, regardless of a termination clause. The right to terminate under common law exists if there has\u00a0...https://www.summize.com/resources/contract-termination",
-          "The 5 Stages of Collective Bargaining | NEAThe resulting approved contract legally binds both parties. Each round of successor negotiations allows the parties to revisit existing agreements. While there\u00a0...https://www.nea.org/resource-library/5-stages-collective-bargaining",
-          "Is it possible to renegotiate a divorce mediation if one party feels that ...Jun 14, 2018 ... Can you change a mediation agreement? Yes, if all involved parties are in agreement with the change and sign off on it. If the mediation is\u00a0...https://www.quora.com/Is-it-possible-to-renegotiate-a-divorce-mediation-if-one-party-feels-that-the-mediation-results-are-unfair"
-        ]
-      },
-      {
-        "1. Sectors of United States economy would lose revenue and jobs if United States remained part of the Paris Accord.": [
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord, citing a\u00a0...https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "US Hegemony and Its PerilsFeb 20, 2023 ... This report, by presenting the relevant facts, seeks to expose the U.S. abuse of hegemony in the political, military, economic, financial,\u00a0...https://www.fmprc.gov.cn/mfa_eng/wjbxw/202302/t20230220_11027664.html",
-          "The Long-Term Strategy of the United States, Pathways to Net-Zero ...In 2021, we rejoined the Paris Agreement, set an ambitious. Nationally Determined Contribution to reduce net greenhouse gas emissions by 50-52% in 2030,.https://www.whitehouse.gov/wp-content/uploads/2021/10/us-long-term-strategy.pdf"
-        ]
-      },
-      {
-        "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025.": [
-          "How to Talk to a Paris Accord SkepticJul 26, 2017 ... ... 2.7 million jobs by 2025. The source of ... Trump's assertion that the Paris accord would ... United States holds the largest share of\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Trump declared that the agreement could cost the United States $3 trillion in lost gross domestic product (GDP) by 2040 and 2.7 million jobs by 2025 in the United States.] -> Hypothesis:[1. The study exaggerated the future costs of emissions reductions from the agreement and underestimated advances in energy efficiency and clean energy technologies that could happen by the study.] Here is the updated sentence with the requested changes:\n\nPremise:[2. The source of those figures was a March 2017 study commissioned by two lobbying groups against climate regulation.] -> Hypothesis:[1. The March 2017 study commissioned by two lobbying groups against climate regulation exaggerated the future costs of emissions reductions and underestimated advances in energy efficiency and clean energy technologies.]https://www.nrdc.org/stories/how-talk-paris-accord-skeptic",
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... ... of the accord, citing a study \u2014 vigorously disputed by environmental groups \u2014 asserting that the agreement would cost 2.7 million jobs by 2025.https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "Fact-checking President Trump's claims on the Paris climate change ...Jun 1, 2017 ... ... United States could cost America as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates. This\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Compliance with the terms of the Paris accord and the onerous energy restrictions the Paris accord has placed on the United States could cost America as much as 2.7 million lost jobs by 2025, according to the National Economic Research Associates.] -> Hypothesis:[1. The Paris accord places onerous energy restrictions on the United States.]https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/",
-          "Factcheck Shows Trump's Climate Speech Was Full of Misleading ...Jun 2, 2017 ... He claimed the Paris Agreement would make America the laughingstock of the world, costing the country 2.7 million jobs. He said China and India\u00a0...https://www.scientificamerican.com/article/factcheck-shows-trumps-climate-speech-was-full-of-misleading-statements/",
-          "Statement by President Trump on the Paris Climate Accord \u2013 The ...Jun 1, 2017 ... ... 2.7 million lost jobs by 2025 according to the National Economic Research Associates. ... The cost to ... The Paris Agreement handicaps the United\u00a0...Here is the modified sentence with the requested changes:\n\nPremise:[1. Compliance with the terms of the Paris Accord and the onerous energy restrictions the Paris Accord has placed on the United States could cost America as much as 2.7 million lost jobs by 2025 according to the National Economic Research Associates.] -> Hypothesis:[1. This includes 440,000 fewer manufacturing jobs in the United States.]https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
-        ]
-      },
-      {
-        "3. President Donald Trump mentioned specific United States cities that would presumably be negatively affected by the Paris Accord. ": [
-          "United States Department of State5 days ago ... Two questions on Israel and Iran. It was reported that director general of IAEA has said there were concerns that Israel would attack Iranian\u00a0...https://www.state.gov/?post_type=state_briefing&%3Bp=92333",
-          "Coronavirus: the first three months as it happenedApr 22, 2020 ... US President Donald Trump said on 14 April that he would ... stated goal of the Paris agreement. ... probably be more US cases of the coronavirus in\u00a0...https://www.nature.com/articles/d41586-020-00154-w"
-        ]
-      }
-    ],
-    "hypothesis": [
-      {
-        " 3. The current agreement is not fair to the United States in the view of the United States government.\n": {
-          " 3. The current agreement is not fair to the United States in the view of the United States government.\n": [
-            "National Labor Relations ActIn 1935, Congress passed the National Labor Relations Act (\u201cNLRA\u201d), making clear that it is the policy of the United States to encourage collective\u00a0...https://www.nlrb.gov/guidance/key-reference-materials/national-labor-relations-act",
-            "Constitution of the United States - U.S. SenateWritten in 1787, ratified in 1788, and in operation since 1789, the United States Constitution is the world's longest surviving written charter of government.https://www.senate.gov/civics/constitution_item/constitution.htm"
-          ],
-          "Look up specific statements or comments made by key US government officials or spokespersons about the fairness of the identified agreement.": [
-            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... In May 2018, the US government announced its unilateral withdrawal from the JCPOA, and soon after resumed and expanded sanctions against Iran.https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
-            "FTC's Endorsement Guides: What People Are Asking | Federal ...Here are answers to some of the most frequently asked questions from advertisers, ad agencies, influencers, bloggers, and others. Our staff guidance can't be\u00a0...https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
-            "Prohibited Personnel Practices - U.S. Merit Systems Protection Board... certain actions by Government agencies and employees. ... agreement, filing a ... Simply put, this PPP protects Federal employees and applicants for employment from\u00a0...https://www.mspb.gov/ppp/ppp.htm",
-            "Communicating in a Crisis... government spokespersons, public ... for Public Officials. 30. IDENTIFYING CREDIBLE SOURCES ON SOCIAL MEDIA ... Communicating in a Crisis: Risk Communication\u00a0...https://store.samhsa.gov/sites/default/files/d7/priv/pep19-01-01-005.pdf",
-            "Advancing Equity and Racial Justice Through the Federal Government\u201cIt is therefore the policy of my Administration that the Federal Government should pursue a comprehensive approach to advancing equity for all,\u00a0...https://www.whitehouse.gov/equity/"
-          ],
-          "Look for congressional hearings, reports, or policy analysis documents that discuss the specific reasons why the US views a particular agreement as not fair, focusing on economic, strategic, or legal aspects.": [
-            "TREATIES AND OTHER INTERNATIONAL AGREEMENTS: THE ...[Senate Prints 106-71] [From the U.S. Government Publishing Office] 106th Congress COMMITTEE PRINT S. Prt. 2d Session 106-71\u00a0...https://www.govinfo.gov/content/pkg/CPRT-106SPRT66922/html/CPRT-106SPRT66922.htm",
-            "National Labor Relations ActNo administrative law judge's report shall be ... economic analysis. [The title ... because he has filed charges or given testimony under this Act [subchapter];.https://www.nlrb.gov/guidance/key-reference-materials/national-labor-relations-act",
-            "Reality Check: Falsehoods in US Perceptions of ChinaJun 19, 2022 ... A US scholar pointed out that American foreign policy since World War II has been based on a simple idea: \u201cEither you are with us or against us.https://www.mfa.gov.cn/eng/wjbxw/202206/t20220619_10706059.html",
-            "Glossary of Legislative Terms | Congress.gov | Library of CongressLiterally, \u201ctwo chambers;\u201d in a legislative body, having two houses (as in the House of Representatives and the Senate comprising the U.S. Congress). bill: The\u00a0...https://www.congress.gov/help/legislative-glossary",
-            "Annual Threat Assessment of the U.S. Intelligence CommunityFeb 6, 2023 ... This annual report of worldwide threats to the national security of the United States responds to. Section 617 of the FY21 Intelligence\u00a0...https://www.dni.gov/files/ODNI/documents/assessments/ATA-2023-Unclassified-Report.pdf"
-          ]
-        }
-      },
-      {
-        " 1. Remaining part of the Paris Accord is detrimental to the United States economy.\n": [
-          "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...Jun 1, 2017 ... But by Thursday, aides who pushed to remain part of the agreement were disconsolate, and it was Mr. ... United States economy ... bad deal for\u00a0...https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html",
-          "Statement by President Trump on the Paris Climate Accord \u2013 The ...Jun 1, 2017 ... This agreement is less about the climate and more about other countries gaining a financial advantage over the United States. The rest of the\u00a0...https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
+        "1. Remaining part of the Paris Accord is detrimental to the United States economy.": [
+          {
+            "search": "1. Remaining part of the Paris Accord is detrimental to the United States economy.",
+            "explain": "Original topic",
+            "results": [
+              {
+                "title": "Statement by President Trump on the Paris Climate Accord \u2013 The ...",
+                "snippet": "Jun 1, 2017 ... This agreement is less about the climate and more about other countries gaining a financial advantage over the United States. The rest of the\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "The Paris Agreement handicaps the United States economy in order to win praise from the very foreign capitals and global activists that have long sought to gain wealth at the country's expense.  The global activists and foreign capitals do not put the United States first.",
+                      "The risks grow as historically these agreements only tend to become more and more ambitious over time."
+                    ],
+                    "hypothesis": [
+                      "I, the speaker, do, and I always will."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The Paris Agreement handicaps the United States economy in order to win praise from the very foreign capitals and global activists that have long sought to gain wealth at the United States' expense. The foreign capitals and global activists do not put the United States first.",
+                      "The risks grow as historically these agreements only tend to become more and more ambitious over time."
+                    ],
+                    "hypothesis": [
+                      "The Paris Accord would undermine the United States' economy, hamstring the United States' workers, weaken the United States' sovereignty, impose unacceptable legal risks, and put the United States at a permanent disadvantage to the other countries of the world."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The Paris Agreement handicaps the United States economy in order to win praise from the very foreign capitals and global activists that have long sought to gain wealth at the United States' expense.  The foreign capitals and global activists do not put the United States first.",
+                      "The risks grow as historically these agreements only tend to become more and more ambitious over time."
+                    ],
+                    "hypothesis": [
+                      "It is time for the United States to exit the Paris Accord \u2014 (applause) \u2014 and time for the United States to pursue a new deal that protects the environment, the United States' companies, the United States' citizens, and the United States."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The Paris Agreement is seen as detrimental to the U.S. economy by undermining it, weakening sovereignty, and transferring jobs out of the country.",
+                  "Staying in the agreement poses obstacles to U.S. economic affairs and can hinder the U.S. from realizing its energy potential.",
+                  "The focus is on the perceived disadvantage the U.S. faces in the agreement, with the argument that it benefits other countries financially and affects American workers negatively."
+                ],
+                "link": "https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-trump-paris-climate-accord/"
+              },
+              {
+                "title": "In Response to Climate Change, Citizens in Advanced Economies ...",
+                "snippet": "Sep 14, 2021 ... A new Pew Research Center survey in 17 advanced economies spanning North America, Europe and the Asia-Pacific region finds widespread concern\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "2. Relatively few in the advanced economies surveyed think actions taken by the international community to address climate change, such as the Paris climate agreement, will mostly benefit or harm their own economy."
+                    ],
+                    "hypothesis": [
+                      "2. A median of 31% across 17 publics say the actions taken by the international community to address climate change, such as the Paris climate agreement, will be good for their economy, while a median of 24% believe such actions will mostly harm their economy."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Only in certain countries do more than one-in-ten describe their society's efforts on climate change as \"very good.\""
+                    ],
+                    "hypothesis": [
+                      "The United States' response to climate change is perceived negatively compared to other countries."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. Those on the right in many publics are more likely than those on the left to think international actions such as the Paris Agreement will mostly harm their economies.",
+                      "2. In several advanced economies, those who say their current economic situation is good are more likely to say that actions taken by the international community to address climate change will mostly benefit their economies than those who say the economic situation is bad."
+                    ],
+                    "hypothesis": [
+                      "1. Ideological divisions in the United States are much larger than those in other publics: 65% of conservatives in the United States say international climate change actions will harm the American economy, compared with 12% of liberals in the United States who say the same."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "4. A median of 31% across 17 publics say these actions by international climate agreements will be good for their economy, while a median of 24% believe such actions by international climate agreements will mostly harm their economy.",
+                      "5. Little consensus on whether international climate action by international climate agreements will harm or benefit domestic economies."
+                    ],
+                    "hypothesis": [
+                      "4. International climate agreements will harm the economy."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "7. Only 18% in France say the public in France will benefit economically from international climate agreements."
+                    ],
+                    "hypothesis": [
+                      "4. International climate agreements will harm the economy in France."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "A third of Americans believe that international climate agreements, such as the Paris climate agreement, will harm the economy.",
+                  "Relatively few people in the surveyed advanced economies think that actions taken by the international community to address climate change, like the Paris climate agreement, will benefit their own economy."
+                ],
+                "link": "https://www.pewresearch.org/global/2021/09/14/in-response-to-climate-change-citizens-in-advanced-economies-are-willing-to-alter-how-they-live-and-work/"
+              },
+              {
+                "title": "Trump Will Withdraw U.S. From Paris Climate Agreement - The New ...",
+                "snippet": "Jun 1, 2017 ... Trump listed sectors of the United States economy that would lose revenue and jobs if the country remained part of the accord, citing a\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "President Trump withdrew the United States from the Paris climate accord, stating that it imposed unfair environmental standards on American businesses and workers, presenting a threat to the U.S. economy and sovereignty."
+                ],
+                "link": "https://www.nytimes.com/2017/06/01/climate/trump-paris-climate-agreement.html"
+              },
+              {
+                "title": "Leaving the Paris Agreement is a bad deal for the United States ...",
+                "snippet": "May 19, 2019 ... First, climate change presents a massive coordination problem. Every country has an economic incentive to underinvest in reducing emissions,\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. The president of the United States sought to divert money from other sources to build a wall on the U.S.-Mexico border.",
+                      "4. The 2018 National Climate Assessment predicts that climate change could cost the United States hundreds of billions of dollars every year by the end of the century."
+                    ],
+                    "hypothesis": [
+                      "1. Faced with the costs of climate change, any competent dealmaker would invest $2 billion to secure climate commitments and prompt the world's leading polluters to tackle climate change."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "5. Donald Trump's promise to withdraw from the Paris accord could create the problem Donald Trump falsely attributes to the Paris agreement."
+                    ],
+                    "hypothesis": [
+                      "1. Faced with the costs of climate change, any competent dealmaker would invest $2 billion to secure climate commitments and prompt the world's leading polluters to tackle climate change."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document discusses Trump's belief that the Paris Agreement is unfair to the United States compared to other countries like China and India due to perceived advantages they have within the agreement.",
+                  "It notes the economic costs predicted by the National Climate Assessment and highlights the challenges and objectives of the Paris Agreement regarding emissions reduction and transparency measures.",
+                  "The criticisms and justifications surrounding the U.S.'s withdrawal from the agreement, including concerns about being the ultimate climate action free-rider, are outlined."
+                ],
+                "link": "https://www.brookings.edu/articles/leaving-the-paris-agreement-is-a-bad-deal-for-the-united-states/"
+              },
+              {
+                "title": "Does it matter how much the United States reduces its carbon ...",
+                "snippet": "Aug 30, 2023 ... ... Paris Agreement. The agreement aims to limit ... How much of the carbon budget does the United States have left? ... U.S. emissions to date dwarf\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "4. Each pie chart shows the amount of carbon dioxide added to the atmosphere through 2022 and how much additional carbon dioxide can be added to limit global warming to specific temperatures.",
+                      "5. Most of what can be emitted to keep temperatures below certain amounts has already been released."
+                    ],
+                    "hypothesis": [
+                      "3. Most countries have not spent as much of the carbon budget."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Emissions of carbon dioxide rose slowly to about 5 gigatons per year in the mid-20th century before skyrocketing to more than 35 billion tons per year by the end of the century.",
+                      "Emissions of carbon dioxide rose slowly to about 5 gigatons per year in the mid-20th century before skyrocketing to more than 35 billion tons per year by the end of the century."
+                    ],
+                    "hypothesis": [
+                      "Emissions of carbon dioxide have increased significantly over time."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "6. National emissions are not wholly independent of each other",
+                      "7. Much of China's rising emissions are related to manufacturing, with many of the resulting products increasingly purchased by American consumers",
+                      "8. The United States imported $450.4 billion worth of goods from China in 2020 alone"
+                    ],
+                    "hypothesis": [
+                      "2. The United States has overspent on the importation of goods from China"
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document emphasizes the importance of reducing emissions to limit temperature increases globally and highlights the historical responsibility of the United States for emissions.",
+                  "It compares the emissions of the United States, China, and India, showing how the United States has historically emitted more and overspent its carbon budget according to a study\u30104\u2020source\u3011."
+                ],
+                "link": "http://www.climate.gov/news-features/climate-qa/does-it-matter-how-much-united-states-reduces-its-carbon-dioxide-emissions"
+              },
+              {
+                "title": "Failures of Kyoto will Repeat with the Paris Climate Agreement ...",
+                "snippet": "Apr 21, 2016 ... To recap, in 1997, the United Nations Framework Convention on Climate Change adopted the Kyoto Protocol, which set forth binding targets and\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "The Paris Agreement is a political stunt for President Obama to do what President Clinton could not with the Kyoto Protocol."
+                    ],
+                    "hypothesis": [
+                      "Failures of the Kyoto Protocol will repeat with the Paris Climate Agreement."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "1. The United Nations Framework Convention on Climate Change adopted the Kyoto Protocol in 1997.",
+                      "2. The Kyoto Protocol set forth binding targets and timetables for greenhouse gas emission reductions for developed countries.",
+                      "3. Developing countries like China, India, and Brazil were exempted from GHG emission reductions under the Kyoto Protocol.",
+                      "4. The Kyoto Protocol exempted 80 percent of the world from GHG emission reductions.",
+                      "5. The United Nations Framework Convention on Climate Change knew that without developing countries, the Kyoto Protocol would produce no meaningful impact on global climate change."
+                    ],
+                    "hypothesis": [
+                      "1. Holding the Obama Administration accountable to the lessons learned from the fallout of the Kyoto Protocol is important in advance of the Paris Agreement signing."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "6. The Kyoto Protocol was a legally binding treaty.",
+                      "7. The Clinton Administration signed the Kyoto Protocol in late 1998 but never submitted the Kyoto Protocol to the U.S. Senate for ratification.",
+                      "8. The U.S. Senate had already voted 95 to 0 to approve the Byrd-Hagel resolution, which warned against signing a climate treaty that would harm the United States economy or exempt developing countries.",
+                      "9. The United States formally rejected the Kyoto Protocol in 2001.",
+                      "10. 36 developed countries were legally bound to the greenhouse gas (GHG) targets of the Kyoto Protocol, and 17 of the 36 developed countries failed to meet their targets.",
+                      "11. Some countries joining the Kyoto Protocol had targets that granted increases in greenhouse gas (GHG) emissions, while others had a target of zero."
+                    ],
+                    "hypothesis": [
+                      "2. The United States rejection of the Kyoto Protocol was a good thing based on the Kyoto Protocol's track record."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "The document indicates past failures with international climate agreements, highlighting concerns about economic harm to the U.S. and exemptions for developing countries like China under the Kyoto Protocol.",
+                  "It mentions issues faced with the Kyoto Protocol, such as countries failing to meet their GHG targets and instances like Iceland having emission-increasing targets and Russia manipulating its commitments. ",
+                  "The text speculates that similar challenges may arise with the Paris Agreement, questioning the effectiveness of the pledges made by countries like China and suggesting that it may not lead to significant reductions in emissions or global temperatures."
+                ],
+                "link": "https://www.epw.senate.gov/public/index.cfm/2016/4/failures-of-kyoto-will-repeat-with-the-paris-climate-agreement"
+              },
+              {
+                "title": "World economy set to lose up to 18% GDP from climate change if no ...",
+                "snippet": "Apr 22, 2021 ... ... in the Paris Agreement, Swiss Re Institute's new Climate Economics Index shows. This will require more than what is pledged today; public\u00a0...",
+                "logics": [],
+                "knowledge": [
+                  "**Withdrawal from the Paris Agreement**: The Paris Accord was deemed detrimental to the United States by the Trump administration, leading to the decision to formally withdraw from the agreement. President Donald Trump justified this action by arguing that the agreement would undermine the American economy and place the U.S. at a disadvantage relative to other countries.",
+                  "**Arguments Against the Paris Agreement**: The document outlines multiple reasons for viewing the Paris Accord unfavorably. It suggests that the agreement would result in substantial economic burdens for the U.S., including high energy prices that could negatively impact industries and consumers. Additionally, it emphasizes concerns about the lack of significant emissions reductions by major polluters like China and India, which could diminish the effectiveness of the agreement and reduce its economic benefits for the U.S.",
+                  "**Economic Impact Considerations**: Economic concerns play a central role in the decision to withdraw from the Paris Agreement. Critics of the accord argue that its requirements would constrain U.S. economic growth, limit job creation, and hinder the competitiveness of American businesses. By prioritizing the country's economic interests, the decision to exit the agreement was seen as a strategic move to protect the U.S. economy from potential harm.",
+                  "**Potential Benefits of Withdrawal**: The document discusses the potential benefits associated with the U.S. withdrawal from the Paris Agreement. It highlights the preservation of American jobs, industries, and economic prosperity as key advantages of disengaging from the agreement. Additionally, the decision was portrayed as a means to protect U.S. sovereignty and uphold the country's interests without being bound by international climate mandates that could negatively impact the economy.",
+                  "**Evaluation of Impact**: Despite criticism and concern about the environmental implications of exiting the Paris Accord, the primary focus in the document is on the perceived economic advantages of withdrawal. The decision was framed as a strategic choice to safeguard American economic interests and prevent potential adverse effects on the country's economy, reflecting a prioritization of economic considerations in the decision-making process."
+                ],
+                "link": "https://www.swissre.com/media/press-release/nr-20210422-economics-of-climate-change-risks.html"
+              },
+              {
+                "title": "Methane emissions are driving climate change. Here's how to ...",
+                "snippet": "Aug 20, 2021 ... ... 1 million premature deaths every year. Methane ... In fact, according to data from the United States ... Paris Agreement targets. Every year, the\u00a0...",
+                "logics": [
+                  {
+                    "premises": [
+                      "1. Methane emissions are driving climate change.",
+                      "3. Agriculture is the predominant source of methane."
+                    ],
+                    "hypothesis": [
+                      "1. Methane can be reduced through cutting farming-related emissions."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "The recent assessment from the United Nations Environment Programme (UNEP) and the Climate and Clean Air Coalition found that cutting farming-related methane emissions would be key in the battle against climate change."
+                    ],
+                    "hypothesis": [
+                      "Methane can be reduced through cutting farming-related emissions."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "3. Agriculture is the predominant source of methane."
+                    ],
+                    "hypothesis": [
+                      "2. Livestock emissions contribute significantly to human-caused methane emissions."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Livestock emissions - from manure and gastroenteric releases - account for roughly 32 per cent of human-caused methane emissions."
+                    ],
+                    "hypothesis": [
+                      "Livestock emissions contribute significantly to human-caused methane emissions."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "4. Livestock emissions \u2013 from manure and gastroenteric releases \u2013 account for roughly 32 per cent of human-caused methane emissions."
+                    ],
+                    "hypothesis": [
+                      "3. Demand for animal protein is expected to increase due to population growth, economic development, and urban migration."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "Human-caused methane emissions could be reduced by as much as 45 per cent within the decade.",
+                      "Every year, the subsequent reduction in ground-level ozone would also prevent 260,000 premature deaths, 775,000 asthma-related hospital visits, 73 billion hours of lost labour from extreme heat and 25 million tonnes of crop losses."
+                    ],
+                    "hypothesis": [
+                      "Reduction in ground-level ozone due to methane reduction would have significant health and economic benefits."
+                    ]
+                  },
+                  {
+                    "premises": [
+                      "2. UNEP Food Systems and Agriculture Advisor James Lomax says the world needs to rethink approaches to UNEP Food Systems and Agriculture's agricultural cultivation and livestock production."
+                    ],
+                    "hypothesis": [
+                      "2. Farmers can help in the campaign to reduce methane emissions by providing the animals with more nutritious feed."
+                    ]
+                  }
+                ],
+                "knowledge": [
+                  "Agriculture, specifically livestock emissions and paddy rice cultivation, is a major source of methane emissions that contribute significantly to global warming.",
+                  "Methane is highlighted as a powerful greenhouse gas that plays a significant role in climate change.",
+                  "Strategies to reduce methane emissions include rethinking agricultural practices, utilizing new technology, and changing diets to reduce emissions.",
+                  "Farmers can contribute to reducing methane emissions by providing better feed, experimenting with alternative feeds, and managing manure efficiently.",
+                  "Reducing methane emissions is essential for limiting global warming to 1.5\u00b0C and achieving the goals set in the Paris climate change agreement."
+                ],
+                "link": "https://www.unep.org/news-and-stories/story/methane-emissions-are-driving-climate-change-heres-how-reduce-them"
+              }
+            ]
+          }
         ]
       }
     ]

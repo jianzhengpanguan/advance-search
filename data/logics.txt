@@ -5,26 +5,17 @@
       "5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. "
     ],
     "hypothesis": [
-      "4. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.\n"
-    ]
-  },
-  {
-    "premises": [
-      "3. The United States will withdraw from the agreement in the context of international relations.",
-      "4. There is a possibility of renegotiating a deal that is fair to all involved parties. "
-    ],
-    "hypothesis": [
-      "3. The current agreement is not fair to the United States in the view of the United States government.\n"
+      "2. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.\n"
     ]
   },
   {
     "premises": [
       "1. Sectors of United States economy would lose revenue and jobs if United States remained part of the Paris Accord.",
-      "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025.",
-      "3. President Donald Trump mentioned specific United States cities that would presumably be negatively affected by the Paris Accord. "
+      "2. A study asserts that the Paris Accord would cost 2.7 million United States jobs by 2025",
+      "3. President Donald Trump mentioned specific United States cities (e.g., Youngstown, Ohio; Detroit, Mich.; and Pittsburgh, Pa.) that would presumably be negatively affected by the Paris Accord. "
     ],
     "hypothesis": [
-      "1. Remaining part of the Paris Accord is detrimental to the United States economy.\n"
+      "1. Remaining part of the Paris Accord is detrimental to the United States economy."
     ]
   }
 ]
