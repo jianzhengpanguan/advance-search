@@ -53,5 +53,5 @@ def stonealone_question(search: str)-> str:
   Question: `{search}`
   Rephrased:
   """
-  return gpt.anthropic_request(prompt, utils.ModelType.advance_model).replace("`", "").split(":")[-1]
+  return gpt.anthropic_request(prompt, utils.ModelType.advance_model).replace("`", "").replace("\"", "").split(":")[-1].strip()
 

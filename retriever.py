@@ -53,7 +53,7 @@ def _hash_string_to_uuid(input_string):
   # Create a UUID based on the first 16 bytes of the SHA-1 hash
   return uuid.UUID(bytes=hash_bytes[:16])
 
-def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.ProviderType.unknown)->str:
+def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.ProviderType.unknown, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
   # Generate a unique UUID for the filename
   filename = f"data/knowledge/{str(_hash_string_to_uuid(knowledge))}.txt"
 
@@ -62,7 +62,7 @@ def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.Prov
       file.write(knowledge)
 
   if provider == utils.ProviderType.openai:
-    return openai_retrieve(question, filename)
+    return openai_retrieve(question, filename, model_type)
   return rag_retrieve(question, filename)
 
 def rag_retrieve(question:str, filename:str)->str:
@@ -100,7 +100,7 @@ def rag_retrieve(question:str, filename:str)->str:
   logging.info(f"filename: {filename}, docs size: {len(str(find_docs))}")
   return "\n".join([doc for doc in find_docs["documents"][0]])
 
-def openai_retrieve(question:str, filename:str)->str:
+def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
   client = openai.OpenAI(api_key=config['OPENAI']['api_key'])
 
   # Upload a file to the assistant".
@@ -108,12 +108,16 @@ def openai_retrieve(question:str, filename:str)->str:
     file=open(filename, "rb"),
     purpose='assistants'
   )
+  # By default, use basic model for faster response and save money.
+  model = config['OPENAI']['basic_model']
+  if model_type == utils.ModelType.advance_model:
+    model = config['OPENAI']['advance_model']
 
   try:
     # Add the file to the assistant
     assistant = client.beta.assistants.create(
       instructions=f"You are a knowledge retrival expert. Use the upload doc to best respond to user's query: {question}",
-      model=config['OPENAI']['basic_model'], # Use basic model for faster response and save money.
+      model=model, 
       tools=[{"type": "retrieval"}],
       file_ids=[file.id]
     )
