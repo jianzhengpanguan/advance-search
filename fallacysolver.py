@@ -164,6 +164,6 @@ def solve(inference_fallacies:dict[str, dict[str, str]])->dict[str, list[Fallacy
   for inference in inference_fallacies:
     fallacy_searches:list[FallacySearches] = []
     for fallacy, explanation in inference_fallacies[inference].items():
-      fallacy_searches.append(_search_to_avoid_fallacies(inference, fallacy, explanation))
+      fallacy_searches.extend(_search_to_avoid_fallacies(inference, fallacy, explanation))
     inference_searches[inference] = fallacy_searches
   return inference_searches

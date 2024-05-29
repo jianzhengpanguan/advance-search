@@ -1,0 +1,812 @@
+{
+  "Inference=Premises->Hypothesis: {'premises': [\"4. Donald Trump aims to focus the United States's empathy on internal matters within the United States.\", '5. Donald Trump rejects financial assistance for pollution controls in developing nations to instead help cities within the United States. '], 'hypothesis': ['2. Redirecting funds from international pollution controls to domestic needs within the United States will provide more immediate benefits to citizens of the United States.\\n']}": [
+    {
+      "fallacy": "Appeal to Ignorance (Argumentum ad Ignorantiam)",
+      "explanation": "Arguing that a proposition is true because it has not been proven false.",
+      "search": "Studies indicate that previous redirection of funds similar to those proposed by Donald Trump resulted in significant, measurable benefits to urban areas within the United States within a short period.",
+      "search_reason": "Adding a premise with specific evidence provides a factual basis for the claim, avoiding the assumption that the benefits exist simply because detriments have not been proven.",
+      "search_results": [
+        {
+          "search": "Studies indicate that previous redirection of funds similar to those proposed by Donald Trump resulted in significant, measurable benefits to urban areas within the United States within a short period.",
+          "explain": "Original topic",
+          "results": ""
+        },
+        {
+          "search": "Donald Trump policies redirecting funds to urban areas",
+          "explain": "This search helps identify specific instances during Trump\u2019s administration when funds were redirected towards urban areas, providing a direct context to evaluate the claim.",
+          "results": [
+            {
+              "title": "America at a Crossroads: Reimagining Federal Funding to End ...",
+              "snippet": "Dec 17, 2020 ... Giffords Law Center works in all 50 states to change policies and ... of gang violence, and victims of violent crime in high crime urban areas.",
+              "logics": [
+                {
+                  "premises": [
+                    "1. There's No Evidence That Project Safe Neighborhoods - A National Program to Reduce Gun Crime Works"
+                  ],
+                  "hypothesis": [
+                    "1. Project Safe Neighborhoods - A National Program to Reduce Gun Crime"
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Project Safe Neighborhoods (PSN) is required to award thirty percent of grants to \"Gang Task Forces\" in regions experiencing significant or increased presence of organized violent crime, firearm offenses, human trafficking, or drug trafficking."
+                  ],
+                  "hypothesis": [
+                    "1. Project Safe Neighborhoods (PSN) is focused on addressing and reducing organized violent crime, firearm offenses, human trafficking, and drug trafficking."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Project Safe Neighborhoods (PSN)'s budget for fiscal year 2021 requests $40 million, which would amount to an average of about $425,000 per district."
+                  ],
+                  "hypothesis": [
+                    "Project Safe Neighborhoods (PSN) is focused on addressing and reducing organized violent crime, firearm offenses, human trafficking, and drug trafficking."
+                  ]
+                },
+                {
+                  "premises": [
+                    "2. The President's budget for fiscal year 2021 requests $40 million to carry out Project Safe Neighborhoods (PSN), which would amount to an average of about $425,000 per district."
+                  ],
+                  "hypothesis": [
+                    "1. Project Safe Neighborhoods (PSN) is focused on addressing and reducing organized violent crime, firearm offenses, human trafficking, and drug trafficking."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Donald Trump seized on the increase in violence in Donald Trump's successful bid for the presidency.",
+                    "3. For decades, the United States federal government largely left issues of crime control to local and state authorities."
+                  ],
+                  "hypothesis": [
+                    "1. Project Exile was described as 'tremendous' by Donald Trump.",
+                    "2. Project Exile was a key part of the solution according to Donald Trump."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Two of the most prominent funding programs were the Local Law Enforcement Block Grant and the Edward Byrne Memorial."
+                  ],
+                  "hypothesis": [
+                    "The funding streams created by the United States Congress were designed to support state and local crime-fighting efforts."
+                  ]
+                },
+                {
+                  "premises": [
+                    "States like California, Illinois, and New York were suddenly forced to choose between losing access to public safety funding and pursuing immigration policies that may have jeopardized public safety."
+                  ],
+                  "hypothesis": [
+                    "Placing immigration-related conditions on federal funding for public safety efforts was viewed as an effort to punish sanctuary jurisdictions."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document discusses gun safety laws, violence intervention strategies, and funding for law-abiding states in the context of public safety and criminal justice reform.",
+                "It mentions a coalition led by the New York State Attorney General to protect law enforcement funding from actions by the Trump Administration.",
+                "There are references to efforts to restore Byrne JAG Program funding for law-abiding states, indicating a redirection of funds to urban areas."
+              ],
+              "link": "https://giffords.org/lawcenter/report/america-at-a-crossroads-reimagining-federal-funding-to-end-community-violence/"
+            },
+            {
+              "title": "Praise for The People's Budget: A Roadmap for the Resistance ...",
+              "snippet": "May 8, 2017 ... ... United States on a path to a ... Policy, Rebukes Trump. To people who argue ... cities and the National Housing Trust Fund to build much needed new\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "The Progressive Caucus frames its budget around the central challenge of the Progressive Caucus's time: how to make the economy work for working people and redress inequality.",
+                    "The 'People's Budget' is virtually a point-by-point rebuttal of the Trump administration policies.",
+                    "The 'People's Budget' offers plans for completing the work of economic recovery that has been thwarted by the Republican-imposed fiscal austerity."
+                  ],
+                  "hypothesis": [
+                    "The 'People's Budget' is a roadmap for resistance against the Trump administration's policies."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The People's Budget serves as a point-by-point rebuttal to Trump administration policies and proposes redirecting funds to urban areas such as increasing CDBG and HOME grants for cities and the National Housing Trust Fund\u30106:0\u2020source\u3011\u30106:1\u2020source\u3011.",
+                "Specific allocations in the People's Budget include $32 billion for Public Housing repairs, full funding for Public Housing operating budgets, and an increase of 400,000 Section 8 Vouchers, as well as $12.8 billion for Rep. Waters' bill to End Homelessness in America\u30106:2\u2020source\u3011."
+              ],
+              "link": "https://progressives.house.gov/2017/5/praise-for-the-peoples-budget-a-roadmap-for-the-resistance"
+            },
+            {
+              "title": "Department Of Justice Identifies New York City, Portland And Seattle ...",
+              "snippet": "Sep 21, 2020 ... Identification is Response to Presidential Memorandum Reviewing Federal Funding to State and Local Governments that are Permitting Anarchy,\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "The Department of Justice's list was published on the Department of Justice's website today in response to President Donald Trump's memorandum of September 2, 2020, entitled 'Memorandum on Reviewing Funding to State and Local Government Recipients That Are Permitting Anarchy, Violence, and Destruction in American Cities.'",
+                    "The Office of Public Affairs of the Department of Justice identified New York City, Portland, and Seattle as jurisdictions permitting violence and destruction of property"
+                  ],
+                  "hypothesis": [
+                    "The website where the Department of Justice's list was published is an official website of the United States government"
+                  ]
+                },
+                {
+                  "premises": [
+                    "The New York City Council cut $1 billion from the New York Police Department's (NYPD) fiscal year 2021 budget."
+                  ],
+                  "hypothesis": [
+                    "The budget cut in New York City resulted in the cancellation of the new New York Police Department (NYPD) police recruiting class and the transfer of certain police functions out of the New York Police Department (NYPD)."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The Department of Justice identified New York City, Portland, and Seattle as jurisdictions permitting violence and destruction of property in response to President Trump's memorandum on redirecting funds to areas allowing anarchy\u30104\u2020source\u3011.",
+                "New York City faced increased shootings and budget cuts to the NYPD, while Portland experienced ongoing protests with increased violence, leading to a $15 million cut in the police budget and rejection of federal law enforcement support. In Seattle, an autonomous zone was allowed to exist for nearly a month, leading to increased crime, rejection of federal involvement by local authorities, and refusal of law enforcement support\u30104\u2020source\u3011."
+              ],
+              "link": "https://www.justice.gov/opa/pr/department-justice-identifies-new-york-city-portland-and-seattle-jurisdictions-permitting"
+            },
+            {
+              "title": "The \u201cHousing First\u201d Approach Has Failed: Time to Reform Federal ...",
+              "snippet": "Aug 4, 2020 ... Policymakers should redirect housing funds to programs with a ... In some city neighborhoods, such as in ... policies, and proposes an agenda for\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "President Donald Trump has proposed $2.8 billion in funding for HUD's homelessness programs in the fiscal year 2021 budget and the CARES Act provides an additional one-time $9 billion for HUD's Emergency Shelter and Community Development Block Grant programs, showing a redirection of funds to urban areas to address homelessness\u30106:0\u2020source\u3011.",
+                "The document suggests redirecting housing funds from Housing First programs to Treatment First programs, such as those operated by rescue missions, rehabilitation centers, and recovery homes, in order to help the homeless overcome addiction, find employment, and achieve independence\u30106:2\u2020source\u3011.",
+                "President Trump issued executive orders recognizing the need for reform and modernization in public assistance programs like HUD's homelessness programs. He emphasized the importance of programs provided by faith-based organizations in helping individuals rise out of poverty and strengthen families at the local level\u30106:2\u2020source\u3011."
+              ],
+              "link": "https://www.heritage.org/housing/report/the-housing-first-approach-has-failed-time-reform-federal-policy-and-make-it-work"
+            }
+          ]
+        },
+        {
+          "search": "Historical examples of fund redirection to urban areas in the United States",
+          "explain": "By looking at past examples, we can compare whether similar actions in history had beneficial impacts on urban areas, giving a broader context to the claim.",
+          "results": [
+            {
+              "title": "Defunding the Police Will Actually Make Us Safer | ACLU",
+              "snippet": "Jun 11, 2020 ... Almost exactly six years after NYPD officers murdered Eric Garner in New York City, Minneapolis police officers murdered George Floyd. Activists\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "1._American policing has never been a neutral institution.",
+                    "1._American policing has never been a neutral institution."
+                  ],
+                  "hypothesis": [
+                    "1._Many protestors and activists are demanding immediate defunding of American police departments."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. In addition to divesting from police and reinvesting the savings in nonpunitive programs that benefit public safety and health, there are other critical steps the society needs to take to foster the systemic change people across the country are calling for.",
+                    "2. End the presence of police in schools, which exacerbates racial inequalities, puts immigrant students at risk of deportation, and limits opportunities accessible to low-income students."
+                  ],
+                  "hypothesis": [
+                    "1. Develop mobile crisis services, peer crisis services, and crisis hotlines and warmlines to support people who have a behavioral or mental health crisis."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. In addition to divesting from police and reinvesting the savings in nonpunitive programs that benefit public safety and health, there are other critical steps the people across the country are calling for need to take to foster the systemic change."
+                  ],
+                  "hypothesis": [
+                    "2. Ban pretextual stops and consent searches that act as common mechanisms for the police to engage in racial profiling and circumvent legal standards."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. The police spend the most resources going after minor incidents",
+                    "3. Funneling the police into communities of color perpetuates harm and trauma"
+                  ],
+                  "hypothesis": [
+                    "2. Shrinking the police budgets can help end decades of racial oppression"
+                  ]
+                },
+                {
+                  "premises": [
+                    "Spending on law enforcement has outpaced spending on community services since the 1980s."
+                  ],
+                  "hypothesis": [
+                    "Spending on law enforcement is disproportionate to community services spending."
+                  ]
+                },
+                {
+                  "premises": [
+                    "The Los Angeles budget gives the Los Angeles Police Department $3.14 billion out of $10.5 billion"
+                  ],
+                  "hypothesis": [
+                    "Spending on the Los Angeles Police Department is disproportionate to spending on Los Angeles community services"
+                  ]
+                },
+                {
+                  "premises": [
+                    "New York City spends almost $6 billion on New York City's policing"
+                  ],
+                  "hypothesis": [
+                    "New York City's spending on law enforcement is disproportionate to New York City's community services spending"
+                  ]
+                },
+                {
+                  "premises": [
+                    "Divesting from police can help address social problems at their root"
+                  ],
+                  "hypothesis": [
+                    "Shrinking police budgets can help end decades of racial oppression"
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Year, state and local governments spend upward of $100 billion dollars on law enforcement, excluding billions more in federal grants and resources.",
+                    "2. Budgets can be changed through targeted advocacy and organizing."
+                  ],
+                  "hypothesis": [
+                    "1. Redirecting funds from law enforcement to community-run violence-prevention programs and counselors in schools could be beneficial."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Policing in this country evolved from slave patrols.",
+                    "2. Policing has never been a neutral institution.",
+                    "4. American policing has directed oppression and violence at Black people to enforce Jim Crow, wage the War on Drugs, and crack down on protests."
+                  ],
+                  "hypothesis": [
+                    "1. Defunding the police will actually make the people safer."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Activists, advocates, and protestors are still demanding police reform that will end police violence in Black communities."
+                  ],
+                  "hypothesis": [
+                    "Many individuals are actually asking for this oppressive system to be dismantled and to invest in institutions, resources, and services that help communities grow and thrive."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Los Angeles's budget gives the Los Angeles Police Department $3.14 billion out of the city's $10.5 billion.",
+                    "2. Spending on community services such as economic development ($30 million) and housing ($81 million) is significantly less than the Los Angeles Police Department's budget."
+                  ],
+                  "hypothesis": [
+                    "1. By shrinking the massive budgets of the Los Angeles Police Department, the city can help end decades of racially driven social control and oppression."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document discusses the need for redirecting funds from law enforcement to more beneficial services like job training, counseling, and violence-prevention programs, as demanded by protestors and activists calling for defunding of police departments.",
+                "Specific examples are provided, such as Los Angeles's budget allocating $3.14 billion to the police out of the city's $10.5 billion budget, highlighting the disparity in spending between law enforcement and community services like economic development and housing.",
+                "The text emphasizes the negative impact of channeling excessive resources into law enforcement rather than areas like education, affordable housing, and accessible healthcare, which has been detrimental to communities\u30106\u2020source\u3011\u30108:2\u2020source\u3011\u30108:0\u2020source\u3011."
+              ],
+              "link": "https://www.aclu.org/news/criminal-law-reform/defunding-the-police-will-actually-make-us-safer"
+            },
+            {
+              "title": "The Impact of Gun Violence on Children and Teens | Everytown ...",
+              "snippet": "May 29, 2019 ... Children and teens in the US experience staggeringly high rates of gun deaths and injuries. They are also harmed when a friend or family\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "1. Children and teens in the US experience staggeringly high rates of gun deaths and injuries.",
+                    "2. The children and teens are also harmed when a friend or family member is killed with a gun, when someone the children and teens know is shot, and when the children and teens witness and hear gunshots.",
+                    "3. Gun homicides, non-fatal shootings, and exposure to gun violence stunt the lives of the children and teens and reflect and intensify this country's long-standing racial inequities."
+                  ],
+                  "hypothesis": [
+                    "1. Gun thefts are preventable."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The Community Reinvestment Act (CRA) was established in 1977 to address financial disparities in low- and moderate-income (LMI) areas by encouraging banks to invest in affordable housing, small businesses, and community development projects within urban neighborhoods.",
+                "The CRA reversed the trend of banks neglecting to invest in urban areas, leading to increased lending and investments in LMI communities, which boosted economic activity and enhanced living conditions.",
+                "Financial institutions were incentivized by the CRA to collaborate with community organizations and government agencies to fund projects in urban areas, promoting innovative approaches to urban renewal.",
+                "Ongoing evaluation and monitoring were essential to ensure that funds allocated to urban areas through the CRA were effectively utilized and contributed to sustainable community development, emphasizing the importance of accountability and impact assessment."
+              ],
+              "link": "https://everytownresearch.org/report/the-impact-of-gun-violence-on-children-and-teens/"
+            },
+            {
+              "title": "GlobalTrends_2040.pdf",
+              "snippet": "Published every four years since 1997, Global Trends assesses the key trends and uncertainties that will shape the strategic environment for the. United States\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "Urbanization exacerbates urban-rural societal divides and the expanding role of local and city governance could impact policy coherence.",
+                "Major financing gaps exist for infrastructure development and climate change adaptation, with challenges more pronounced in developing countries.",
+                "Sub-Saharan African urban areas are noted to often become stuck in a poverty trap, highlighting the difficulties faced in developing urban infrastructure and services."
+              ],
+              "link": "https://www.dni.gov/files/ODNI/documents/assessments/GlobalTrends_2040.pdf"
+            },
+            {
+              "title": "Neighborhood Transformation Grants",
+              "snippet": "... funds: $400,000 (Economic ... historic districts of the City of St. Louis ... Economic Justice Index; City Demonstration Areas; Neighborhood Revitalization Strategy\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "Economic Justice Index; City Demonstration Areas; Neighborhood Revitalization Strategy Areas; QCTs, and proximity to community assets - Schools, Transit, etc. Note: extra points will be awarded to projects in overlapping priority areas (see map)"
+                  ],
+                  "hypothesis": [
+                    "Projects in overlapping priority areas will receive extra points"
+                  ]
+                },
+                {
+                  "premises": [
+                    "Priority geographies in the City of St. Louis 2024 Qualified Census Tracts (QCTs) and/or areas that have an Economic Justice Index Composite Score of 40.6 or higher will be prioritized."
+                  ],
+                  "hypothesis": [
+                    "Projects in the Qualified Census Tracts (QCTs) or areas with an Economic Justice Index Composite Score of 40.6 or higher will be prioritized."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Priority geographies include all City of St. Louis 2024 Qualified Census Tracts (QCTs) and/or areas that have an Economic Justice Index Composite Score of 40.6 or higher"
+                  ],
+                  "hypothesis": [
+                    "Projects in the overlapping priority areas will receive extra points"
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Available funds: $500,000 (CDBG)",
+                    "2. The grant categories are guided by the City of St. Louis' ARPA Needs Survey and the City's 2022 Economic Justice Action Plan's three strategic pillars: economic empowerment, equitable & inclusive development, and neighborhood transformation"
+                  ],
+                  "hypothesis": [
+                    "1. The HOME-ARP Permanent Supportive Housing Program has Available Funds: $9,668,557. The LRA Inspections will End on April 8, 2024 at 5:00PM. The Application Deadline is April 30, 2024 at 4:00PM. The Preliminary Design Review will End on April 15, 2024 at 5:00PM"
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Available funds: $500,000 (CDBG)",
+                    "2. The grant categories are guided by the City of St. Louis' ARPA Needs Survey and the City's 2022 Economic Justice Action Plan's three strategic pillars: economic empowerment, equitable & inclusive development, and neighborhood transformation"
+                  ],
+                  "hypothesis": [
+                    "2. Affordable Housing Production: Rental and For Sale: Available funds: $6 million. The LRA Inspections will end on April 8, 2024 at 5:00PM. The Application Deadline is April 30, 2024"
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Construction management services are needed to administer a Historic Home Repair Program for owner-occupants in specific historic districts of the City of St. Louis.",
+                    "2. Available funds for the program are $1,000,000."
+                  ],
+                  "hypothesis": [
+                    "1. Respondents eligible for the program may include non-profit institutions, construction contractors, housing developers, etc."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document provides information on various funds and programs in the City of St. Louis aimed at economic development and community projects, including Historic Home Repair, Neighborhood Plan Implementation, Neighborhood Capacity Building, and Community Development Grants Program.",
+                "Funds are directed towards areas such as Qualified Census Tracts, Economic Justice Index areas, and projects near community assets to address specific needs in the city.",
+                "Initiatives like the Neighborhood Transformation Grants empower communities in targeted areas with substantial funding available.",
+                "Specific funds are allocated for housing production and repair, focusing on aspects like affordable housing, rental housing, and turning vacant units into rental properties."
+              ],
+              "link": "https://www.stlouis-mo.gov/cda/neighborhood-nofa/index.cfm"
+            },
+            {
+              "title": "Billion-Dollar Weather and Climate Disasters | Events | National ...",
+              "snippet": "Severe storms impact states across the South, Southeast, Midwest and Northeast regions ... This was the costliest urban wildfire to affect the United States since\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "The document discusses the history of funds being redirected toward urban areas through federal and state policies, with the focus on preventing urban deterioration and addressing urban needs .",
+                "It mentions that the Urban Mass Transportation Act of 1964 allowed for a redirection of funds to mass transit in urban areas to reduce urban deterioration and highlight their services as necessary and important ."
+              ],
+              "link": "https://www.ncei.noaa.gov/access/billions/events"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fallacy": "Appeal to Ignorance (Argumentum ad Ignorantiam)",
+      "explanation": "Arguing that a proposition is true because it has not been proven false.",
+      "search": "Economic impact analyses show that investment in domestic cities for pollution control generates greater immediate local economic uplift compared to similar investments in developing countries.",
+      "search_reason": "Including analysis provides a comparative basis for the claim, ensuring it is grounded in quantitative data rather than being an unsupported assertion.",
+      "search_results": [
+        {
+          "search": "Economic impact analyses show that investment in domestic cities for pollution control generates greater immediate local economic uplift compared to similar investments in developing countries.",
+          "explain": "Original topic",
+          "results": [
+            {
+              "title": "Nuclear Energy - Our World in Data",
+              "snippet": "This includes deaths from air pollution and accidents in the supply chain. Let's look at this comparison in the chart. Fossil fuels and biomass kill many more\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "On the right, we have the amount of greenhouse gases emitted per unit of electricity production."
+                  ],
+                  "hypothesis": [
+                    "The global average death rates from coal could be 93 to 224 deaths per TWh."
+                  ]
+                },
+                {
+                  "premises": [
+                    "3. Power plants in China tend to be located closer to cities in China."
+                  ],
+                  "hypothesis": [
+                    "3. The death rate from air pollution in China is expected to be higher than in Europe due to the locations of power plants in China."
+                  ]
+                },
+                {
+                  "premises": [
+                    "3. Residents in surrounding areas of Chernobyl were uninformed of the radioactive material in the air around them."
+                  ],
+                  "hypothesis": [
+                    "4. An earlier response by the authorities could have prevented the scale of evacuation efforts at Fukushima."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "Economic impact analyses suggest that investments in pollution control in domestic cities yield greater immediate economic benefits for the local area compared to similar investments made in developing countries.",
+                "The document mentions that air pollution has critical health effects, which are even more severe based on recent research compared to earlier findings.",
+                "It introduces the concept of co-benefits where the reduction of air pollutants provides simultaneous short-term health benefits and contributes to long-term climate change mitigation strategies."
+              ],
+              "link": "https://ourworldindata.org/nuclear-energy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fallacy": "Appeal to Ignorance (Argumentum ad Ignorantiam)",
+      "explanation": "Arguing that a proposition is true because it has not been proven false.",
+      "search": "Redirecting funds from international pollution controls to domestic needs within the United States could provide more immediate benefits to citizens, as shown by comparative studies between domestic and international aid impacts.",
+      "search_reason": "This version of the hypothesis provides a clear rationale for why redirecting funds could be beneficial. By specifically mentioning comparative studies, it grounds the assertion in evidence rather than an assumption of unknowns.",
+      "search_results": [
+        {
+          "search": "Redirecting funds from international pollution controls to domestic needs within the United States could provide more immediate benefits to citizens, as shown by comparative studies between domestic and international aid impacts.",
+          "explain": "Original topic",
+          "results": [
+            {
+              "title": "National Security Strategy | The White House",
+              "snippet": "Oct 12, 2022 ... As the world continues to navigate the lingering impacts of the pandemic and global economic uncertainty, there is no nation better positioned\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "Globalization has delivered immense benefits for the United States and the world."
+                  ],
+                  "hypothesis": [
+                    "An adjustment is required for the United States and the world to cope with dramatic global changes such as widening inequality within and among countries."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document emphasizes the need for investments both at home and abroad to address shared challenges like climate change, pandemics, and economic turbulence within a competitive international environment.",
+                "It stresses the significance of developing means to execute strategies by making renewed investments domestically and internationally."
+              ],
+              "link": "https://www.whitehouse.gov/wp-content/uploads/2022/10/Biden-Harris-Administrations-National-Security-Strategy-10.2022.pdf"
+            },
+            {
+              "title": "Public Policy: Origins, Practice, and Analysis",
+              "snippet": "citizens can use ... can be taken in order to make all of us more secure\u201d ... control in Congress or the state legislature shifts\u2014which could affect appropriations.",
+              "logics": [
+                {
+                  "premises": [
+                    "3. The United States Congress has leverage over policy implementation and Congress can choose which policy areas to fund or ignore."
+                  ],
+                  "hypothesis": [
+                    "2. The United States Congress can use appropriations and oversight as constitutional tools."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Public policy is defined as government activities influencing the lives of citizens."
+                  ],
+                  "hypothesis": [
+                    "Public policy is defined as government activities influencing the lives of citizens."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "Congress has significant power in translating public desires into policy decisions, particularly through appropriations where funding can be allocated based on popularity among legislators.",
+                "The President has limited policymaking powers compared to Congress, to prevent concentration of power in the executive branch.",
+                "Welfare programs like the Supplemental Nutrition Assistance Program (SNAP) and Temporary Assistance for Needy Families (TANF) are examples of distributive policies that provide benefits to specific groups at the expense of others."
+              ],
+              "link": "https://web.ung.edu/media/university-press/public-policy.pdf?t=1661449833017"
+            },
+            {
+              "title": "If done correctly, aquaculture increases food production, boosts ...",
+              "snippet": "Sep 30, 2020 ... Farmed seafood can lead to improved nutrition and food security for many communities. Sustainable Development Goal 1. End poverty in all its\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "Aquaculture can boost economic growth and food security in coastal and rural areas, supporting the notion of redirecting funds from international pollution controls to domestic needs.",
+                "It creates year-round jobs, sustainable economic growth, and drives employment in related industries, aligning with the potential for more immediate benefits to citizens within the United States.",
+                "Sustainable aquaculture advancements in technology and the economic opportunities it presents domestically provide a basis for redirecting funds to benefit citizens more immediately."
+              ],
+              "link": "https://www.fisheries.noaa.gov/feature-story/aquaculture-supports-sustainable-earth"
+            },
+            {
+              "title": "CLIMATE CHANGE 2023",
+              "snippet": "This Synthesis Report (SYR) of the IPCC Sixth Assessment Report (AR6) summarises the state of knowledge of climate change, its widespread impacts and risks, and\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "The document discusses the cost-effectiveness and benefits of investing in domestic clean energy projects in the U.S., highlighting the potential positive impacts on economic growth and employment opportunities.",
+                "It suggests that dedicating funds to domestic projects, such as employing existing technologies for renewable energies and energy efficiency improvements, can have significant benefits for the U.S. economy.",
+                "The document emphasizes the importance of transitioning to a sustainable energy future within the country by investing in clean energy projects to reduce greenhouse gas emissions, addressing climate change concerns, and creating jobs."
+              ],
+              "link": "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf"
+            },
+            {
+              "title": "LSE-IDEAS-How-International-Aid-Can-Do-More-Harm-Than-Good ...",
+              "snippet": "Critics insist on foreign aid producing mostly reverse effects for developing countries\u2014despite intending to help, the rich world may actually hurt the\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "1. The rich world may actually hurt the countries' economies and contribute to state corruption.",
+                    "3. International donors and organizations in Lebanon provide basic services to the public such as building infrastructure and implementing waste and water management."
+                  ],
+                  "hypothesis": [
+                    "2. International aid can do more harm than good."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Long-term foreign aid correlates with a surge in development in the given context."
+                  ],
+                  "hypothesis": [
+                    "Such findings (the correlation between long-term foreign aid and development) can be misleading in the given context."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document questions the effectiveness of international aid and highlights doubts about its efficacy.",
+                "It raises concerns about how development projects funded by international aid may create negative incentives for governments.",
+                "References are made to aid inflows potentially having reverse effects and lacking proper oversight and implementation."
+              ],
+              "link": "https://www.lse.ac.uk/ideas/Assets/Documents/updates/LSE-IDEAS-How-International-Aid-Can-Do-More-Harm-Than-Good.pdf"
+            },
+            {
+              "title": "Disparities in the Impact of Air Pollution | American Lung Association",
+              "snippet": "Nov 2, 2023 ... Poorer people and some racial and ethnic groups are among those who often face higher exposure to pollutants and who may experience greater\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "The burden of air pollution is not evenly shared.",
+                    "Many studies have explored the differences in harm from air pollution to racial or ethnic groups."
+                  ],
+                  "hypothesis": [
+                    "Poorer people and some racial and ethnic groups often face higher exposure to pollutants."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Many studies have explored the differences in harm from air pollution to racial or ethnic groups."
+                  ],
+                  "hypothesis": [
+                    "Nonwhite populations, especially Black people, faced higher risk from particle pollution."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Health care, grocery stores and good jobs; poorer job opportunities; dirtier workplaces; and higher traffic exposure are among the factors that could handicap groups and increase the risk of harm.",
+                    "2. Existing health conditions, behaviors or traits may predispose some groups to greater risk.",
+                    "3. People of color are among the groups most at risk from air pollutants.",
+                    "4. The elderly, African Americans, Mexican Americans and people living near a central city have higher incidence of diabetes.",
+                    "5. People of color also may be more likely to live in counties with higher levels of pollution.",
+                    "6. Non-Hispanic blacks and Hispanics were more likely to live in counties that had worse problems with particle pollution.",
+                    "7. Non-Hispanic blacks were also more likely to live in counties with worse ozone pollution.",
+                    "8. Income groups, by contrast, differed little in these exposures.",
+                    "9. Unemployed people, those with low income or low education and non-Hispanic blacks were found to be more likely to live in areas with higher exposures to particle pollution.",
+                    "10. The different racial/ethnic and income groups were often breathing very different kinds of particles; the different composition and structure of these particles may have different health impacts."
+                  ],
+                  "hypothesis": [
+                    "1. Poorer people and some racial and ethnic groups are among those who often face higher exposure to pollutants and who may experience greater responses to such pollution.",
+                    "2. The burden of air pollution is not evenly shared."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Existing health conditions, behaviors or traits may predispose some groups to greater risk.",
+                    "People of color are among the groups most at risk from air pollutants, and the elderly, African Americans, Mexican Americans and people living near a central city have higher incidence of diabetes."
+                  ],
+                  "hypothesis": [
+                    "Disparities in health outcomes among people eligible for Medicaid may exist due to differences in exposure to pollution, susceptibility to health threats, and predisposition to health risks."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document addresses how poorer individuals and certain racial and ethnic groups experience higher exposure to pollutants and are more affected by the health consequences of air pollution.",
+                "Studies mentioned in the document have explored the disparities in the impact of air pollution on premature death among different demographic groups, showcasing how factors like race and socioeconomic status play a role in vulnerability to pollution-related health risks.",
+                "It is suggested that redirecting funds from international pollution controls to domestic needs within the United States could provide more immediate benefits to citizens, as comparative studies have shown the significant impacts of air pollution on disadvantaged groups within the country."
+              ],
+              "link": "https://www.lung.org/clean-air/outdoors/who-is-at-risk/disparities"
+            },
+            {
+              "title": "Housing and health guidelines",
+              "snippet": "Inadequate water supply and sanitation facilities affect food safety and personal hygiene, and therefore lead to the development of communicable diseases. The\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "The document stresses the importance of addressing health risks associated with housing, supporting the idea of redirecting funds from international pollution controls to domestic needs for immediate benefits to citizens.",
+                "It highlights the cost-effectiveness of interventions to improve housing conditions and the significant financial investment required from governments to implement new housing standards.",
+                "The guidelines recommend promoting access to social housing, ensuring housing standards, and empowering vulnerable groups for health and security improvements."
+              ],
+              "link": "https://iris.who.int/bitstream/handle/10665/276001/9789241550376-eng.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fallacy": "Appeal to Ignorance (Argumentum ad Ignorantiam)",
+      "explanation": "Arguing that a proposition is true because it has not been proven false.",
+      "search": "Studies suggest that focusing financial assistance on domestic urban issues rather than international pollution control measures tends to yield faster improvements in local socioeconomic conditions.",
+      "search_reason": "This rephrasing anchors the claim to documented studies, avoiding the fallacy by relying on documented observations and expert analysis rather than unsupported assumptions.",
+      "search_results": [
+        {
+          "search": "Studies suggest that focusing financial assistance on domestic urban issues rather than international pollution control measures tends to yield faster improvements in local socioeconomic conditions.",
+          "explain": "Original topic",
+          "results": [
+            {
+              "title": "Waste Mismanagement in Developing Countries: A Review of ...",
+              "snippet": "Mar 24, 2019 ... Environmental contamination due to solid waste mismanagement is a global issue. Open dumping and open burning are the main implemented waste\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "Huge amounts of waste produced by construction and demolition activities reduce the useful life of final disposal sites and increase the risk of land collapses.",
+                    "Waste tires cause the presence of mosquitoes and the risk of fire."
+                  ],
+                  "hypothesis": [
+                    "The presence of hazardous materials can be a source of pollution."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Informal sector plays the main role in recycling activities in developing countries.",
+                    "Appropriate strategies should be introduced by the government for supporting recycling activities in the informal sector."
+                  ],
+                  "hypothesis": [
+                    "The generation of particulate matter (PM), containing heavy metals, increases health issues in the populations that live near the areas where the informal sector conducts recycling activities."
+                  ]
+                },
+                {
+                  "premises": [
+                    "1. Waste mismanagement is a global issue."
+                  ],
+                  "hypothesis": [
+                    "1. Environmental contamination due to solid waste mismanagement is a global issue."
+                  ]
+                },
+                {
+                  "premises": [
+                    "3. The results reported that the environmental impacts are pervasive worldwide: marine litter, air, soil and water contamination, and the direct interaction of waste pickers with hazardous waste are the most important issues."
+                  ],
+                  "hypothesis": [
+                    "1. Environmental contamination due to solid waste mismanagement is a global issue."
+                  ]
+                },
+                {
+                  "premises": [
+                    "4. Many reviews were published in the scientific literature about specific waste streams, in order to quantify the effect of the different waste fractions on the environment."
+                  ],
+                  "hypothesis": [
+                    "2. Global issues due to different waste fractions can be addressed by quantifying the impacts of the different waste fractions on the environment."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "The document discusses the environmental and health risks associated with poor solid waste management primarily in developing countries, emphasizing the impacts of mismanagement of different waste streams.",
+                "It details the risks of open dumping and burning of waste, highlighting the generation of pollutants and health hazards that affect the population living near these sites.",
+                "The document also points out that solid waste management can present opportunities such as renewable energy generation, employment, and economic advantages, while also promoting environmental awareness.",
+                "It underscores the need to support informal recycling sectors in developing countries through various strategies like public awareness campaigns, regulatory frameworks, and infrastructure enhancements."
+              ],
+              "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6466021/"
+            },
+            {
+              "title": "GlobalTrends_2040.pdf",
+              "snippet": "Global. Trends reflects the National Intelligence Council's perspective on these future trends; it does not represent the official, coordinated view of the US\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "1. The Global Trends report is published every four years since 1997.",
+                    "2. The Global Trends report assesses the key trends and uncertainties shaping the strategic environment for the United States for the next two decades."
+                  ],
+                  "hypothesis": [
+                    "1. The Global Trends report provides insights into future trends and uncertainties."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "Financing gaps for infrastructure development and climate change adaptation may lead to policy coherence challenges when local and national strategies for problem solving diverge.",
+                "Traditional providers of development assistance may not keep up with the needs, potentially resulting in shortfalls in multilateral development assistance, which could open the door for countries like China to finance critical urban infrastructure for their advantage."
+              ],
+              "link": "https://www.dni.gov/files/ODNI/documents/assessments/GlobalTrends_2040.pdf"
+            },
+            {
+              "title": "Impact of tourism development upon environmental sustainability: a ...",
+              "snippet": "Aug 19, 2022 ... ... service quality, and an exponential increase in wastage and pollution. Furthermore, tourism arrivals beyond capacity bring problems rather than\u00a0...",
+              "logics": [
+                {
+                  "premises": [
+                    "Government authorities and policymakers generate revenue and monetary support for people and the community through local arts and culture commercialization.",
+                    "Government authorities and policymakers improve local resource infrastructure and quality of life, including employment generation and access to improved civic facilities.",
+                    "Government authorities and policymakers help to create awareness and understanding of different ethnic cultures, social values, and traditions, connecting them and preserving cultures."
+                  ],
+                  "hypothesis": [
+                    "Government authorities and policymakers have a special role in placing their moderating intervention in terms of policy guidelines, regulatory framework, and budgetary support.",
+                    "Government authorities and policymakers have a special role in provision of inter-organizational synergy in planning and implementation of ecotourism strategies.",
+                    "Government authorities and policymakers have a special role in protection of environmental resource base and conservation of natural and biological ecosystem.",
+                    "Government authorities and policymakers have a special role in sustenance of socio-cultural value of local community over and above their economic and social well-being/quality life for the long run."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Government authorities and policymakers improve local resource infrastructure and quality of life, including employment generation and access to improved civic facilities."
+                  ],
+                  "hypothesis": [
+                    "Government authorities and policymakers have a special role in protection of environmental resource base and conservation of natural and biological ecosystem."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Government authorities and policymakers have a responsibility to improve local resource infrastructure and quality of life, including employment generation and access to improved civic facilities."
+                  ],
+                  "hypothesis": [
+                    "Government authorities and policymakers have a special role in sustenance of the socio-cultural value of the local community over and above their economic and social well-being/quality life for the long run."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "Tourism growth and development have adverse impacts on the environment, including depletion of natural resources, pollution, physical effects on the ecosystem, socio-cultural degradation, and economic consequences.",
+                "Specific interventions by the Government of Pakistan aim to address the negative effects of tourism growth on the environment.",
+                "The document supports the idea that focusing on domestic urban issues may lead to faster improvements in local socioeconomic conditions compared to addressing international pollution control measures."
+              ],
+              "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9389488/"
+            },
+            {
+              "title": "Our Common Future: Report of the World Commission on ...",
+              "snippet": "The International Economy, the Environment, and. Development. I. Decline in the 1980s. II. Enabling Sustainable Development. III. A Sustainable World Economy.",
+              "logics": [
+                {
+                  "premises": [
+                    "1. The local governments set up infrastructure funds.",
+                    "2. The local governments undertake tasks such as reorganizing local tax assessments and collection, preparing or updating maps of property ownership, and setting up technical teams to advise households and community groups on improving housing."
+                  ],
+                  "hypothesis": [
+                    "1. The reduction of poverty itself is a precondition for environmentally sound development."
+                  ]
+                },
+                {
+                  "premises": [
+                    "Public opinion has played a critical role in the drive to improve urban conditions. In some cities, public pressure has triggered the abandonment of massive urban development projects, fostered residential schemes on a more human scale, countered indiscriminate demolition of development."
+                  ],
+                  "hypothesis": [
+                    "The reduction of poverty itself is a precondition for environmentally sound development."
+                  ]
+                },
+                {
+                  "premises": [
+                    "6. Domestic efforts are of paramount importance. More external funding is also required, but the external funding must come in ways that are sensitive to the environmental impacts. The reduction of poverty itself is a precondition for environmentally sound development."
+                  ],
+                  "hypothesis": [
+                    "1. The reduction of poverty itself is a precondition for environmentally sound development."
+                  ]
+                }
+              ],
+              "knowledge": [
+                "Public opinion plays a crucial role in improving urban conditions, and domestic efforts are paramount in this regard.",
+                "External funding is necessary for urban improvement, with sensitivity to environmental impacts, and poverty reduction is fundamental for sustainable development.",
+                "Resource flows from wealthy nations to poorer ones are crucial for poverty alleviation and overall development."
+              ],
+              "link": "https://sustainabledevelopment.un.org/content/documents/5987our-common-future.pdf"
+            },
+            {
+              "title": "The Sustainable Development Goals Report 2022",
+              "snippet": "May 9, 2022 ... It is a collaborative effort between the Department of Economic and Social Affairs and more than. 50 international and regional agencies, based\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "Rapid and poorly planned urbanization leads to challenges such as a shortage of affordable housing, insufficient infrastructure, limited open spaces, air pollution, and climate and disaster risk, emphasizing the importance of focusing on domestic urban issues\u30104\u2020source\u3011.",
+                "Sustainable urban development is crucial for addressing inequalities highlighted by crises like the COVID-19 pandemic and plays a vital role in improving urban areas' efficiency, inclusivity, safety, battling poverty, and addressing climate change\u30104\u2020source\u3011.",
+                "Public transportation coverage, waste management infrastructure, and accessible open public spaces are key components that need attention in sustainable urban development initiatives\u30104\u2020source\u3011."
+              ],
+              "link": "https://unstats.un.org/sdgs/report/2022/The-Sustainable-Development-Goals-Report-2022.pdf"
+            },
+            {
+              "title": "General Plan Guidelines, Chapter 4: Required Elements",
+              "snippet": "The mandatory elements for all jurisdictions are land use, circulation, housing, conservation, open space, noise, and safety. Cities and counties in the San\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "The document discusses recommended policies for housing subsidies, income targeting, and supportive services to address affordability.",
+                "It highlights the sources of housing data like the US Census and the American Community Survey.",
+                "The text explains the influence of sustainable communities strategy in regional transportation plans on local land use planning.",
+                "Steps are outlined for conducting analysis, goal setting, and policy development in the context of land use planning and incorporating relevant documents into the general plan."
+              ],
+              "link": "https://opr.ca.gov/docs/OPR_C4_final.pdf"
+            },
+            {
+              "title": "Closing the gap in a generation",
+              "snippet": "Socioeconomic factors. 2.Health care rationing. 3.Health services accessibility. 4.Patient advocacy. I.Commission on Social. Determinants of\u00a0...",
+              "logics": [],
+              "knowledge": [
+                "Different government policies can influence health and health equity, with urban planning and housing standards playing significant roles in determining health outcomes.",
+                "Urban planning that lacks affordable housing, local amenities, and accessible public transport can be detrimental to public health.",
+                "Emphasizes that addressing domestic urban issues through effective public policies can lead to immediate and future health benefits, supporting the idea that focusing financial assistance on local urban issues may yield faster improvements in socioeconomic conditions than international pollution control measures."
+              ],
+              "link": "https://iris.who.int/bitstream/handle/10665/43943/9789241563703_eng.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
