@@ -15,4 +15,3 @@ class ModelType(Enum):
 
 class SearchType(Enum):
   verifier = "verify"
-  fallacy_avoider = "avoid the fallacy"

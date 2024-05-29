@@ -2,7 +2,7 @@ import re
 import gpt
 import json
 import utils
-import searcher
+from applog import logger as logging
 
 _JSON_OUTPUT = """
 Response in the json format: 
@@ -62,7 +62,6 @@ Use instruct to analyze inference:
 %s
 """
 _MAX_NUM_PATTERNS = 100
-_MAX_ITER = 3
 
 # Fetch the patterns in fallacy, explanation.
 # Example raw text: r"Fallacy:\s*\n(1\..*?)\n(2\..*?)\n".
@@ -78,7 +77,6 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
     patterns.append(matches.group(i).strip())
   return patterns
 
-
 def _to_fallacy_explanations(inference:str)->dict[str, str]:
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, inference)
@@ -90,6 +88,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
     for part in json_part:
       if part:
         parsed_part = part.split("```json")[-1].split("```")[0]
+        logging.info(f"parsed_part:{parsed_part} part:{part}")
         for fallacy_explanation in json.loads(parsed_part):
           for fallacy, explanation in fallacy_explanation.items():
             fallacy_explanations[fallacy] = explanation
@@ -104,53 +103,11 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
     fallacy_explanations[fallacies[i]] = explanations[i]
   return fallacy_explanations
 
-class FallacySearches:
-  def __init__(self, fallacy:str, explanation:str, search_results:list[searcher.SearchResults]):
-    self.fallacy = fallacy
-    self.explanation = explanation
-    self.search_results = search_results
-
-  def __str__(self):
-    return f"Fallacy: {self.fallacy}\nExplanation: {self.explanation}\nSearch Results: {self.search_results}\n"
-
-  def to_dict(self):
-    return {
-      "fallacy": self.fallacy,
-      "explanation": self.explanation,
-      "search_results": self.search_results
-    }
-
-class CustomEncoder(json.JSONEncoder):
-  def default(self, obj):
-    if isinstance(obj, FallacySearches):
-      return obj.to_dict()
-    if isinstance(obj, searcher.SearchResults):
-      return obj.to_dict()
-    # If the object is of any other type, use the default behavior
-    return json.JSONEncoder.default(self, obj)
-
-def _search_to_avoid_fallacies(inference:str)->list[FallacySearches]:
-  fallacy_searches:list[FallacySearches] = []
-  fallacy_explanations = _to_fallacy_explanations(inference)
-  
-  for fallacy, explanation in fallacy_explanations.items():
-    topic = f"""
-    ```
-    Given: `{inference}`,
-    The inference commits the fallacy of `{fallacy}`,
-    because: `{explanation}`
-    ```
-    """
-    search_results = searcher.search(topic, _MAX_ITER, utils.SearchType.fallacy_avoider)
-    fallacy_searches.append(FallacySearches(fallacy, explanation, search_results))
-
-  return fallacy_searches
-
-def find(inferences:list)->dict[str, list[FallacySearches]]:
-  inference_fallacies:dict[str, list[FallacySearches]] = {}
+def find(inferences:list)->dict[str, dict[str, str]]:
+  inference_fallacies:dict[str, dict[str, str]] = {}
   for inference in inferences:
     inference = f"Inference=Premises->Hypothesis: {inference}"
-    inference_fallacies[inference] = _search_to_avoid_fallacies(inference)
+    inference_fallacies[inference] = _to_fallacy_explanations(inference)
     return inference_fallacies
   return inference_fallacies
 
