@@ -12,7 +12,9 @@ from urllib3.exceptions import InsecureRequestWarning
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from wrapt_timeout_decorator import timeout
 
+_REQUEST_TIMTOUT = 60 # Web request timeout set to 60 seconds
 # Suppress only the InsecureRequestWarning
 urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -33,7 +35,7 @@ class CustomHttpAdapter(requests.adapters.HTTPAdapter):
             num_pools=connections, maxsize=maxsize,
             block=block, ssl_context=self.ssl_context)
 
-def get_legacy_session():
+def _get_legacy_session():
     ctx = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     ctx.options |= 0x4  # OP_LEGACY_SERVER_CONNECT
     session = requests.session()
@@ -83,16 +85,30 @@ def _bypass_javascript_blocker(url: str) -> str:
 
 def _is_valid_pdf(url:str)->bool:
   """Check if the URL points to a PDF file."""
+  response = None
   # Make a HEAD request to check the content type
   try:
-    response = requests.head(url, allow_redirects=True)
+    response = requests.head(url, allow_redirects=True, timeout=_REQUEST_TIMTOUT)
+  except requests.exceptions.Timeout:
+    logging.error("The request timed out: response = requests.head(%s)", url)
+    return False
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
     try:
-      response = get_legacy_session().head(url, allow_redirects=True)
+      response = _get_legacy_session().head(url, allow_redirects=True)
+    except requests.exceptions.Timeout:
+      logging.error("The request timed out: get_legacy_session().head(%s)", url)
+      return False
     except requests.exceptions.SSLError as e:
-      response = requests.get(url, allow_redirects=True, verify=False)
+      try:
+        response = requests.head(url, allow_redirects=True, verify=False, timeout=_REQUEST_TIMTOUT)
+      except requests.exceptions.Timeout:
+        logging.error("The request timed out: get_legacy_session().head(%s)", url)
+        return False
+  if not response:
+    logging.info("Failed to validate if the content type is PDF: %s", url)
+    return False
 
   content_type = response.headers.get('Content-Type', '')
   
@@ -102,16 +118,31 @@ def _is_valid_pdf(url:str)->bool:
   return False
 
 def _read_pdf(url:str)->str:
+  response = None
   # Make a GET request to download the PDF
   try:
-    response = requests.get(url, allow_redirects=True)
+    response = requests.get(url, allow_redirects=True, timeout=_REQUEST_TIMTOUT)
+  except requests.exceptions.Timeout:
+    logging.error("The request timed out: requests.get(%s)", url)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
     try:
-      response = get_legacy_session().get(url, allow_redirects=True)
+      response = _get_legacy_session().get(url, allow_redirects=True, timeout=_REQUEST_TIMTOUT)
+    except requests.exceptions.Timeout:
+      logging.error("The request timed out: get_legacy_session().get(%s)", url)
     except requests.exceptions.SSLError as e:
-      response = requests.get(url, allow_redirects=True, verify=False)
+      logging.info("Request PDF has SSL Error: %s", url)
+      try:
+        response = requests.get(url, allow_redirects=True, verify=False, timeout=_REQUEST_TIMTOUT)
+      except requests.exceptions.Timeout:
+        logging.error("The request timed out: requests.get(%s)", url)
+        return False
+
+  if not response:
+    logging.info("Failed to download the PDF: %s", url)
+    return ""
+
   response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   try:
     response.raise_for_status()  # Raise an exception for bad requests
@@ -154,16 +185,30 @@ def _is_valid_html(content):
   return True
 
 def _read_html(url):
+  response = None
   try:
-    response = requests.get(url, allow_redirects=True)
+    response = requests.get(url, allow_redirects=True, timeout=_REQUEST_TIMTOUT)
+  except requests.exceptions.Timeout:
+    logging.error("The request timed out: requests.get(%s)", url)
   except requests.exceptions.SSLError as e:
     logging.warning(f"Request PDF has SSL Error: {e}")
     # Make a request ignoring SSL certificate verification
     try:
-      response = get_legacy_session().get(url, allow_redirects=True)
+      response = _get_legacy_session().get(url, allow_redirects=True, timeout=_REQUEST_TIMTOUT)
+    except requests.exceptions.Timeout:
+      logging.error("The request timed out: get_legacy_session().get(%s)", url)
     except requests.exceptions.SSLError as e:
-      response = requests.get(url, allow_redirects=True, verify=False)
+      logging.error(f"Request PDF has SSL Error: {e}")
+      try:
+        response = requests.get(url, allow_redirects=True, verify=False, timeout=_REQUEST_TIMTOUT)
+      except requests.exceptions.Timeout:
+        logging.error("The request timed out: requests.get(%s)", url)
 
+  if not response:
+    logging.info("Failed to download the HTML: %s", url)
+    return ""
+
+  response.encoding = 'utf-8'  # Ensures response.text is treated as UTF-8
   raw_html = response.text
   if not _is_valid_html(response):
     logging.warning(f'Not a valid HTML document:{response}\n')
@@ -192,6 +237,8 @@ def _read_html(url):
   # Get the updated HTML with only title and body
   return " \n".join(results)
 
+# Timeout the web request if it takes more than 300 seconds.
+@timeout(300)
 def parse(url:str)->str:
   if _is_valid_pdf(url):
     return _read_pdf(url)

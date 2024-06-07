@@ -47,7 +47,12 @@ def _is_relevant(statement, search_result):
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(prompt)
+  try:
+    response = gpt.request(prompt)
+  except Exception as e:
+    logging.error(f"Error when requesting GPT, gpt.request({prompt}): {e}")
+    return False
+
   answer = ""
   try:
     answer = response.split("Answer")[-1]
@@ -213,12 +218,16 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   1. __
   2. __
   """
+  keywords = []
+  keywordSet = set()
   # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
-  response = gpt.request(prompt)
-  keywords = []
-  keywordSet = set()
+  try:
+    response = gpt.request(prompt)
+  except Exception as e:
+    logging.error(f"Error when requesting GPT, gpt.request({prompt}): {e}")
+    return keywords
 
   gpt_suggest = ""
   try:
@@ -244,8 +253,12 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
       keywords.append(parsed_keyword)
   return keywords
 
-def _fetch_web_content(link:str, search:str):
-  web_content = webparser.parse(link)
+def _fetch_web_content(link:str, search:str)->str:
+  try:
+    web_content = webparser.parse(link)
+  except Exception as e:
+    logging.info(f"Cannot fetch web content webparser.parse({link}): {e}")
+    return ""
   # If we cannot fetch the content from the link.
   if not web_content:
     return ""
@@ -260,7 +273,11 @@ def _optimize_search(search:str, keywords:list[str]):
   for start in range(1, _MAX_LINKS_PER_SEARCH, _MAX_LINKS_PER_QUERY):
     url = f"{config['SEARCH']['url']}?key={config['SEARCH']['api_key']}&cx={config['SEARCH']['cx']}&safe=active&q={search}&orTerms={' '.join(keywords)}&num={_MAX_LINKS_PER_QUERY}&start={start}"
 
-    response = requests.get(url, timeout=60)  # Timeout set to 60 seconds
+    try:
+      response = requests.get(url, timeout=60)  # Timeout set to 60 seconds
+    except requests.exceptions.Timeout:
+      logging.error("The request timed out: %s", url)
+      continue
     data = response.json()
     # If there is no response, we need to reduce the number of keywords.
     if 'items' not in data:

@@ -5,7 +5,7 @@ import anthropic
 import math
 import ratelimiter
 import utils
-import time
+from wrapt_timeout_decorator import timeout
 from typing import Callable
 from applog import logger as logging
 
@@ -256,6 +256,7 @@ basic_models = [
 ]
 basic_models_requester = requester(basic_models)
 
-
+# Timeout the gpt request if it takes more than 300 seconds.
+@timeout(300)
 def request(statement:str)->str:
   return basic_models_requester.request(statement)
