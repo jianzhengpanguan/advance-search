@@ -144,15 +144,9 @@ def _raw_text_to_logics(raw_text:str, provider_type:utils.ProviderType=utils.Pro
 def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
   logics:list[{dict[str,list[str]]}] = []
   # Find json part in ```json * ```.
-  # The json part is a list of dictionary {fallacy:explanation}.
-  json_part = re.findall(r"[\`{3}json].*[\`{3}]", raw_json, re.DOTALL)
-  if not json_part:
+  raw_logic = rephraser.best_effort_json(raw_json)
+  if not raw_logic:
     return logics
-  raw_logic = {}
-  for part in json_part:
-    if part:
-      parsed_part = part.split("```json")[-1].split("```")[0]
-      raw_logic = json.loads(parsed_part)
 
   # If no premises, hypothesis or inferences, skip it.
   for key in ["Premise", "Hypothesis","Inference"]:
@@ -170,12 +164,24 @@ def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
     logics.append({"premises": premises, "hypothesis": hypotheses})
   return logics
 
-def fetch_logics(statement:str):
+def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType.unknown, model:utils.ModelType = utils.ModelType.basic_model):
+  def request(request: str) -> str:
+    if provider == utils.ProviderType.unknown:
+      try:
+        return gpt.request(request)
+      except Exception as e:
+        logging.warning(f"LLM request failed, gpt.request({request}): {e}")
+        return ""
+    if provider == utils.ProviderType.openai:
+      return gpt.openai_request(request, model)
+    if provider == utils.ProviderType.anthropic:
+      return gpt.anthropic_request(request, model)
+
   logics:list[{dict[str,list[str]]}] = []
   chunks = gpt.divide_statement(statement)
   for current_chunk in chunks:
-    request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
-    raw_json = gpt.request(request)
+    query = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
+    raw_json = request(query)
     json_logics = None
     try:
       json_logics = _json_text_to_logics(raw_json)
@@ -187,16 +193,16 @@ def fetch_logics(statement:str):
       continue
     
     # If LLM does not support Json format, use the text format.
-    request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, current_chunk)
-    raw_text = gpt.request(request)
+    query = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, current_chunk)
+    raw_text = request(query)
     logics.extend(_raw_text_to_logics(raw_text))
   
   # Replace Ambiguous Terms.
   for i, logic in enumerate(logics):
     json_str = json.dumps(logic)
-    output = rephraser.replace_ambiguous_terms(json_str)
-    try:
-      logics[i] = json.loads(output.split("```json")[-1].split("```")[0])
-    except Exception as e:
-      logging.error(f"json loads failure: {e}")
+    rephrased_logic = rephraser.replace_ambiguous_terms(json_str)
+    json_logic = rephraser.best_effort_json(rephrased_logic)
+    if not json_logic:
+      continue
+    logics[i] = json_logic
   return logics

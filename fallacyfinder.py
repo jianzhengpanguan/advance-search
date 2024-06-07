@@ -2,6 +2,7 @@ import re
 import gpt
 import json
 import utils
+import rephraser
 from applog import logger as logging
 
 _JSON_OUTPUT = """
@@ -83,17 +84,15 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   response = gpt.openai_request(request, utils.ModelType.advance_model)
   # Find json part in ```json * ```.
   # The json part is a list of dictionary {fallacy:explanation}.
-  json_part = re.findall(r"[\`{3}json].*[\`{3}]", response, re.DOTALL)
-  if json_part:
-    for part in json_part:
-      if part:
-        parsed_part = part.split("```json")[-1].split("```")[0]
-        logging.info(f"parsed_part:{parsed_part} part:{part}")
-        for fallacy_explanation in json.loads(parsed_part):
-          for fallacy, explanation in fallacy_explanation.items():
-            fallacy_explanations[fallacy] = explanation
+  json_obj = rephraser.best_effort_json(response)
+  if json_obj:
+    for fallacy_explanation in json_obj:
+      for fallacy, explanation in fallacy_explanation.items():
+        fallacy_explanations[fallacy] = explanation
+    return fallacy_explanations
   
   # If LLM does not support Json format , use the text format.
+  fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, inference)
   response = gpt.openai_request(request, utils.ModelType.advance_model)
   fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)

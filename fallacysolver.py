@@ -3,6 +3,7 @@ import gpt
 import json
 import utils
 import searcher
+import rephraser
 from applog import logger as logging
 
 _MAX_ITER = 3
@@ -32,6 +33,7 @@ How could the hypothesis be modified to avoid committing the fallacy?
 <fix_instructions>
 Provide clear, step-by-step instructions for how to modify the inference to fix the fallacy and make the argument logically valid.
 Export the rephrased hypothesis and why rephrasing as the following JSON object.
+</fix_instructions>
 
 ```json
 [
@@ -45,7 +47,6 @@ Export the rephrased hypothesis and why rephrasing as the following JSON object.
   }
 ]
 ```
-</fix_instructions>
 """
 
 _PREMISE_PROMPT = """
@@ -76,6 +77,7 @@ Provide clear, step-by-step instructions for how to modify the inference to fix 
 Be specific about what premises to add, remove, or change. 
 Provide guidance on adding qualifiers or narrowing the scope of claims as appropriate to align premises with hypothesis and avoid hasty generalizations.
 Export the "rephrased"/"adding new premises" and why "adding new" or "rephrasing" premises as the following JSON object.
+</fix_instructions>
 
 ```json
 [
@@ -89,7 +91,6 @@ Export the "rephrased"/"adding new premises" and why "adding new" or "rephrasing
   }
 ]
 ```
-</fix_instructions>
 """
 def _suggest_search_reason(inference:str, fallacy:str, explanation:str)->dict[str, str]:
   topic_explanations:dict[str, str] = {}
@@ -98,21 +99,21 @@ def _suggest_search_reason(inference:str, fallacy:str, explanation:str)->dict[st
 
     # Find json part in ```json * ```.
     # The json part is a list of dictionary {fallacy:explanation}.
-    json_part = re.findall(r"[\`{3}json].*[\`{3}]", response, re.DOTALL)
-    if json_part:
-      for part in json_part:
-        if part:
-          parsed_part = part.split("```json")[-1].split("```")[0]
-          logging.info(f"parsed_part:{parsed_part} part:{part}")
-          topic, explanation = "", ""
-          for topic_explanation in json.loads(parsed_part):
-            if "premise" in topic_explanation:
-              topic = topic_explanation["premise"]
-            if "hypothesis" in topic_explanation:
-              topic = topic_explanation["hypothesis"]
-            if "why" in topic_explanation:
-              explanation = topic_explanation["why"]
-            topic_explanations[topic] = explanation
+    json_obj = rephraser.best_effort_json(response)
+    if not json_obj:
+      continue
+
+    topic, explanation = "", ""
+    for topic_explanation in json_obj:
+      if "premise" in topic_explanation:
+        topic = topic_explanation["premise"]
+      if "hypothesis" in topic_explanation:
+        topic = topic_explanation["hypothesis"]
+      if "why" in topic_explanation:
+        explanation = topic_explanation["why"]
+      topic_explanations[topic] = explanation
+      
+
   return topic_explanations
 
 

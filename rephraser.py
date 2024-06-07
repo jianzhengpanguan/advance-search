@@ -1,5 +1,8 @@
 import gpt
 import utils
+import re
+import json
+from applog import logger as logging
 
 # Use context to replace ambiguous terms in an inference.
 # An inference can be ambiguous, when:
@@ -37,6 +40,43 @@ def replace_ambiguous_terms(inference: str)-> str:
   """
   # Currently only openai advance model and anthropic small and advance model are supported.
   return gpt.anthropic_request(prompt, utils.ModelType.small_model)
+
+def _to_json_text(text:str)->str:
+  json_part = re.findall(r"[\`{3}json].*[\`{3}]", text, re.DOTALL)
+  if not json_part or not json_part[0]:
+    logging.warning(f"Does not contain json: {text}")
+    return ""
+  return json_part[0].split("```json")[-1].split("```")[0]
+  
+
+def best_effort_json(text:str):
+  json_text = _to_json_text(text)
+  if not json_text:
+    return None
+  json_obj = None
+  try:
+    json_obj = json.loads(json_text)
+  except json.JSONDecodeError as e:
+    logging.error(f"Failed to parse json: {e}\n text: {text}")
+    prompt = f"""
+    Fix the json format file:
+    ```json
+    {json_text}
+    ```
+    Export in the json format like:
+    ```json
+    ...
+    ```
+    """
+    # Currently only openai advance model and anthropic small and advance model are supported.
+    best_effort_text = gpt.anthropic_request(prompt, utils.ModelType.small_model)
+    best_effort_json_text = _to_json_text(best_effort_text)
+    try:
+      json_obj = json.loads(best_effort_json_text)
+    except json.JSONDecodeError as e:
+      logging.error(f"Failed to parse json: {e}\n best effort text: {best_effort_text}")
+      return None
+  return json_obj
 
 def stonealone_question(search: str)-> str:
   prompt = f"""
