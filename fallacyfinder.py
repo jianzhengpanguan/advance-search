@@ -9,8 +9,14 @@ _JSON_OUTPUT = """
 Response in the json format: 
 ```json
 [
-  {"1.fallacy": "1.explanation"},
-  {"2.fallacy": "2.explanation"},
+  {
+    "fallacy": ...,
+    "explanation": ...
+  },
+  {
+    "fallacy": ...,
+    "explanation": ...
+  },
 ]
 ```
 """
@@ -30,7 +36,9 @@ Explanation:
 _PROMPT_TEMPLATE = """
 Read the inference, identify all the fallacies.
 For each fallacy, explain why the inference is that fallacy.
+
 %s
+
 
 The fallacies should be one or few of the following:
 ```
@@ -59,8 +67,12 @@ The fallacies should be one or few of the following:
   "Non Sequitur": "Non Sequitur is a logical fallacy where the conclusion does not logically follow from the premises. In other words, there is a disconnect between the premises and the conclusion, making the argument invalid. This fallacy occurs when the conclusion is not a natural or logical outcome of the arguments presented, often resulting in a statement or conclusion that seems out of place or irrelevant to the preceding discussion. Non sequiturs can arise from faulty reasoning, misplaced connections, or irrelevant information being introduced into the argument.",
 }
 ```
-Use instruct to analyze inference: 
+Use instruct to analyze inference:
+<inference>
+```
 %s
+```
+</inference>
 """
 _MAX_NUM_PATTERNS = 100
 
@@ -87,7 +99,10 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   json_obj = rephraser.best_effort_json(response)
   if json_obj:
     for fallacy_explanation in json_obj:
-      for fallacy, explanation in fallacy_explanation.items():
+      print(fallacy_explanation)
+      if "fallacy" in fallacy_explanation and "explanation" in fallacy_explanation:
+        fallacy = fallacy_explanation["fallacy"]
+        explanation = fallacy_explanation["explanation"]
         fallacy_explanations[fallacy] = explanation
     return fallacy_explanations
   
@@ -107,6 +122,5 @@ def find(inferences:list)->dict[str, dict[str, str]]:
   for inference in inferences:
     inference = f"Inference=Premises->Hypothesis: {inference}"
     inference_fallacies[inference] = _to_fallacy_explanations(inference)
-    return inference_fallacies
   return inference_fallacies
 
