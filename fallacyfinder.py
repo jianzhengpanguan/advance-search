@@ -99,7 +99,6 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   json_obj = rephraser.best_effort_json(response)
   if json_obj:
     for fallacy_explanation in json_obj:
-      print(fallacy_explanation)
       if "fallacy" in fallacy_explanation and "explanation" in fallacy_explanation:
         fallacy = fallacy_explanation["fallacy"]
         explanation = fallacy_explanation["explanation"]
