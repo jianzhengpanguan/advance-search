@@ -11,10 +11,10 @@ import utils
 import json
 from applog import logger as logging
 
-_MAX_WORKERS = 6 # The maximum number of requests allowed by most LLM api.
+_MAX_WORKERS = 12 # The maximum number of requests allowed by most LLM api.
 _NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
-_MAX_LINKS_PER_SEARCH = 100
+_MAX_LINKS_PER_SEARCH = 20
 _MAX_LINKS_PER_QUERY = 10
 _MAX_ALLOWED_SEARCH_RESULT_SIZE = 100000
 
