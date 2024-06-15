@@ -34,12 +34,14 @@ Explanation:
 ```
 """
 _PROMPT_TEMPLATE = """
-Read the inference, identify all the fallacies.
-For each fallacy, explain why the inference is that fallacy.
-
+Read the inference:
+<inference>
+```
 %s
+```
+</inference>
 
-
+Identify all (at most 3) fallacies in the inference.
 The fallacies should be one or few of the following:
 ```
 {
@@ -67,12 +69,9 @@ The fallacies should be one or few of the following:
   "Non Sequitur": "Non Sequitur is a logical fallacy where the conclusion does not logically follow from the premises. In other words, there is a disconnect between the premises and the conclusion, making the argument invalid. This fallacy occurs when the conclusion is not a natural or logical outcome of the arguments presented, often resulting in a statement or conclusion that seems out of place or irrelevant to the preceding discussion. Non sequiturs can arise from faulty reasoning, misplaced connections, or irrelevant information being introduced into the argument.",
 }
 ```
-Use instruct to analyze inference:
-<inference>
-```
+
+For each fallacy, explain why the inference is a fallacy (must considering the context of the inference).
 %s
-```
-</inference>
 """
 _MAX_NUM_PATTERNS = 100
 
@@ -92,7 +91,7 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
 
 def _to_fallacy_explanations(inference:str)->dict[str, str]:
   fallacy_explanations = {}
-  request = _PROMPT_TEMPLATE % (_JSON_OUTPUT, inference)
+  request = _PROMPT_TEMPLATE % (inference, _JSON_OUTPUT)
   response = gpt.openai_request(request, utils.ModelType.advance_model)
   # Find json part in ```json * ```.
   # The json part is a list of dictionary {fallacy:explanation}.
@@ -107,7 +106,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   
   # If LLM does not support Json format , use the text format.
   fallacy_explanations = {}
-  request = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, inference)
+  request = _PROMPT_TEMPLATE % (inference, _TEXT_OUTPUT)
   response = gpt.openai_request(request, utils.ModelType.advance_model)
   fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)
   explanations = _fetch_patterns(prefix="Explanation", raw_text=response)
