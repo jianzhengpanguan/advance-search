@@ -77,7 +77,6 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
       raise RatelimitByProviderError(str(response), response.status_code)
     if not response or not response.json() or not response.json().get('choices'):
       continue
-    logging.info(f"openai response: {response.json().get('choices')}")
     results.append(response.json().get('choices')[0].get('message').get('content'))
   return " \n".join(results)
 

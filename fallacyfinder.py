@@ -1,8 +1,8 @@
 import re
 import gpt
-import json
 import utils
 import rephraser
+import retriever
 from applog import logger as logging
 
 _JSON_OUTPUT = """
@@ -93,7 +93,10 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
 def _to_fallacy_explanations(inference:str)->dict[str, str]:
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (inference, _JSON_OUTPUT)
-  response = gpt.openai_request(request, utils.ModelType.advance_model)
+  response = retriever.retrieve(request, request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  # TODO: Fix the divide statement broken the prompt. We should allow multiple round of messages sent to the LLM.
+  # response = gpt.openai_request(request, utils.ModelType.advance_model)
+  # gpt.openai_request(request, utils.ModelType.advance_model)
   # Find json part in ```json * ```.
   # The json part is a list of dictionary {fallacy:explanation}.
   json_obj = rephraser.best_effort_json(response)
@@ -108,7 +111,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   # If LLM does not support Json format , use the text format.
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (inference, _TEXT_OUTPUT)
-  response = gpt.openai_request(request, utils.ModelType.advance_model)
+  response = retriever.retrieve(request, request, utils.ProviderType.openai, utils.ModelType.advance_model)
   fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)
   explanations = _fetch_patterns(prefix="Explanation", raw_text=response)
   num_fallacies = min(len(fallacies), len(explanations))
