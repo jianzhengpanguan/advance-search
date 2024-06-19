@@ -41,7 +41,7 @@ Read the inference:
 ```
 </inference>
 
-Identify all (at most 3) fallacies in the inference.
+Identify the fallacies in the inference.
 The fallacies should be one or few of the following:
 ```
 {
@@ -70,7 +70,8 @@ The fallacies should be one or few of the following:
 }
 ```
 
-For each fallacy, explain why the inference is a fallacy (must considering the context of the inference).
+Only return the `top 3` severity fallacies.
+For each fallacy, explain why the inference is a fallacy with details.
 %s
 """
 _MAX_NUM_PATTERNS = 100

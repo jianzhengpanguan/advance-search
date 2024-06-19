@@ -6,7 +6,7 @@ import searcher
 import rephraser
 from applog import logger as logging
 
-_MAX_ITER = 3
+_MAX_ITER = 1
 
 _HYPOTHESIS_PROMPT = """
 Here is an inference:
