@@ -8,6 +8,8 @@ import utils
 from wrapt_timeout_decorator import timeout
 from typing import Callable
 from applog import logger as logging
+from typing import List
+import retriever
 
 _OVERLAP = 40
 _MAX_TOKENS = 4000
@@ -54,31 +56,27 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
       'Authorization': f"Bearer {config['OPENAI']['api_key']}",
       'Content-Type': 'application/json'
   }
-  statements = divide_statement(statement)
-  results = []
-  for statement in statements:
-    # Find how many tokens will be used.
-    num_tokens = _num_tokens_from_messages(statement)
-    try:
-      logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
-    except:
-      pass
+  # Find how many tokens will be used.
+  num_tokens = _num_tokens_from_messages(statement)
+  try:
+    logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+  except:
+    pass
 
-    # Build the request, including the question or statement you want to ask.
-    request = {
-        'model': model,
-        'temperature': _TEMPERATURE,
-        'messages': [{'role': 'user', 'content': statement}],
-        'max_tokens': _MAX_TOKENS - num_tokens
-    }
-    response = requests.post(url, headers=headers, json=request)
-    logging.info(f"openai response: {response.json()}")
-    if response.status_code == _RATE_LIMIT_STATUS_CODE:
-      raise RatelimitByProviderError(str(response), response.status_code)
-    if not response or not response.json() or not response.json().get('choices'):
-      continue
-    results.append(response.json().get('choices')[0].get('message').get('content'))
-  return " \n".join(results)
+  # Build the request, including the question or statement you want to ask.
+  request = {
+      'model': model,
+      'temperature': _TEMPERATURE,
+      'messages': [{'role': 'user', 'content': statement}],
+      'max_tokens': _MAX_TOKENS - num_tokens
+  }
+  response = requests.post(url, headers=headers, json=request)
+  logging.info(f"openai response: {response.json()}")
+  if response.status_code == _RATE_LIMIT_STATUS_CODE:
+    raise RatelimitByProviderError(str(response), response.status_code)
+  if not response or not response.json() or not response.json().get('choices'):
+    return _GPT_NO_ANSWER
+  return response.json().get('choices')[0].get('message').get('content')
 
 def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   # Set model.
@@ -91,41 +89,37 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   client = anthropic.Anthropic(
     api_key=config['ANTHROPIC']['api_key'],
   )
-  statements = divide_statement(statement)
-  results = []
-  for statement in statements:
-    # Find how many tokens will be used.
-    num_tokens = _num_tokens_from_messages(statement)
-    try:
-      logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
-    except:
-      pass
+  # Find how many tokens will be used.
+  num_tokens = _num_tokens_from_messages(statement)
+  try:
+    logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+  except:
+    pass
 
-    # Build the message, including the question or statement you want to ask.
-    messages = [{
-      "role": "user", 
-      "content": [
-        {
-          "type": "text",
-          "text": statement
-        }
-      ]
-    }]
-    try:
-      response = client.messages.create(
-        model=model,
-        max_tokens=_MAX_TOKENS - num_tokens,
-        temperature=_TEMPERATURE,
-        system="",
-        messages=messages
-      )
-    except anthropic.RateLimitError as e:
-      raise RatelimitByProviderError(str(e), response.status_code)
-    logging.info(f"anthropic response: {response.content}")
-    if not len(response.content):
-      continue
-    results.append(response.content[0].text)
-  return " \n".join(results)
+  # Build the message, including the question or statement you want to ask.
+  messages = [{
+    "role": "user", 
+    "content": [
+      {
+        "type": "text",
+        "text": statement
+      }
+    ]
+  }]
+  try:
+    response = client.messages.create(
+      model=model,
+      max_tokens=_MAX_TOKENS - num_tokens,
+      temperature=_TEMPERATURE,
+      system="",
+      messages=messages
+    )
+  except anthropic.RateLimitError as e:
+    raise RatelimitByProviderError(str(e), response.status_code)
+  logging.info(f"anthropic response: {response.content}")
+  if not len(response.content):
+    return _GPT_NO_ANSWER
+  return response.content[0].text
 
 def deepseek_request(statement:str, _:utils.ModelType)->str:
   # Set model.
@@ -137,39 +131,63 @@ def deepseek_request(statement:str, _:utils.ModelType)->str:
       'Authorization': f"Bearer {config['DEEPSEEK']['api_key']}",
       'Content-Type': 'application/json'
   }
-  statements = divide_statement(statement)
-  results = []
-  for statement in statements:
-    # Find how many tokens will be used.
-    num_tokens = _num_tokens_from_messages(statement)
-    try:
-      logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
-    except:
-      pass
+  # Find how many tokens will be used.
+  num_tokens = _num_tokens_from_messages(statement)
+  try:
+    logging.info(f"text: {statement} \n, num_tokens_from_messages: {num_tokens}")
+  except:
+    pass
 
-    # Build the request, including the question or statement you want to ask.
-    request = {
-        'model': model,
-        'temperature': _TEMPERATURE,
-        "messages": [{"role": "user", "content": statement}],
-        'max_tokens': _MAX_TOKENS - num_tokens
-    }
-    response = requests.post(url, headers=headers, json=request)
-    if response.status_code == _RATE_LIMIT_STATUS_CODE or response.status_code == _SERVER_OVERLOADED_STATUS_CODE:
-      raise RatelimitByProviderError(str(response), response.status_code)
-    if not response or not response.json() or not response.json().get('choices'):
-      continue
-    logging.info(f"Deepseek response: {response.json().get('choices')}")
-    results.append(response.json().get('choices')[0].get('message').get('content'))
-  return " \n".join(results)
+  # Build the request, including the question or statement you want to ask.
+  request = {
+      'model': model,
+      'temperature': _TEMPERATURE,
+      "messages": [{"role": "user", "content": statement}],
+      'max_tokens': _MAX_TOKENS - num_tokens
+  }
+  response = requests.post(url, headers=headers, json=request)
+  if response.status_code == _RATE_LIMIT_STATUS_CODE or response.status_code == _SERVER_OVERLOADED_STATUS_CODE:
+    raise RatelimitByProviderError(str(response), response.status_code)
+  if not response or not response.json() or not response.json().get('choices'):
+    return _GPT_NO_ANSWER
+  logging.info(f"Deepseek response: {response.json().get('choices')}")
+  return response.json().get('choices')[0].get('message').get('content')
 
 # Divide the statement into chunks make sure we don't exceed the maximum number of tokens in one request.
-def divide_statement(statement:str)->list[str]:
+def divide_statement(statement:str, prompt_tokent_count:int)->List[str]:
   """Divide the statement into chunks."""
+  if prompt_tokent_count >= _MAX_TOKENS:
+    raise ValueError(f"Prompt tokent_count {prompt_tokent_count} exceeds the maximum allowed tokent count of {_MAX_TOKENS} tokens.")
   num_tokens = _num_tokens_from_messages(statement)
-  num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 4))
-  bucket_length = math.ceil(len(statement) / num_buckets)
-  return [statement[i:i+bucket_length+_OVERLAP] for i in range(0, len(statement), bucket_length)]
+  # For a balanced request/response, the tokens should be evenly distributed between the request and the response.
+  # The request tokens = tokens of prompt + tokens of the statement chunk.
+  num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 2 - prompt_tokent_count))
+  bucket_tokent_count = math.ceil(len(statement) / num_buckets)
+  return [statement[i:i+bucket_tokent_count+_OVERLAP] for i in range(0, len(statement), bucket_tokent_count)]
+
+# When the combined token count of a statement and prompt exceeds _MAX_TOKENS,
+# the statement needs to be broken down into segments.
+def divide_request(statement: str, model_type:utils.ModelType, query_build_func: Callable[[str], str], request_func: Callable[[str, utils.ModelType], str]) -> List[str]:
+  # Check the prompt tokens count without any statement.
+  prompt_tokent_count = _num_tokens_from_messages(query_build_func(""))
+
+  # If the prompt is excessively long, it results in an excessive number of small segments.
+  # For instance, with a prompt of 3999 tokens and a _MAX_TOKENS limit of 4000, each segment of the statement can only be 1 token long.
+  # This would mean generating 1000 requests for a 1000-token statement, which is costly and inefficient.
+  # In such situations, it's better to directly use the openai retriever assist.
+  #
+  # For a balanced request/response, the tokens should be evenly distributed between the request and the response.
+  # For the request tokens, the tokens should be equally split between the prompt and the statement.
+  # So the max prompt tokens should be 1/4 of the max tokens.
+  if prompt_tokent_count >= _MAX_TOKENS / 4:
+    return [retriever.retrieve(query_build_func("<statemet>\n...\n</statement>"), f"<statemet>\n{statement}\n</statement>", utils.ProviderType.openai, model_type)]
+
+  results = []
+  chunks = divide_statement(statement, prompt_tokent_count)
+  for current_chunk in chunks:
+    query = query_build_func(current_chunk)
+    results.append(request_func(query, model_type))
+  return results
 
 class model:
   provider_type: utils.ProviderType
@@ -198,7 +216,7 @@ class model:
     return self.request_function(statement, self.model_type)
   
 class requester:
-  models: list[model]
+  models: List[model]
 
   def __init__(self, models) -> None:
     self.models = models
@@ -209,9 +227,10 @@ class requester:
         return False
     return True
 
-  def request(self, statement: str)->str:
+  def request(self, statement: str, query_build_func: Callable[[str], str])->List[str]:
     # Find how many tokens will be used.
-    num_tokens = _num_tokens_from_messages(statement)
+    prompt = query_build_func("")
+    num_tokens = _num_tokens_from_messages(f"{statement} {prompt}")
     for _ in range(_MAX_RETRIES):
       if self._is_all_models_rate_limit_by_provider():
         raise RatelimitByProviderError("All providers and models are rate limited.", _RATE_LIMIT_STATUS_CODE)
@@ -221,8 +240,8 @@ class requester:
         if model.isRateLimitedByProvider:
           continue
         try:
-          response = model.request(statement, model.model_type)
-        except RatelimitByProviderError as e:
+          response = divide_request(statement, model.model_type, query_build_func, model.request)
+        except RatelimitByProviderError:
           logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} is rate limited by provider, moved to the next provider and model")
           model.isRateLimitedByProvider = True
           continue
@@ -231,7 +250,7 @@ class requester:
           logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} cannot answer the question, moved to the next provider and model")
           continue
         if response == None:
-          logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} cannot answer the question, moved to the next provider and model")
+          logging.warning(f"Provider:{model.provider_type} Model:{model.model_type} does not answer the question, moved to the next provider and model")
           continue
         return response
 
@@ -258,5 +277,5 @@ basic_models_requester = requester(basic_models)
 
 # Timeout the gpt request if it takes more than 300 seconds.
 @timeout(300)
-def request(statement:str)->str:
-  return basic_models_requester.request(statement)
+def request(statement:str, query_build_func: Callable[[str], str])->List[str]:
+  return basic_models_requester.request(statement, query_build_func)

@@ -4,6 +4,7 @@ import rephraser
 import utils
 import json
 from applog import logger as logging
+from typing import Callable, List, Dict
 
 _JSON_OUTPUT = """
 Response in the json format:
@@ -79,7 +80,7 @@ _MAX_NUM_PATTERNS = 100
 
 # Fetch the patterns in premise, hypothesis.
 # Example raw text: r"Premise:\s*\n(1\..*?)\n(2\..*?)\n".
-def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
+def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> List[str]:
   patterns = []
   pattern = prefix+r":\s*\n"
   for i in range(1, max_iter):
@@ -91,8 +92,8 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
     patterns.append(matches.group(i).strip())
   return patterns
 
-def _raw_text_to_logics(raw_text:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model)->list[{dict[str,list[str]]}]:
-  logics:list[{dict[str,list[str]]}] = []
+def _raw_text_to_logics(raw_text:str, provider_type:utils.ProviderType=utils.ProviderType.openai, model_type:utils.ModelType=utils.ModelType.advance_model)->List[Dict[str,List[str]]]:
+  logics:List[Dict[str,List[str]]] = []
   raw_logic = {
     "Premise": _fetch_patterns(prefix="Premise", raw_text=raw_text),
     "Hypothesis": _fetch_patterns(prefix="Hypothesis", raw_text=raw_text),
@@ -141,8 +142,8 @@ def _raw_text_to_logics(raw_text:str, provider_type:utils.ProviderType=utils.Pro
     logics.append({"premises": premises, "hypothesis": hypotheses})
   return logics
 
-def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
-  logics:list[{dict[str,list[str]]}] = []
+def _json_text_to_logics(raw_json:str)->List[Dict[str,List[str]]]:
+  logics:List[Dict[str,List[str]]] = []
   # Find json part in ```json * ```.
   raw_logic = rephraser.best_effort_json(raw_json)
   if not raw_logic:
@@ -165,23 +166,28 @@ def _json_text_to_logics(raw_json:str)->list[{dict[str,list[str]]}]:
   return logics
 
 def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType.unknown, model:utils.ModelType = utils.ModelType.basic_model):
-  def request(request: str) -> str:
+  def request(statement: str, query_build_func: Callable[[str], str]) -> List[str]:
     if provider == utils.ProviderType.unknown:
       try:
-        return gpt.request(request)
+        return gpt.request(statement, query_build_func)
       except Exception as e:
-        logging.warning(f"LLM request failed, gpt.request({request}): {e}")
+        prompt = query_build_func("")
+        logging.warning(f"LLM request failed, gpt.request({statement} {prompt}): {e}")
         return ""
     if provider == utils.ProviderType.openai:
-      return gpt.openai_request(request, model)
+      return gpt.divide_request(statement, model, query_build_func, gpt.openai_request)
     if provider == utils.ProviderType.anthropic:
-      return gpt.anthropic_request(request, model)
+      return gpt.divide_request(statement, model, query_build_func, gpt.anthropic_request)
 
-  logics:list[{dict[str,list[str]]}] = []
-  chunks = gpt.divide_statement(statement)
-  for current_chunk in chunks:
-    query = _PROMPT_TEMPLATE % (_JSON_OUTPUT, current_chunk)
-    raw_json = request(query)
+
+  logics:List[Dict[str,List[str]]] = []
+  def json_query_build_func(chunk: str) -> str:
+    return _PROMPT_TEMPLATE % (_JSON_OUTPUT, chunk)
+  def text_query_build_func(chunk: str) -> str:
+    return _PROMPT_TEMPLATE % (_TEXT_OUTPUT, chunk)
+
+  raw_jsons = request(statement, json_query_build_func)
+  for raw_json in raw_jsons:
     json_logics = None
     try:
       json_logics = _json_text_to_logics(raw_json)
@@ -190,11 +196,10 @@ def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType
     # If LLM support Json format, add it into logics.
     if json_logics:
       logics.extend(json_logics)
-      continue
-    
-    # If LLM does not support Json format, use the text format.
-    query = _PROMPT_TEMPLATE % (_TEXT_OUTPUT, current_chunk)
-    raw_text = request(query)
+  
+  # If LLM does not support Json format, use the text format.
+  if not logics:
+    raw_text = request(statement, text_query_build_func)
     logics.extend(_raw_text_to_logics(raw_text))
   
   # Replace Ambiguous Terms.
