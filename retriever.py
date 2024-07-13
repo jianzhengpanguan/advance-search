@@ -113,6 +113,7 @@ def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils
   if model_type == utils.ModelType.advance_model:
     model = config['OPENAI']['advance_model']
 
+  assistant = None
   try:
     # Add the file to the assistant
     assistant = client.beta.assistants.create(
@@ -146,7 +147,11 @@ def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils
     logging.info(thread_messages.data[-1].content[-1].text.value)
     return thread_messages.data[-1].content[-1].text.value
 
+
   finally:
+    # If no assistant defined, skip.
+    if assistant == None:
+      return
     # Detaching the file from the assistant removes the file from the retrieval index and means you will no longer be charged for the storage of the indexed file.
     client.beta.assistants.files.delete(
       assistant_id=assistant.id,

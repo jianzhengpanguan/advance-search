@@ -156,9 +156,11 @@ def deepseek_request(statement:str, _:utils.ModelType)->str:
 # Divide the statement into chunks make sure we don't exceed the maximum number of tokens in one request.
 def divide_statement(statement:str, prompt_tokent_count:int)->List[str]:
   """Divide the statement into chunks."""
-  if prompt_tokent_count >= _MAX_TOKENS:
-    raise ValueError(f"Prompt tokent_count {prompt_tokent_count} exceeds the maximum allowed tokent count of {_MAX_TOKENS} tokens.")
+  if statement == "":
+    return [""]
   num_tokens = _num_tokens_from_messages(statement)
+  if prompt_tokent_count >= _MAX_TOKENS / 2:
+    raise ValueError(f"Prompt tokent_count {prompt_tokent_count} exceeds the maximum allowed tokent count of {_MAX_TOKENS} tokens.")
   # For a balanced request/response, the tokens should be evenly distributed between the request and the response.
   # The request tokens = tokens of prompt + tokens of the statement chunk.
   num_buckets = math.ceil(num_tokens / (_MAX_TOKENS / 2 - prompt_tokent_count))

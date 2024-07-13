@@ -57,7 +57,7 @@ def best_effort_json(text:str):
   try:
     json_obj = json.loads(json_text)
   except json.JSONDecodeError as e:
-    logging.error(f"Failed to parse json: {e}\n text: {text}")
+    logging.warning(f"Failed to parse json: {e}\n text: {text}")
     prompt = f"""
     Fix the json format file:
     ```json
