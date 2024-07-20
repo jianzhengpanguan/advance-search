@@ -10,8 +10,8 @@ import utils
 import signal
 import sys
 import chromadb
-from sentence_transformers import SentenceTransformer
 from applog import logger as logging
+from sentence_transformers import SentenceTransformer
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
@@ -54,6 +54,11 @@ def _hash_string_to_uuid(input_string):
   return uuid.UUID(bytes=hash_bytes[:16])
 
 def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.ProviderType.unknown, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
+  if not knowledge:
+    logging.warning(f"Knowledge is empty: question: {question}, knowledge: {knowledge}")
+    return ""
+    
+
   # Generate a unique UUID for the filename
   filename = f"data/knowledge/{str(_hash_string_to_uuid(knowledge))}.txt"
 
@@ -108,6 +113,7 @@ def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils
     file=open(filename, "rb"),
     purpose='assistants'
   )
+
   # By default, use basic model for faster response and save money.
   model = config['OPENAI']['basic_model']
   if model_type == utils.ModelType.advance_model:
@@ -117,48 +123,47 @@ def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils
   try:
     # Add the file to the assistant
     assistant = client.beta.assistants.create(
-      instructions=f"You are a knowledge retrival expert. Use the upload doc to best respond to user's query: {question}",
+      instructions="You are a knowledge retrival expert.",
       model=model, 
-      tools=[{"type": "retrieval"}],
-      file_ids=[file.id]
+      tools=[{"type": "file_search"}],
     )
-    thread = client.beta.threads.create()
-    run = client.beta.threads.runs.create(
+    thread = client.beta.threads.create(
+      messages=[
+        {
+          "role": "user",
+          "content": f"Use the upload doc to best respond to user's query: {question}",
+          # Attach the new file to the message.
+          "attachments": [
+            { "file_id": file.id, "tools": [{"type": "file_search"}] }
+          ],
+        }
+      ]
+    )
+    # Create and poll ensure we received a response from the assistant.
+    # Either failure or completion.
+    run = client.beta.threads.runs.create_and_poll(
       thread_id=thread.id,
       assistant_id=assistant.id
     )
-    for _ in range(_MAX_RETRIES):
-      retrieved = client.beta.threads.runs.retrieve(
-        thread_id=thread.id,
-        run_id=run.id
-      )
-      if retrieved.status == "failed":
-        return ""
-      if retrieved.status == "completed":
-        break
-      # Sleep 30 seconds until retrieve run complete.
-      time.sleep(30)      
-    if retrieved.status != "completed":
-      return ""
-
-    thread_messages = client.beta.threads.messages.list(thread.id)
+    thread_messages = client.beta.threads.messages.list(thread_id=thread.id, run_id=run.id)
     if not thread_messages.data or not thread_messages.data[-1] or not thread_messages.data[-1].content[-1] or not thread_messages.data[-1].content[-1].text:
+      logging.error(f"The retrieving returns no data, openai_retrieve({question} {filename})")
       return ""
     logging.info(thread_messages.data[-1].content[-1].text.value)
     return thread_messages.data[-1].content[-1].text.value
 
+  except Exception as e:
+    logging.error(f"Error when retrieving, openai_retrieve({question} {filename}): {e}")
+    return ""
 
   finally:
     # If no assistant defined, skip.
     if assistant == None:
       return
-    # Detaching the file from the assistant removes the file from the retrieval index and means you will no longer be charged for the storage of the indexed file.
-    client.beta.assistants.files.delete(
-      assistant_id=assistant.id,
-      file_id=file.id
-    )
-    logging.info(f"Deleted file {file.id} from assistant")
-    # Delete the assistant because we will be charged for the assitant.
+    # Removes the file.
+    client.files.delete(file.id)
+    logging.info(f"Deleted file {file.id}")
+    # Delete the assistant.
     client.beta.assistants.delete(assistant.id)
     logging.info(f"Deleted assistant {assistant.id}")
 

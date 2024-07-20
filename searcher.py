@@ -102,7 +102,7 @@ def _summarize(statement:str, search_result:str)->List[str]:
   except IndexError:
     logging.error(f"Cannot find 'Summary' in response: {response}")
   except AttributeError:
-    logging.error(f"Response is None type: {response}")
+    logging.error(f"Response is None type. prompt: {prompt}, search_result: {search_result}")
   return re.findall(r'\d+\.\s+(.*)', answer)
 
 
