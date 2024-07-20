@@ -86,7 +86,11 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> List[str]:
   for i in range(1, max_iter):
     pattern += f"({i}"+r"\..*?)\n"
     # Find all matched content.
-    matches = re.search(pattern, raw_text, re.DOTALL)
+    try:
+      matches = re.search(pattern, raw_text, re.DOTALL)
+    except TypeError as e:
+      logging.error(f"search({pattern}, {raw_text}): {e}")
+      continue
     if matches == None:
       return patterns
     patterns.append(matches.group(i).strip())
@@ -194,12 +198,14 @@ def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType
     except Exception as e:
       logging.warning(f"LLM does not support Json format: {e}")
     # If LLM support Json format, add it into logics.
-    if json_logics:
+    if not json_logics:
+      logging.warning(f"Json Logics is none: {raw_json}")
+    else:
       logics.extend(json_logics)
   
   # If LLM does not support Json format, use the text format.
   if not logics:
-    raw_text = request(statement, text_query_build_func)
+    raw_text:str = "\n".joins(request(statement, text_query_build_func))
     logics.extend(_raw_text_to_logics(raw_text))
   
   # Replace Ambiguous Terms.
