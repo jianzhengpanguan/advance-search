@@ -39,13 +39,13 @@ def evaluate(text_need_evaluated:str, search_results:str)->str:
 
     <Sources>
       <Supporting>
-        1.[Supporting quote/fact](source link)
-        2.[Supporting quote/fact](source link)
+        1.[Supporting quote/fact](https://...)
+        2.[Supporting quote/fact](https://...)
         ...
       </Supporting>
       <Refuting>
-        1.[Refuting quote/fact](source link)
-        2.[Refuting quote/fact](source link)
+        1.[Refuting quote/fact](https://...)
+        2.[Refuting quote/fact](https://...)
         ...
       </Refuting>
     </Sources>

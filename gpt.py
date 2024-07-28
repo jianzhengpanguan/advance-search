@@ -68,7 +68,6 @@ def openai_request(statement:str, model_type:utils.ModelType)->str:
       'model': model,
       'temperature': _TEMPERATURE,
       'messages': [{'role': 'user', 'content': statement}],
-      'max_tokens': _MAX_TOKENS - num_tokens
   }
   response = requests.post(url, headers=headers, json=request)
   logging.info(f"openai response: {response.json()}")
@@ -109,7 +108,6 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   try:
     response = client.messages.create(
       model=model,
-      max_tokens=_MAX_TOKENS - num_tokens,
       temperature=_TEMPERATURE,
       system="",
       messages=messages
@@ -143,7 +141,6 @@ def deepseek_request(statement:str, _:utils.ModelType)->str:
       'model': model,
       'temperature': _TEMPERATURE,
       "messages": [{"role": "user", "content": statement}],
-      'max_tokens': _MAX_TOKENS - num_tokens
   }
   response = requests.post(url, headers=headers, json=request)
   if response.status_code == _RATE_LIMIT_STATUS_CODE or response.status_code == _SERVER_OVERLOADED_STATUS_CODE:

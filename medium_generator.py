@@ -8,7 +8,7 @@ _MAX_ITER = 3
 
 def main():
     parser = argparse.ArgumentParser(description='Process the flags.')
-    parser.add_argument('-folder', '--folder_path', type=str, default='./data/5. Taylor Swift relationship with NFL player Travis Kelce is part of a Democratic plot to sway the upcoming election/2', help='Folder path')
+    parser.add_argument('-folder', '--folder_path', type=str, default='./data/6. Trump shooter motive/1', help='Folder path')
     args = parser.parse_args()
     folder_path = args.folder_path
     raw_file_path = f'{folder_path}/raw.txt'
@@ -16,7 +16,9 @@ def main():
     evaluation_file_path = f'{folder_path}/evaluation.txt'
     fallacy_file_path = f'{folder_path}/fallacy.txt'
     fallacy_evaluation_file_path = f'{folder_path}/fallacy_evaluation.txt'
-    meduim_file_path = f'{folder_path}/meduim.txt'
+    meduim_logic_path = f'{folder_path}/meduim_logic.txt'
+    meduim_fallacy_path = f'{folder_path}/meduim_fallacy.txt'
+    meduim_summary_path = f'{folder_path}/meduim_summary.txt'
 
     print(f"Raw file path: {raw_file_path}")
     print(f"Logics file path: {logics_file_path}")
@@ -110,13 +112,9 @@ def main():
     ```
     """
 
-    prompt_continuesly_writing = f"""
+    prompt_fallacy_eval = f"""
     You are an expert for Meduim blog writing. 
-    Here is the blog:
-    <blog>
-    %s
-    </blog>
-    Help me continiously write the blog.
+    Help me write the blog.
 
     You are given the fallacies in the inference.
     <fallacy>
@@ -155,7 +153,16 @@ def main():
 
     In summary, ... out of the ... premises (...) in ... logic chain are classified as truthful based on the available evidence, while ... premises (...) are deemed to be fiction or lacking substantive proof. This suggests that the rationale ....
     ```
-
+    """
+    prompt_summerize = f"""
+    You are an expert for Meduim blog writing. 
+    Here are the part of previous blog:
+    ```
+    %s
+    %s
+    ```
+    Help me continiously write the blog.
+  
     3. Summary
     Summarize and the doc into the following format:
     ```
@@ -181,12 +188,15 @@ def main():
 
     # Step 1: Initial
     blog = gpt.openai_request(prompt_writing, utils.ModelType.advance_model)
-    continues_blog = gpt.openai_request(prompt_continuesly_writing % (blog), utils.ModelType.advance_model)
+    fallacy_eval_blog = gpt.openai_request(prompt_fallacy_eval, utils.ModelType.advance_model)
+    summerize_blog = gpt.openai_request(prompt_summerize % (blog, fallacy_eval_blog), utils.ModelType.advance_model)
 
-    with open(meduim_file_path, "w", encoding='utf-8') as f:
+    with open(meduim_logic_path, "w", encoding='utf-8') as f:
       f.write(blog)
-      f.write(continues_blog)
-
+    with open(meduim_fallacy_path, "w", encoding='utf-8') as f:
+      f.write(fallacy_eval_blog)
+    with open(meduim_summary_path, "w", encoding='utf-8') as f:
+      f.write(summerize_blog)
 
 if __name__ == "__main__":
     main()
