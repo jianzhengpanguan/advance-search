@@ -16,9 +16,9 @@ def main():
     evaluation_file_path = f'{folder_path}/evaluation.txt'
     fallacy_file_path = f'{folder_path}/fallacy.txt'
     fallacy_evaluation_file_path = f'{folder_path}/fallacy_evaluation.txt'
-    meduim_logic_path = f'{folder_path}/meduim_logic.txt'
-    meduim_fallacy_path = f'{folder_path}/meduim_fallacy.txt'
-    meduim_summary_path = f'{folder_path}/meduim_summary.txt'
+    meduim_logic_path = f'{folder_path}/meduim_logic.md'
+    meduim_fallacy_path = f'{folder_path}/meduim_fallacy.md'
+    meduim_summary_path = f'{folder_path}/meduim_summary.md'
 
     print(f"Raw file path: {raw_file_path}")
     print(f"Logics file path: {logics_file_path}")
