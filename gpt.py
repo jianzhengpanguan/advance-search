@@ -259,7 +259,7 @@ basic_models = [
     provider_type=utils.ProviderType.openai,
     model_type=utils.ModelType.basic_model,
     request_function=openai_request,
-    per_minute_rate_limiter=ratelimiter.PerMinuteRateLimiter(name=f"Provider:{utils.ProviderType.openai},Model:{utils.ModelType.basic_model}", max_num_requests=12),
+    per_minute_rate_limiter=ratelimiter.PerMinuteRateLimiter(name=f"Provider:{utils.ProviderType.openai},Model:{utils.ModelType.basic_model}", max_num_requests=120),
   ),
   model(
     provider_type=utils.ProviderType.deepseek,

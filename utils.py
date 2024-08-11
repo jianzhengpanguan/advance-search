@@ -15,3 +15,4 @@ class ModelType(Enum):
 
 class SearchType(Enum):
   verifier = "verify"
+  image_search = "to search images"

@@ -10,9 +10,9 @@ import concurrent.futures
 import utils
 import json
 from applog import logger as logging
-from typing import List, Dict
+from typing import List, Dict, Any
 
-_MAX_WORKERS = 12 # The maximum number of requests allowed by most LLM api.
+_MAX_WORKERS = 60 # The maximum number of requests allowed by most LLM api.
 _NUM_TARGET_SEARCH_RESULT = 5
 _NUM_SEARCHES = 5
 _MAX_LINKS_PER_SEARCH = 20
@@ -23,7 +23,7 @@ _MAX_ALLOWED_SEARCH_RESULT_SIZE = 100000
 # Create a configparser object
 config = configparser.ConfigParser()
 # Read the configuration file
-config.read('config/config.ini')
+config.read("config/config.ini")
 
 # Given the search result, determine if the search result is relevant to the statement.
 def _is_relevant(statement:str, search_result:str)->bool:
@@ -49,7 +49,7 @@ def _is_relevant(statement:str, search_result:str)->bool:
   def query_build_func(chunk: str) -> str:
     return prompt % (chunk, statement)
   
-  # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
+  # We check multiple(e.g., 4 by default) searchs" results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
   try:
@@ -65,7 +65,7 @@ def _is_relevant(statement:str, search_result:str)->bool:
     logging.error(f"Cannot find 'Answer' in response: {response}")
   except AttributeError:
     logging.error(f"Response is None type: {response}")
-  if 'yes' in answer.lower():
+  if "yes" in answer.lower():
     return True
   return False
 
@@ -103,7 +103,7 @@ def _summarize(statement:str, search_result:str)->List[str]:
     logging.error(f"Cannot find 'Summary' in response: {response}")
   except AttributeError:
     logging.error(f"Response is None type. prompt: {prompt}, search_result: {search_result}")
-  return re.findall(r'\d+\.\s+(.*)', answer)
+  return re.findall(r"\d+\.\s+(.*)", answer)
 
 
 # Given the search result, determine if additional search is needed.
@@ -146,7 +146,7 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
     logging.error(f"Cannot find 'Answer' in response: {response}")
   except AttributeError:
     logging.error(f"Response is None type: {response}")
-  if 'yes' in answer.lower():
+  if "yes" in answer.lower():
     return True
   return False
 
@@ -186,14 +186,14 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
     logging.error(f"Cannot find 'Explain' in response: {response}")
   except AttributeError:
     logging.error(f"Response is None type: {response}")
-  explains = re.findall(r'\d+\.\s+(.*)', explain_search)
+  explains = re.findall(r"\d+\.\s+(.*)", explain_search)
   try:
     suggest_search = "".join(response_without_explain).split("Search")[-1]
   except IndexError:
     logging.error(f"Cannot find 'Search' in response: {response}")
   except AttributeError:
     logging.error(f"Response is None type: {response}")
-  searches = re.findall(r'\d+\.\s+(.*)', suggest_search)
+  searches = re.findall(r"\d+\.\s+(.*)", suggest_search)
   search_explains = {}
   num_searches = min(len(searches), len(explains), _NUM_SEARCHES)
   for i in range(num_searches):
@@ -205,7 +205,7 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   return search_explains
 
 # Let LLM suggests the keywords for the search.
-def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.SearchType.verifier)->List[str]:
+def to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.SearchType.verifier)->List[str]:
   prompt = f"""
   If I want to search ```
   {search}
@@ -230,7 +230,7 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
   """
   keywords = []
   keywordSet = set()
-  # We check multiple(e.g., 4 by default) searchs' results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
+  # We check multiple(e.g., 4 by default) searchs" results(e.g., by default top 3 result per search) multiple rounds(e.g., by default 3 iterations).
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
   try:
@@ -248,15 +248,15 @@ def _to_keywords(topic:str, search:str, search_type:utils.SearchType=utils.Searc
     logging.error(f"Response is None type: {response}")
   if not gpt_suggest:
     return keywords
-
-  raw_keywords = re.findall(r'\d+\.\s+(.*)', gpt_suggest)
+  raw_keywords = re.findall(r"\d+\.\s+(.*)", gpt_suggest)
   for suggest_keyword in raw_keywords:
     if not suggest_keyword:
       continue
-    for keyword in suggest_keyword.split(' '):
+    for keyword in suggest_keyword.split(" "):
       if not keyword:
         continue
-      parsed_keyword = keyword.lower()
+      # Using regex to keep only characters, digits, and spaces
+      parsed_keyword = re.sub(r'[^a-zA-Z0-9 ]', '', keyword.lower())
       if parsed_keyword in keywordSet:
         continue
       keywordSet.add(parsed_keyword)
@@ -277,52 +277,73 @@ def _fetch_web_content(link:str, search:str)->str:
   return relevant_snippet
 
 # LLM generate keywords to filter search results.
-def _optimize_search(search:str, keywords:List[str]):
-  results = []
+def _optimize_search(search:str, keywords:List[str], is_image:bool=False)->List[str]:
+  link_items = []
   links = set()
   for start in range(1, _MAX_LINKS_PER_SEARCH, _MAX_LINKS_PER_QUERY):
-    url = f"{config['SEARCH']['url']}?key={config['SEARCH']['api_key']}&cx={config['SEARCH']['cx']}&safe=active&q={search}&orTerms={' '.join(keywords)}&num={_MAX_LINKS_PER_QUERY}&start={start}"
-
+    url = config["SEARCH"]["url"]
+    params = {
+      "q": search,
+      "num": _MAX_LINKS_PER_QUERY,
+      "start": start,
+      "orTerms": " ".join(keywords),
+      "key": config["SEARCH"]["api_key"],
+      "cx": config["SEARCH"]["cx"],
+      "safe": "active"
+    }
+    if is_image:
+      params["key"] = config["IMAGE"]["api_key"]
+      params["cx"] = config["IMAGE"]["cx"]
+      params["searchType"] = "image"
     try:
-      response = requests.get(url, timeout=60)  # Timeout set to 60 seconds
+      response = requests.get(url, params=params, timeout=60)  # Timeout set to 60 seconds
     except requests.exceptions.Timeout:
-      logging.error("The request timed out: %s", url)
+      logging.error("The request timed out: %s", url + str(params))
       continue
     data = response.json()
-    # If there is no response, we need to reduce the number of keywords.
-    if 'items' not in data:
+    if "items" not in data:
       logging.info(f"query:{search}, keywords:{keywords}, got not result: {data}")
       break
     
-    # Add new search results, dedup the repeated links.
-    for item in data['items']:
-      if not ('title' in item and 'snippet' in item and 'link' in item):
-        continue
+    # Function to process each item and check if it's relevant
+    def process(item)->Any:
+      if not ("title" in item and "snippet" in item and "link" in item):
+        return None
       # Check if the link title and snippest is revelant to the search.
       if not _is_relevant(search, f"{item['title']} {item['snippet']}"):
-        continue
-      if item['link'] not in links:
-        links.add(item['link'])
-        results.append(item)
-        if len(results) >= _NUM_TARGET_SEARCH_RESULT:
+        return None
+      if item["link"] not in links:
+        return item
+
+    # Use ThreadPoolExecutor to process items in parallel
+    with concurrent.futures.ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:
+      # Map process to each item.
+      items = executor.map(process, data["items"])
+      # Filter None values and collect relevant results
+      for item in items:
+        if item:
+          links.add(item["link"])
+          link_items.append(item)
+        if len(link_items) >= _NUM_TARGET_SEARCH_RESULT:
           break
       
-      # If we got enough results, we can stop searching.
-      if len(results) >= _NUM_TARGET_SEARCH_RESULT:
-        break
-  return results
+    # If we got enough results, we can stop searching.
+    if len(link_items) >= _NUM_TARGET_SEARCH_RESULT:
+      break
+
+  return link_items
 
 def _web_request(search:str, keywords:List[str])->List[Dict[str, str]]:
   items = _optimize_search(search, keywords)
 
-  # Function to process each item and check if it's relevant
+  # Function to process each item and check if it"s relevant
   def process(item)->Dict[str, str]:
-    if 'title' in item and 'snippet' in item and 'link' in item:
+    if "title" in item and "snippet" in item and "link" in item:
       # Fetch web content will get the chuck based on the question (e.g, search/title/snippet).
       # Dedup the same chuck retrived from different questions.
       knowledges = set()
-      for question in [search, item['title'], item['snippet']]:
-        knowledge_from_web = _fetch_web_content(item['link'], question)
+      for question in [search, item["title"], item["snippet"]]:
+        knowledge_from_web = _fetch_web_content(item["link"], question)
         knowledges.add(knowledge_from_web)
       knowledge = "\n".join(knowledges)
       # Summerized the knowledge.
@@ -337,11 +358,11 @@ def _web_request(search:str, keywords:List[str])->List[Dict[str, str]]:
           relevant_logics.append(logic)
 
     return {
-      "title": item['title'],
-      "snippet": item['snippet'],
+      "title": item["title"],
+      "snippet": item["snippet"],
       "logics": relevant_logics,
       "knowledge": relevant_knowledge,
-      "link": item['link']
+      "link": item["link"]
     }
 
   # Use ThreadPoolExecutor to process items in parallel
@@ -383,7 +404,7 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
   if search_type == utils.SearchType.verifier:
     response = ""
     try:
-      response = _web_request(topic, _to_keywords(topic, topic, search_type))
+      response = _web_request(topic, to_keywords(topic, topic, search_type))
     except Exception as e:
       logging.error(f"_web_request({topic}, {search_type}): {e}")
     search_results.append(SearchResults(search=topic, explain="Original topic", results=response))
@@ -404,7 +425,7 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
     for search, explain in search_explains.items():
       response = ""
       try:
-        response = _web_request(search, _to_keywords(topic, search, search_type))
+        response = _web_request(search, to_keywords(topic, search, search_type))
       except Exception as e:
         logging.error(f"_web_request({topic}, {search}, {search_type}): {e}")
       search_results.append(SearchResults(search=search, explain=explain, results=response))
@@ -412,3 +433,28 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
   
   # Try to return as much search results as possible.
   return search_results
+
+
+def image_search(search: str, keywords: List[str]) -> Dict[str, str]:
+  images = {}
+  items = _optimize_search(search, keywords, True)
+  for item in items:
+    # Step 1: Check if the image height and width are large enough
+    is_size_valid = item["image"]["height"] > 200 and item["image"]["width"] > 100
+
+    # Step 2: Check if mime type is either image/jpeg or image/png
+    is_mime_valid = item["mime"] in ["image/jpeg", "image/jpg", "image/png"]
+
+    # Step 3: Download and save the image if conditions are met
+    if is_size_valid and is_mime_valid:
+      # Define the local file path with appropriate extension based on MIME type
+      extension = item["mime"].split("/")[-1]  # Extract "jpeg" or "png" from MIME type
+      file_name = "_".join(item["title"].split(" ")) + "." + extension  # Replace spaces with underscores and append extension
+      # Download and save the image
+      try:
+        response = requests.get(item["link"])
+      except Exception as e:
+        logging.error(f"requests.get({item['link']}): {e}")
+      if response.status_code == 200:
+        images[file_name] = response.content
+  return images
