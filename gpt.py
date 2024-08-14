@@ -107,6 +107,7 @@ def anthropic_request(statement:str, model_type:utils.ModelType)->str:
   }]
   try:
     response = client.messages.create(
+      max_tokens=_MAX_TOKENS, # Required.
       model=model,
       temperature=_TEMPERATURE,
       system="",
