@@ -3,6 +3,7 @@ import PyPDF2
 import gpt
 import utils
 import speech
+import searcher
 import argparse
 from typing import List
 
@@ -100,8 +101,10 @@ def main():
     script_path = f"{folder_path}/youtube_script.txt"
     subtitle_path = f"{folder_path}/youtube_subtitle.txt"
     audio_path = f"{folder_path}/youtube_audio"
+    image_path = f"{folder_path}/youtube_image"
     # Ensure the directory exists.
     os.makedirs(audio_path, exist_ok=True)
+    os.makedirs(image_path, exist_ok=True)
 
     sections = split_pdf_by_delimiter(file_path)
     enriched_scripts = []
@@ -149,15 +152,26 @@ def main():
 
     with open(subtitle_path, "r") as f:
         dialogue = "\n".join(f.readlines()).split("\n")
-    index = 0
-    for line in dialogue:
-        if not line.strip():
+    for i, row in enumerate(dialogue):
+        if not row.strip():
             continue
-        audio = speech.generate(line)
-        with open(f"{audio_path}/{index}.mp3", "wb") as f:
+        # Audio generation.
+        audio = speech.generate(row)
+        with open(f"{audio_path}/{i}.mp3", "wb") as f:
             for chunk in audio:
                 f.write(chunk)
-        index += 1
+        # Image collection.
+        # Ensure the directory exists.
+        keywords = searcher.to_keywords(row, row, utils.SearchType.image_search)
+        path = f"{image_path}/{i}.{' '.join(keywords)}"
+        os.makedirs(path, exist_ok=True)
+        images = searcher.image_search(" ".join(keywords), keywords)
+        for image_name in images:
+            # Sanitize the filename to remove problematic characters
+            safe_image_name = image_name.translate(str.maketrans("<>:\"/|?*", "________"))
+            print(safe_image_name)
+            with open(f"{path}/{safe_image_name}", "wb") as f:
+                f.write(images[image_name])
 
 
 if __name__ == "__main__":

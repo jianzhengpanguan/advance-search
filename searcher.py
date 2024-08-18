@@ -415,7 +415,7 @@ def search(topic:str, max_iter:int, search_type:utils.SearchType=utils.SearchTyp
     # Check if the current fact is enough.
     if _is_enough(topic, summerized_results):
       return search_results
-    search_explains = None
+    search_explains = {}
     try:
       search_explains = _to_follow_up_searches(topic, summerized_results, search_type)
     except Exception as e:
