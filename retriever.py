@@ -5,6 +5,7 @@ import openai
 import time
 import configparser
 import uuid
+import gpt
 import hashlib
 import utils
 import signal
@@ -16,7 +17,7 @@ from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 _TOP_K_CHUNKS = 3
-_MAX_RETRIES = 3
+_RETRIVE_PROMPT_TOKENS = 50
 
 embedding_model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 
@@ -53,11 +54,10 @@ def _hash_string_to_uuid(input_string):
   # Create a UUID based on the first 16 bytes of the SHA-1 hash
   return uuid.UUID(bytes=hash_bytes[:16])
 
-def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.ProviderType.unknown, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
+def _knowledge_to_file(question:str, knowledge:str) -> str:
   if not knowledge:
     logging.warning(f"Knowledge is empty: question: {question}, knowledge: {knowledge}")
     return ""
-    
 
   # Generate a unique UUID for the filename
   filename = f"data/knowledge/{str(_hash_string_to_uuid(knowledge))}.txt"
@@ -65,13 +65,25 @@ def retrieve(question:str, knowledge:str, provider:utils.ProviderType=utils.Prov
   if not os.path.exists(filename):
     with open(filename, 'w', encoding='utf-8') as file:
       file.write(knowledge)
+  
+  return filename
 
-  if provider == utils.ProviderType.openai:
-    return openai_retrieve(question, filename, model_type)
-  return rag_retrieve(question, filename)
+def local_retrieve(question:str, knowledge:str)->str:
+  print(utils.num_tokens_from_messages(question + knowledge))
+  if utils.num_tokens_from_messages(question + knowledge) + _RETRIVE_PROMPT_TOKENS < int(config['LLAMA']['context_window']):
+    try:
+      prompt = f"""
+      You are a knowledge retrival expert.
+      Use the upload doc: {knowledge} 
+      Try to respond to user's query: {question}
+      """
+      return gpt.llama_request(prompt, utils.ModelType.basic_model)
+    except Exception as e:
+      logging.warning(f"Failed to retrieve knowledge using OpenAI with the context window: {e}")
+  return rag_retrieve(question, knowledge)
 
-def rag_retrieve(question:str, filename:str)->str:
-
+def rag_retrieve(question:str, knowledge:str)->str:
+  filename = _knowledge_to_file(knowledge)
   # Use the uuid from the filename.
   unique_id = filename.split("/")[-1].replace(".txt", "")
   # Create or reuse a existing collection
@@ -105,7 +117,19 @@ def rag_retrieve(question:str, filename:str)->str:
   logging.info(f"filename: {filename}, docs size: {len(str(find_docs))}")
   return "\n".join([doc for doc in find_docs["documents"][0]])
 
-def openai_retrieve(question:str, filename:str, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
+def openai_retrieve(question:str, knowledge:str, model_type:utils.ModelType=utils.ModelType.basic_model)->str:
+  if utils.num_tokens_from_messages(question + knowledge) + _RETRIVE_PROMPT_TOKENS < int(config['OPENAI']['context_window']):
+    try:
+      prompt = f"""
+      You are a knowledge retrival expert.
+      Use the upload doc: {knowledge} 
+      Try to respond to user's query: {question}
+      """
+      return gpt.openai_request(prompt, utils.ModelType.basic_model)
+    except Exception as e:
+      logging.warning(f"Failed to retrieve knowledge using OpenAI with the context window: {e}")
+
+  filename = _knowledge_to_file(knowledge)
   client = openai.OpenAI(api_key=config['OPENAI']['api_key'])
 
   # Upload a file to the assistant".

@@ -62,4 +62,4 @@ def evaluate(text_need_evaluated:str, search_results:str)->str:
   If the search results are not sufficient to verify the claim, say the claim is unverifiable rather than guessing. 
   Justify your reasoning by directly citing quotes and sources.
   """
-  return retriever.retrieve(prompt, search_results, utils.ProviderType.openai, utils.ModelType.advance_model)
+  return retriever.openai_retrieve(prompt, search_results, utils.ModelType.advance_model)

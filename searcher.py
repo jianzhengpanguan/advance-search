@@ -1,6 +1,7 @@
 import requests
 import re
 import gpt
+import gptrequester
 import configparser
 import webparser
 import logiclinker
@@ -53,7 +54,7 @@ def _is_relevant(statement:str, search_result:str)->bool:
   # By default, we will request gpt 4 * 3 * 3 = 36 times per statement.
   # Use basic model to reduce cost.
   try:
-    response = "\n".join(gpt.request(search_result, query_build_func))
+    response = "\n".join(gptrequester.request(search_result, query_build_func))
   except Exception as e:
     logging.error(f"Error when requesting GPT, gpt.request({search_result} {query_build_func('')}): {e}")
     return False
@@ -95,7 +96,7 @@ def _summarize(statement:str, search_result:str)->List[str]:
 
   Each point should be one sentence long at most. Focus on distilling out only the essential information that pertains to the given statement.
   """
-  response = retriever.retrieve(prompt, search_result, utils.ProviderType.openai)
+  response = retriever.openai_retrieve(prompt, search_result)
   answer = ""
   try:
     answer = response.split("Summary")[-1]
@@ -137,7 +138,7 @@ def _is_enough(statement:str, search_result:str, search_type:utils.SearchType=ut
   def query_build_func(chunk: str) -> str:
     return prompt % (chunk, search_type.value, statement)
   
-  response = "\n".join(gpt.divide_request(statement, utils.ModelType.advance_model, query_build_func, gpt.openai_request))
+  response = "\n".join(gptrequester.divide_request(statement, utils.ModelType.advance_model, query_build_func, gpt.openai_request))
 
   answer = ""
   try:
@@ -176,7 +177,7 @@ def _to_follow_up_searches(statement:str, search_result:str, search_type:utils.S
   """
   if search_result:
     retriever_prefix = f"The given document is not enough to {search_type.value}: `{statement}`"
-    response = retriever.retrieve(f"{retriever_prefix}\n{prompt}", search_result, utils.ProviderType.openai)
+    response = retriever.openai_retrieve(f"{retriever_prefix}\n{prompt}", search_result)
   else:
     response = gpt.openai_request(prompt, utils.ModelType.advance_model)
   logging.info(f"_to_follow_up_searches():{response}")
@@ -273,7 +274,7 @@ def _fetch_web_content(link:str, search:str)->str:
   if not web_content:
     return ""
   # Find the web content relevant to search.
-  relevant_snippet = retriever.retrieve(search, web_content)
+  relevant_snippet = retriever.local_retrieve(search, web_content)
   return relevant_snippet
 
 # LLM generate keywords to filter search results.

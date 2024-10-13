@@ -1,5 +1,6 @@
 import re
 import gpt
+import gptrequester
 import rephraser
 import utils
 import json
@@ -173,15 +174,15 @@ def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType
   def request(statement: str, query_build_func: Callable[[str], str]) -> List[str]:
     if provider == utils.ProviderType.unknown:
       try:
-        return gpt.request(statement, query_build_func)
+        return gptrequester.request(statement, query_build_func)
       except Exception as e:
         prompt = query_build_func("")
         logging.warning(f"LLM request failed, gpt.request({statement} {prompt}): {e}")
         return ""
     if provider == utils.ProviderType.openai:
-      return gpt.divide_request(statement, model, query_build_func, gpt.openai_request)
+      return gptrequester.divide_request(statement, model, query_build_func, gpt.openai_request)
     if provider == utils.ProviderType.anthropic:
-      return gpt.divide_request(statement, model, query_build_func, gpt.anthropic_request)
+      return gptrequester.divide_request(statement, model, query_build_func, gpt.anthropic_request)
 
 
   logics:List[Dict[str,List[str]]] = []

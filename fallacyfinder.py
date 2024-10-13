@@ -93,7 +93,7 @@ def _fetch_patterns(prefix, raw_text, max_iter=_MAX_NUM_PATTERNS)-> list[str]:
 def _to_fallacy_explanations(inference:str)->dict[str, str]:
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (inference, _JSON_OUTPUT)
-  response = retriever.retrieve(request, request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  response = retriever.openai_retrieve(request, request, utils.ModelType.advance_model)
   # TODO: Fix the divide statement broken the prompt. We should allow multiple round of messages sent to the LLM.
   # response = gpt.openai_request(request, utils.ModelType.advance_model)
   # gpt.openai_request(request, utils.ModelType.advance_model)
@@ -111,7 +111,7 @@ def _to_fallacy_explanations(inference:str)->dict[str, str]:
   # If LLM does not support Json format , use the text format.
   fallacy_explanations = {}
   request = _PROMPT_TEMPLATE % (inference, _TEXT_OUTPUT)
-  response = retriever.retrieve(request, request, utils.ProviderType.openai, utils.ModelType.advance_model)
+  response = retriever.openai_retrieve(request, request, utils.ModelType.advance_model)
   fallacies = _fetch_patterns(prefix="Fallacy", raw_text=response)
   explanations = _fetch_patterns(prefix="Explanation", raw_text=response)
   num_fallacies = min(len(fallacies), len(explanations))
