@@ -171,6 +171,11 @@ def _json_text_to_logics(raw_json:str)->List[Dict[str,List[str]]]:
   return logics
 
 def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType.unknown, model:utils.ModelType = utils.ModelType.basic_model):
+  logics:List[Dict[str,List[str]]] = []
+  # If statement is empty, directly return empty logics.
+  if not statement.replace(" ", ""): 
+    return logics
+
   def request(statement: str, query_build_func: Callable[[str], str]) -> List[str]:
     if provider == utils.ProviderType.unknown:
       try:
@@ -185,11 +190,12 @@ def fetch_logics(statement:str, provider:utils.ProviderType = utils.ProviderType
       return gptrequester.divide_request(statement, model, query_build_func, gpt.anthropic_request)
 
 
-  logics:List[Dict[str,List[str]]] = []
+
   def json_query_build_func(chunk: str) -> str:
     return _PROMPT_TEMPLATE % (_JSON_OUTPUT, chunk)
   def text_query_build_func(chunk: str) -> str:
     return _PROMPT_TEMPLATE % (_TEXT_OUTPUT, chunk)
+  
 
   raw_jsons = request(statement, json_query_build_func)
   for raw_json in raw_jsons:

@@ -69,7 +69,6 @@ def _knowledge_to_file(question:str, knowledge:str) -> str:
   return filename
 
 def local_retrieve(question:str, knowledge:str)->str:
-  print(utils.num_tokens_from_messages(question + knowledge))
   if utils.num_tokens_from_messages(question + knowledge) + _RETRIVE_PROMPT_TOKENS < int(config['LLAMA']['context_window']):
     try:
       prompt = f"""
